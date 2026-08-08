@@ -6,6 +6,10 @@
 <title>Apple Servisleri - Servis Rehberi</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -54,6 +58,15 @@ header h1 {
 .card p {
     color: #6b7280;
 }
+
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
 </style>
 </head>
 
@@ -64,6 +77,9 @@ header h1 {
 </header>
 
 <div class="container">
+
+<a class="back" href="index.html">← Ana Sayfaya Dön</a>
+
 <div class="card">
     <h2>Şehir Seçiniz</h2>
 
@@ -79,8 +95,11 @@ header h1 {
 
 <div id="cityResult"></div>
 
+</div>
+
 <script>
 function showCity() {
+
     const city = document.getElementById("citySelect").value;
     const result = document.getElementById("cityResult");
 
@@ -89,77 +108,53 @@ function showCity() {
         return;
     }
 
-    const names = {
-        ankara: "Ankara",
-        istanbul: "İstanbul",
-        izmir: "İzmir",
-        bursa: "Bursa",
-        antalya: "Antalya"
-    };
+    if (city === "ankara") {
 
-    result.innerHTML = `
+        result.innerHTML = `
+
+        <div class="card">
+            <h2>Ankara Apple Yetkili Servisleri</h2>
+        </div>
+
+        <div class="card">
+            <h2>Gürgençler - Ankamall</h2>
+            <p><strong>İlçe:</strong> Yenimahalle</p>
+            <p><strong>Adres:</strong> Ankamall AVM</p>
+            <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
+        </div>
+
+        <div class="card">
+            <h2>KVK Teknik Servis - Ankara</h2>
+            <p><strong>İlçe:</strong> Çankaya</p>
+            <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
+        </div>
+
+        <div class="card">
+            <h2>Başarı Teknik Servis - Ankara</h2>
+            <p><strong>İlçe:</strong> Yenimahalle</p>
+            <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
+        </div>
+
+        `;
+
+    } else {
+
+        const names = {
+            istanbul: "İstanbul",
+            izmir: "İzmir",
+            bursa: "Bursa",
+            antalya: "Antalya"
+        };
+
+        result.innerHTML = `
         <div class="card">
             <h2>${names[city]} Apple Servisleri</h2>
-            <p>Bu şehirdeki Apple servis noktaları burada listelenecek.</p>
-        </div><div class="card">
-<div class="card">
-    <h2>Gürgençler - Ankamall</h2>
-    <p><strong>İlçe:</strong> Yenimahalle</p>
-    <p><strong>Adres:</strong> Ankamall AVM, Gazi Mah. Mevlana Bulvarı No:02, Mağaza No:1050</p>
-    <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-</div>
-
-<div class="card">
-    <h2>KVK Teknik Servis - Ankara</h2>
-    <p><strong>İlçe:</strong> Çankaya</p>
-    <p><strong>Adres:</strong> Kızılay Mah. Fevzi Çakmak 1 Sok. Oran Apt. No:15/B</p>
-    <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-</div>
-
-<div class="card">
-    <h2>Başarı Teknik Servis - Ankara</h2>
-    <p><strong>İlçe:</strong> Yenimahalle</p>
-    <p><strong>Adres:</strong> Armada AVM, Beştepe Mah. Dumlupınar Bulvarı No:6/181</p>
-    <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-</div>
-
-<div class="card">
-    <h2>Gürgençler - Ankara</h2>
-    <p><strong>İlçe:</strong> Yenimahalle</p>
-    <p><strong>Adres:</strong> Gazi Mah. Mevlana Bulvarı, Ankamall AVM</p>
-    <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-</div>
-    <p><strong>İlçe:</strong> Çankaya</p>
-    <p><strong>Adres:</strong> Servis adresi daha sonra eklenecek.</p>
-    <p><strong>Telefon:</strong> Telefon bilgisi daha sonra eklenecek.</p>
-    <p><strong>Tür:</strong> Yetkili / Özel servis bilgisi eklenecek.</p>
-</div>
-    `;
+            <p>Bu şehirdeki yetkili servis bilgileri hazırlanıyor.</p>
+        </div>
+        `;
+    }
 }
 </script>
-<a class="back" href="index.html">← Ana Sayfaya Dön</a>
-
-<div class="card">
-    <h2>Apple Yetkili Servis</h2>
-    <p>Apple cihazlarınız için teknik servis bilgileri burada yer alacak.</p>
-</div>
-
-<div class="card">
-    <h2>iPhone Servisleri</h2>
-    <p>iPhone onarım ve servis noktalarını şehir seçerek bulabileceksiniz.</p>
-</div>
-
-<div class="card">
-    <h2>iPad Servisleri</h2>
-    <p>iPad servis noktaları ve teknik servis bilgileri.</p>
-</div>
-
-<div class="card">
-    <h2>Mac Servisleri</h2>
-    <p>Mac servis noktaları ve teknik servis bilgileri.</p>
-</div>
-
-</div>
 
 </body>
 </html>
