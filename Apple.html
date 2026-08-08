@@ -64,7 +64,47 @@ header h1 {
 </header>
 
 <div class="container">
+<div class="card">
+    <h2>Şehir Seçiniz</h2>
 
+    <select id="citySelect" onchange="showCity()">
+        <option value="">Şehir seçiniz</option>
+        <option value="ankara">Ankara</option>
+        <option value="istanbul">İstanbul</option>
+        <option value="izmir">İzmir</option>
+        <option value="bursa">Bursa</option>
+        <option value="antalya">Antalya</option>
+    </select>
+</div>
+
+<div id="cityResult"></div>
+
+<script>
+function showCity() {
+    const city = document.getElementById("citySelect").value;
+    const result = document.getElementById("cityResult");
+
+    if (city === "") {
+        result.innerHTML = "";
+        return;
+    }
+
+    const names = {
+        ankara: "Ankara",
+        istanbul: "İstanbul",
+        izmir: "İzmir",
+        bursa: "Bursa",
+        antalya: "Antalya"
+    };
+
+    result.innerHTML = `
+        <div class="card">
+            <h2>${names[city]} Apple Servisleri</h2>
+            <p>Bu şehirdeki Apple servis noktaları burada listelenecek.</p>
+        </div>
+    `;
+}
+</script>
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
 <div class="card">
