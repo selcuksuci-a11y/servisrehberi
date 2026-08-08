@@ -111,21 +111,33 @@ footer {
 
 <div class="container">
 
-    <div class="search-box">
-        <h2>Marka seçiniz</h2>
+    <div <select onchange="goToBrand(this.value)">
+    <option value="">Marka seçiniz</option>
+    <option value="Apple.html">Apple</option>
+    <option value="Samsung.html">Samsung</option>
+    <option value="Xiaomi.html">Xiaomi</option>
+    <option value="Huawei.html">Huawei</option>
+    <option value="Oppo.html">Oppo</option>
+    <option value="Vivo.html">Vivo</option>
+    <option value="Tekno.html">Tekno</option>
+    <option value="Reedar.html">Reedar</option>
+</select>
 
-        <select>
-            <option value="">Marka seçiniz</option>
-            <option>Apple</option>
-            <option>Samsung</option>
-            <option>Xiaomi</option>
-            <option>Huawei</option>
-            <option>Oppo</option>
-            <option>Vivo</option>
-            <option>Sony</option>
-            <option>Nokia</option>
-        </select>
-    </div>
+<script>
+function goToBrand(page) {
+    if (page !== "") {
+        window.location.href = page;
+    }
+}
+</script>        
+            
+            
+            
+            
+            
+            
+
+    <
 
     <h2 class="section-title">Popüler Markalar</h2>
 
