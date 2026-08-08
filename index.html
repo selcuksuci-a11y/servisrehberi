@@ -81,6 +81,7 @@ select {
     text-align: center;
     font-weight: bold;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    cursor: pointer;
 }
 
 .brand:hover {
@@ -111,7 +112,9 @@ footer {
 
 <div class="container">
 
-    <div class="brand-selector">
+    <div class="search-box">
+        <h2>Marka Seçiniz</h2>
+
         <select onchange="goToBrand(this.value)">
             <option value="">Marka seçiniz</option>
             <option value="Apple.html">Apple</option>
@@ -124,122 +127,27 @@ footer {
             <option value="Reedar.html">Reedar</option>
         </select>
     </div>
-    
-
-<script>
-function goToBrand(page) {
-    if (page !== "") {
-        window.location.href = page;
-    }
-}
-</script>        
-            
-            
-            
-            
-            
-            
-
-    <
 
     <h2 class="section-title">Popüler Markalar</h2>
 
- <div class="brand" onclick="window.location.href='Apple.html'">Apple</div>
-    <div class="brand" onclick="window.location.href='Samsung.html'">Samsung</div>
-        <div class="brand" onclick="window.location.href='Xiaomi.html'">Xiaomi</div>
-        <div class="brand" onclick="window.location.href='Huawei.html'">Huawei</div>
-        <!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oppo Servisleri - Servis Rehberi</title>
+    <div class="brands">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #1f2937;
-}
+        <div class="brand" onclick="goToBrand('Apple.html')">Apple</div>
 
-header {
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
+        <div class="brand" onclick="goToBrand('Samsung.html')">Samsung</div>
 
-header h1 {
-    margin: 0;
-    font-size: 28px;
-}
+        <div class="brand" onclick="goToBrand('Xiaomi.html')">Xiaomi</div>
 
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 15px;
-}
+        <div class="brand" onclick="goToBrand('Huawei.html')">Huawei</div>
 
-.back {
-    display: inline-block;
-    margin-bottom: 20px;
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: bold;
-}
+        <div class="brand" onclick="goToBrand('Oppo.html')">Oppo</div>
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
+        <div class="brand" onclick="goToBrand('Vivo.html')">Vivo</div>
 
-.card h2 {
-    margin-top: 0;
-}
+        <div class="brand" onclick="goToBrand('Tekno.html')">Tekno</div>
 
-.card p {
-    color: #6b7280;
-}
-</style>
-</head>
+        <div class="brand" onclick="goToBrand('Reedar.html')">Reedar</div>
 
-<body>
-
-<header>
-    <h1>Oppo Servisleri</h1>
-</header>
-
-<div class="container">
-
-<a class="back" href="index.html">← Ana Sayfaya Dön</a>
-
-<div class="card">
-    <h2>Oppo Yetkili Servis</h2>
-    <p>Oppo cihazlarınız için teknik servis bilgileri burada yer alacak.</p>
-</div>
-
-<div class="card">
-    <h2>Telefon Servisleri</h2>
-    <p>Oppo telefon servis noktalarını şehir seçerek bulabileceksiniz.</p>
-</div>
-
-<div class="card">
-    <h2>Tablet Servisleri</h2>
-    <p>Oppo tablet servis noktaları ve teknik servis bilgileri.</p>
-</div>
-
-</div>
-
-</body>
-</html>
-       <div class="brand" onclick="window.location.href='Vivo.html'">Vivo</div>
-<div class="brand" onclick="window.location.href='Tekno.html'">Tekno</div>
-<div class="brand" onclick="window.location.href='Reedar.html'">Reedar</div>
-    
     </div>
 
 </div>
@@ -247,6 +155,14 @@ header h1 {
 <footer>
     © 2026 Servis Rehberi
 </footer>
+
+<script>
+function goToBrand(page) {
+    if (page !== "") {
+        window.location.href = page;
+    }
+}
+</script>
 
 </body>
 </html>
