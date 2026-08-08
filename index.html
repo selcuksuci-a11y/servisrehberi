@@ -1,211 +1,150 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servis Rehberi | Türkiye'nin Teknik Servis Rehberi</title>
-  <meta name="description" content="Türkiye'nin teknik servis rehberi. Marka ve şehre göre teknik servisleri bulun.">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servis Rehberi</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.brand {
+    background: white;
+    padding: 18px 10px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.brand:hover {
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+@media (min-width: 600px) {
+    .brands {
+        grid-template-columns: repeat(4, 1fr);
     }
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-    }
-    header {
-      background: #123b5d;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-    header p {
-      font-size: 16px;
-    }
-    .hero {
-      background: white;
-      text-align: center;
-      padding: 45px 20px;
-    }
-    .hero h2 {
-      font-size: 30px;
-      margin-bottom: 12px;
-    }
-    .hero p {
-      margin-bottom: 25px;
-      color: #666;
-    }
-    .search-box {
-      max-width: 700px;
-      margin: auto;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .search-box select,
-    .search-box input,
-    .search-box button {
-      padding: 14px;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-      font-size: 16px;
-    }
-    .search-box input {
-      flex: 1;
-      min-width: 220px;
-    }
-    .search-box button {
-      background: #123b5d;
-      color: white;
-      cursor: pointer;
-      border: none;
-    }
-    .section {
-      max-width: 1100px;
-      margin: 35px auto;
-      padding: 0 20px;
-    }
-    .section h2 {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 15px;
-    }
-    .card {
-      background: white;
-      padding: 25px 15px;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    }
-    .card h3 {
-      margin-bottom: 8px;
-    }
-    .card p {
-      color: #666;
-      font-size: 14px;
-    }
-    .about {
-      background: white;
-      padding: 35px 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    footer {
-      background: #123b5d;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 30px;
-    }
-    .briko {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>🦦 Servis Rehberi</h1>
+
+<header>
+    <h1>Servis Rehberi</h1>
     <p>Türkiye'nin teknik servis rehberi</p>
-  </header>
-  <section class="hero">
-    <h2>Aradığınız Teknik Servisi Bulun</h2>
-    <p>Marka, şehir veya servis adına göre arama yapın.</p>
+</header>
+
+<div class="container">
+
     <div class="search-box">
-      <select>
-        <option>Marka Seçin</option>
-        <option>Apple</option>
-        <option>Samsung</option>
-        <option>Xiaomi</option>
-        <option>Oppo</option>
-        <option>Vivo</option>
-        <option>Sony</option>
-        <option>Nokia</option>
-      </select>
-      <input type="text" placeholder="Şehir veya servis adı">
-      <button type="button">Servis Ara</button>
+        <h2>Marka seçiniz</h2>
+
+        <select>
+            <option value="">Marka seçiniz</option>
+            <option>Apple</option>
+            <option>Samsung</option>
+            <option>Xiaomi</option>
+            <option>Huawei</option>
+            <option>Oppo</option>
+            <option>Vivo</option>
+            <option>Sony</option>
+            <option>Nokia</option>
+        </select>
     </div>
-  </section>
-  <section class="section">
-    <h2>Popüler Markalar</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Apple</h3>
-        <p>Apple teknik servisleri</p>
-      </div>
-      <div class="card">
-        <h3>Samsung</h3>
-        <p>Samsung teknik servisleri</p>
-      </div>
-      <div class="card">
-        <h3>Xiaomi</h3>
-        <p>Xiaomi teknik servisleri</p>
-      </div>
-      <div class="card">
-        <h3>Oppo</h3>
-        <p>Oppo teknik servisleri</p>
-      </div>
-      <div class="card">
-        <h3>Vivo</h3>
-        <p>Vivo teknik servisleri</p>
-      </div>
-      <div class="card">
-        <h3>Sony</h3>
-        <p>Sony teknik servisleri</p>
-      </div>
+
+    <h2 class="section-title">Popüler Markalar</h2>
+
+    <div class="brands">
+        <div class="brand">Apple</div>
+        <div class="brand">Samsung</div>
+        <div class="brand">Xiaomi</div>
+        <div class="brand">Huawei</div>
+        <div class="brand">Oppo</div>
+        <div class="brand">Vivo</div>
+        <div class="brand">Sony</div>
+        <div class="brand">Nokia</div>
     </div>
-  </section>
-  <section class="section">
-    <h2>Popüler Şehirler</h2>
-    <div class="cards">
-      <div class="card"><h3>Ankara</h3><p>Teknik servisler</p></div>
-      <div class="card"><h3>İstanbul</h3><p>Teknik servisler</p></div>
-      <div class="card"><h3>İzmir</h3><p>Teknik servisler</p></div>
-      <div class="card"><h3>Bursa</h3><p>Teknik servisler</p></div>
-      <div class="card"><h3>Antalya</h3><p>Teknik servisler</p></div>
-      <div class="card"><h3>Adana</h3><p>Teknik servisler</p></div>
-    </div>
-  </section>
-  <section class="section">
-    <h2>Servis Rehberi'nde Neler Var?</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>🔧 Teknik Servisler</h3>
-        <p>Türkiye genelindeki servisleri keşfedin.</p>
-      </div>
-      <div class="card">
-        <h3>📱 Marka Servisleri</h3>
-        <p>Markanıza uygun servisleri bulun.</p>
-      </div>
-      <div class="card">
-        <h3>❓ Sorun & Çözüm</h3>
-        <p>Teknik sorunlar hakkında bilgi alın.</p>
-      </div>
-      <div class="card">
-        <h3>⭐ Servis Değerlendirme</h3>
-        <p>İlerleyen aşamada servisleri değerlendirin.</p>
-      </div>
-    </div>
-  </section>
-  <section class="about">
-    <div class="briko">🦦</div>
-    <h2>Servis Rehberi</h2>
-    <p>Doğru teknik servisi daha kolay bulmanız için buradayız.</p>
-  </section>
-  <footer>
-    <p>© 2026 Servis Rehberi - Türkiye'nin Teknik Servis Rehberi</p>
-  </footer>
+
+</div>
+
+<footer>
+    © 2026 Servis Rehberi
+</footer>
+
 </body>
 </html>
