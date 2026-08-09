@@ -9,7 +9,6 @@
 <meta name="description" content="Türkiye genelinde yetkili teknik servisleri bulun.">
 
 <style>
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -153,7 +152,6 @@ footer p + p {
 }
 
 @media (max-width:600px) {
-
     .logo {
         font-size: 27px;
     }
@@ -165,244 +163,148 @@ footer p + p {
     .brands {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-
-<div class="logo">
-    Teknik Servis Rehberi
-</div>
-
-<p>
-    Türkiye'nin teknik servis rehberi
-</p>
-
+    <div class="logo">Teknik Servis Rehberi</div>
+    <p>Türkiye'nin teknik servis rehberi</p>
 </header>
-
 
 <section class="hero">
 
-<h1>
-    Teknik Servisin Adresi
-</h1>
+    <h1>Teknik Servisin Adresi</h1>
 
-<p>
-    Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
-</p>
+    <p>
+        Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
+    </p>
 
-<div class="search">
-
-<input
-    type="text"
-    id="searchInput"
-    placeholder="Marka ara... Örn: Apple"
-    onkeyup="searchBrand()"
->
-
-</div>
+    <div class="search">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Marka ara... Örn: Vivo"
+            onkeyup="searchBrand()"
+        >
+    </div>
 
 </section>
 
-
 <main class="container">
 
-<h2 class="section-title">
-    Markalar
-</h2>
+    <h2 class="section-title">Markalar</h2>
 
+    <div class="brands" id="brandList">
 
-<div class="brands" id="brandList">
+        <a class="brand" data-name="Apple" href="Apple.html">
+            <span>🍎</span>
+            Apple
+        </a>
 
+        <a class="brand" data-name="Samsung" href="Samsung.html">
+            <span>📱</span>
+            Samsung
+        </a>
 
-<a
-class="brand"
-data-name="Apple"
-href="Apple.html"
->
-<span>🍎</span>
-Apple
-</a>
+        <a class="brand" data-name="Xiaomi" href="Xiaomi.html">
+            <span>📱</span>
+            Xiaomi
+        </a>
 
+        <a class="brand" data-name="Huawei" href="Huawei.html">
+            <span>📱</span>
+            Huawei
+        </a>
 
-<a
-class="brand"
-data-name="Samsung"
-href="Samsung.html"
->
-<span>📱</span>
-Samsung
-</a>
+        <a class="brand" data-name="Oppo" href="Oppo.html">
+            <span>📱</span>
+            Oppo
+        </a>
 
+        <a class="brand" data-name="Vivo" href="Vivo.html">
+            <span>📱</span>
+            Vivo
+        </a>
 
-<a
-class="brand"
-data-name="Xiaomi"
-href="Xiaomi.html"
->
-<span>📱</span>
-Xiaomi
-</a>
+        <div class="brand" data-name="Nokia">
+            <span>📱</span>
+            Nokia
+        </div>
 
+        <div class="brand" data-name="Sony">
+            <span>📱</span>
+            Sony
+        </div>
 
-<a
-class="brand"
-data-name="Huawei"
-href="Huawei.html"
->
-<span>📱</span>
-Huawei
-</a>
+        <div class="brand" data-name="TECNO">
+            <span>📱</span>
+            TECNO
+        </div>
 
+        <div class="brand" data-name="REEDER">
+            <span>📱</span>
+            REEDER
+        </div>
 
-<!-- OPPO BAĞLANDI -->
+    </div>
 
-<a
-class="brand"
-data-name="Oppo"
-href="Oppo.html"
->
-<span>📱</span>
-Oppo
-</a>
+    <div class="info">
 
+        <div class="info-card">
+            <h3>🔧 Yetkili Servisler</h3>
+            <p>
+                Markalara göre yetkili teknik servisleri bulun.
+            </p>
+        </div>
 
-<div
-class="brand"
-data-name="Vivo"
->
-<span>📱</span>
-Vivo
-</div>
+        <div class="info-card">
+            <h3>🇹🇷 Türkiye Geneli</h3>
+            <p>
+                Türkiye genelindeki servis ağı tek yerde.
+            </p>
+        </div>
 
+        <div class="info-card">
+            <h3>❓ Sorun & Çözüm</h3>
+            <p>
+                Teknik servis sorunları ve çözüm önerilerini keşfedin.
+            </p>
+        </div>
 
-<div
-class="brand"
-data-name="Nokia"
->
-<span>📱</span>
-Nokia
-</div>
-
-
-<div
-class="brand"
-data-name="Sony"
->
-<span>📱</span>
-Sony
-</div>
-
-
-<div
-class="brand"
-data-name="TECNO"
->
-<span>📱</span>
-TECNO
-</div>
-
-
-<div
-class="brand"
-data-name="REEDER"
->
-<span>📱</span>
-REEDER
-</div>
-
-
-</div>
-
-
-<div class="info">
-
-<div class="info-card">
-
-<h3>🔧 Yetkili Servisler</h3>
-
-<p>
-Markalara göre yetkili teknik servisleri bulun.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🇹🇷 Türkiye Geneli</h3>
-
-<p>
-Türkiye genelindeki servis ağı tek yerde.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>❓ Sorun & Çözüm</h3>
-
-<p>
-Teknik servis sorunları ve çözüm önerilerini keşfedin.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </main>
 
-
 <footer>
-
-<p>
-© 2026 Teknik Servis Rehberi
-</p>
-
-<p>
-Türkiye'nin teknik servis rehberi
-</p>
-
+    <p>© 2026 Teknik Servis Rehberi</p>
+    <p>Türkiye'nin teknik servis rehberi</p>
 </footer>
-
 
 <script>
 
 function searchBrand() {
 
-const input =
-document.getElementById("searchInput");
+    const filter =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
 
-const filter =
-input.value.toLowerCase().trim();
+    const brands =
+        document.querySelectorAll(".brand");
 
-const brands =
-document.querySelectorAll(".brand");
+    brands.forEach(function(brand) {
 
+        const name =
+            brand.getAttribute("data-name").toLowerCase();
 
-brands.forEach(function(brand) {
+        brand.style.display =
+            name.includes(filter) ? "block" : "none";
 
-const name =
-brand.getAttribute("data-name").toLowerCase();
-
-if (name.includes(filter)) {
-
-brand.style.display = "block";
-
-} else {
-
-brand.style.display = "none";
-
-}
-
-});
-
+    });
 }
 
 </script>
