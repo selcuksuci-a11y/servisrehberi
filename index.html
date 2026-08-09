@@ -100,6 +100,9 @@
       cursor: pointer;
       box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
       transition: 0.2s;
+      text-decoration: none;
+      color: #172033;
+      display: block;
     }
 
     .brand:hover {
@@ -111,94 +114,6 @@
       display: block;
       font-size: 34px;
       margin-bottom: 10px;
-    }
-
-    .service-section {
-      display: none;
-      margin-top: 40px;
-      background: white;
-      border-radius: 18px;
-      padding: 30px 20px;
-      border: 1px solid #e2e8f0;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
-    }
-
-    .service-section.active {
-      display: block;
-    }
-
-    .service-title {
-      font-size: 27px;
-      margin-bottom: 10px;
-    }
-
-    .service-description {
-      color: #64748b;
-      line-height: 1.6;
-      margin-bottom: 25px;
-    }
-
-    .notice {
-      background: #f8fafc;
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 22px;
-    }
-
-    .notice strong {
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    .service-card {
-      border: 1px solid #e2e8f0;
-      border-radius: 14px;
-      padding: 22px;
-      margin-top: 14px;
-      background: #ffffff;
-    }
-
-    .service-card h3 {
-      margin-bottom: 9px;
-    }
-
-    .service-card p {
-      color: #64748b;
-      line-height: 1.5;
-    }
-
-    .verified {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 7px 11px;
-      border-radius: 20px;
-      background: #ecfdf5;
-      color: #047857;
-      font-size: 13px;
-      font-weight: bold;
-    }
-
-    .official-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 13px 18px;
-      border-radius: 10px;
-      background: #0f172a;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .back-button {
-      margin-top: 20px;
-      border: none;
-      background: #64748b;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 15px;
     }
 
     .info {
@@ -240,6 +155,7 @@
     }
 
     @media (max-width: 600px) {
+
       .logo {
         font-size: 27px;
       }
@@ -263,169 +179,250 @@
 
   <header>
     <div class="logo">Teknik Servis Rehberi</div>
-    <p>Türkiye'nin teknik servis rehberi</p>
+
+    <p>
+      Türkiye'nin teknik servis rehberi
+    </p>
   </header>
 
+
   <section class="hero">
-    <h1>Teknik Servisin Adresi</h1>
+
+    <h1>
+      Teknik Servisin Adresi
+    </h1>
 
     <p>
       Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
     </p>
 
     <div class="search">
+
       <input
         type="text"
         id="searchInput"
         placeholder="Marka ara... Örn: Apple"
         onkeyup="searchBrand()"
       >
+
     </div>
+
   </section>
+
 
   <main class="container">
 
-    <h2 class="section-title">Markalar</h2>
+    <h2 class="section-title">
+      Markalar
+    </h2>
+
 
     <div class="brands" id="brandList">
 
-      <div class="brand" data-name="Apple" onclick="showApple()">
+
+      <!-- APPLE -->
+
+      <a
+        class="brand"
+        data-name="Apple"
+        href="Apple.html"
+      >
+
         <span>🍎</span>
+
         Apple
-      </div>
 
-      <div class="brand" data-name="Samsung">
+      </a>
+
+
+      <!-- SAMSUNG -->
+
+      <div
+        class="brand"
+        data-name="Samsung"
+      >
+
         <span>📱</span>
+
         Samsung
+
       </div>
 
-      <div class="brand" data-name="Xiaomi">
+
+      <!-- XIAOMI -->
+
+      <div
+        class="brand"
+        data-name="Xiaomi"
+      >
+
         <span>📱</span>
+
         Xiaomi
+
       </div>
 
-      <div class="brand" data-name="Huawei">
+
+      <!-- HUAWEI -->
+
+      <div
+        class="brand"
+        data-name="Huawei"
+      >
+
         <span>📱</span>
+
         Huawei
+
       </div>
 
-      <div class="brand" data-name="Oppo">
+
+      <!-- OPPO -->
+
+      <div
+        class="brand"
+        data-name="Oppo"
+      >
+
         <span>📱</span>
+
         Oppo
+
       </div>
 
-      <div class="brand" data-name="Vivo">
+
+      <!-- VIVO -->
+
+      <div
+        class="brand"
+        data-name="Vivo"
+      >
+
         <span>📱</span>
+
         Vivo
+
       </div>
 
-      <div class="brand" data-name="Nokia">
+
+      <!-- NOKIA -->
+
+      <div
+        class="brand"
+        data-name="Nokia"
+      >
+
         <span>📱</span>
+
         Nokia
+
       </div>
 
-      <div class="brand" data-name="Sony">
+
+      <!-- SONY -->
+
+      <div
+        class="brand"
+        data-name="Sony"
+      >
+
         <span>📱</span>
+
         Sony
+
       </div>
 
-      <div class="brand" data-name="TECNO">
+
+      <!-- TECNO -->
+
+      <div
+        class="brand"
+        data-name="TECNO"
+      >
+
         <span>📱</span>
+
         TECNO
+
       </div>
 
-      <div class="brand" data-name="REEDER">
+
+      <!-- REEDER -->
+
+      <div
+        class="brand"
+        data-name="REEDER"
+      >
+
         <span>📱</span>
+
         REEDER
+
       </div>
+
 
     </div>
 
-    <section id="appleServices" class="service-section">
-
-      <h2 class="service-title">🍎 Apple Yetkili Servisleri</h2>
-
-      <p class="service-description">
-        Türkiye genelinde Apple ürünlerine hizmet veren yetkili servis
-        sağlayıcılarını burada bulabileceksiniz.
-      </p>
-
-      <div class="notice">
-        <strong>🇹🇷 Türkiye Geneli</strong>
-
-        <p>
-          Şehir seçimi yok. Apple'a ait yetkili servis sağlayıcıları
-          Türkiye genelinde tek bir rehber içerisinde listelenecek.
-        </p>
-      </div>
-
-      <div class="service-card">
-        <h3>Apple Yetkili Servis Sağlayıcısı</h3>
-
-        <p>
-          Yetkili servislerin adı, adresi, telefon bilgisi ve internet sitesi
-          doğrulanmış kaynaklardan eklenir.
-        </p>
-
-        <span class="verified">
-          ✓ Yetkili servis bilgisi doğrulanacak
-        </span>
-      </div>
-
-      <div class="service-card">
-        <h3>Apple Servis ve Destek</h3>
-
-        <p>
-          Apple'ın resmi servis bulma sistemi üzerinden Türkiye'deki
-          servis ve destek seçeneklerine ulaşabilirsiniz.
-        </p>
-
-        <a
-          class="official-button"
-          href="https://locate.apple.com/tr/tr/service/"
-          target="_blank"
-        >
-          Resmî Apple Servis Bul
-        </a>
-      </div>
-
-      <button class="back-button" onclick="hideApple()">
-        ← Markalara Dön
-      </button>
-
-    </section>
 
     <div class="info">
 
+
       <div class="info-card">
-        <h3>🔧 Yetkili Servisler</h3>
+
+        <h3>
+          🔧 Yetkili Servisler
+        </h3>
+
         <p>
           Markalara göre yetkili teknik servisleri bulun.
         </p>
+
       </div>
 
+
       <div class="info-card">
-        <h3>🇹🇷 Türkiye Geneli</h3>
+
+        <h3>
+          🇹🇷 Türkiye Geneli
+        </h3>
+
         <p>
-          Şehir şehir değil, Türkiye genelindeki servis ağı tek yerde.
+          Türkiye genelindeki servis ağı tek yerde.
         </p>
+
       </div>
 
+
       <div class="info-card">
-        <h3>❓ Sorun & Çözüm</h3>
+
+        <h3>
+          ❓ Sorun & Çözüm
+        </h3>
+
         <p>
           Teknik servis sorunları ve çözüm önerilerini keşfedin.
         </p>
+
       </div>
+
 
     </div>
 
   </main>
 
+
   <footer>
-    <p>© 2026 Teknik Servis Rehberi</p>
-    <p>Türkiye'nin teknik servis rehberi</p>
+
+    <p>
+      © 2026 Teknik Servis Rehberi
+    </p>
+
+    <p>
+      Türkiye'nin teknik servis rehberi
+    </p>
+
   </footer>
+
 
   <script>
 
@@ -435,15 +432,17 @@
         document.getElementById("searchInput");
 
       const filter =
-        input.value.toLowerCase();
+        input.value.toLowerCase().trim();
 
       const brands =
         document.querySelectorAll(".brand");
+
 
       brands.forEach(function(brand) {
 
         const name =
           brand.getAttribute("data-name").toLowerCase();
+
 
         if (name.includes(filter)) {
 
@@ -455,33 +454,6 @@
 
         }
 
-      });
-
-    }
-
-    function showApple() {
-
-      document
-        .getElementById("appleServices")
-        .classList.add("active");
-
-      document
-        .getElementById("appleServices")
-        .scrollIntoView({
-          behavior: "smooth"
-        });
-
-    }
-
-    function hideApple() {
-
-      document
-        .getElementById("appleServices")
-        .classList.remove("active");
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
       });
 
     }
