@@ -61,21 +61,14 @@ header p {
     margin-top: 0;
 }
 
-input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 16px;
-    margin-bottom: 12px;
-}
-
+input,
 select {
     width: 100%;
     padding: 14px;
     border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
+    margin-bottom: 12px;
     background: white;
 }
 
@@ -95,7 +88,6 @@ select {
 
 .card h3 {
     margin-top: 0;
-    margin-bottom: 10px;
     font-size: 19px;
 }
 
@@ -113,10 +105,6 @@ select {
 .type {
     color: #111827 !important;
     font-weight: bold;
-}
-
-.products {
-    font-size: 14px;
 }
 
 .badge {
@@ -139,17 +127,7 @@ select {
     border-radius: 14px;
 }
 
-.info {
-    background: #eef4ff;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    color: #374151;
-    line-height: 1.5;
-}
-
 .count {
-    margin-top: 15px;
     color: #6b7280;
     font-size: 14px;
 }
@@ -160,18 +138,12 @@ select {
 
 <header>
     <h1>Apple Yetkili Servisleri</h1>
-    <p>Türkiye Geneli Servis Rehberi</p>
+    <p>Türkiye Geneli - Servis Rehberi</p>
 </header>
 
 <div class="container">
 
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
-
-<div class="info">
-    <strong>Apple Yetkili Servisleri</strong><br>
-    Türkiye genelindeki servis noktalarını şehir ve servis adına göre
-    arayabilirsiniz.
-</div>
 
 <div class="search-box">
 
@@ -189,7 +161,6 @@ select {
         <option value="Ankara">Ankara</option>
         <option value="İstanbul">İstanbul</option>
         <option value="İzmir">İzmir</option>
-        <option value="Bursa">Bursa</option>
     </select>
 
     <div class="count" id="serviceCount"></div>
@@ -203,47 +174,23 @@ select {
     <h2 class="city-title">Ankara</h2>
 
     <div class="card service" data-city="Ankara">
-        <h3>Gürgençler - Ankamall</h3>
+        <h3>Gürgençler</h3>
         <p class="city">Ankara</p>
-        <p>Gazi Mah. Mevlana Bulvarı, Ankamall AVM, Mağaza No:1050, Yenimahalle</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
+        <p>Apple Yetkili Servis Sağlayıcısı</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
     <div class="card service" data-city="Ankara">
-        <h3>Gürgençler - Ankara</h3>
+        <h3>KVK Teknik Servis</h3>
         <p class="city">Ankara</p>
-        <p>Gazi Mahallesi Mevlana Bulvarı, Ankamall AVM</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • iPod • Beats</p>
+        <p>Apple Yetkili Servis Sağlayıcısı</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
     <div class="card service" data-city="Ankara">
-        <h3>KVK Teknik Servis - Ankara</h3>
+        <h3>Başarı Teknik Servis</h3>
         <p class="city">Ankara</p>
-        <p>Kızılay Mah. Fevzi Çakmak 1 Sok. Oran Apt. No:15/B, Çankaya</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
-        <span class="badge">✓ Yetkili Servis</span>
-    </div>
-
-    <div class="card service" data-city="Ankara">
-        <h3>Gürgençler - Ankara Next Level</h3>
-        <p class="city">Ankara</p>
-        <p>Next Level, Kızılırmak Mah. Dumlupınar Bulvarı, Pasifik No:3C1/117</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
-        <span class="badge">✓ Yetkili Servis</span>
-    </div>
-
-    <div class="card service" data-city="Ankara">
-        <h3>Başarı Teknik Servis - Ankara</h3>
-        <p class="city">Ankara</p>
-        <p>Armada AVM, Beştepe Mah. Dumlupınar Bulvarı No:6/181, Yenimahalle</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
+        <p>Apple Yetkili Servis Sağlayıcısı</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
@@ -257,7 +204,6 @@ select {
         <p class="city">İstanbul</p>
         <p>Ataköy 7-8-9-10 Kısım Mah. Bedri Rahmi Eyüpoğlu Cad. No:4 K:1 D:1</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
@@ -266,7 +212,6 @@ select {
         <p class="city">İstanbul</p>
         <p>Galataport, Kılıç Ali Paşa Mah. Meclis-i Mebusan Cad.</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
@@ -275,16 +220,14 @@ select {
         <p class="city">İstanbul</p>
         <p>Metrocity AVM, Büyükdere Cad. No:171, 1. Levent</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
     <div class="card service" data-city="İstanbul">
         <h3>Troy Apple Yetkili Servis - Kanyon</h3>
         <p class="city">İstanbul</p>
-        <p>Kanyon AVM, Büyükdere Cad. No:185, Kat:-2, Levent</p>
+        <p>Kanyon AVM, Büyükdere Cad. No:185, Levent</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
@@ -296,9 +239,8 @@ select {
     <div class="card service" data-city="İzmir">
         <h3>Egemek</h3>
         <p class="city">İzmir</p>
-        <p>1385. Sokak, 3/Z-2, İzmir</p>
+        <p>1385. Sok. 3/Z-2, İzmir</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
@@ -307,16 +249,14 @@ select {
         <p class="city">İzmir</p>
         <p>Şair Eşref Bulvarı No:28B</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
     <div class="card service" data-city="İzmir">
         <h3>Troy Apple Yetkili Servis - Mavibahçe</h3>
         <p class="city">İzmir</p>
-        <p>Caner Dudayev Bulvarı No:40/Z12, A Blok, Mavibahçe AVM</p>
+        <p>Caner Dudayev Bulvarı No:40/Z12, A Blok Mavibahçe AVM</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
@@ -325,30 +265,6 @@ select {
         <p class="city">İzmir</p>
         <p>İzmir Optimum AVM, Beyazevler Mah. Akçay Cad. No:101/103</p>
         <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
-        <span class="badge">✓ Yetkili Servis</span>
-    </div>
-
-
-    <!-- BURSA -->
-
-    <h2 class="city-title">Bursa</h2>
-
-    <div class="card service" data-city="Bursa">
-        <h3>Troy Apple Yetkili Servis - Bursa Sur Yapı Marka</h3>
-        <p class="city">Bursa</p>
-        <p>Odunluk Mah. Akademi Cad. Sur Yapı Marka AVM No:6A</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
-        <span class="badge">✓ Yetkili Servis</span>
-    </div>
-
-    <div class="card service" data-city="Bursa">
-        <h3>Gürgençler - Bursa Korupark</h3>
-        <p class="city">Bursa</p>
-        <p>Emek Adnan Menderes, Korupark</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-        <p class="products">iPhone • Mac • iPad • Apple Watch • Apple TV • HomePod • iPod • Beats • AirPods</p>
         <span class="badge">✓ Yetkili Servis</span>
     </div>
 
