@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oppo Servisleri - Servis Rehberi</title>
+
+<title>Oppo Yetkili Servisleri - Servis Rehberi</title>
 
 <style>
 * {
@@ -29,6 +30,11 @@ header h1 {
     font-size: 28px;
 }
 
+header p {
+    margin: 8px 0 0;
+    opacity: 0.85;
+}
+
 .container {
     max-width: 900px;
     margin: auto;
@@ -43,6 +49,32 @@ header h1 {
     font-weight: bold;
 }
 
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
 .card {
     background: white;
     padding: 20px;
@@ -51,21 +83,31 @@ header h1 {
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
 }
 
-.card h2 {
+.card h3 {
     margin-top: 0;
+    font-size: 19px;
 }
 
 .card p {
+    margin: 8px 0;
     color: #6b7280;
 }
 
-select {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 16px;
-    background: white;
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.no-result {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
 }
 </style>
 </head>
@@ -73,80 +115,155 @@ select {
 <body>
 
 <header>
-    <h1>Oppo Servisleri</h1>
+    <h1>Oppo Yetkili Servisleri</h1>
+    <p>Türkiye Geneli</p>
 </header>
 
 <div class="container">
 
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
-<div class="card">
-    <h2>Şehir Seçiniz</h2>
+<div class="search-box">
+    <h2>Oppo Servisi Ara</h2>
 
-    <select id="citySelect" onchange="showCity()">
-        <option value="">Şehir seçiniz</option>
-        <option value="ankara">Ankara</option>
-        <option value="istanbul">İstanbul</option>
-        <option value="izmir">İzmir</option>
-        <option value="bursa">Bursa</option>
-        <option value="antalya">Antalya</option>
-    </select>
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir veya servis adı yazın..."
+        onkeyup="searchServices()"
+    >
 </div>
 
-<div id="cityResult"></div>
+<div id="services">
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Ankara</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+<div class="card service">
+    <h3>BDH Bilişim Destek Hizmetleri</h3>
+    <p class="city">Ankara</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+
+<h2 class="city-title">İstanbul</h2>
+
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">İstanbul</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+<div class="card service">
+    <h3>BDH Bilişim Destek Hizmetleri</h3>
+    <p class="city">İstanbul</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">İzmir</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+
+<h2 class="city-title">Bursa</h2>
+
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Bursa</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+
+<h2 class="city-title">Antalya</h2>
+
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Antalya</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+
+<h2 class="city-title">Adana</h2>
+
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Adana</p>
+    <p class="type">Oppo Yetkili Servis</p>
+</div>
+
+</div>
+
+<div id="noResult" class="no-result">
+    Aradığınız servis bulunamadı.
+</div>
 
 </div>
 
 <script>
-function showCity() {
 
-    const city = document.getElementById("citySelect").value;
-    const result = document.getElementById("cityResult");
+function searchServices() {
 
-    if (city === "") {
-        result.innerHTML = "";
-        return;
-    }
+    const search =
+        document.getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
 
-    if (city === "ankara") {
+    const services =
+        document.querySelectorAll(".service");
 
-        result.innerHTML = `
+    const titles =
+        document.querySelectorAll(".city-title");
 
-        <div class="card">
-            <h2>Ankara Oppo Yetkili Servisleri</h2>
-        </div>
+    let found = 0;
 
-        <div class="card">
-            <h2>KVK Teknik Servis - Ankara</h2>
-            <p><strong>İlçe:</strong> Çankaya</p>
-            <p><strong>Tür:</strong> Oppo Yetkili Servis</p>
-        </div>
+    services.forEach(function(service) {
 
-        <div class="card">
-            <h2>BDH Bilişim Destek Hizmetleri - Ankara</h2>
-            <p><strong>İlçe:</strong> Çankaya</p>
-            <p><strong>Tür:</strong> Oppo Yetkili Servis</p>
-        </div>
+        const text =
+            service.innerText.toLowerCase();
 
-        `;
+        if (text.includes(search)) {
+            service.style.display = "block";
+            found++;
+        } else {
+            service.style.display = "none";
+        }
+    });
 
-    } else {
+    titles.forEach(function(title) {
 
-        const names = {
-            istanbul: "İstanbul",
-            izmir: "İzmir",
-            bursa: "Bursa",
-            antalya: "Antalya"
-        };
+        let next = title.nextElementSibling;
+        let visible = false;
 
-        result.innerHTML = `
-        <div class="card">
-            <h2>${names[city]} Oppo Servisleri</h2>
-            <p>Bu şehirdeki yetkili servis bilgileri hazırlanıyor.</p>
-        </div>
-        `;
-    }
+        while (next && !next.classList.contains("city-title")) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+                visible = true;
+            }
+
+            next = next.nextElementSibling;
+        }
+
+        title.style.display = visible ? "block" : "none";
+    });
+
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
 }
+
 </script>
 
 </body>
