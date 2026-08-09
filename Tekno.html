@@ -69,12 +69,6 @@ input {
     font-size: 16px;
 }
 
-.city-title {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 23px;
-}
-
 .card {
     background: white;
     padding: 20px;
@@ -91,11 +85,6 @@ input {
 .card p {
     margin: 8px 0;
     color: #6b7280;
-}
-
-.city {
-    color: #2563eb !important;
-    font-weight: bold;
 }
 
 .type {
@@ -124,41 +113,75 @@ input {
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
 <div class="search-box">
+
     <h2>TECNO Servisi Ara</h2>
 
     <input
         type="text"
         id="searchBox"
-        placeholder="Şehir veya servis adı yazın..."
+        placeholder="Servis adı yazın..."
         onkeyup="searchServices()"
     >
+
 </div>
 
 <div id="services">
 
-<div class="card service">
-    <h3>KVK Teknik Servis</h3>
-    <p class="type">TECNO Yetkili Servis</p>
-    <p>Telefon ve mobil cihaz servisleri</p>
-</div>
+    <div class="card service">
 
-<div class="card service">
-    <h3>OUNO Yetkili Servis</h3>
-    <p class="type">TECNO Yetkili Servis</p>
-    <p>Telefon ve mobil cihaz servisleri</p>
-</div>
+        <h3>KVK Teknik Servis</h3>
 
-<div class="card service">
-    <h3>BDH Bilişim Destek Hizmetleri</h3>
-    <p class="type">TECNO Yetkili Servis</p>
-    <p>Telefon ve mobil cihaz servisleri</p>
-</div>
+        <p class="type">
+            TECNO Yetkili Servis
+        </p>
 
-<div class="card service">
-    <h3>ARENA Bilgisayar</h3>
-    <p class="type">TECNO Yetkili Servis</p>
-    <p>Bilgisayar ve ilgili ürün servisleri</p>
-</div>
+        <p>
+            Telefon ve mobil cihaz servisleri
+        </p>
+
+    </div>
+
+    <div class="card service">
+
+        <h3>OUNO Yetkili Servis</h3>
+
+        <p class="type">
+            TECNO Yetkili Servis
+        </p>
+
+        <p>
+            Telefon ve mobil cihaz servisleri
+        </p>
+
+    </div>
+
+    <div class="card service">
+
+        <h3>BDH Bilişim Destek Hizmetleri</h3>
+
+        <p class="type">
+            TECNO Yetkili Servis
+        </p>
+
+        <p>
+            Telefon ve mobil cihaz servisleri
+        </p>
+
+    </div>
+
+    <div class="card service">
+
+        <h3>ARENA Bilgisayar</h3>
+
+        <p class="type">
+            TECNO Yetkili Servis
+        </p>
+
+        <p>
+            Bilgisayar ve ilgili ürün servisleri
+        </p>
+
+    </div>
 
 </div>
 
@@ -173,7 +196,8 @@ input {
 function searchServices() {
 
     const search =
-        document.getElementById("searchBox")
+        document
+        .getElementById("searchBox")
         .value
         .toLowerCase()
         .trim();
@@ -189,14 +213,22 @@ function searchServices() {
             service.innerText.toLowerCase();
 
         if (text.includes(search)) {
+
             service.style.display = "block";
+
             found++;
+
         } else {
+
             service.style.display = "none";
+
         }
+
     });
 
-    document.getElementById("noResult").style.display =
+    document
+        .getElementById("noResult")
+        .style.display =
         found === 0 ? "block" : "none";
 }
 
