@@ -154,6 +154,7 @@ footer p + p {
 }
 
 @media (max-width: 600px) {
+
     .logo {
         font-size: 27px;
     }
@@ -189,12 +190,14 @@ footer p + p {
     </p>
 
     <div class="search">
+
         <input
             type="text"
             id="searchInput"
             placeholder="Marka ara... Örn: Vivo"
             onkeyup="searchBrand()"
         >
+
     </div>
 
 </section>
@@ -245,10 +248,10 @@ footer p + p {
             Sony
         </div>
 
-        <div class="brand" data-name="TECNO">
+        <a class="brand" data-name="TECNO" href="Tekno.html">
             <span>📱</span>
             TECNO
-        </div>
+        </a>
 
         <div class="brand" data-name="REEDER">
             <span>📱</span>
@@ -285,8 +288,13 @@ footer p + p {
 </main>
 
 <footer>
+
     <p>© 2026 Teknik Servis Rehberi</p>
-    <p>Türkiye'nin teknik servis rehberi</p>
+
+    <p>
+        Türkiye'nin teknik servis rehberi
+    </p>
+
 </footer>
 
 <script>
@@ -294,7 +302,8 @@ footer p + p {
 function searchBrand() {
 
     const filter =
-        document.getElementById("searchInput")
+        document
+        .getElementById("searchInput")
         .value
         .toLowerCase()
         .trim();
@@ -305,13 +314,18 @@ function searchBrand() {
     brands.forEach(function(brand) {
 
         const name =
-            brand.getAttribute("data-name")
+            brand
+            .getAttribute("data-name")
             .toLowerCase();
 
         if (name.includes(filter)) {
+
             brand.style.display = "block";
+
         } else {
+
             brand.style.display = "none";
+
         }
 
     });
