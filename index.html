@@ -69,7 +69,6 @@ header p {
     border-radius: 14px;
     font-size: 16px;
     outline: none;
-    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
 }
 
 .container {
@@ -108,7 +107,6 @@ header p {
 
 .brand:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
 }
 
 .brand span {
@@ -130,7 +128,6 @@ header p {
     border-radius: 16px;
     border: 1px solid #e2e8f0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.04);
 }
 
 .info-card h3 {
@@ -155,14 +152,10 @@ footer p + p {
     margin-top: 7px;
 }
 
-@media (max-width: 600px) {
+@media (max-width:600px) {
 
     .logo {
         font-size: 27px;
-    }
-
-    .hero {
-        padding: 35px 15px;
     }
 
     .hero h1 {
@@ -182,252 +175,199 @@ footer p + p {
 
 <header>
 
-    <div class="logo">
-        Teknik Servis Rehberi
-    </div>
+<div class="logo">
+    Teknik Servis Rehberi
+</div>
 
-    <p>
-        Türkiye'nin teknik servis rehberi
-    </p>
+<p>
+    Türkiye'nin teknik servis rehberi
+</p>
 
 </header>
 
 
 <section class="hero">
 
-    <h1>
-        Teknik Servisin Adresi
-    </h1>
+<h1>
+    Teknik Servisin Adresi
+</h1>
 
-    <p>
-        Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
-    </p>
+<p>
+    Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
+</p>
 
-    <div class="search">
+<div class="search">
 
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Marka ara... Örn: Apple"
-            onkeyup="searchBrand()"
-        >
+<input
+    type="text"
+    id="searchInput"
+    placeholder="Marka ara... Örn: Apple"
+    onkeyup="searchBrand()"
+>
 
-    </div>
+</div>
 
 </section>
 
 
 <main class="container">
 
-    <h2 class="section-title">
-        Markalar
-    </h2>
+<h2 class="section-title">
+    Markalar
+</h2>
+
+
+<div class="brands" id="brandList">
+
+
+<a
+class="brand"
+data-name="Apple"
+href="Apple.html"
+>
+<span>🍎</span>
+Apple
+</a>
 
 
-    <div class="brands" id="brandList">
+<a
+class="brand"
+data-name="Samsung"
+href="Samsung.html"
+>
+<span>📱</span>
+Samsung
+</a>
 
 
-        <!-- APPLE -->
+<a
+class="brand"
+data-name="Xiaomi"
+href="Xiaomi.html"
+>
+<span>📱</span>
+Xiaomi
+</a>
 
-        <a
-            class="brand"
-            data-name="Apple"
-            href="Apple.html"
-        >
 
-            <span>🍎</span>
+<a
+class="brand"
+data-name="Huawei"
+href="Huawei.html"
+>
+<span>📱</span>
+Huawei
+</a>
 
-            Apple
 
-        </a>
+<!-- OPPO BAĞLANDI -->
 
+<a
+class="brand"
+data-name="Oppo"
+href="Oppo.html"
+>
+<span>📱</span>
+Oppo
+</a>
 
-        <!-- SAMSUNG -->
 
-        <a
-            class="brand"
-            data-name="Samsung"
-            href="Samsung.html"
-        >
+<div
+class="brand"
+data-name="Vivo"
+>
+<span>📱</span>
+Vivo
+</div>
 
-            <span>📱</span>
 
-            Samsung
+<div
+class="brand"
+data-name="Nokia"
+>
+<span>📱</span>
+Nokia
+</div>
 
-        </a>
 
+<div
+class="brand"
+data-name="Sony"
+>
+<span>📱</span>
+Sony
+</div>
 
-        <!-- XIAOMI -->
 
-        <a
-            class="brand"
-            data-name="Xiaomi"
-            href="Xiaomi.html"
-        >
+<div
+class="brand"
+data-name="TECNO"
+>
+<span>📱</span>
+TECNO
+</div>
 
-            <span>📱</span>
 
-            Xiaomi
+<div
+class="brand"
+data-name="REEDER"
+>
+<span>📱</span>
+REEDER
+</div>
 
-        </a>
 
+</div>
 
-        <!-- HUAWEI -->
 
-        <a
-            class="brand"
-            data-name="Huawei"
-            href="Huawei.html"
-        >
+<div class="info">
 
-            <span>📱</span>
+<div class="info-card">
 
-            Huawei
+<h3>🔧 Yetkili Servisler</h3>
 
-        </a>
+<p>
+Markalara göre yetkili teknik servisleri bulun.
+</p>
 
+</div>
 
-        <!-- OPPO -->
 
-        <div
-            class="brand"
-            data-name="Oppo"
-        >
+<div class="info-card">
 
-            <span>📱</span>
+<h3>🇹🇷 Türkiye Geneli</h3>
 
-            Oppo
+<p>
+Türkiye genelindeki servis ağı tek yerde.
+</p>
 
-        </div>
+</div>
 
 
-        <!-- VIVO -->
+<div class="info-card">
 
-        <div
-            class="brand"
-            data-name="Vivo"
-        >
+<h3>❓ Sorun & Çözüm</h3>
 
-            <span>📱</span>
+<p>
+Teknik servis sorunları ve çözüm önerilerini keşfedin.
+</p>
 
-            Vivo
+</div>
 
-        </div>
-
-
-        <!-- NOKIA -->
-
-        <div
-            class="brand"
-            data-name="Nokia"
-        >
-
-            <span>📱</span>
-
-            Nokia
-
-        </div>
-
-
-        <!-- SONY -->
-
-        <div
-            class="brand"
-            data-name="Sony"
-        >
-
-            <span>📱</span>
-
-            Sony
-
-        </div>
-
-
-        <!-- TECNO -->
-
-        <div
-            class="brand"
-            data-name="TECNO"
-        >
-
-            <span>📱</span>
-
-            TECNO
-
-        </div>
-
-
-        <!-- REEDER -->
-
-        <div
-            class="brand"
-            data-name="REEDER"
-        >
-
-            <span>📱</span>
-
-            REEDER
-
-        </div>
-
-
-    </div>
-
-
-    <div class="info">
-
-        <div class="info-card">
-
-            <h3>
-                🔧 Yetkili Servisler
-            </h3>
-
-            <p>
-                Markalara göre yetkili teknik servisleri bulun.
-            </p>
-
-        </div>
-
-
-        <div class="info-card">
-
-            <h3>
-                🇹🇷 Türkiye Geneli
-            </h3>
-
-            <p>
-                Türkiye genelindeki servis ağı tek yerde.
-            </p>
-
-        </div>
-
-
-        <div class="info-card">
-
-            <h3>
-                ❓ Sorun & Çözüm
-            </h3>
-
-            <p>
-                Teknik servis sorunları ve çözüm önerilerini keşfedin.
-            </p>
-
-        </div>
-
-    </div>
+</div>
 
 </main>
 
 
 <footer>
 
-    <p>
-        © 2026 Teknik Servis Rehberi
-    </p>
+<p>
+© 2026 Teknik Servis Rehberi
+</p>
 
-    <p>
-        Türkiye'nin teknik servis rehberi
-    </p>
+<p>
+Türkiye'nin teknik servis rehberi
+</p>
 
 </footer>
 
@@ -436,32 +376,32 @@ footer p + p {
 
 function searchBrand() {
 
-    const input =
-        document.getElementById("searchInput");
+const input =
+document.getElementById("searchInput");
 
-    const filter =
-        input.value.toLowerCase().trim();
+const filter =
+input.value.toLowerCase().trim();
 
-    const brands =
-        document.querySelectorAll(".brand");
+const brands =
+document.querySelectorAll(".brand");
 
 
-    brands.forEach(function(brand) {
+brands.forEach(function(brand) {
 
-        const name =
-            brand.getAttribute("data-name").toLowerCase();
+const name =
+brand.getAttribute("data-name").toLowerCase();
 
-        if (name.includes(filter)) {
+if (name.includes(filter)) {
 
-            brand.style.display = "block";
+brand.style.display = "block";
 
-        } else {
+} else {
 
-            brand.style.display = "none";
+brand.style.display = "none";
 
-        }
+}
 
-    });
+});
 
 }
 
