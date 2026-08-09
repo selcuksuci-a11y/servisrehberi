@@ -22,7 +22,7 @@ header {
     background: #111827;
     color: white;
     text-align: center;
-    padding: 25px 15px;
+    padding: 28px 15px;
 }
 
 header h1 {
@@ -36,7 +36,7 @@ header p {
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 25px 15px;
 }
@@ -49,48 +49,59 @@ header p {
     font-weight: bold;
 }
 
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
 .search-box {
     background: white;
     padding: 20px;
-    border-radius: 14px;
+    border-radius: 15px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
 .search-box h2 {
     margin-top: 0;
 }
 
-input {
+input,
+select {
     width: 100%;
     padding: 14px;
+    margin-top: 10px;
     border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
+    background: white;
 }
 
 .city-title {
-    margin-top: 30px;
-    margin-bottom: 15px;
+    margin: 30px 0 15px;
     font-size: 23px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 14px;
+    border-radius: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
 .card h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
     font-size: 19px;
 }
 
 .card p {
-    margin: 8px 0;
+    margin: 7px 0;
     color: #6b7280;
+    line-height: 1.5;
 }
 
 .city {
@@ -103,11 +114,36 @@ input {
     font-weight: bold;
 }
 
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
 .no-result {
     display: none;
+    background: white;
+    padding: 25px;
     text-align: center;
-    padding: 20px;
-    color: #6b7280;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+@media (max-width:600px) {
+    header h1 {
+        font-size: 24px;
+    }
 }
 </style>
 </head>
@@ -115,96 +151,129 @@ input {
 <body>
 
 <header>
-    <h1>Vivo Yetkili Servisleri</h1>
-    <p>Türkiye Geneli</p>
+    <h1>📱 Vivo Yetkili Servisleri</h1>
+    <p>Türkiye Geneli - Servis Rehberi</p>
 </header>
 
 <div class="container">
 
-<a class="back" href="index.html">← Ana Sayfaya Dön</a>
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+<div class="info">
+    <strong>Vivo Yetkili Servis Rehberi</strong><br>
+    Türkiye genelindeki Vivo yetkili servis noktalarını
+    şehir veya servis adına göre arayabilirsiniz.
+</div>
 
 <div class="search-box">
+
     <h2>Vivo Servisi Ara</h2>
 
     <input
         type="text"
         id="searchBox"
-        placeholder="Şehir veya servis adı yazın..."
+        placeholder="Servis veya şehir yazın..."
         onkeyup="searchServices()"
     >
+
+    <select id="cityFilter" onchange="searchServices()">
+
+        <option value="">Tüm Türkiye</option>
+
+        <option value="Ankara">Ankara</option>
+        <option value="İstanbul">İstanbul</option>
+        <option value="İzmir">İzmir</option>
+        <option value="Bursa">Bursa</option>
+        <option value="Antalya">Antalya</option>
+        <option value="Adana">Adana</option>
+
+    </select>
+
+    <div id="serviceCount" class="count"></div>
+
 </div>
 
 <div id="services">
 
 <h2 class="city-title">Ankara</h2>
 
-<div class="card service">
+<div class="card service" data-city="Ankara">
     <h3>KVK Teknik Servis</h3>
     <p class="city">Ankara</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
-<div class="card service">
+<div class="card service" data-city="Ankara">
     <h3>BDH Bilişim Destek Hizmetleri</h3>
     <p class="city">Ankara</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
 <h2 class="city-title">İstanbul</h2>
 
-<div class="card service">
+<div class="card service" data-city="İstanbul">
     <h3>KVK Teknik Servis</h3>
     <p class="city">İstanbul</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
-<div class="card service">
+<div class="card service" data-city="İstanbul">
     <h3>BDH Bilişim Destek Hizmetleri</h3>
     <p class="city">İstanbul</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
 <h2 class="city-title">İzmir</h2>
 
-<div class="card service">
+<div class="card service" data-city="İzmir">
     <h3>KVK Teknik Servis</h3>
     <p class="city">İzmir</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
 <h2 class="city-title">Bursa</h2>
 
-<div class="card service">
+<div class="card service" data-city="Bursa">
     <h3>KVK Teknik Servis</h3>
     <p class="city">Bursa</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
 <h2 class="city-title">Antalya</h2>
 
-<div class="card service">
+<div class="card service" data-city="Antalya">
     <h3>KVK Teknik Servis</h3>
     <p class="city">Antalya</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
 <h2 class="city-title">Adana</h2>
 
-<div class="card service">
+<div class="card service" data-city="Adana">
     <h3>KVK Teknik Servis</h3>
     <p class="city">Adana</p>
     <p class="type">Vivo Yetkili Servis</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 </div>
 
 <div id="noResult" class="no-result">
-    Aradığınız servis bulunamadı.
+    Aradığınız Vivo yetkili servisi bulunamadı.
 </div>
 
 </div>
@@ -219,6 +288,11 @@ function searchServices() {
         .toLowerCase()
         .trim();
 
+    const city =
+        document.getElementById("cityFilter")
+        .value
+        .toLowerCase();
+
     const services =
         document.querySelectorAll(".service");
 
@@ -232,12 +306,23 @@ function searchServices() {
         const text =
             service.innerText.toLowerCase();
 
-        if (text.includes(search)) {
+        const serviceCity =
+            service.dataset.city.toLowerCase();
+
+        const searchMatch =
+            text.includes(search);
+
+        const cityMatch =
+            city === "" ||
+            serviceCity === city;
+
+        if (searchMatch && cityMatch) {
             service.style.display = "block";
             found++;
         } else {
             service.style.display = "none";
         }
+
     });
 
     titles.forEach(function(title) {
@@ -245,7 +330,10 @@ function searchServices() {
         let next = title.nextElementSibling;
         let visible = false;
 
-        while (next && !next.classList.contains("city-title")) {
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
 
             if (
                 next.classList.contains("service") &&
@@ -257,12 +345,19 @@ function searchServices() {
             next = next.nextElementSibling;
         }
 
-        title.style.display = visible ? "block" : "none";
+        title.style.display =
+            visible ? "block" : "none";
+
     });
 
     document.getElementById("noResult").style.display =
         found === 0 ? "block" : "none";
+
+    document.getElementById("serviceCount").innerText =
+        found + " servis listeleniyor";
 }
+
+searchServices();
 
 </script>
 
