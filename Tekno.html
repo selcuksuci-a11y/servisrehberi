@@ -6,6 +6,10 @@
 <title>Tekno Servisleri - Servis Rehberi</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -54,6 +58,15 @@ header h1 {
 .card p {
     color: #6b7280;
 }
+
+select {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
 </style>
 </head>
 
@@ -68,21 +81,49 @@ header h1 {
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
 <div class="card">
-    <h2>Tekno Yetkili Servis</h2>
-    <p>Tekno ürünleri için teknik servis bilgileri burada yer alacak.</p>
+    <h2>Şehir Seçiniz</h2>
+
+    <select id="citySelect" onchange="showCity()">
+        <option value="">Şehir seçiniz</option>
+        <option value="ankara">Ankara</option>
+        <option value="istanbul">İstanbul</option>
+        <option value="izmir">İzmir</option>
+        <option value="bursa">Bursa</option>
+        <option value="antalya">Antalya</option>
+    </select>
 </div>
 
-<div class="card">
-    <h2>Telefon Servisleri</h2>
-    <p>Telefon servis noktaları şehir seçerek listelenecek.</p>
-</div>
-
-<div class="card">
-    <h2>Diğer Ürün Servisleri</h2>
-    <p>Ürün ve servis bilgileri daha sonra eklenecek.</p>
-</div>
+<div id="cityResult"></div>
 
 </div>
+
+<script>
+function showCity() {
+
+    const city = document.getElementById("citySelect").value;
+    const result = document.getElementById("cityResult");
+
+    if (city === "") {
+        result.innerHTML = "";
+        return;
+    }
+
+    const names = {
+        ankara: "Ankara",
+        istanbul: "İstanbul",
+        izmir: "İzmir",
+        bursa: "Bursa",
+        antalya: "Antalya"
+    };
+
+    result.innerHTML = `
+        <div class="card">
+            <h2>${names[city]} Tekno Servisleri</h2>
+            <p>Bu şehirdeki yetkili servis bilgileri hazırlanıyor.</p>
+        </div>
+    `;
+}
+</script>
 
 </body>
 </html>
