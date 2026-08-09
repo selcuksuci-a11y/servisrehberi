@@ -6,7 +6,7 @@
 
   <title>Teknik Servis Rehberi | Türkiye'nin Teknik Servis Rehberi</title>
 
-  <meta name="description" content="Türkiye'nin teknik servis rehberi. Marka ve şehre göre teknik servisleri bulun.">
+  <meta name="description" content="Türkiye genelinde yetkili teknik servisleri bulun.">
 
   <style>
     * {
@@ -31,7 +31,6 @@
     .logo {
       font-size: 32px;
       font-weight: 800;
-      letter-spacing: -0.5px;
     }
 
     header p {
@@ -54,7 +53,6 @@
 
     .hero p {
       color: #64748b;
-      font-size: 16px;
       margin-bottom: 25px;
     }
 
@@ -71,10 +69,6 @@
       font-size: 16px;
       outline: none;
       box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
-    }
-
-    .search input:focus {
-      border-color: #475569;
     }
 
     .container {
@@ -124,7 +118,7 @@
       margin-top: 40px;
       background: white;
       border-radius: 18px;
-      padding: 28px 20px;
+      padding: 30px 20px;
       border: 1px solid #e2e8f0;
       box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
     }
@@ -134,26 +128,39 @@
     }
 
     .service-title {
-      font-size: 25px;
+      font-size: 27px;
       margin-bottom: 10px;
     }
 
     .service-description {
       color: #64748b;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .notice {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
       margin-bottom: 22px;
-      line-height: 1.5;
+    }
+
+    .notice strong {
+      display: block;
+      margin-bottom: 8px;
     }
 
     .service-card {
       border: 1px solid #e2e8f0;
       border-radius: 14px;
-      padding: 20px;
-      margin-top: 12px;
-      background: #f8fafc;
+      padding: 22px;
+      margin-top: 14px;
+      background: #ffffff;
     }
 
     .service-card h3 {
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
 
     .service-card p {
@@ -161,10 +168,32 @@
       line-height: 1.5;
     }
 
+    .verified {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 7px 11px;
+      border-radius: 20px;
+      background: #ecfdf5;
+      color: #047857;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .official-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 13px 18px;
+      border-radius: 10px;
+      background: #0f172a;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     .back-button {
       margin-top: 20px;
       border: none;
-      background: #0f172a;
+      background: #64748b;
       color: white;
       padding: 12px 18px;
       border-radius: 10px;
@@ -241,7 +270,7 @@
     <h1>Teknik Servisin Adresi</h1>
 
     <p>
-      Markanı seç, teknik servis bilgilerine kolayca ulaş.
+      Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
     </p>
 
     <div class="search">
@@ -314,26 +343,50 @@
 
     <section id="appleServices" class="service-section">
 
-      <h2 class="service-title">🍎 Apple Teknik Servisleri</h2>
+      <h2 class="service-title">🍎 Apple Yetkili Servisleri</h2>
 
       <p class="service-description">
-        Apple cihazlarınız için teknik servis bilgilerini burada bulabilirsiniz.
-        Şehir seçerek size uygun servisi bulma sistemi sonraki aşamada eklenecek.
+        Türkiye genelinde Apple ürünlerine hizmet veren yetkili servis
+        sağlayıcılarını burada bulabileceksiniz.
       </p>
 
-      <div class="service-card">
-        <h3>Apple Yetkili Servis</h3>
+      <div class="notice">
+        <strong>🇹🇷 Türkiye Geneli</strong>
+
         <p>
-          Apple cihazlarınızın bakım, onarım ve teknik servis işlemleri için
-          servis bilgileri.
+          Şehir seçimi yok. Apple'a ait yetkili servis sağlayıcıları
+          Türkiye genelinde tek bir rehber içerisinde listelenecek.
         </p>
       </div>
 
       <div class="service-card">
-        <h3>Apple Servis Arama</h3>
+        <h3>Apple Yetkili Servis Sağlayıcısı</h3>
+
         <p>
-          iPhone, iPad, Mac ve diğer Apple ürünleri için servis seçenekleri.
+          Yetkili servislerin adı, adresi, telefon bilgisi ve internet sitesi
+          doğrulanmış kaynaklardan eklenir.
         </p>
+
+        <span class="verified">
+          ✓ Yetkili servis bilgisi doğrulanacak
+        </span>
+      </div>
+
+      <div class="service-card">
+        <h3>Apple Servis ve Destek</h3>
+
+        <p>
+          Apple'ın resmi servis bulma sistemi üzerinden Türkiye'deki
+          servis ve destek seçeneklerine ulaşabilirsiniz.
+        </p>
+
+        <a
+          class="official-button"
+          href="https://locate.apple.com/tr/tr/service/"
+          target="_blank"
+        >
+          Resmî Apple Servis Bul
+        </a>
       </div>
 
       <button class="back-button" onclick="hideApple()">
@@ -345,16 +398,16 @@
     <div class="info">
 
       <div class="info-card">
-        <h3>🔧 Teknik Servisler</h3>
+        <h3>🔧 Yetkili Servisler</h3>
         <p>
-          Türkiye genelindeki teknik servis bilgilerine ulaşın.
+          Markalara göre yetkili teknik servisleri bulun.
         </p>
       </div>
 
       <div class="info-card">
-        <h3>📍 Şehre Göre Ara</h3>
+        <h3>🇹🇷 Türkiye Geneli</h3>
         <p>
-          Bulunduğunuz şehre göre servisleri kolayca bulun.
+          Şehir şehir değil, Türkiye genelindeki servis ağı tek yerde.
         </p>
       </div>
 
@@ -375,38 +428,64 @@
   </footer>
 
   <script>
+
     function searchBrand() {
-      const input = document.getElementById("searchInput");
-      const filter = input.value.toLowerCase();
-      const brands = document.querySelectorAll(".brand");
+
+      const input =
+        document.getElementById("searchInput");
+
+      const filter =
+        input.value.toLowerCase();
+
+      const brands =
+        document.querySelectorAll(".brand");
 
       brands.forEach(function(brand) {
-        const name = brand.getAttribute("data-name").toLowerCase();
+
+        const name =
+          brand.getAttribute("data-name").toLowerCase();
 
         if (name.includes(filter)) {
+
           brand.style.display = "block";
+
         } else {
+
           brand.style.display = "none";
+
         }
+
       });
+
     }
 
     function showApple() {
-      document.getElementById("appleServices").classList.add("active");
 
-      document.getElementById("appleServices").scrollIntoView({
-        behavior: "smooth"
-      });
+      document
+        .getElementById("appleServices")
+        .classList.add("active");
+
+      document
+        .getElementById("appleServices")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
     }
 
     function hideApple() {
-      document.getElementById("appleServices").classList.remove("active");
+
+      document
+        .getElementById("appleServices")
+        .classList.remove("active");
 
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
+
     }
+
   </script>
 
 </body>
