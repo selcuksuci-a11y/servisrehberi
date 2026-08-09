@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -45,26 +44,6 @@ header h1 {
     font-weight: bold;
 }
 
-.search-box {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-}
-
-.search-box h2 {
-    margin-top: 0;
-}
-
-input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 16px;
-}
-
 .card {
     background: white;
     padding: 20px;
@@ -77,13 +56,34 @@ input {
     margin-top: 0;
 }
 
-.city {
-    color: #2563eb;
-    font-weight: bold;
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
-.type {
+.city {
+    display: block;
+    background: white;
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.city:hover {
+    transform: translateY(-2px);
+}
+
+.info {
     color: #6b7280;
+    line-height: 1.5;
 }
 </style>
 </head>
@@ -92,95 +92,383 @@ input {
 
 <header>
     <h1>Apple Yetkili Servisleri</h1>
+    <p>Türkiye Geneli</p>
 </header>
 
 <div class="container">
 
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
-<div class="search-box">
+<div class="card">
     <h2>Apple Servisi Ara</h2>
+
+    <p class="info">
+        Şehrinizi seçin. Apple'ın resmi servis bulucusunda
+        o şehirdeki güncel yetkili servis noktalarını görebilirsiniz.
+    </p>
 
     <input
         type="text"
         id="search"
-        placeholder="Şehir veya servis adı yazın..."
-        onkeyup="searchServices()"
+        placeholder="Şehir ara..."
+        onkeyup="searchCities()"
     >
 </div>
 
-<div id="services">
+<div id="cities">
 
-    <div class="card service">
-        <h2>Gürgençler</h2>
-        <p class="city">Ankara</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Adana">
+Adana
+</a>
 
-    <div class="card service">
-        <h2>KVK Teknik Servis</h2>
-        <p class="city">Ankara</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Ad%C4%B1yaman">
+Adıyaman
+</a>
 
-    <div class="card service">
-        <h2>Başarı Teknik Servis</h2>
-        <p class="city">Ankara</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Afyonkarahisar">
+Afyonkarahisar
+</a>
 
-    <div class="card service">
-        <h2>Egemek</h2>
-        <p class="city">İzmir</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=A%C4%9Fr%C4%B1">
+Ağrı
+</a>
 
-    <div class="card service">
-        <h2>Başarı Teknik Servis - İzmir</h2>
-        <p class="city">İzmir</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Aksaray">
+Aksaray
+</a>
 
-    <div class="card service">
-        <h2>Troy Apple Yetkili Servis - Mavibahçe</h2>
-        <p class="city">İzmir</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Amasya">
+Amasya
+</a>
 
-    <div class="card service">
-        <h2>Gürgençler - İzmir Optimum</h2>
-        <p class="city">İzmir</p>
-        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
-    </div>
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Ankara">
+Ankara
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Antalya">
+Antalya
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Ardahan">
+Ardahan
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Artvin">
+Artvin
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Ayd%C4%B1n">
+Aydın
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bal%C4%B1kesir">
+Balıkesir
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bart%C4%B1n">
+Bartın
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Batman">
+Batman
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bayburt">
+Bayburt
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bilecik">
+Bilecik
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bing%C3%B6l">
+Bingöl
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bitlis">
+Bitlis
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bolu">
+Bolu
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Burdur">
+Burdur
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Bursa">
+Bursa
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C3%87anakkale">
+Çanakkale
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C3%87ank%C4%B1r%C4%B1">
+Çankırı
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C3%87orum">
+Çorum
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Denizli">
+Denizli
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Diyarbak%C4%B1r">
+Diyarbakır
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=D%C3%BCzce">
+Düzce
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Edirne">
+Edirne
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Elaz%C4%B1%C4%9F">
+Elazığ
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Erzincan">
+Erzincan
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Erzurum">
+Erzurum
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Eski%C5%9Fehir">
+Eskişehir
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Gaziantep">
+Gaziantep
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Giresun">
+Giresun
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=G%C3%BCm%C3%BC%C5%9Fhane">
+Gümüşhane
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Hakkari">
+Hakkari
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Hatay">
+Hatay
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=I%C4%9Fd%C4%B1r">
+Iğdır
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Isparta">
+Isparta
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C4%B0stanbul">
+İstanbul
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C4%B0zmir">
+İzmir
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Kahramanmara%C5%9F">
+Kahramanmaraş
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Karab%C3%BCk">
+Karabük
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Karaman">
+Karaman
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Kars">
+Kars
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Kastamonu">
+Kastamonu
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Kayseri">
+Kayseri
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Kilis">
+Kilis
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=K%C4%B1r%C4%B1kkale">
+Kırıkkale
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=K%C4%B1rklareli">
+Kırklareli
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=K%C4%B1r%C5%9Fehir">
+Kırşehir
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Kocaeli">
+Kocaeli
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Konya">
+Konya
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=K%C3%BCtahya">
+Kütahya
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Malatya">
+Malatya
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Manisa">
+Manisa
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Mardin">
+Mardin
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Mersin">
+Mersin
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Mu%C4%9Fla">
+Muğla
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Muş">
+Muş
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Nev%C5%9Fehir">
+Nevşehir
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Ni%C4%9Fde">
+Niğde
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Ordu">
+Ordu
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Osmaniye">
+Osmaniye
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Rize">
+Rize
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Sakarya">
+Sakarya
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Samsun">
+Samsun
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Siirt">
+Siirt
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Sinop">
+Sinop
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Sivas">
+Sivas
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C5%9Eanl%C4%B1urfa">
+Şanlıurfa
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=%C5%9E%C4%B1rnak">
+Şırnak
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Tekirda%C4%9F">
+Tekirdağ
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Tokat">
+Tokat
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Trabzon">
+Trabzon
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Tunceli">
+Tunceli
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=U%C5%9Fak">
+Uşak
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Van">
+Van
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Yalova">
+Yalova
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Yozgat">
+Yozgat
+</a>
+
+<a class="city" href="https://locate.apple.com/tr/tr/service?address=Zonguldak">
+Zonguldak
+</a>
 
 </div>
 
 </div>
 
 <script>
+function searchCities() {
 
-function searchServices() {
+    const search =
+        document.getElementById("search").value
+        .toLowerCase()
+        .trim();
 
-    const searchText =
-        document.getElementById("search").value.toLowerCase();
+    const cities =
+        document.querySelectorAll(".city");
 
-    const services =
-        document.querySelectorAll(".service");
+    cities.forEach(function(city) {
 
-    services.forEach(function(service) {
+        const name =
+            city.innerText.toLowerCase();
 
-        const text =
-            service.innerText.toLowerCase();
-
-        if (text.includes(searchText)) {
-            service.style.display = "block";
+        if (name.includes(search)) {
+            city.style.display = "block";
         } else {
-            service.style.display = "none";
+            city.style.display = "none";
         }
 
     });
 }
-
 </script>
 
 </body>
