@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Teknik Servis Rehberi</title>
+<title>Servis Rehberi | Türkiye'nin Teknik Servis Rehberi</title>
+
+<meta name="description" content="Türkiye'nin teknik servis rehberi. Teknik servisler, servis sorunları, marka servisleri ve çözüm önerileri.">
 
 <style>
 * {
@@ -21,95 +23,107 @@ body {
 header {
     background: #111827;
     color: white;
+    padding: 25px 20px;
     text-align: center;
-    padding: 22px 15px 28px;
 }
 
-/* BRİKO LOGOSU */
 .logo {
-    width: 110px;
-    height: 110px;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto 10px;
+    font-size: 42px;
+    margin-bottom: 5px;
 }
 
 header h1 {
-    margin: 0;
+    margin: 5px 0;
     font-size: 30px;
 }
 
 header p {
     margin: 8px 0 0;
-    font-size: 15px;
-    opacity: 0.85;
-}
-
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 25px 15px;
+    color: #d1d5db;
 }
 
 .search-box {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 25px auto;
+    display: flex;
+    gap: 10px;
+    padding: 0 15px;
 }
 
-.search-box h2 {
-    margin-top: 0;
-    font-size: 20px;
-}
-
-select {
-    width: 100%;
-    padding: 14px;
+.search-box input {
+    flex: 1;
+    padding: 15px;
     border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
-    background: white;
 }
 
-.section-title {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 23px;
-}
-
-.brands {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-}
-
-.brand {
-    background: white;
-    padding: 18px 10px;
-    border-radius: 12px;
-    text-align: center;
-    font-weight: bold;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+.search-box button {
+    padding: 15px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
-    transition: 0.2s;
 }
 
-.brand:hover {
-    transform: translateY(-2px);
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.welcome {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.card .icon {
+    font-size: 38px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #6b7280;
+    line-height: 1.5;
 }
 
 footer {
+    margin-top: 40px;
+    background: #111827;
+    color: #d1d5db;
     text-align: center;
-    padding: 30px 15px;
-    color: #6b7280;
-    font-size: 14px;
+    padding: 25px;
 }
 
-@media (min-width: 600px) {
-    .brands {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.briko {
+    font-size: 18px;
+    margin-top: 10px;
 }
 </style>
 </head>
@@ -118,102 +132,108 @@ footer {
 
 <header>
 
-    <img src="briko.png" alt="Briko" class="logo">
+    <div class="logo">🦦</div>
 
-    <h1>Teknik Servis Rehberi</h1>
+    <h1>Servis Rehberi</h1>
 
     <p>Türkiye'nin teknik servis rehberi</p>
 
 </header>
 
-<div class="container">
+<div class="search-box">
 
-    <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Servis, marka veya sorun ara..."
+    >
 
-        <h2>Marka Seçiniz</h2>
-
-        <select onchange="goToBrand(this.value)">
-
-            <option value="">Marka seçiniz</option>
-
-            <option value="Apple.html">Apple</option>
-
-            <option value="Samsung.html">Samsung</option>
-
-            <option value="Xiaomi.html">Xiaomi</option>
-
-            <option value="Huawei.html">Huawei</option>
-
-            <option value="Oppo.html">Oppo</option>
-
-            <option value="Vivo.html">Vivo</option>
-
-            <option value="tecno.html">TECNO</option>
-
-            <option value="reeder.html">REEDER</option>
-
-        </select>
-
-    </div>
-
-
-    <h2 class="section-title">Popüler Markalar</h2>
-
-
-    <div class="brands">
-
-        <div class="brand" onclick="goToBrand('Apple.html')">
-            Apple
-        </div>
-
-        <div class="brand" onclick="goToBrand('Samsung.html')">
-            Samsung
-        </div>
-
-        <div class="brand" onclick="goToBrand('Xiaomi.html')">
-            Xiaomi
-        </div>
-
-        <div class="brand" onclick="goToBrand('Huawei.html')">
-            Huawei
-        </div>
-
-        <div class="brand" onclick="goToBrand('Oppo.html')">
-            Oppo
-        </div>
-
-        <div class="brand" onclick="goToBrand('Vivo.html')">
-            Vivo
-        </div>
-
-        <div class="brand" onclick="goToBrand('tecno.html')">
-            TECNO
-        </div>
-
-        <div class="brand" onclick="goToBrand('reeder.html')">
-            REEDER
-        </div>
-
-    </div>
+    <button onclick="searchService()">Ara</button>
 
 </div>
 
+<main class="container">
+
+    <section class="welcome">
+
+        <h2>Teknik servis arıyorsan doğru yerdesin.</h2>
+
+        <p>
+            Servis Rehberi; teknik servisleri, servis sorunlarını,
+            marka servislerini ve çözüm önerilerini tek bir yerde
+            buluşturmayı amaçlayan yeni nesil servis rehberidir.
+        </p>
+
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">🔧</div>
+            <h3>Teknik Servisler</h3>
+            <p>
+                Türkiye genelindeki teknik servisleri keşfet.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">📱</div>
+            <h3>Marka Servisleri</h3>
+            <p>
+                Apple, Samsung, Xiaomi ve daha birçok marka.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">❓</div>
+            <h3>Sorun & Çözüm</h3>
+            <p>
+                Teknik servis sorunları ve çözüm önerilerini incele.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">💬</div>
+            <h3>Soru & Cevap</h3>
+            <p>
+                Servis deneyimlerini paylaş ve sorularına cevap bul.
+            </p>
+        </div>
+
+    </section>
+
+</main>
 
 <footer>
-    © 2026 Teknik Servis Rehberi
-</footer>
 
+    <strong>Servis Rehberi</strong>
+
+    <div class="briko">
+        🦦 Briko ile daha kolay servis keşfet.
+    </div>
+
+    <p>© 2026 Servis Rehberi</p>
+
+</footer>
 
 <script>
 
-function goToBrand(page) {
+function searchService() {
 
-    if (page !== "") {
+    const input =
+        document.getElementById("searchInput").value.trim();
 
-        window.location.href = page;
+    if (input === "") {
 
+        alert("Lütfen bir servis, marka veya sorun yazın.");
+
+        return;
     }
 
+    alert(
+        '"' + input +
+        '" için servis arama sistemi yakında aktif olacak.'
+    );
 }
 
 </script>
