@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apple Servisleri - Servis Rehberi</title>
+
+<title>Apple Yetkili Servisleri - Servis Rehberi</title>
 
 <style>
 * {
@@ -43,6 +45,26 @@ header h1 {
     font-weight: bold;
 }
 
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
 .card {
     background: white;
     padding: 20px;
@@ -55,17 +77,13 @@ header h1 {
     margin-top: 0;
 }
 
-.card p {
-    color: #6b7280;
+.city {
+    color: #2563eb;
+    font-weight: bold;
 }
 
-select {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 16px;
-    background: white;
+.type {
+    color: #6b7280;
 }
 </style>
 </head>
@@ -73,87 +91,96 @@ select {
 <body>
 
 <header>
-    <h1>Apple Servisleri</h1>
+    <h1>Apple Yetkili Servisleri</h1>
 </header>
 
 <div class="container">
 
 <a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
-<div class="card">
-    <h2>Şehir Seçiniz</h2>
+<div class="search-box">
+    <h2>Apple Servisi Ara</h2>
 
-    <select id="citySelect" onchange="showCity()">
-        <option value="">Şehir seçiniz</option>
-        <option value="ankara">Ankara</option>
-        <option value="istanbul">İstanbul</option>
-        <option value="izmir">İzmir</option>
-        <option value="bursa">Bursa</option>
-        <option value="antalya">Antalya</option>
-    </select>
+    <input
+        type="text"
+        id="search"
+        placeholder="Şehir veya servis adı yazın..."
+        onkeyup="searchServices()"
+    >
 </div>
 
-<div id="cityResult"></div>
+<div id="services">
+
+    <div class="card service">
+        <h2>Gürgençler</h2>
+        <p class="city">Ankara</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+    <div class="card service">
+        <h2>KVK Teknik Servis</h2>
+        <p class="city">Ankara</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+    <div class="card service">
+        <h2>Başarı Teknik Servis</h2>
+        <p class="city">Ankara</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+    <div class="card service">
+        <h2>Egemek</h2>
+        <p class="city">İzmir</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+    <div class="card service">
+        <h2>Başarı Teknik Servis - İzmir</h2>
+        <p class="city">İzmir</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+    <div class="card service">
+        <h2>Troy Apple Yetkili Servis - Mavibahçe</h2>
+        <p class="city">İzmir</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+    <div class="card service">
+        <h2>Gürgençler - İzmir Optimum</h2>
+        <p class="city">İzmir</p>
+        <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
+    </div>
+
+</div>
 
 </div>
 
 <script>
-function showCity() {
 
-    const city = document.getElementById("citySelect").value;
-    const result = document.getElementById("cityResult");
+function searchServices() {
 
-    if (city === "") {
-        result.innerHTML = "";
-        return;
-    }
+    const searchText =
+        document.getElementById("search").value.toLowerCase();
 
-    if (city === "ankara") {
+    const services =
+        document.querySelectorAll(".service");
 
-        result.innerHTML = `
+    services.forEach(function(service) {
 
-        <div class="card">
-            <h2>Ankara Apple Yetkili Servisleri</h2>
-        </div>
+        const text =
+            service.innerText.toLowerCase();
 
-        <div class="card">
-            <h2>Gürgençler - Ankamall</h2>
-            <p><strong>İlçe:</strong> Yenimahalle</p>
-            <p><strong>Adres:</strong> Ankamall AVM</p>
-            <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-        </div>
+        if (text.includes(searchText)) {
+            service.style.display = "block";
+        } else {
+            service.style.display = "none";
+        }
 
-        <div class="card">
-            <h2>KVK Teknik Servis - Ankara</h2>
-            <p><strong>İlçe:</strong> Çankaya</p>
-            <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-        </div>
-
-        <div class="card">
-            <h2>Başarı Teknik Servis - Ankara</h2>
-            <p><strong>İlçe:</strong> Yenimahalle</p>
-            <p><strong>Tür:</strong> Apple Yetkili Servis Sağlayıcısı</p>
-        </div>
-
-        `;
-
-    } else {
-
-        const names = {
-            istanbul: "İstanbul",
-            izmir: "İzmir",
-            bursa: "Bursa",
-            antalya: "Antalya"
-        };
-
-        result.innerHTML = `
-        <div class="card">
-            <h2>${names[city]} Apple Servisleri</h2>
-            <p>Bu şehirdeki yetkili servis bilgileri hazırlanıyor.</p>
-        </div>
-        `;
-    }
+    });
 }
+
 </script>
 
 </body>
