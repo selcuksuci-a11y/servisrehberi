@@ -17,114 +17,175 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      color: #1f2937;
+      background: #f1f5f9;
+      color: #172033;
     }
 
     header {
-      background: #111827;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
-      padding: 25px 15px;
+      padding: 32px 18px;
       text-align: center;
     }
 
     .logo {
       font-size: 32px;
-      font-weight: bold;
+      font-weight: 800;
+      letter-spacing: -0.5px;
     }
 
     header p {
-      font-size: 15px;
-      color: #d1d5db;
       margin-top: 8px;
+      color: #cbd5e1;
+      font-size: 15px;
     }
 
     .hero {
       background: white;
       text-align: center;
-      padding: 35px 15px;
-      border-bottom: 1px solid #e5e7eb;
+      padding: 45px 18px;
+      border-bottom: 1px solid #e2e8f0;
     }
 
     .hero h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
+      font-size: 32px;
+      margin-bottom: 12px;
     }
 
     .hero p {
-      color: #6b7280;
-      margin-bottom: 20px;
+      color: #64748b;
+      font-size: 16px;
+      margin-bottom: 25px;
     }
 
     .search {
-      max-width: 600px;
+      max-width: 650px;
       margin: auto;
     }
 
     .search input {
       width: 100%;
-      padding: 15px;
-      border: 1px solid #d1d5db;
-      border-radius: 10px;
+      padding: 17px 20px;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
       font-size: 16px;
       outline: none;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.06);
+    }
+
+    .search input:focus {
+      border-color: #475569;
     }
 
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 30px 15px;
+      padding: 38px 18px;
     }
 
     .section-title {
       text-align: center;
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 25px;
     }
 
     .brands {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+      gap: 16px;
     }
 
     .brand {
       background: white;
-      border-radius: 12px;
-      padding: 22px 15px;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px 12px;
       text-align: center;
-      font-size: 18px;
-      font-weight: bold;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      font-size: 17px;
+      font-weight: 700;
       cursor: pointer;
+      box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
       transition: 0.2s;
     }
 
     .brand:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.10);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
     }
 
     .brand span {
       display: block;
-      font-size: 30px;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .service-section {
+      display: none;
+      margin-top: 40px;
+      background: white;
+      border-radius: 18px;
+      padding: 28px 20px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.07);
+    }
+
+    .service-section.active {
+      display: block;
+    }
+
+    .service-title {
+      font-size: 25px;
+      margin-bottom: 10px;
+    }
+
+    .service-description {
+      color: #64748b;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    .service-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 12px;
+      background: #f8fafc;
+    }
+
+    .service-card h3 {
       margin-bottom: 8px;
     }
 
+    .service-card p {
+      color: #64748b;
+      line-height: 1.5;
+    }
+
+    .back-button {
+      margin-top: 20px;
+      border: none;
+      background: #0f172a;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
     .info {
-      margin-top: 35px;
+      margin-top: 40px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
+      gap: 16px;
     }
 
     .info-card {
       background: white;
-      padding: 25px;
-      border-radius: 12px;
-      border: 1px solid #e5e7eb;
+      padding: 26px 20px;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
       text-align: center;
+      box-shadow: 0 5px 15px rgba(15, 23, 42, 0.04);
     }
 
     .info-card h3 {
@@ -132,17 +193,21 @@
     }
 
     .info-card p {
-      color: #6b7280;
+      color: #64748b;
       line-height: 1.5;
     }
 
     footer {
-      margin-top: 30px;
-      background: #111827;
-      color: #d1d5db;
+      margin-top: 35px;
+      background: #0f172a;
+      color: #cbd5e1;
       text-align: center;
-      padding: 25px 15px;
+      padding: 28px 15px;
       font-size: 14px;
+    }
+
+    footer p + p {
+      margin-top: 7px;
     }
 
     @media (max-width: 600px) {
@@ -150,8 +215,16 @@
         font-size: 27px;
       }
 
+      .hero {
+        padding: 35px 15px;
+      }
+
       .hero h1 {
-        font-size: 23px;
+        font-size: 25px;
+      }
+
+      .brands {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
   </style>
@@ -165,17 +238,17 @@
   </header>
 
   <section class="hero">
-    <h1>Türkiye'nin Teknik Servis Rehberi</h1>
+    <h1>Teknik Servisin Adresi</h1>
 
     <p>
-      Markanızı seçin, teknik servis bilgilerine ulaşın.
+      Markanı seç, teknik servis bilgilerine kolayca ulaş.
     </p>
 
     <div class="search">
       <input
         type="text"
         id="searchInput"
-        placeholder="Marka ara..."
+        placeholder="Marka ara... Örn: Apple"
         onkeyup="searchBrand()"
       >
     </div>
@@ -187,7 +260,7 @@
 
     <div class="brands" id="brandList">
 
-      <div class="brand" data-name="Apple">
+      <div class="brand" data-name="Apple" onclick="showApple()">
         <span>🍎</span>
         Apple
       </div>
@@ -239,6 +312,36 @@
 
     </div>
 
+    <section id="appleServices" class="service-section">
+
+      <h2 class="service-title">🍎 Apple Teknik Servisleri</h2>
+
+      <p class="service-description">
+        Apple cihazlarınız için teknik servis bilgilerini burada bulabilirsiniz.
+        Şehir seçerek size uygun servisi bulma sistemi sonraki aşamada eklenecek.
+      </p>
+
+      <div class="service-card">
+        <h3>Apple Yetkili Servis</h3>
+        <p>
+          Apple cihazlarınızın bakım, onarım ve teknik servis işlemleri için
+          servis bilgileri.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Apple Servis Arama</h3>
+        <p>
+          iPhone, iPad, Mac ve diğer Apple ürünleri için servis seçenekleri.
+        </p>
+      </div>
+
+      <button class="back-button" onclick="hideApple()">
+        ← Markalara Dön
+      </button>
+
+    </section>
+
     <div class="info">
 
       <div class="info-card">
@@ -285,6 +388,23 @@
         } else {
           brand.style.display = "none";
         }
+      });
+    }
+
+    function showApple() {
+      document.getElementById("appleServices").classList.add("active");
+
+      document.getElementById("appleServices").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    function hideApple() {
+      document.getElementById("appleServices").classList.remove("active");
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
       });
     }
   </script>
