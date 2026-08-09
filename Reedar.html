@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Reeder Servisleri - Servis Rehberi</title>
 
@@ -108,22 +109,40 @@ function showCity() {
         return;
     }
 
-    const names = {
-        ankara: "Ankara",
-        istanbul: "İstanbul",
-        izmir: "İzmir",
-        bursa: "Bursa",
-        antalya: "Antalya"
-    };
+    if (city === "ankara") {
 
-    result.innerHTML = `
+        result.innerHTML = `
+
+        <div class="card">
+            <h2>Ankara Reeder Yetkili Servisi</h2>
+        </div>
+
+        <div class="card">
+            <h2>KVK Teknik Servis - Ankara</h2>
+            <p><strong>İlçe:</strong> Çankaya</p>
+            <p><strong>Tür:</strong> Reeder Yetkili Servis</p>
+        </div>
+
+        `;
+
+    } else {
+
+        const names = {
+            istanbul: "İstanbul",
+            izmir: "İzmir",
+            bursa: "Bursa",
+            antalya: "Antalya"
+        };
+
+        result.innerHTML = `
         <div class="card">
             <h2>${names[city]} Reeder Servisleri</h2>
             <p>Bu şehirdeki yetkili servis bilgileri hazırlanıyor.</p>
         </div>
-    `;
+        `;
+    }
 }
 </script>
 
 </body>
-</html>u
+</html>
