@@ -1,175 +1,114 @@
+
 <!DOCTYPE html>
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Teknik Servis Rehberi | Türkiye'nin Teknik Servis Rehberi</title>
-
-<meta name="description" content="Türkiye genelinde yetkili teknik servisleri bulun.">
+<title>REEDER Yetkili Servisleri - Servis Rehberi</title>
 
 <style>
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    color: #172033;
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
 header {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background: #111827;
     color: white;
-    padding: 32px 18px;
     text-align: center;
+    padding: 25px 15px;
 }
 
-.logo {
-    font-size: 32px;
-    font-weight: 800;
+header h1 {
+    margin: 0;
+    font-size: 28px;
 }
 
 header p {
-    margin-top: 8px;
-    color: #cbd5e1;
-    font-size: 15px;
-}
-
-.hero {
-    background: white;
-    text-align: center;
-    padding: 45px 18px;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.hero h1 {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.hero p {
-    color: #64748b;
-    margin-bottom: 25px;
-}
-
-.search {
-    max-width: 650px;
-    margin: auto;
-}
-
-.search input {
-    width: 100%;
-    padding: 17px 20px;
-    border: 1px solid #cbd5e1;
-    border-radius: 14px;
-    font-size: 16px;
-    outline: none;
+    margin: 8px 0 0;
+    opacity: 0.85;
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 900px;
     margin: auto;
-    padding: 38px 18px;
+    padding: 25px 15px;
 }
 
-.section-title {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 25px;
-}
-
-.brands {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
-    gap: 16px;
-}
-
-.brand {
-    display: block;
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 24px 12px;
-    text-align: center;
-    font-size: 17px;
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
-    transition: 0.2s;
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
     text-decoration: none;
-    color: #172033;
+    color: #2563eb;
+    font-weight: bold;
 }
 
-.brand:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.10);
-}
-
-.brand span {
-    display: block;
-    font-size: 34px;
-    margin-bottom: 10px;
-}
-
-.info {
-    margin-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 16px;
-}
-
-.info-card {
+.search-box {
     background: white;
-    padding: 26px 20px;
-    border-radius: 16px;
-    border: 1px solid #e2e8f0;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.no-result {
+    display: none;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.04);
-}
-
-.info-card h3 {
-    margin-bottom: 10px;
-}
-
-.info-card p {
-    color: #64748b;
-    line-height: 1.5;
-}
-
-footer {
-    margin-top: 35px;
-    background: #0f172a;
-    color: #cbd5e1;
-    text-align: center;
-    padding: 28px 15px;
-    font-size: 14px;
-}
-
-footer p + p {
-    margin-top: 7px;
-}
-
-@media (max-width: 600px) {
-
-    .logo {
-        font-size: 27px;
-    }
-
-    .hero {
-        padding: 35px 15px;
-    }
-
-    .hero h1 {
-        font-size: 25px;
-    }
-
-    .brands {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    padding: 20px;
+    color: #6b7280;
 }
 </style>
 </head>
@@ -177,146 +116,143 @@ footer p + p {
 <body>
 
 <header>
-    <div class="logo">Teknik Servis Rehberi</div>
-    <p>Türkiye'nin teknik servis rehberi</p>
+    <h1>REEDER Yetkili Servisleri</h1>
+    <p>Türkiye Geneli</p>
 </header>
 
-<section class="hero">
+<div class="container">
 
-    <h1>Teknik Servisin Adresi</h1>
+<a class="back" href="index.html">← Ana Sayfaya Dön</a>
 
-    <p>
-        Markanı seç, Türkiye genelindeki yetkili servis bilgilerine ulaş.
-    </p>
+<div class="search-box">
 
-    <div class="search">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Marka ara... Örn: Reeder"
-            onkeyup="searchBrand()"
-        >
-    </div>
+    <h2>REEDER Servisi Ara</h2>
 
-</section>
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir veya servis adı yazın..."
+        onkeyup="searchServices()"
+    >
 
-<main class="container">
+</div>
 
-    <h2 class="section-title">Markalar</h2>
+<div id="services">
 
-    <div class="brands">
+<h2 class="city-title">Ankara</h2>
 
-        <a class="brand" data-name="Apple" href="Apple.html">
-            <span>🍎</span>
-            Apple
-        </a>
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Ankara</p>
+    <p class="type">REEDER Yetkili Servis</p>
+</div>
 
-        <a class="brand" data-name="Samsung" href="Samsung.html">
-            <span>📱</span>
-            Samsung
-        </a>
+<h2 class="city-title">İstanbul</h2>
 
-        <a class="brand" data-name="Xiaomi" href="Xiaomi.html">
-            <span>📱</span>
-            Xiaomi
-        </a>
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">İstanbul</p>
+    <p class="type">REEDER Yetkili Servis</p>
+</div>
 
-        <a class="brand" data-name="Huawei" href="Huawei.html">
-            <span>📱</span>
-            Huawei
-        </a>
+<h2 class="city-title">Samsun</h2>
 
-        <a class="brand" data-name="Oppo" href="Oppo.html">
-            <span>📱</span>
-            Oppo
-        </a>
+<div class="card service">
+    <h3>REEDER Yetkili Servis</h3>
+    <p class="city">Samsun</p>
+    <p class="type">REEDER Yetkili Servis</p>
+</div>
 
-        <a class="brand" data-name="Vivo" href="Vivo.html">
-            <span>📱</span>
-            Vivo
-        </a>
+<h2 class="city-title">İzmir</h2>
 
-        <div class="brand" data-name="Nokia">
-            <span>📱</span>
-            Nokia
-        </div>
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">İzmir</p>
+    <p class="type">REEDER Yetkili Servis</p>
+</div>
 
-        <div class="brand" data-name="Sony">
-            <span>📱</span>
-            Sony
-        </div>
+<h2 class="city-title">Bursa</h2>
 
-        <div class="brand" data-name="TECNO">
-            <span>📱</span>
-            TECNO
-        </div>
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Bursa</p>
+    <p class="type">REEDER Yetkili Servis</p>
+</div>
 
-        <a class="brand" data-name="Reeder" href="Reeder.html">
-            <span>📱</span>
-            Reeder
-        </a>
+<h2 class="city-title">Antalya</h2>
 
-    </div>
+<div class="card service">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Antalya</p>
+    <p class="type">REEDER Yetkili Servis</p>
+</div>
 
-    <div class="info">
+</div>
 
-        <div class="info-card">
-            <h3>🔧 Yetkili Servisler</h3>
-            <p>
-                Markalara göre yetkili teknik servisleri bulun.
-            </p>
-        </div>
+<div id="noResult" class="no-result">
+    Aradığınız servis bulunamadı.
+</div>
 
-        <div class="info-card">
-            <h3>🇹🇷 Türkiye Geneli</h3>
-            <p>
-                Türkiye genelindeki servis ağı tek yerde.
-            </p>
-        </div>
-
-        <div class="info-card">
-            <h3>❓ Sorun & Çözüm</h3>
-            <p>
-                Teknik servis sorunları ve çözüm önerilerini keşfedin.
-            </p>
-        </div>
-
-    </div>
-
-</main>
-
-<footer>
-    <p>© 2026 Teknik Servis Rehberi</p>
-    <p>Türkiye'nin teknik servis rehberi</p>
-</footer>
+</div>
 
 <script>
 
-function searchBrand() {
+function searchServices() {
 
-    const filter =
-        document.getElementById("searchInput")
+    const search =
+        document.getElementById("searchBox")
         .value
         .toLowerCase()
         .trim();
 
-    const brands =
-        document.querySelectorAll(".brand");
+    const services =
+        document.querySelectorAll(".service");
 
-    brands.forEach(function(brand) {
+    const titles =
+        document.querySelectorAll(".city-title");
 
-        const name =
-            brand.getAttribute("data-name")
-            .toLowerCase();
+    let found = 0;
 
-        if (name.includes(filter)) {
-            brand.style.display = "block";
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+            service.style.display = "block";
+            found++;
         } else {
-            brand.style.display = "none";
+            service.style.display = "none";
         }
 
     });
 
+    titles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+                visible = true;
+            }
+
+            next = next.nextElementSibling;
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+    });
+
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
 }
 
 </script>
