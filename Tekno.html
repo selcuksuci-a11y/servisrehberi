@@ -22,7 +22,7 @@ header {
     background: #111827;
     color: white;
     text-align: center;
-    padding: 25px 15px;
+    padding: 28px 15px;
 }
 
 header h1 {
@@ -32,11 +32,11 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    opacity: 0.85;
+    opacity: .85;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     padding: 25px 15px;
 }
@@ -49,42 +49,64 @@ header p {
     font-weight: bold;
 }
 
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
 .search-box {
     background: white;
     padding: 20px;
-    border-radius: 14px;
+    border-radius: 15px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
 .search-box h2 {
     margin-top: 0;
 }
 
-input {
+input,
+select {
     width: 100%;
     padding: 14px;
+    margin-top: 10px;
     border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
 }
 
 .card {
     background: white;
     padding: 20px;
-    border-radius: 14px;
+    border-radius: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
 .card h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
     font-size: 19px;
 }
 
 .card p {
-    margin: 8px 0;
+    margin: 7px 0;
     color: #6b7280;
+    line-height: 1.5;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
 }
 
 .type {
@@ -92,11 +114,47 @@ input {
     font-weight: bold;
 }
 
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #374151 !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
 .no-result {
     display: none;
+    background: white;
+    padding: 25px;
     text-align: center;
-    padding: 20px;
-    color: #6b7280;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+@media (max-width:600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
 }
 </style>
 </head>
@@ -104,13 +162,21 @@ input {
 <body>
 
 <header>
-    <h1>TECNO Yetkili Servisleri</h1>
-    <p>Türkiye Geneli</p>
+    <h1>📱 TECNO Yetkili Servisleri</h1>
+    <p>Türkiye Geneli - Servis Rehberi</p>
 </header>
 
 <div class="container">
 
-<a class="back" href="index.html">← Ana Sayfaya Dön</a>
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+<div class="info">
+    <strong>TECNO Yetkili Servis Rehberi</strong><br>
+    Türkiye genelindeki TECNO yetkili servis noktalarını
+    şehir, servis adı veya adres bilgisine göre arayabilirsiniz.
+</div>
 
 <div class="search-box">
 
@@ -119,74 +185,245 @@ input {
     <input
         type="text"
         id="searchBox"
-        placeholder="Servis adı yazın..."
+        placeholder="Servis, şehir veya adres yazın..."
         onkeyup="searchServices()"
     >
+
+    <select id="cityFilter" onchange="searchServices()">
+
+        <option value="">Tüm Türkiye</option>
+
+        <option value="İstanbul">İstanbul</option>
+        <option value="Ankara">Ankara</option>
+        <option value="Adana">Adana</option>
+        <option value="Antalya">Antalya</option>
+        <option value="İzmir">İzmir</option>
+        <option value="Trabzon">Trabzon</option>
+
+    </select>
+
+    <div id="serviceCount" class="count"></div>
 
 </div>
 
 <div id="services">
 
-    <div class="card service">
+<!-- İSTANBUL -->
 
-        <h3>KVK Teknik Servis</h3>
+<h2 class="city-title">İstanbul</h2>
 
-        <p class="type">
-            TECNO Yetkili Servis
-        </p>
+<div class="card service" data-city="İstanbul">
 
-        <p>
-            Telefon ve mobil cihaz servisleri
-        </p>
+    <h3>KVK Teknik Servis</h3>
 
-    </div>
+    <p class="city">İstanbul - Kartal</p>
 
-    <div class="card service">
+    <p class="address">
+        Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+        Kanat Sanayi Sitesi No:32
+        (Titanic Otel Yanı) Kartal / İstanbul
+    </p>
 
-        <h3>OUNO Yetkili Servis</h3>
+    <p class="phone">
+        ☎ 0850 222 15 85
+    </p>
 
-        <p class="type">
-            TECNO Yetkili Servis
-        </p>
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
 
-        <p>
-            Telefon ve mobil cihaz servisleri
-        </p>
+    <span class="badge">✓ Yetkili Servis</span>
 
-    </div>
+</div>
 
-    <div class="card service">
 
-        <h3>BDH Bilişim Destek Hizmetleri</h3>
+<div class="card service" data-city="İstanbul">
 
-        <p class="type">
-            TECNO Yetkili Servis
-        </p>
+    <h3>OUNO Yetkili Servis</h3>
 
-        <p>
-            Telefon ve mobil cihaz servisleri
-        </p>
+    <p class="city">İstanbul - Ataşehir</p>
 
-    </div>
+    <p class="address">
+        Atilla İlhan Cd. No:20,
+        34750 Ataşehir / İstanbul
+    </p>
 
-    <div class="card service">
+    <p class="phone">
+        ☎ OUNO Servis
+    </p>
 
-        <h3>ARENA Bilgisayar</h3>
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
 
-        <p class="type">
-            TECNO Yetkili Servis
-        </p>
+    <span class="badge">✓ Yetkili Servis</span>
 
-        <p>
-            Bilgisayar ve ilgili ürün servisleri
-        </p>
+</div>
 
-    </div>
+
+<div class="card service" data-city="İstanbul">
+
+    <h3>OUNO Servis Tuzla Şube</h3>
+
+    <p class="city">İstanbul - Tuzla</p>
+
+    <p class="address">
+        Tepeören Demokrasi Caddesi No:137,
+        34959 Tuzla / İstanbul
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
+
+
+<div class="card service" data-city="İstanbul">
+
+    <h3>BDH Bilişim Destek Hizmetleri</h3>
+
+    <p class="city">İstanbul - Maltepe</p>
+
+    <p class="address">
+        Bağlarbaşı Mahallesi,
+        Cemal Bey Caddesi No:110,
+        34844 Maltepe / İstanbul
+    </p>
+
+    <p class="phone">
+        ☎ 0216 500 17 00
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="card service" data-city="Ankara">
+
+    <h3>KVK Teknik Servis</h3>
+
+    <p class="city">Ankara</p>
+
+    <p class="address">
+        Ankara KVK Yetkili Servis Merkezi
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+<div class="card service" data-city="Adana">
+
+    <h3>KVK Teknik Servis</h3>
+
+    <p class="city">Adana</p>
+
+    <p class="address">
+        Adana KVK Yetkili Servis Merkezi
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+<div class="card service" data-city="Antalya">
+
+    <h3>KVK Teknik Servis</h3>
+
+    <p class="city">Antalya</p>
+
+    <p class="address">
+        Antalya KVK Yetkili Servis Merkezi
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service" data-city="İzmir">
+
+    <h3>KVK Teknik Servis</h3>
+
+    <p class="city">İzmir</p>
+
+    <p class="address">
+        İzmir KVK Yetkili Servis Merkezi
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+<div class="card service" data-city="Trabzon">
+
+    <h3>KVK Teknik Servis</h3>
+
+    <p class="city">Trabzon</p>
+
+    <p class="address">
+        Trabzon KVK Yetkili Servis Merkezi
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">✓ Yetkili Servis</span>
+
+</div>
 
 </div>
 
 <div id="noResult" class="no-result">
-    Aradığınız servis bulunamadı.
+    Aradığınız TECNO yetkili servisi bulunamadı.
 </div>
 
 </div>
@@ -199,23 +436,43 @@ function searchServices() {
         document
         .getElementById("searchBox")
         .value
-        .toLowerCase()
+        .toLocaleLowerCase("tr-TR")
         .trim();
+
+    const city =
+        document
+        .getElementById("cityFilter")
+        .value
+        .toLocaleLowerCase("tr-TR");
 
     const services =
         document.querySelectorAll(".service");
+
+    const titles =
+        document.querySelectorAll(".city-title");
 
     let found = 0;
 
     services.forEach(function(service) {
 
         const text =
-            service.innerText.toLowerCase();
+            service.innerText
+            .toLocaleLowerCase("tr-TR");
 
-        if (text.includes(search)) {
+        const serviceCity =
+            service.dataset.city
+            .toLocaleLowerCase("tr-TR");
+
+        const searchMatch =
+            text.includes(search);
+
+        const cityMatch =
+            city === "" ||
+            serviceCity === city;
+
+        if (searchMatch && cityMatch) {
 
             service.style.display = "block";
-
             found++;
 
         } else {
@@ -226,11 +483,51 @@ function searchServices() {
 
     });
 
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
     document
         .getElementById("noResult")
         .style.display =
-        found === 0 ? "block" : "none";
+        found === 0
+        ? "block"
+        : "none";
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
 }
+
+searchServices();
 
 </script>
 
