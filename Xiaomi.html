@@ -141,11 +141,9 @@ select {
 }
 
 @media (max-width:600px) {
-
     header h1 {
         font-size: 24px;
     }
-
 }
 </style>
 </head>
@@ -177,19 +175,22 @@ select {
         type="text"
         id="searchBox"
         placeholder="Servis veya şehir yazın..."
-        onkeyup="searchServices()"
+        oninput="searchServices()"
     >
 
     <select id="cityFilter" onchange="searchServices()">
 
         <option value="">Tüm Türkiye</option>
 
+        <option value="Adana">Adana</option>
         <option value="Ankara">Ankara</option>
-        <option value="İstanbul">İstanbul</option>
+        <option value="Antalya">Antalya</option>
         <option value="Bursa">Bursa</option>
         <option value="Gaziantep">Gaziantep</option>
-        <option value="Antalya">Antalya</option>
+        <option value="İstanbul">İstanbul</option>
+        <option value="İzmir">İzmir</option>
         <option value="Samsun">Samsun</option>
+        <option value="Trabzon">Trabzon</option>
 
     </select>
 
@@ -197,8 +198,20 @@ select {
 
 </div>
 
-
 <div id="services">
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+<div class="card service" data-city="Adana">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Adana - Seyhan</p>
+    <p>Reşatbey, Turhan Cemal Beriker Bulvarı, Günep Panorama B Blok No:8, Seyhan / Adana</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
 
 
 <!-- ANKARA -->
@@ -206,190 +219,19 @@ select {
 <h2 class="city-title">Ankara</h2>
 
 <div class="card service" data-city="Ankara">
-
     <h3>Evofone</h3>
-
-    <p class="city">
-        Ankara
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
+    <p class="city">Ankara - Çankaya</p>
+    <p>Korkutreis Mah. Gazi Mustafa Kemal Bulvarı No:32/B, Demirtepe, Çankaya / Ankara</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
-
 
 <div class="card service" data-city="Ankara">
-
     <h3>KVK Teknik Servis</h3>
-
-    <p class="city">
-        Ankara
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<div class="card service" data-city="Ankara">
-
-    <h3>BDH Bilişim Destek Hizmetleri</h3>
-
-    <p class="city">
-        Ankara
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<!-- İSTANBUL -->
-
-<h2 class="city-title">İstanbul</h2>
-
-<div class="card service" data-city="İstanbul">
-
-    <h3>OUNO Yetkili Servis</h3>
-
-    <p class="city">
-        İstanbul
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<div class="card service" data-city="İstanbul">
-
-    <h3>MİEKO Yetkili Servis</h3>
-
-    <p class="city">
-        İstanbul
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<div class="card service" data-city="İstanbul">
-
-    <h3>KVK Teknik Servis</h3>
-
-    <p class="city">
-        İstanbul
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<div class="card service" data-city="İstanbul">
-
-    <h3>BDH Bilişim Destek Hizmetleri</h3>
-
-    <p class="city">
-        İstanbul
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<!-- BURSA -->
-
-<h2 class="city-title">Bursa</h2>
-
-<div class="card service" data-city="Bursa">
-
-    <h3>MİEKO Yetkili Servis</h3>
-
-    <p class="city">
-        Bursa
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<!-- GAZİANTEP -->
-
-<h2 class="city-title">Gaziantep</h2>
-
-<div class="card service" data-city="Gaziantep">
-
-    <h3>MİEKO Yetkili Servis</h3>
-
-    <p class="city">
-        Gaziantep - Şehitkamil
-    </p>
-
-    <p>
-        Prof. Muammer Aksoy Bulvarı,
-        Kepkep Plaza No:20H
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
+    <p class="city">Ankara - Çankaya</p>
+    <p>Kızılay Mah. Fevzi Çakmak 1 Sokak, Oran Apartmanı No:15/B, Çankaya / Ankara</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
@@ -398,21 +240,119 @@ select {
 <h2 class="city-title">Antalya</h2>
 
 <div class="card service" data-city="Antalya">
-
     <h3>Evofone</h3>
+    <p class="city">Antalya - Muratpaşa</p>
+    <p>İsmet Gökşen Cad. Hüseyin Akçor 2 Apt. No:40/E, Muratpaşa, Şirinyalı / Antalya</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
 
-    <p class="city">
-        Antalya
-    </p>
 
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
+<!-- BURSA -->
 
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
+<h2 class="city-title">Bursa</h2>
 
+<div class="card service" data-city="Bursa">
+    <h3>MIEKO</h3>
+    <p class="city">Bursa - Osmangazi</p>
+    <p>Kırcaali Mah. Kayalı Sok. No:34, Osmangazi / Bursa</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+
+<!-- GAZİANTEP -->
+
+<h2 class="city-title">Gaziantep</h2>
+
+<div class="card service" data-city="Gaziantep">
+    <h3>MIEKO</h3>
+    <p class="city">Gaziantep - Şehitkamil</p>
+    <p>Değirmiçem Mah. Prof. Muammer Aksoy Bulvarı Kepkep Plaza No:20H, Gaziantep</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+<div class="card service" data-city="İstanbul">
+    <h3>Xiaomi ESC - Levent</h3>
+    <p class="city">İstanbul - Şişli</p>
+    <p>Metrocity AVM, Esentepe Mah. Büyükdere Cad. No:171, İç Kapı No:93, Şişli / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İstanbul">
+    <h3>Evofone</h3>
+    <p class="city">İstanbul - Kadıköy</p>
+    <p>Fahrettin Kerim Gökay Caddesi, Baycan Han No:39-41/B, Kadıköy / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İstanbul">
+    <h3>MIEKO</h3>
+    <p class="city">İstanbul - Zeytinburnu</p>
+    <p>Prof. Muammer Aksoy Cad. No:31, Olivium AVM, Zeytinburnu / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İstanbul">
+    <h3>MIEKO</h3>
+    <p class="city">İstanbul - Pendik</p>
+    <p>Batı Mah. Dr. Orhan Altepe Cad. Sezer Apt. No:31, Pendik / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İstanbul">
+    <h3>Ouno</h3>
+    <p class="city">İstanbul - Ataşehir</p>
+    <p>Atilla İlhan Cad. No:20, 34750 Ataşehir / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İstanbul">
+    <h3>BDH Bilişim</h3>
+    <p class="city">İstanbul - Maltepe</p>
+    <p>Bağlarbaşı Mah. Cemal Bey Cad. No:110, 34844 Maltepe / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İstanbul">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">İstanbul - Kartal</p>
+    <p>Soğanlık Yeni Mah. D-100 Kuzey Yan Yol, Kanat San. Sit. No:32, 34880 Kartal / İstanbul</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service" data-city="İzmir">
+    <h3>Evofone</h3>
+    <p class="city">İzmir - Konak</p>
+    <p>İsmet Kaptan Mah. Şair Eşref Bulvarı No:26/B, Konak / İzmir</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
+</div>
+
+<div class="card service" data-city="İzmir">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">İzmir - Konak</p>
+    <p>İsmet Kaptan Mah. 1365. Sok. No:7/B, Konak / İzmir</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
@@ -421,26 +361,27 @@ select {
 <h2 class="city-title">Samsun</h2>
 
 <div class="card service" data-city="Samsun">
-
     <h3>Evofone</h3>
-
-    <p class="city">
-        Samsun
-    </p>
-
-    <p class="type">
-        Xiaomi Yetkili Servis
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
+    <p class="city">Samsun - İlkadım</p>
+    <p>19 Mayıs Mah. Gazi Cad. No:95/4, İlkadım / Samsun</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
 
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+<div class="card service" data-city="Trabzon">
+    <h3>KVK Teknik Servis</h3>
+    <p class="city">Trabzon - Ortahisar</p>
+    <p>Cumhuriyet Mah. Nemlioğlu Cemal Sok. Ziya Bey Sitesi A Blok No:16/1, Ortahisar / Trabzon</p>
+    <p class="type">Xiaomi Yetkili Servis Merkezi</p>
+    <span class="badge">✓ Yetkili Servis</span>
 </div>
 
+</div>
 
 <div id="noResult" class="no-result">
     Aradığınız Xiaomi yetkili servisi bulunamadı.
@@ -448,23 +389,20 @@ select {
 
 </div>
 
-
 <script>
 
 function searchServices() {
 
     const search =
-        document
-        .getElementById("searchBox")
+        document.getElementById("searchBox")
         .value
-        .toLowerCase()
+        .toLocaleLowerCase("tr-TR")
         .trim();
 
     const city =
-        document
-        .getElementById("cityFilter")
+        document.getElementById("cityFilter")
         .value
-        .toLowerCase();
+        .toLocaleLowerCase("tr-TR");
 
     const services =
         document.querySelectorAll(".service");
@@ -474,14 +412,15 @@ function searchServices() {
 
     let found = 0;
 
-
     services.forEach(function(service) {
 
         const text =
-            service.innerText.toLowerCase();
+            service.innerText
+            .toLocaleLowerCase("tr-TR");
 
         const serviceCity =
-            service.dataset.city.toLowerCase();
+            service.dataset.city
+            .toLocaleLowerCase("tr-TR");
 
         const searchMatch =
             text.includes(search);
@@ -490,13 +429,9 @@ function searchServices() {
             city === "" ||
             serviceCity === city;
 
-        if (
-            searchMatch &&
-            cityMatch
-        ) {
+        if (searchMatch && cityMatch) {
 
             service.style.display = "block";
-
             found++;
 
         } else {
@@ -507,14 +442,10 @@ function searchServices() {
 
     });
 
-
     titles.forEach(function(title) {
 
-        let next =
-            title.nextElementSibling;
-
+        let next = title.nextElementSibling;
         let visible = false;
-
 
         while (
             next &&
@@ -525,38 +456,23 @@ function searchServices() {
                 next.classList.contains("service") &&
                 next.style.display !== "none"
             ) {
-
                 visible = true;
-
             }
 
-            next =
-                next.nextElementSibling;
-
+            next = next.nextElementSibling;
         }
-
 
         title.style.display =
             visible ? "block" : "none";
 
     });
 
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
 
-    document
-        .getElementById("noResult")
-        .style.display =
-        found === 0
-        ? "block"
-        : "none";
-
-
-    document
-        .getElementById("serviceCount")
-        .innerText =
+    document.getElementById("serviceCount").innerText =
         found + " servis listeleniyor";
-
 }
-
 
 searchServices();
 
