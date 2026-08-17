@@ -32,7 +32,7 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    opacity: .85;
+    opacity: 0.85;
 }
 
 .container {
@@ -109,13 +109,18 @@ select {
     font-weight: bold;
 }
 
+.address {
+    color: #374151 !important;
+}
+
 .type {
     color: #111827 !important;
     font-weight: bold;
 }
 
-.address {
-    color: #374151 !important;
+.phone {
+    color: #111827 !important;
+    font-weight: bold;
 }
 
 .badge {
@@ -188,6 +193,7 @@ select {
 
         <option value="Ankara">Ankara</option>
         <option value="İstanbul">İstanbul</option>
+        <option value="İzmir">İzmir</option>
         <option value="Adana">Adana</option>
         <option value="Antalya">Antalya</option>
         <option value="Trabzon">Trabzon</option>
@@ -198,7 +204,9 @@ select {
 
 </div>
 
+
 <div id="services">
+
 
 <!-- ANKARA -->
 
@@ -209,12 +217,12 @@ select {
     <h3>KVK Teknik Servis</h3>
 
     <p class="city">
-        📍 Ankara - Çankaya
+        Ankara - Çankaya
     </p>
 
     <p class="address">
-        Kızılay Mah. Fevzi Çakmak 1 Sokak
-        Oran Apt. No:15/B
+        📍 Kızılay Mah. Fevzi Çakmak 1 Sokak,
+        Oran Apt. No:15/B,
         Çankaya / Ankara
     </p>
 
@@ -238,38 +246,15 @@ select {
     <h3>KVK Teknik Servis - Kartal</h3>
 
     <p class="city">
-        📍 İstanbul - Kartal
+        İstanbul - Kartal
     </p>
 
     <p class="address">
-        Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+        📍 Soğanlık Yeni Mah.
+        D-100 Kuzey Yanyol Cad.
         Kanat Sanayi Sitesi No:32
+        (Titanic Otel Yanı),
         Kartal / İstanbul
-    </p>
-
-    <p class="type">
-        Vivo Yetkili Servis Sağlayıcısı
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<!-- İSTANBUL BAKIRKÖY -->
-
-<div class="card service" data-city="İstanbul">
-
-    <h3>KVK Teknik Servis - Bakırköy</h3>
-
-    <p class="city">
-        📍 İstanbul - Bakırköy
-    </p>
-
-    <p class="address">
-        Bakırköy / İstanbul
     </p>
 
     <p class="type">
@@ -290,40 +275,17 @@ select {
     <h3>BDH Bilişim Destek Hizmetleri</h3>
 
     <p class="city">
-        📍 İstanbul - Maltepe
+        İstanbul - Maltepe
     </p>
 
     <p class="address">
-        Bağlarbaşı Mahallesi,
-        Cemal Bey Caddesi No:110
-        34844 Maltepe / İstanbul
+        📍 Bağlarbaşı Mahallesi,
+        Cemal Bey Caddesi No:110,
+        Maltepe / İstanbul
     </p>
 
-    <p class="type">
-        Vivo Yetkili Servis Merkezi
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<!-- İSTANBUL OUNO -->
-
-<div class="card service" data-city="İstanbul">
-
-    <h3>OUNO Yetkili Servis</h3>
-
-    <p class="city">
-        📍 İstanbul - Ataşehir
-    </p>
-
-    <p class="address">
-        Küçükbakkalköy Mah.
-        Işıklar Caddesi No:15/B
-        Ataşehir / İstanbul
+    <p class="phone">
+        ☎ 0850 622 57 87
     </p>
 
     <p class="type">
@@ -337,20 +299,74 @@ select {
 </div>
 
 
-<!-- İSTANBUL EVOFONE -->
+<!-- İSTANBUL KAĞITHANE -->
 
 <div class="card service" data-city="İstanbul">
 
-    <h3>Evofone Yetkili Teknik Servis</h3>
+    <h3>Evofone - Kağıthane</h3>
 
     <p class="city">
-        📍 İstanbul - Kağıthane
+        İstanbul - Kağıthane
     </p>
 
     <p class="address">
-        Merkez Mah. Bağlar Cad.
-        No:14 A1-A2 Blok
+        📍 Merkez Mah. Bağlar Cad.
+        No:14 A1-A2 Blok,
         Kağıthane / İstanbul
+    </p>
+
+    <p class="type">
+        Vivo Yetkili Servis
+    </p>
+
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
+
+</div>
+
+
+<!-- İSTANBUL OUNO -->
+
+<div class="card service" data-city="İstanbul">
+
+    <h3>OUNO Teknik Servis</h3>
+
+    <p class="city">
+        İstanbul - Ataşehir
+    </p>
+
+    <p class="address">
+        📍 Küçükbakkalköy,
+        Işıklar Cd. No:15/B,
+        Ataşehir / İstanbul
+    </p>
+
+    <p class="type">
+        Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Servis
+    </span>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service" data-city="İzmir">
+
+    <h3>Evofone - İzmir</h3>
+
+    <p class="city">
+        İzmir
+    </p>
+
+    <p class="address">
+        📍 Evofone İzmir Yetkili Teknik Servis Noktası
     </p>
 
     <p class="type">
@@ -373,11 +389,11 @@ select {
     <h3>KVK Teknik Servis</h3>
 
     <p class="city">
-        📍 Adana
+        Adana
     </p>
 
     <p class="address">
-        Adana KVK Teknik Servis
+        📍 KVK Teknik Servis - Adana
     </p>
 
     <p class="type">
@@ -400,41 +416,15 @@ select {
     <h3>KVK Teknik Servis</h3>
 
     <p class="city">
-        📍 Antalya
+        Antalya
     </p>
 
     <p class="address">
-        Antalya KVK Teknik Servis
+        📍 KVK Teknik Servis - Antalya
     </p>
 
     <p class="type">
         Vivo Yetkili Servis Sağlayıcısı
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
-<div class="card service" data-city="Antalya">
-
-    <h3>Evofone Yetkili Teknik Servis</h3>
-
-    <p class="city">
-        📍 Antalya - Muratpaşa
-    </p>
-
-    <p class="address">
-        İsmet Gökşen Caddesi
-        Hüseyin Akçor 2 Apt.
-        No:40/E
-        Muratpaşa / Antalya
-    </p>
-
-    <p class="type">
-        Vivo Yetkili Servis
     </p>
 
     <span class="badge">
@@ -453,11 +443,11 @@ select {
     <h3>KVK Teknik Servis</h3>
 
     <p class="city">
-        📍 Trabzon
+        Trabzon
     </p>
 
     <p class="address">
-        Trabzon KVK Teknik Servis
+        📍 KVK Teknik Servis - Trabzon
     </p>
 
     <p class="type">
@@ -470,13 +460,16 @@ select {
 
 </div>
 
+
 </div>
+
 
 <div id="noResult" class="no-result">
     Aradığınız Vivo yetkili servisi bulunamadı.
 </div>
 
 </div>
+
 
 <script>
 
@@ -486,14 +479,14 @@ function searchServices() {
         document
         .getElementById("searchBox")
         .value
-        .toLocaleLowerCase("tr-TR")
+        .toLowerCase()
         .trim();
 
     const city =
         document
         .getElementById("cityFilter")
         .value
-        .toLocaleLowerCase("tr-TR");
+        .toLowerCase();
 
     const services =
         document.querySelectorAll(".service");
@@ -503,15 +496,14 @@ function searchServices() {
 
     let found = 0;
 
+
     services.forEach(function(service) {
 
         const text =
-            service.innerText
-            .toLocaleLowerCase("tr-TR");
+            service.innerText.toLowerCase();
 
         const serviceCity =
-            service.dataset.city
-            .toLocaleLowerCase("tr-TR");
+            service.dataset.city.toLowerCase();
 
         const searchMatch =
             text.includes(search);
@@ -520,9 +512,13 @@ function searchServices() {
             city === "" ||
             serviceCity === city;
 
-        if (searchMatch && cityMatch) {
+        if (
+            searchMatch &&
+            cityMatch
+        ) {
 
             service.style.display = "block";
+
             found++;
 
         } else {
@@ -533,12 +529,14 @@ function searchServices() {
 
     });
 
+
     titles.forEach(function(title) {
 
         let next =
             title.nextElementSibling;
 
         let visible = false;
+
 
         while (
             next &&
@@ -559,21 +557,28 @@ function searchServices() {
 
         }
 
+
         title.style.display =
             visible ? "block" : "none";
 
     });
 
+
     document
         .getElementById("noResult")
         .style.display =
-        found === 0 ? "block" : "none";
+        found === 0
+        ? "block"
+        : "none";
+
 
     document
         .getElementById("serviceCount")
         .innerText =
         found + " servis listeleniyor";
+
 }
+
 
 searchServices();
 
