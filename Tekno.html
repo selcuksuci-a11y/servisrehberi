@@ -100,26 +100,25 @@ select {
 
 .card p {
     margin: 7px 0;
-    color: #6b7280;
     line-height: 1.5;
 }
 
 .city {
-    color: #2563eb !important;
+    color: #2563eb;
     font-weight: bold;
 }
 
 .type {
-    color: #111827 !important;
+    color: #111827;
     font-weight: bold;
 }
 
 .address {
-    color: #374151 !important;
+    color: #4b5563;
 }
 
 .phone {
-    color: #374151 !important;
+    color: #374151;
     font-weight: bold;
 }
 
@@ -150,11 +149,9 @@ select {
 }
 
 @media (max-width:600px) {
-
     header h1 {
         font-size: 24px;
     }
-
 }
 </style>
 </head>
@@ -175,7 +172,7 @@ select {
 <div class="info">
     <strong>TECNO Yetkili Servis Rehberi</strong><br>
     Türkiye genelindeki TECNO yetkili servis noktalarını
-    şehir, servis adı veya adres bilgisine göre arayabilirsiniz.
+    servis adı, şehir veya açık adres bilgisine göre arayabilirsiniz.
 </div>
 
 <div class="search-box">
@@ -197,7 +194,6 @@ select {
         <option value="Ankara">Ankara</option>
         <option value="Adana">Adana</option>
         <option value="Antalya">Antalya</option>
-        <option value="İzmir">İzmir</option>
         <option value="Trabzon">Trabzon</option>
 
     </select>
@@ -206,7 +202,9 @@ select {
 
 </div>
 
+
 <div id="services">
+
 
 <!-- İSTANBUL -->
 
@@ -214,14 +212,17 @@ select {
 
 <div class="card service" data-city="İstanbul">
 
-    <h3>KVK Teknik Servis</h3>
+    <h3>KVK Teknik Servis - Kartal</h3>
 
-    <p class="city">İstanbul - Kartal</p>
+    <p class="city">
+        İstanbul - Kartal
+    </p>
 
     <p class="address">
         Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
         Kanat Sanayi Sitesi No:32
-        (Titanic Otel Yanı) Kartal / İstanbul
+        (Titanic Otel Yanı)
+        Kartal / İstanbul
     </p>
 
     <p class="phone">
@@ -232,43 +233,72 @@ select {
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
 
 <div class="card service" data-city="İstanbul">
 
-    <h3>OUNO Yetkili Servis</h3>
+    <h3>KVK Teknik Servis - Bakırköy</h3>
 
-    <p class="city">İstanbul - Ataşehir</p>
-
-    <p class="address">
-        Atilla İlhan Cd. No:20,
-        34750 Ataşehir / İstanbul
+    <p class="city">
+        İstanbul - Bakırköy
     </p>
 
-    <p class="phone">
-        ☎ OUNO Servis
+    <p class="address">
+        Kartaltepe Mah. İncirli Cad.
+        İhsan Kalmaz Sokak No:3/A
+        Bakırköy / İstanbul
     </p>
 
     <p class="type">
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
 
 <div class="card service" data-city="İstanbul">
 
-    <h3>OUNO Servis Tuzla Şube</h3>
+    <h3>OUNO Yetkili Servis - Ataşehir</h3>
 
-    <p class="city">İstanbul - Tuzla</p>
+    <p class="city">
+        İstanbul - Ataşehir
+    </p>
 
     <p class="address">
-        Tepeören Demokrasi Caddesi No:137,
+        Atilla İlhan Cd. No:20
+        34750 Ataşehir / İstanbul
+    </p>
+
+    <p class="type">
+        TECNO Yetkili Servis
+    </p>
+
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
+
+</div>
+
+
+<div class="card service" data-city="İstanbul">
+
+    <h3>OUNO Yetkili Servis - Tuzla</h3>
+
+    <p class="city">
+        İstanbul - Tuzla
+    </p>
+
+    <p class="address">
+        Tepeören Demokrasi Caddesi No:137
         34959 Tuzla / İstanbul
     </p>
 
@@ -276,7 +306,9 @@ select {
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
@@ -285,11 +317,13 @@ select {
 
     <h3>BDH Bilişim Destek Hizmetleri</h3>
 
-    <p class="city">İstanbul - Maltepe</p>
+    <p class="city">
+        İstanbul - Maltepe
+    </p>
 
     <p class="address">
         Bağlarbaşı Mahallesi,
-        Cemal Bey Caddesi No:110,
+        Cemal Bey Caddesi No:110
         34844 Maltepe / İstanbul
     </p>
 
@@ -301,7 +335,9 @@ select {
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
@@ -314,17 +350,23 @@ select {
 
     <h3>KVK Teknik Servis</h3>
 
-    <p class="city">Ankara</p>
+    <p class="city">
+        Ankara - Çankaya
+    </p>
 
     <p class="address">
-        Ankara KVK Yetkili Servis Merkezi
+        Kızılay Mah. Fevzi Çakmak 1 Sokak
+        Oran Apt. No:15/B
+        Çankaya / Ankara
     </p>
 
     <p class="type">
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
@@ -337,17 +379,24 @@ select {
 
     <h3>KVK Teknik Servis</h3>
 
-    <p class="city">Adana</p>
+    <p class="city">
+        Adana - Seyhan
+    </p>
 
     <p class="address">
-        Adana KVK Yetkili Servis Merkezi
+        Reşatbey Mah.
+        Turan Cemal Beriker Bulvarı
+        Günep Panorama B Blok No:8/B
+        Seyhan / Adana
     </p>
 
     <p class="type">
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
@@ -360,40 +409,23 @@ select {
 
     <h3>KVK Teknik Servis</h3>
 
-    <p class="city">Antalya</p>
+    <p class="city">
+        Antalya - Muratpaşa
+    </p>
 
     <p class="address">
-        Antalya KVK Yetkili Servis Merkezi
+        Etiler Mah.
+        Adnan Menderes Bulvarı No:67/B
+        Muratpaşa / Antalya
     </p>
 
     <p class="type">
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
-
-</div>
-
-
-<!-- İZMİR -->
-
-<h2 class="city-title">İzmir</h2>
-
-<div class="card service" data-city="İzmir">
-
-    <h3>KVK Teknik Servis</h3>
-
-    <p class="city">İzmir</p>
-
-    <p class="address">
-        İzmir KVK Yetkili Servis Merkezi
-    </p>
-
-    <p class="type">
-        TECNO Yetkili Servis
-    </p>
-
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
@@ -406,27 +438,37 @@ select {
 
     <h3>KVK Teknik Servis</h3>
 
-    <p class="city">Trabzon</p>
+    <p class="city">
+        Trabzon - Ortahisar
+    </p>
 
     <p class="address">
-        Trabzon KVK Yetkili Servis Merkezi
+        Cumhuriyet Mah.
+        Nemlioğlu Cemal Sokak
+        Ziya Bey Sitesi A Blok No:16/1
+        Ortahisar / Trabzon
     </p>
 
     <p class="type">
         TECNO Yetkili Servis
     </p>
 
-    <span class="badge">✓ Yetkili Servis</span>
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
 
 </div>
 
+
 </div>
+
 
 <div id="noResult" class="no-result">
     Aradığınız TECNO yetkili servisi bulunamadı.
 </div>
 
 </div>
+
 
 <script>
 
@@ -452,6 +494,7 @@ function searchServices() {
         document.querySelectorAll(".city-title");
 
     let found = 0;
+
 
     services.forEach(function(service) {
 
@@ -483,6 +526,7 @@ function searchServices() {
 
     });
 
+
     titles.forEach(function(title) {
 
         let next =
@@ -513,6 +557,7 @@ function searchServices() {
 
     });
 
+
     document
         .getElementById("noResult")
         .style.display =
@@ -520,12 +565,14 @@ function searchServices() {
         ? "block"
         : "none";
 
+
     document
         .getElementById("serviceCount")
         .innerText =
         found + " servis listeleniyor";
 
 }
+
 
 searchServices();
 
