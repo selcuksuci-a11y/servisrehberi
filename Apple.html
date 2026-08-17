@@ -175,7 +175,7 @@ select {
         type="text"
         id="searchBox"
         placeholder="Servis veya şehir yazın..."
-        onkeyup="searchServices()"
+        oninput="searchServices()"
     >
 
     <select id="cityFilter" onchange="searchServices()">
@@ -351,7 +351,7 @@ select {
 <div class="card service" data-city="Adana">
     <h3>KVK Teknik Servis - Adana</h3>
     <p class="city">Adana</p>
-    <p>KVK Teknik Servis Adana</p>
+    <p>Adana KVK Teknik Servis</p>
     <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
     <span class="badge">✓ Yetkili Servis</span>
 </div>
@@ -370,41 +370,66 @@ select {
 </div>
 
 
-<!-- DİĞER TÜRKİYE NOKTALARI -->
+<!-- MERSİN -->
 
-<h2 class="city-title">Diğer Türkiye Noktaları</h2>
+<h2 class="city-title">Mersin</h2>
 
 <div class="card service" data-city="Mersin">
-    <h3>Gürgençler</h3>
+    <h3>Gürgençler - Mersin</h3>
     <p class="city">Mersin</p>
+    <p>Gürgençler Mersin</p>
     <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
     <span class="badge">✓ Yetkili Servis</span>
 </div>
+
+
+<!-- KONYA -->
+
+<h2 class="city-title">Konya</h2>
 
 <div class="card service" data-city="Konya">
-    <h3>Gürgençler</h3>
+    <h3>Gürgençler - Konya</h3>
     <p class="city">Konya</p>
+    <p>Gürgençler Konya</p>
     <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
     <span class="badge">✓ Yetkili Servis</span>
 </div>
+
+
+<!-- HATAY -->
+
+<h2 class="city-title">Hatay</h2>
 
 <div class="card service" data-city="Hatay">
-    <h3>Gürgençler</h3>
+    <h3>Gürgençler - Hatay</h3>
     <p class="city">Hatay</p>
+    <p>Gürgençler Hatay</p>
     <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
     <span class="badge">✓ Yetkili Servis</span>
 </div>
+
+
+<!-- EDİRNE -->
+
+<h2 class="city-title">Edirne</h2>
 
 <div class="card service" data-city="Edirne">
-    <h3>Gürgençler</h3>
+    <h3>Gürgençler - Edirne</h3>
     <p class="city">Edirne</p>
+    <p>Gürgençler Edirne</p>
     <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
     <span class="badge">✓ Yetkili Servis</span>
 </div>
 
+
+<!-- TEKİRDAĞ -->
+
+<h2 class="city-title">Tekirdağ</h2>
+
 <div class="card service" data-city="Tekirdağ">
-    <h3>Gürgençler</h3>
+    <h3>Gürgençler - Tekirdağ</h3>
     <p class="city">Tekirdağ</p>
+    <p>Gürgençler Tekirdağ</p>
     <p class="type">Apple Yetkili Servis Sağlayıcısı</p>
     <span class="badge">✓ Yetkili Servis</span>
 </div>
@@ -442,16 +467,17 @@ select {
 
 function searchServices() {
 
-    const search =
-        document.getElementById("searchBox")
+    const search = document
+        .getElementById("searchBox")
         .value
-        .toLowerCase()
+        .toLocaleLowerCase("tr-TR")
         .trim();
 
-    const city =
-        document.getElementById("cityFilter")
+    const selectedCity = document
+        .getElementById("cityFilter")
         .value
-        .toLowerCase();
+        .toLocaleLowerCase("tr-TR")
+        .trim();
 
     const services =
         document.querySelectorAll(".service");
@@ -463,17 +489,20 @@ function searchServices() {
 
     services.forEach(function(service) {
 
-        const text =
-            service.innerText.toLowerCase();
+        const text = service.innerText
+            .toLocaleLowerCase("tr-TR");
 
         const serviceCity =
-            service.dataset.city.toLowerCase();
+            (service.dataset.city || "")
+            .toLocaleLowerCase("tr-TR");
 
         const searchMatch =
+            search === "" ||
             text.includes(search);
 
         const cityMatch =
-            city === "" || serviceCity === city;
+            selectedCity === "" ||
+            serviceCity === selectedCity;
 
         if (searchMatch && cityMatch) {
 
@@ -503,6 +532,7 @@ function searchServices() {
                 next.style.display !== "none"
             ) {
                 visible = true;
+                break;
             }
 
             next = next.nextElementSibling;
@@ -513,4 +543,25 @@ function searchServices() {
 
     });
 
-    document.get
+    const noResult =
+        document.getElementById("noResult");
+
+    noResult.style.display =
+        found === 0 ? "block" : "none";
+
+    document.getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+        searchServices();
+    }
+);
+
+</script>
+
+</body>
+</html>
