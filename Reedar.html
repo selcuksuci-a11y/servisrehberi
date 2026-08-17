@@ -7,7 +7,6 @@
 <title>REEDER Yetkili Servisleri - Servis Rehberi</title>
 
 <style>
-
 * {
     box-sizing: border-box;
 }
@@ -33,7 +32,7 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    opacity: .85;
+    opacity: 0.85;
 }
 
 .container {
@@ -55,7 +54,7 @@ header p {
     border-radius: 12px;
     padding: 16px;
     margin-bottom: 20px;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .search-box {
@@ -73,15 +72,16 @@ header p {
 input {
     width: 100%;
     padding: 14px;
+    margin-top: 10px;
     border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
+    background: white;
 }
 
-.count {
-    margin-top: 12px;
-    color: #64748b;
-    font-size: 14px;
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
 }
 
 .card {
@@ -93,14 +93,14 @@ input {
 }
 
 .card h3 {
-    margin: 0 0 10px;
+    margin: 0 0 12px;
     font-size: 19px;
 }
 
 .card p {
     margin: 8px 0;
     color: #6b7280;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .city {
@@ -108,18 +108,13 @@ input {
     font-weight: bold;
 }
 
-.address {
-    color: #374151 !important;
-}
-
-.phone {
-    color: #111827 !important;
-    font-weight: bold;
-}
-
 .type {
     color: #111827 !important;
     font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
 }
 
 .badge {
@@ -133,6 +128,12 @@ input {
     font-weight: bold;
 }
 
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
 .no-result {
     display: none;
     background: white;
@@ -143,47 +144,31 @@ input {
 }
 
 @media (max-width:600px) {
-
     header h1 {
         font-size: 24px;
     }
-
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-
     <h1>📱 REEDER Yetkili Servisleri</h1>
-
-    <p>
-        Türkiye Geneli - Servis Rehberi
-    </p>
-
+    <p>Türkiye Geneli - Servis Rehberi</p>
 </header>
 
-
 <div class="container">
-
 
 <a class="back" href="index.html">
     ← Ana Sayfaya Dön
 </a>
 
-
 <div class="info">
-
     <strong>REEDER Yetkili Servis Rehberi</strong><br>
-
-    REEDER teknik servis noktalarını
-    servis adı, şehir veya adres bilgisine göre
-    arayabilirsiniz.
-
+    REEDER cihazları için servis noktalarını şehir,
+    servis adı veya adres bilgisine göre arayabilirsiniz.
 </div>
-
 
 <div class="search-box">
 
@@ -200,180 +185,134 @@ input {
 
 </div>
 
-
 <div id="services">
 
-
 <!-- SAMSUN -->
+
+<h2 class="city-title">Samsun</h2>
 
 <div class="card service">
 
     <h3>REEDER Teknik Servis</h3>
 
     <p class="city">
-        📍 Samsun - Tekkeköy
-    </p>
-
-    <p class="address">
-        Kerimbey Mahallesi,
-        Organize Sanayi Bulvarı No:28,
-        Tekkeköy / Samsun
-    </p>
-
-    <p class="phone">
-        ☎ 0850 811 73 33
+        Samsun - 19 Mayıs
     </p>
 
     <p class="type">
         REEDER Teknik Servis
     </p>
 
-    <span class="badge">
-        ✓ Yetkili Teknik Servis
-    </span>
-
-</div>
-
-
-<div class="card service">
-
-    <h3>REEDER Teknik Servis - Ballıca</h3>
-
-    <p class="city">
-        📍 Samsun - 19 Mayıs
-    </p>
-
     <p class="address">
-        İstiklal Mahallesi,
-        Tekel Caddesi,
-        Ballıca Kampüsü,
-        Hangar:53 No:2,
+        <strong>Açık Adres:</strong><br>
+        İstiklal Mah. Tekel Cad.<br>
+        Ballıca Kampüsü Hangar:53 No:2<br>
         19 Mayıs / Samsun
     </p>
 
-    <p class="phone">
-        ☎ 0850 811 73 33
-    </p>
-
-    <p class="type">
-        REEDER Teknik Servis
-    </p>
-
     <span class="badge">
-        ✓ Yetkili Teknik Servis
+        ✓ Teknik Servis
     </span>
 
 </div>
 
 
-<!-- REEDER MERKEZ -->
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
 
 <div class="card service">
 
-    <h3>REEDER Genel Merkez</h3>
+    <h3>KVK Teknik Servis</h3>
 
     <p class="city">
-        📍 Samsun - Atakum
-    </p>
-
-    <p class="address">
-        İncesu Mahallesi,
-        Sırıncak Caddesi No:100,
-        Atakum / Samsun
-    </p>
-
-    <p class="phone">
-        ☎ 0850 811 73 33
+        Ankara - Çankaya
     </p>
 
     <p class="type">
-        REEDER Merkez
+        KVK Teknik Servis
+    </p>
+
+    <p class="address">
+        <strong>Açık Adres:</strong><br>
+        Kızılay Mah. Fevzi Çakmak 1 Sokak<br>
+        Oran Apartmanı No:15/B<br>
+        Çankaya / Ankara
     </p>
 
     <span class="badge">
-        ✓ REEDER
+        ✓ KVK Servis
     </span>
 
 </div>
 
 
-<!-- BAFRA REEDÜKKAN -->
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
 
 <div class="card service">
 
-    <h3>REEDER - Çelikpark AVM</h3>
+    <h3>KVK Teknik Servis - Kartal</h3>
 
     <p class="city">
-        📍 Samsun - Bafra
-    </p>
-
-    <p class="address">
-        Emirefendi Mahallesi,
-        Samsun Caddesi No:103,
-        Çelikpark AVM,
-        Bafra / Samsun
-    </p>
-
-    <p class="phone">
-        ☎ 0362 544 50 50
+        İstanbul - Kartal
     </p>
 
     <p class="type">
-        REEDER Servis Kabul Noktası
+        KVK Teknik Servis
+    </p>
+
+    <p class="address">
+        <strong>Açık Adres:</strong><br>
+        Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.<br>
+        Kanat Sanayi Sitesi No:32<br>
+        Titanic Otel Yanı<br>
+        Kartal / İstanbul
     </p>
 
     <span class="badge">
-        ✓ Servis Kabul Noktası
+        ✓ KVK Servis
     </span>
 
 </div>
 
 
-<!-- SAMSUN ATAKUM -->
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
 
 <div class="card service">
 
-    <h3>REEDER - City Mall AVM</h3>
+    <h3>KVK Teknik Servis</h3>
 
     <p class="city">
-        📍 Samsun - Atakum
-    </p>
-
-    <p class="address">
-        Mimar Sinan Mahallesi,
-        Alparslan Bulvarı,
-        City Mall AVM No:1,
-        İç Kapı No:16,
-        Atakum / Samsun
-    </p>
-
-    <p class="phone">
-        ☎ 0362 502 12 81
+        Antalya - Muratpaşa
     </p>
 
     <p class="type">
-        REEDER Servis Kabul Noktası
+        KVK Teknik Servis
+    </p>
+
+    <p class="address">
+        <strong>Açık Adres:</strong><br>
+        Etiler Mah. Adnan Menderes Bulvarı No:67/B<br>
+        Muratpaşa / Antalya
     </p>
 
     <span class="badge">
-        ✓ Servis Kabul Noktası
+        ✓ KVK Servis
     </span>
 
 </div>
 
-
 </div>
-
 
 <div id="noResult" class="no-result">
-
-    Aradığınız REEDER servis noktası bulunamadı.
-
+    Aradığınız REEDER servisi bulunamadı.
 </div>
 
-
 </div>
-
 
 <script>
 
@@ -389,18 +328,19 @@ function searchServices() {
     const services =
         document.querySelectorAll(".service");
 
+    const titles =
+        document.querySelectorAll(".city-title");
+
     let found = 0;
 
     services.forEach(function(service) {
 
         const text =
-            service.innerText
-            .toLowerCase();
+            service.innerText.toLowerCase();
 
         if (text.includes(search)) {
 
             service.style.display = "block";
-
             found++;
 
         } else {
@@ -411,22 +351,46 @@ function searchServices() {
 
     });
 
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
 
     document
         .getElementById("noResult")
         .style.display =
-        found === 0
-        ? "block"
-        : "none";
-
+        found === 0 ? "block" : "none";
 
     document
         .getElementById("serviceCount")
         .innerText =
-        found + " servis noktası listeleniyor";
-
+        found + " servis listeleniyor";
 }
-
 
 searchServices();
 
