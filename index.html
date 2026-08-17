@@ -193,7 +193,7 @@ footer p + p {
             type="text"
             id="searchInput"
             placeholder="Marka ara... Örn: TECNO"
-            onkeyup="searchBrand()"
+            oninput="searchBrand()"
         >
 
     </div>
@@ -235,16 +235,6 @@ footer p + p {
             <span>📱</span>
             Vivo
         </a>
-
-        <div class="brand" data-name="Nokia">
-            <span>📱</span>
-            Nokia
-        </div>
-
-        <div class="brand" data-name="Sony">
-            <span>📱</span>
-            Sony
-        </div>
 
         <a class="brand" data-name="TECNO" href="Tekno.html">
             <span>📱</span>
@@ -298,7 +288,7 @@ function searchBrand() {
         document
         .getElementById("searchInput")
         .value
-        .toLowerCase()
+        .toLocaleLowerCase("tr-TR")
         .trim();
 
     const brands =
@@ -309,7 +299,7 @@ function searchBrand() {
         const name =
             brand
             .getAttribute("data-name")
-            .toLowerCase();
+            .toLocaleLowerCase("tr-TR");
 
         if (name.includes(filter)) {
 
