@@ -38,7 +38,7 @@ header p {
 
 .container {
     width: 94%;
-    max-width: 1000px;
+    max-width: 900px;
     margin: 25px auto;
 }
 
@@ -57,7 +57,7 @@ header p {
     background: white;
     border-radius: 12px;
     padding: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
@@ -72,22 +72,23 @@ header p {
 }
 
 .city {
-    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .city-title {
     background: #111827;
     color: white;
-    padding: 14px 18px;
+    padding: 13px 16px;
     border-radius: 10px;
     margin-bottom: 15px;
-    font-size: 21px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.district {
-    margin: 18px 0 10px;
-    font-size: 18px;
+.district-title {
     color: #111827;
+    font-size: 18px;
+    margin: 18px 0 10px;
 }
 
 .services {
@@ -101,7 +102,6 @@ header p {
     border-radius: 12px;
     padding: 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    border-left: 4px solid #111827;
 }
 
 .card h3 {
@@ -119,8 +119,10 @@ header p {
     color: #111827;
 }
 
-.provider {
+.authorized {
+    margin-top: 12px !important;
     font-weight: bold;
+    color: #15803d !important;
 }
 
 footer {
@@ -131,17 +133,12 @@ footer {
 }
 
 @media (max-width: 650px) {
-
     .services {
         grid-template-columns: 1fr;
     }
 
     header h1 {
         font-size: 22px;
-    }
-
-    .city-title {
-        font-size: 19px;
     }
 }
 </style>
@@ -164,13 +161,8 @@ footer {
 
 <p>
 Xiaomi robot süpürge ve akıllı süpürge ürünleri için
-Türkiye'deki Xiaomi yetkili servis noktalarını
-il, ilçe ve açık adres bilgileriyle görüntüleyebilirsiniz.
-</p>
-
-<p>
-<strong>Not:</strong> Servis bilgileri Xiaomi Türkiye'nin resmi
-yetkili servis ve satış sonrası hizmet bilgilerinden derlenmiştir.
+yetkili servis noktalarını il, ilçe ve açık adres
+bilgileriyle Briko üzerinden görüntüleyebilirsiniz.
 </p>
 
 </div>
@@ -184,156 +176,266 @@ yetkili servis ve satış sonrası hizmet bilgilerinden derlenmiştir.
 İstanbul
 </div>
 
-<h3 class="district">Şişli - Levent</h3>
+<h3 class="district-title">Şişli - Levent</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi ESC Exclusive Service Center İstanbul Levent</h3>
-<p class="provider"><strong>Servis:</strong> Xiaomi Yetkili Servis</p>
-<p><strong>Adres:</strong><br>
-Metrocity AVM, Levent, Esentepe Mahallesi,
+
+<p>
+<strong>Adres:</strong><br>
+Metrocity AVM, Esentepe Mahallesi,
 Büyükdere Caddesi No:171,
-İç Kapı No:93, Şişli / İstanbul
+İç Kapı No:93,
+Şişli / İstanbul
 </p>
-</div>
+
+<p>
+<strong>Servis:</strong>
+Xiaomi Yetkili Servis Merkezi
+</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
 
 </div>
 
+</div>
 
-<h3 class="district">Zeytinburnu</h3>
+
+<h3 class="district-title">Zeytinburnu</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi SIS İstanbul Zeytinburnu</h3>
-<p class="provider"><strong>Servis:</strong> Mieko</p>
-<p><strong>Adres:</strong><br>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Mieko
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Prof. Muammer Aksoy Caddesi No:31,
 Olivium AVM,
-34020 Zeytinburnu / İstanbul
+Zeytinburnu / İstanbul
 </p>
-</div>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
 
 </div>
 
+</div>
 
-<h3 class="district">Pendik</h3>
+
+<h3 class="district-title">Pendik</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi SIS İstanbul Pendik</h3>
-<p class="provider"><strong>Servis:</strong> Mieko</p>
-<p><strong>Adres:</strong><br>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Mieko
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Batı Mahallesi,
 Dr. Orhan Altepe Caddesi,
 Sezer Apartmanı No:31,
 Pendik / İstanbul
 </p>
-</div>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
 
 </div>
 
+</div>
 
-<h3 class="district">Kadıköy</h3>
+
+<h3 class="district-title">Kadıköy</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi ESC İstanbul Kadıköy</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Evofone
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Fahrettin Kerim Gökay Caddesi,
 Baycan Han No:39-41/B,
-34722 Kadıköy / İstanbul
+Kadıköy / İstanbul
 </p>
-</div>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
 
 </div>
 
+</div>
 
-<h3 class="district">Maslak - Sarıyer</h3>
+
+<h3 class="district-title">Sarıyer - Maslak</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi MSC İstanbul Maslak</h3>
-<p class="provider"><strong>Servis:</strong> Mieko</p>
-<p><strong>Adres:</strong><br>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Mieko
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Maslak Mahallesi,
 Sanatkarlar Sokak,
 Eclipse Sitesi D Blok No:12,
 Sarıyer / İstanbul
 </p>
-</div>
 
-</div>
-
-
-<h3 class="district">Kağıthane</h3>
-
-<div class="services">
-
-<div class="card">
-<h3>Xiaomi MSC İstanbul Kağıthane</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
-Kağıthane Ofispark İş Merkezi,
-Merkez, Bağlar Caddesi No:14,
-34406 Kağıthane / İstanbul
+<p class="authorized">
+✓ Yetkili Servis
 </p>
-</div>
 
 </div>
 
+</div>
 
-<h3 class="district">Maltepe</h3>
+
+<h3 class="district-title">Kağıthane</h3>
 
 <div class="services">
 
 <div class="card">
+
+<h3>Xiaomi MSC İstanbul Kağıthane</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Evofone
+</p>
+
+<p>
+<strong>Adres:</strong><br>
+Kağıthane Ofispark İş Merkezi,
+Merkez Mahallesi,
+Bağlar Caddesi No:14,
+Kağıthane / İstanbul
+</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+</div>
+
+</div>
+
+
+<h3 class="district-title">Maltepe</h3>
+
+<div class="services">
+
+<div class="card">
+
 <h3>Xiaomi MSC İstanbul Maltepe</h3>
-<p class="provider"><strong>Servis:</strong> BDH</p>
-<p><strong>Adres:</strong><br>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+BDH
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Bağlarbaşı Mahallesi,
 Cemal Bey Caddesi No:110,
-34844 Maltepe / İstanbul
+Maltepe / İstanbul
 </p>
-</div>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
 
 </div>
 
+</div>
 
-<h3 class="district">Ataşehir</h3>
+
+<h3 class="district-title">Ataşehir</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi MSC İstanbul Ataşehir</h3>
-<p class="provider"><strong>Servis:</strong> Ouno</p>
-<p><strong>Adres:</strong><br>
-Atilla İlhan Caddesi No:20,
-34750 Ataşehir / İstanbul
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Ouno
 </p>
-</div>
+
+<p>
+<strong>Adres:</strong><br>
+Atilla İlhan Caddesi No:20,
+Ataşehir / İstanbul
+</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
 
 </div>
 
+</div>
 
-<h3 class="district">Kartal</h3>
+
+<h3 class="district-title">Kartal</h3>
 
 <div class="services">
 
 <div class="card">
+
 <h3>Xiaomi MSC İstanbul Kartal</h3>
-<p class="provider"><strong>Servis:</strong> KVK</p>
-<p><strong>Adres:</strong><br>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+KVK
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Soğanlık Yeni Mahallesi,
 D-100 Kuzey Yan Yol,
 Kanat Sanayi Sitesi No:32,
-34880 Kartal / İstanbul
+Kartal / İstanbul
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -349,29 +451,31 @@ Kanat Sanayi Sitesi No:32,
 Ankara
 </div>
 
-<h3 class="district">Çankaya - Kızılay</h3>
+<h3 class="district-title">Çankaya - Kızılay</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi ESC Ankara Kızılay</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
-Korkutreis Mahallesi,
-Gazi Mustafa Kemal Bulvarı 32/B,
-Demirtepe, Çankaya / Ankara
-</p>
-</div>
 
-<div class="card">
-<h3>Xiaomi MSC Ankara Çankaya</h3>
-<p class="provider"><strong>Servis:</strong> KVK</p>
-<p><strong>Adres:</strong><br>
-Kızılay Mahallesi,
-Fevzi Çakmak 1 Sokak,
-Oran Apartmanı No:15/B,
-06420 Çankaya / Ankara
+<h3>Xiaomi Ankara Kızılay</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Evofone
 </p>
+
+<p>
+<strong>Adres:</strong><br>
+Korkutreis Mahallesi,
+Gazi Mustafa Kemal Bulvarı No:32/B,
+Demirtepe,
+Çankaya / Ankara
+</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -387,38 +491,59 @@ Oran Apartmanı No:15/B,
 İzmir
 </div>
 
-<h3 class="district">Konak - Alsancak</h3>
+<h3 class="district-title">Konak - Alsancak</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi ESC İzmir Alsancak</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
+
+<h3>Xiaomi İzmir Alsancak</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Genpa
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Alsancak Mahallesi,
 Kıbrıs Şehitleri Caddesi No:136/1-B,
 Konak / İzmir
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
-<div class="card">
-<h3>Xiaomi MSC İzmir Çankaya</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
-İsmet Kaptan Mahallesi,
-Şair Eşref Bulvarı No:26/B,
-Konak / İzmir
-</p>
 </div>
 
+
+<h3 class="district-title">Çankaya</h3>
+
+<div class="services">
+
 <div class="card">
-<h3>Xiaomi MSC İzmir Konak</h3>
-<p class="provider"><strong>Servis:</strong> KVK</p>
-<p><strong>Adres:</strong><br>
-İsmet Kaptan Mahallesi,
-1365. Sokak No:7/B,
-35210 Konak / İzmir
+
+<h3>Xiaomi İzmir Çankaya</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Genpa
 </p>
+
+<p>
+<strong>Adres:</strong><br>
+Şair Eşref Bulvarı,
+No:26/B,
+Çankaya / İzmir
+</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -434,19 +559,31 @@ Konak / İzmir
 Adana
 </div>
 
-<h3 class="district">Seyhan</h3>
+<h3 class="district-title">Seyhan</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi MSC Adana Seyhan</h3>
-<p class="provider"><strong>Servis:</strong> KVK</p>
-<p><strong>Adres:</strong><br>
-Reşatbey Mahallesi,
-Turhan Cemal Beriker Bulvarı,
-Günep Panorama B Blok No:8,
-01120 Seyhan / Adana
+
+<h3>Xiaomi Adana Seyhan</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Genpa
 </p>
+
+<p>
+<strong>Adres:</strong><br>
+Cemalpaşa Mahallesi,
+63005 Sokak,
+Aydınoğlu İş Merkezi No:27/A,
+Seyhan / Adana
+</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -462,19 +599,31 @@ Günep Panorama B Blok No:8,
 Trabzon
 </div>
 
-<h3 class="district">Ortahisar</h3>
+<h3 class="district-title">Ortahisar</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi MSC Trabzon Ortahisar</h3>
-<p class="provider"><strong>Servis:</strong> KVK</p>
-<p><strong>Adres:</strong><br>
+
+<h3>Xiaomi Trabzon Ortahisar</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+KVK
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Cumhuriyet Mahallesi,
 Nemlioğlu Cemal Sokak,
 Ziya Bey Sitesi A Blok No:16/1,
-61050 Ortahisar / Trabzon
+Ortahisar / Trabzon
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -490,18 +639,30 @@ Ziya Bey Sitesi A Blok No:16/1,
 Antalya
 </div>
 
-<h3 class="district">Muratpaşa</h3>
+<h3 class="district-title">Muratpaşa</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi ESC Antalya</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
+
+<h3>Xiaomi Antalya</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Evofone
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 İsmet Gökşen Caddesi,
 Hüseyin Akçor 2 Apartmanı No:40/E,
-Muratpaşa, Şirinyalı / Antalya
+Muratpaşa / Antalya
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -517,18 +678,30 @@ Muratpaşa, Şirinyalı / Antalya
 Samsun
 </div>
 
-<h3 class="district">İlkadım</h3>
+<h3 class="district-title">İlkadım</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi ESC Samsun</h3>
-<p class="provider"><strong>Servis:</strong> Evofone</p>
-<p><strong>Adres:</strong><br>
+
+<h3>Xiaomi Samsun</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Evofone
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 19 Mayıs Mahallesi,
 Gazi Caddesi No:95/4,
 İlkadım / Samsun
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -544,19 +717,31 @@ Gazi Caddesi No:95/4,
 Gaziantep
 </div>
 
-<h3 class="district">Şehitkamil</h3>
+<h3 class="district-title">Şehitkamil</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi ESC Gaziantep</h3>
-<p class="provider"><strong>Servis:</strong> Mieko</p>
-<p><strong>Adres:</strong><br>
+
+<h3>Xiaomi Gaziantep</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Mieko
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Değirmiçem Mahallesi,
 Prof. Muammer Aksoy Bulvarı,
-Kepkep Plaza Kapı No:20H,
-Gaziantep
+Kepkep Plaza No:20H,
+Şehitkamil / Gaziantep
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
@@ -572,18 +757,30 @@ Gaziantep
 Bursa
 </div>
 
-<h3 class="district">Osmangazi</h3>
+<h3 class="district-title">Osmangazi</h3>
 
 <div class="services">
 
 <div class="card">
-<h3>Xiaomi ESC Bursa</h3>
-<p class="provider"><strong>Servis:</strong> Mieko</p>
-<p><strong>Adres:</strong><br>
+
+<h3>Xiaomi Bursa</h3>
+
+<p>
+<strong>Servis Sağlayıcısı:</strong>
+Mieko
+</p>
+
+<p>
+<strong>Adres:</strong><br>
 Kırcaali Mahallesi,
 Kayalı Sokak No:34,
-16220 Osmangazi / Bursa
+Osmangazi / Bursa
 </p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
 </div>
 
 </div>
