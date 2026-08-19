@@ -71,6 +71,43 @@ header p {
     margin-bottom: 0;
 }
 
+/* ARAMA ALANI */
+
+.search-box {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.search-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.search-input,
+.city-select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.search-input:focus,
+.city-select:focus {
+    outline: none;
+    border-color: #111827;
+}
+
 .city {
     margin-bottom: 30px;
 }
@@ -125,6 +162,16 @@ header p {
     color: #15803d !important;
 }
 
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    color: #666;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
 footer {
     text-align: center;
     padding: 30px 15px;
@@ -133,7 +180,12 @@ footer {
 }
 
 @media (max-width: 650px) {
+
     .services {
+        grid-template-columns: 1fr;
+    }
+
+    .search-row {
         grid-template-columns: 1fr;
     }
 
@@ -168,9 +220,54 @@ bilgileriyle Briko üzerinden görüntüleyebilirsiniz.
 </div>
 
 
+<!-- SERVİS ARA / ŞEHİR ARA -->
+
+<div class="search-box">
+
+<h2>🔎 Servis Ara</h2>
+
+<div class="search-row">
+
+<input
+type="text"
+id="serviceSearch"
+class="search-input"
+placeholder="Servis, ilçe veya adres ara..."
+onkeyup="filterServices()"
+>
+
+<select
+id="citySearch"
+class="city-select"
+onchange="filterServices()"
+>
+
+<option value="">📍 Şehir Ara</option>
+<option value="istanbul">İstanbul</option>
+<option value="ankara">Ankara</option>
+<option value="izmir">İzmir</option>
+<option value="adana">Adana</option>
+<option value="trabzon">Trabzon</option>
+<option value="antalya">Antalya</option>
+<option value="samsun">Samsun</option>
+<option value="gaziantep">Gaziantep</option>
+<option value="bursa">Bursa</option>
+
+</select>
+
+</div>
+
+</div>
+
+
+<div id="noResult" class="no-result">
+Aradığınız kriterlere uygun servis bulunamadı.
+</div>
+
+
 <!-- İSTANBUL -->
 
-<div class="city">
+<div class="city service-city" data-city="istanbul">
 
 <div class="city-title">
 İstanbul
@@ -180,7 +277,7 @@ bilgileriyle Briko üzerinden görüntüleyebilirsiniz.
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi ESC Exclusive Service Center İstanbul Levent</h3>
 
@@ -210,7 +307,7 @@ Xiaomi Yetkili Servis Merkezi
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi SIS İstanbul Zeytinburnu</h3>
 
@@ -239,7 +336,7 @@ Zeytinburnu / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi SIS İstanbul Pendik</h3>
 
@@ -269,7 +366,7 @@ Pendik / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi ESC İstanbul Kadıköy</h3>
 
@@ -298,7 +395,7 @@ Kadıköy / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi MSC İstanbul Maslak</h3>
 
@@ -328,7 +425,7 @@ Sarıyer / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi MSC İstanbul Kağıthane</h3>
 
@@ -358,7 +455,7 @@ Kağıthane / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi MSC İstanbul Maltepe</h3>
 
@@ -387,7 +484,7 @@ Maltepe / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi MSC İstanbul Ataşehir</h3>
 
@@ -415,7 +512,7 @@ Ataşehir / İstanbul
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi MSC İstanbul Kartal</h3>
 
@@ -445,7 +542,7 @@ Kartal / İstanbul
 
 <!-- ANKARA -->
 
-<div class="city">
+<div class="city service-city" data-city="ankara">
 
 <div class="city-title">
 Ankara
@@ -455,7 +552,7 @@ Ankara
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Ankara Kızılay</h3>
 
@@ -485,7 +582,7 @@ Demirtepe,
 
 <!-- İZMİR -->
 
-<div class="city">
+<div class="city service-city" data-city="izmir">
 
 <div class="city-title">
 İzmir
@@ -495,7 +592,7 @@ Demirtepe,
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi İzmir Alsancak</h3>
 
@@ -524,7 +621,7 @@ Konak / İzmir
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi İzmir Çankaya</h3>
 
@@ -553,7 +650,7 @@ No:26/B,
 
 <!-- ADANA -->
 
-<div class="city">
+<div class="city service-city" data-city="adana">
 
 <div class="city-title">
 Adana
@@ -563,7 +660,7 @@ Adana
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Adana Seyhan</h3>
 
@@ -593,7 +690,7 @@ Seyhan / Adana
 
 <!-- TRABZON -->
 
-<div class="city">
+<div class="city service-city" data-city="trabzon">
 
 <div class="city-title">
 Trabzon
@@ -603,7 +700,7 @@ Trabzon
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Trabzon Ortahisar</h3>
 
@@ -633,7 +730,7 @@ Ortahisar / Trabzon
 
 <!-- ANTALYA -->
 
-<div class="city">
+<div class="city service-city" data-city="antalya">
 
 <div class="city-title">
 Antalya
@@ -643,7 +740,7 @@ Antalya
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Antalya</h3>
 
@@ -672,7 +769,7 @@ Muratpaşa / Antalya
 
 <!-- SAMSUN -->
 
-<div class="city">
+<div class="city service-city" data-city="samsun">
 
 <div class="city-title">
 Samsun
@@ -682,7 +779,7 @@ Samsun
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Samsun</h3>
 
@@ -711,7 +808,7 @@ Gazi Caddesi No:95/4,
 
 <!-- GAZİANTEP -->
 
-<div class="city">
+<div class="city service-city" data-city="gaziantep">
 
 <div class="city-title">
 Gaziantep
@@ -721,7 +818,7 @@ Gaziantep
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Gaziantep</h3>
 
@@ -751,7 +848,7 @@ Kepkep Plaza No:20H,
 
 <!-- BURSA -->
 
-<div class="city">
+<div class="city service-city" data-city="bursa">
 
 <div class="city-title">
 Bursa
@@ -761,7 +858,7 @@ Bursa
 
 <div class="services">
 
-<div class="card">
+<div class="card service-card">
 
 <h3>Xiaomi Bursa</h3>
 
@@ -793,6 +890,94 @@ Osmangazi / Bursa
 </footer>
 
 </div>
+
+
+<script>
+
+function filterServices() {
+
+    const searchText =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const selectedCity =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cities =
+        document.querySelectorAll(".service-city");
+
+    let totalVisible = 0;
+
+    cities.forEach(function(city) {
+
+        const cityName =
+            city.getAttribute("data-city");
+
+        const cards =
+            city.querySelectorAll(".service-card");
+
+        let cityHasResult = false;
+
+        cards.forEach(function(card) {
+
+            const cardText =
+                card.innerText.toLowerCase();
+
+            const textMatch =
+                searchText === "" ||
+                cardText.includes(searchText);
+
+            const cityMatch =
+                selectedCity === "" ||
+                cityName === selectedCity;
+
+            if (textMatch && cityMatch) {
+
+                card.style.display = "";
+
+                cityHasResult = true;
+                totalVisible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+        if (cityHasResult) {
+
+            city.style.display = "";
+
+        } else {
+
+            city.style.display = "none";
+
+        }
+
+    });
+
+    const noResult =
+        document.getElementById("noResult");
+
+    if (totalVisible === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
 
 </body>
 </html>
