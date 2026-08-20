@@ -1,64 +1,85 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Türkiye’nin Teknik Servis Rehberi</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Türkiye'nin Teknik Servis Rehberi - Briko</title>
+
 
 <style>
+
 * {
     box-sizing: border-box;
 }
 
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #1f2937;
+    background: #f5f6f8;
+    color: #222;
 }
 
+
 header {
-    background: #111827;
+    background: #111;
     color: white;
     text-align: center;
-    padding: 35px 15px;
+    padding: 32px 15px;
 }
+
 
 header h1 {
     margin: 0;
     font-size: 30px;
 }
 
+
 header p {
     margin: 10px 0 0;
-    opacity: .85;
+    color: #ccc;
     font-size: 16px;
 }
+
 
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 30px 15px;
+    padding: 25px 15px 40px;
 }
+
 
 .intro {
     background: white;
     padding: 22px;
-    border-radius: 16px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
-    line-height: 1.6;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 30px;
 }
+
 
 .intro h2 {
     margin-top: 0;
+    font-size: 23px;
 }
 
-.section-title {
-    margin: 30px 0 15px;
-    font-size: 24px;
+
+.intro p {
+    line-height: 1.6;
+    margin-bottom: 0;
 }
+
+
+.section-title {
+    font-size: 24px;
+    margin: 30px 0 15px;
+}
+
 
 .brand-grid {
     display: grid;
@@ -66,106 +87,136 @@ header p {
     gap: 18px;
 }
 
+
 .brand-card {
     display: block;
     background: white;
-    padding: 25px 20px;
-    border-radius: 16px;
+    color: #222;
     text-decoration: none;
-    color: #1f2937;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    padding: 23px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
     transition: .2s;
 }
 
+
 .brand-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    box-shadow: 0 5px 16px rgba(0,0,0,.12);
 }
 
-.brand-icon {
+
+.icon {
     font-size: 34px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
+
 
 .brand-card h3 {
-    margin: 0 0 8px;
-    font-size: 21px;
+    margin: 0 0 7px;
+    font-size: 20px;
 }
+
 
 .brand-card p {
     margin: 0;
-    color: #6b7280;
+    color: #666;
+    font-size: 14px;
     line-height: 1.5;
 }
 
+
 .footer {
     text-align: center;
-    margin-top: 30px;
-    padding: 20px;
-    color: #64748b;
-    font-size: 14px;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
 }
 
-@media (max-width:600px) {
+
+@media (max-width: 700px) {
 
     header h1 {
-        font-size: 25px;
+        font-size: 24px;
     }
+
 
     .brand-grid {
         grid-template-columns: 1fr;
     }
 
-    .brand-card {
-        padding: 22px 18px;
+
+    .section-title {
+        font-size: 22px;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
 
-    <h1>🛠️ Teknik Servis Rehberi</h1>
+    <h1>
+        🛠️ Türkiye'nin Teknik Servis Rehberi
+    </h1>
 
     <p>
-        Türkiye’nin Teknik Servis Rehberi
+        Yetkili servis bilgilerine kolayca ulaşın
     </p>
 
 </header>
 
+
 <div class="container">
+
 
     <div class="intro">
 
-        <h2>Marka Seçin</h2>
+        <h2>
+            Briko'ya Hoş Geldiniz
+        </h2>
 
         <p>
-            Servis bilgilerini görmek istediğiniz markayı seçin.
-            Marka sayfasında şehir, servis adı ve açık adres
-            bilgilerini görüntüleyebilirsiniz.
+            Servis bilgilerini görmek istediğiniz
+            marka üzerine tıklayın. Şehir, servis adı,
+            adres ve yol tarifi bilgilerine ulaşabilirsiniz.
         </p>
 
     </div>
 
 
+
     <!-- TELEFON MARKALARI -->
 
-    <h2 class="section-title">📱 Telefon Markaları</h2>
+    <h2 class="section-title">
+        📱 Telefon Markaları
+    </h2>
+
 
     <div class="brand-grid">
 
 
         <!-- APPLE -->
 
-        <a class="brand-card" href="Apple.html">
+        <a
+            class="brand-card"
+            href="Apple.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>Apple</h3>
+            <h3>
+                Apple
+            </h3>
 
             <p>
                 Apple yetkili servisleri
@@ -174,15 +225,21 @@ header p {
         </a>
 
 
+
         <!-- SAMSUNG -->
 
-        <a class="brand-card" href="Samsung.html">
+        <a
+            class="brand-card"
+            href="Samsung.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>Samsung</h3>
+            <h3>
+                Samsung
+            </h3>
 
             <p>
                 Samsung yetkili servisleri
@@ -191,15 +248,21 @@ header p {
         </a>
 
 
+
         <!-- XIAOMI -->
 
-        <a class="brand-card" href="Xiaomi.html">
+        <a
+            class="brand-card"
+            href="Xiaomi.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>Xiaomi</h3>
+            <h3>
+                Xiaomi
+            </h3>
 
             <p>
                 Xiaomi yetkili servisleri
@@ -208,15 +271,21 @@ header p {
         </a>
 
 
+
         <!-- HUAWEI -->
 
-        <a class="brand-card" href="Huawei.html">
+        <a
+            class="brand-card"
+            href="Huawei.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>Huawei</h3>
+            <h3>
+                Huawei
+            </h3>
 
             <p>
                 Huawei yetkili servisleri
@@ -225,15 +294,21 @@ header p {
         </a>
 
 
+
         <!-- OPPO -->
 
-        <a class="brand-card" href="Oppo.html">
+        <a
+            class="brand-card"
+            href="Oppo.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>Oppo</h3>
+            <h3>
+                Oppo
+            </h3>
 
             <p>
                 Oppo yetkili servisleri
@@ -242,15 +317,21 @@ header p {
         </a>
 
 
+
         <!-- VIVO -->
 
-        <a class="brand-card" href="Vivo.html">
+        <a
+            class="brand-card"
+            href="Vivo.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>Vivo</h3>
+            <h3>
+                Vivo
+            </h3>
 
             <p>
                 Vivo yetkili servisleri
@@ -259,15 +340,21 @@ header p {
         </a>
 
 
+
         <!-- TECNO -->
 
-        <a class="brand-card" href="Tekno.html">
+        <a
+            class="brand-card"
+            href="Tekno.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>TECNO</h3>
+            <h3>
+                TECNO
+            </h3>
 
             <p>
                 TECNO yetkili servisleri
@@ -276,15 +363,21 @@ header p {
         </a>
 
 
+
         <!-- REEDER -->
 
-        <a class="brand-card" href="Reedar.html">
+        <a
+            class="brand-card"
+            href="Reedar.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 📱
             </div>
 
-            <h3>REEDER</h3>
+            <h3>
+                REEDER
+            </h3>
 
             <p>
                 REEDER yetkili servisleri
@@ -295,22 +388,32 @@ header p {
     </div>
 
 
+
+
     <!-- AKILLI SÜPÜRGELER -->
 
-    <h2 class="section-title">🧹 Akıllı Süpürgeler</h2>
+    <h2 class="section-title">
+        🧹 Akıllı Süpürgeler
+    </h2>
+
 
     <div class="brand-grid">
 
 
         <!-- ROBOROCK -->
 
-        <a class="brand-card" href="Roboroc.html">
+        <a
+            class="brand-card"
+            href="Roboroc.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>Roborock</h3>
+            <h3>
+                Roborock
+            </h3>
 
             <p>
                 Roborock yetkili servisleri
@@ -319,15 +422,21 @@ header p {
         </a>
 
 
-        <!-- XIAOMI AKILLI SÜPÜRGE -->
 
-        <a class="brand-card" href="XiaomiSupurge.html">
+        <!-- XIAOMI SÜPÜRGE -->
 
-            <div class="brand-icon">
+        <a
+            class="brand-card"
+            href="XiaomiSupurge.html"
+        >
+
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>Xiaomi</h3>
+            <h3>
+                Xiaomi
+            </h3>
 
             <p>
                 Xiaomi akıllı süpürge yetkili servisleri
@@ -336,49 +445,67 @@ header p {
         </a>
 
 
+
         <!-- DREAME -->
 
-        <a class="brand-card" href="Dreame.html">
+        <a
+            class="brand-card"
+            href="Dreame.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>Dreame</h3>
+            <h3>
+                Dreame
+            </h3>
 
             <p>
-                Dreame akıllı süpürge yetkili servisleri
+                Dreame yetkili servisleri
             </p>
 
         </a>
+
 
 
         <!-- ECOVACS -->
 
-        <a class="brand-card" href="Ecovacs.html">
+        <a
+            class="brand-card"
+            href="Ecovacs.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>Ecovacs</h3>
+            <h3>
+                Ecovacs
+            </h3>
 
             <p>
-                Ecovacs akıllı süpürge yetkili servisleri
+                Ecovacs yetkili servisleri
             </p>
 
         </a>
 
 
+
         <!-- PHILIPS -->
 
-        <a class="brand-card" href="Philips.html">
+        <a
+            class="brand-card"
+            href="Philips.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>Philips</h3>
+            <h3>
+                Philips
+            </h3>
 
             <p>
                 Philips akıllı süpürge yetkili servisleri
@@ -387,50 +514,87 @@ header p {
         </a>
 
 
-        <!-- iROBOT / ROOMBA -->
 
-        <a class="brand-card" href="iRobot.html">
+        <!-- IROBOT -->
 
-            <div class="brand-icon">
+        <a
+            class="brand-card"
+            href="iRobot.html"
+        >
+
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>iRobot / Roomba</h3>
+            <h3>
+                iRobot / Roomba
+            </h3>
 
             <p>
-                iRobot / Roomba akıllı süpürge yetkili servisleri
+                iRobot / Roomba yetkili servisleri
             </p>
 
         </a>
+
 
 
         <!-- DYSON -->
 
-        <a class="brand-card" href="Dyson.html">
+        <a
+            class="brand-card"
+            href="Dyson.html"
+        >
 
-            <div class="brand-icon">
+            <div class="icon">
                 🧹
             </div>
 
-            <h3>Dyson</h3>
+            <h3>
+                Dyson
+            </h3>
 
             <p>
-                Dyson akıllı süpürge yetkili servisleri
+                Dyson yetkili servisleri
             </p>
 
         </a>
 
 
+
+        <!-- KIWI -->
+
+        <a
+            class="brand-card"
+            href="Kiwi.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Kiwi
+            </h3>
+
+            <p>
+                Kiwi yetkili servisleri
+            </p>
+
+        </a>
+
     </div>
 
-
-    <div class="footer">
-
-        Türkiye’nin Teknik Servis Rehberi © 2026
-
-    </div>
 
 </div>
 
+
+<div class="footer">
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</div>
+
+
 </body>
+
 </html>
