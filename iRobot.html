@@ -1,1 +1,402 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>iRobot Roomba Yetkili Servisleri - Briko</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #ccc;
+    font-size: 15px;
+}
+
+.home-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.home-button:hover {
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.search-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.city-filter {
+    margin-top: 12px;
+}
+
+.city-filter select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.badge {
+    display: inline-block;
+    background: #111;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin: 8px 0;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 12px;
+    text-decoration: none;
+    background: #111;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.info {
+    background: white;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>iRobot Roomba Yetkili Servisleri</h1>
+
+    <p>
+        Türkiye'nin Teknik Servis Rehberi - Briko
+    </p>
+
+</header>
+
+<a class="home-button" href="/servisrehberi/">
+    🏠 Ana Sayfaya Dön
+</a>
+
+<div class="container">
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Servis adı, şehir veya adres ara..."
+            onkeyup="filterServices()"
+        >
+
+        <div class="city-filter">
+
+            <select
+                id="cityFilter"
+                onchange="filterServices()"
+            >
+
+                <option value="">Tüm Şehirler</option>
+                <option value="İstanbul">İstanbul</option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="cards" id="serviceCards">
+
+        <!-- HTS TEKNİK HİZMETLER -->
+
+        <div
+            class="card service-card"
+            data-city="İstanbul"
+            data-search="iRobot Roomba HTS Teknik Hizmetler Yetkili Servis İstanbul Ümraniye Site Mahallesi Adıvar Sokak"
+        >
+
+            <span class="badge">
+                Yetkili Servis
+            </span>
+
+            <h2>
+                HTS Teknik Hizmetler
+            </h2>
+
+            <p>
+                <strong>📍 Şehir:</strong>
+                İstanbul
+            </p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Site Mah. Adıvar Sok. No:24<br>
+                Ümraniye / İstanbul
+            </p>
+
+            <p>
+                <strong>☎️ Telefon:</strong><br>
+                0216 313 14 14
+            </p>
+
+            <p>
+                <strong>🕐 Çalışma Saatleri:</strong><br>
+                Pazartesi - Cuma: 08:00 - 17:00
+            </p>
+
+            <a
+                href="tel:02163131414"
+            >
+                ☎️ Ara
+            </a>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Site+Mahallesi+Ad%C4%B1var+Sokak+No+24+%C3%9Cmraniye+%C4%B0stanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
+
+        </div>
+
+    </div>
+
+    <div
+        class="no-result"
+        id="noResult"
+    >
+        Aramanıza uygun yetkili servis bulunamadı.
+    </div>
+
+    <div class="info">
+
+        <h2>
+            iRobot Türkiye Yetkili Servis İletişim
+        </h2>
+
+        <p>
+            <strong>☎️ Yetkili Servis:</strong><br>
+            0216 313 14 14
+        </p>
+
+        <p>
+            <strong>💬 WhatsApp:</strong><br>
+            0553 384 23 40
+        </p>
+
+        <p>
+            <strong>✉️ E-posta:</strong><br>
+            info.tr@certus-mercatus.com
+        </p>
+
+        <p>
+            <strong>🕐 Çalışma Saatleri:</strong><br>
+            Pazartesi - Cuma: 08:00 - 17:00
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+
+    Briko - Türkiye'nin teknik servis rehberi
+
+</footer>
+
+<script>
+
+function filterServices() {
+
+    const searchInput =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const city =
+        document
+        .getElementById("cityFilter")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    let visibleCount = 0;
+
+    cards.forEach(function(card) {
+
+        const searchData =
+            card
+            .getAttribute("data-search")
+            .toLowerCase();
+
+        const cardCity =
+            card
+            .getAttribute("data-city")
+            .toLowerCase();
+
+        const matchesSearch =
+            searchData.includes(searchInput);
+
+        const matchesCity =
+            city === "" ||
+            cardCity === city;
+
+        if (
+            matchesSearch &&
+            matchesCity
+        ) {
+
+            card.style.display = "block";
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+    const noResult =
+        document.getElementById("noResult");
+
+    if (visibleCount === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
