@@ -1,1 +1,534 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Kiwi Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #ccc;
+    font-size: 15px;
+}
+
+.home-button {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.home-button:hover {
+    opacity: .85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.search-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #111;
+}
+
+.city-filter {
+    margin-top: 12px;
+}
+
+.city-filter select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    border: 1px solid #eee;
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.badge {
+    display: inline-block;
+    background: #111;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin: 8px 0;
+    line-height: 1.5;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #111;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.card a.phone {
+    background: #16803c;
+}
+
+.info {
+    background: white;
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.info p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.notice {
+    background: #fff8e1;
+    border: 1px solid #f0d98a;
+    padding: 16px;
+    border-radius: 12px;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Kiwi Yetkili Servisleri</h1>
+
+    <p>
+        Türkiye'nin Teknik Servis Rehberi - Briko
+    </p>
+
+</header>
+
+
+<a class="home-button" href="/servisrehberi/">
+
+    🏠 Ana Sayfaya Dön
+
+</a>
+
+
+<div class="container">
+
+
+    <!-- ARAMA -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Servis adı, şehir veya adres ara..."
+            onkeyup="filterServices()"
+        >
+
+        <div class="city-filter">
+
+            <select
+                id="cityFilter"
+                onchange="filterServices()"
+            >
+
+                <option value="">
+                    Tüm Şehirler
+                </option>
+
+                <option value="İstanbul">
+                    İstanbul
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+
+    <!-- SERVİS KARTLARI -->
+
+    <div
+        class="cards"
+        id="serviceCards"
+    >
+
+
+        <!-- İSTANBUL -->
+
+        <div
+            class="card service-card"
+            data-city="İstanbul"
+            data-search="Kiwi BMVA Elektronik Osmangazi 2644 Kıraç Esenyurt İstanbul"
+        >
+
+            <span class="badge">
+                Yetkili Servis / Teknik Destek
+            </span>
+
+
+            <h2>
+                BMVA Elektronik San. ve Tic. A.Ş.
+            </h2>
+
+
+            <p>
+
+                <strong>📍 Şehir:</strong>
+                İstanbul
+
+            </p>
+
+
+            <p>
+
+                <strong>📌 Adres:</strong><br>
+
+                Osmangazi Mahallesi<br>
+
+                2644. Sokak No:3/2<br>
+
+                Kıraç - Esenyurt / İstanbul
+
+            </p>
+
+
+            <p>
+
+                <strong>🏢 Marka:</strong>
+                Kiwi
+
+            </p>
+
+
+            <div class="buttons">
+
+
+                <a
+                    class="phone"
+                    href="tel:08504335494"
+                >
+
+                    ☎️ Ara
+
+                </a>
+
+
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Osmangazi+Mahallesi+2644+Sokak+No+3%2F2+Kıraç+Esenyurt+İstanbul"
+                    target="_blank"
+                >
+
+                    📍 Yol Tarifi
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        class="no-result"
+        id="noResult"
+    >
+
+        Aramanıza uygun yetkili servis bulunamadı.
+
+    </div>
+
+
+    <!-- BİLGİ -->
+
+    <div class="info">
+
+        <h2>
+            Kiwi Teknik Servis İletişim
+        </h2>
+
+
+        <p>
+
+            <strong>☎️ Müşteri Hizmetleri:</strong><br>
+
+            0850 433 54 94
+
+        </p>
+
+
+        <p>
+
+            <strong>🏢 Üretici / İthalatçı:</strong><br>
+
+            BMVA Elektronik Sanayi ve Ticaret A.Ş.
+
+        </p>
+
+
+        <p>
+
+            <strong>📍 Merkez Adres:</strong><br>
+
+            Osmangazi Mahallesi 2644. Sokak No:3/2<br>
+
+            Kıraç - Esenyurt / İstanbul
+
+        </p>
+
+
+        <p>
+
+            <strong>✉️ E-posta:</strong><br>
+
+            destek@kiwi-home.com
+
+        </p>
+
+
+        <p>
+
+            <strong>🌐 Resmî destek:</strong><br>
+
+            Kiwi teknik servis ve güncel servis listeleri
+            için Kiwi'nin resmî destek kanalları kullanılmalıdır.
+
+        </p>
+
+
+    </div>
+
+
+    <div class="notice">
+
+        <strong>ℹ️ Önemli:</strong><br>
+
+        Kiwi'nin güncel teknik servis listeleri zaman içinde
+        değişebileceğinden, garanti kapsamındaki işlemlerden
+        önce 0850 433 54 94 numaralı Kiwi müşteri hizmetlerinden
+        servis bilgisini doğrulamanız önerilir.
+
+    </div>
+
+
+</div>
+
+
+<footer>
+
+    Briko - Türkiye'nin teknik servis rehberi
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const searchInput =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const city =
+        document
+        .getElementById("cityFilter")
+        .value
+        .toLowerCase();
+
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+
+    let visibleCount = 0;
+
+
+    cards.forEach(function(card) {
+
+
+        const searchData =
+            card
+            .getAttribute("data-search")
+            .toLowerCase();
+
+
+        const cardCity =
+            card
+            .getAttribute("data-city")
+            .toLowerCase();
+
+
+        const matchesSearch =
+            searchData.includes(searchInput);
+
+
+        const matchesCity =
+            city === "" ||
+            cardCity === city;
+
+
+        if (
+            matchesSearch &&
+            matchesCity
+        ) {
+
+            card.style.display = "block";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    const noResult =
+        document.getElementById("noResult");
+
+
+    if (visibleCount === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
