@@ -121,15 +121,25 @@ header p {
     font-size: 15px;
 }
 
+.buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
 .card a {
     display: inline-block;
-    margin-top: 12px;
     text-decoration: none;
     background: #111;
     color: white;
     padding: 10px 14px;
     border-radius: 8px;
     font-size: 14px;
+}
+
+.card a.phone {
+    background: #16803c;
 }
 
 .info {
@@ -149,13 +159,6 @@ header p {
     margin: 8px 0;
 }
 
-footer {
-    text-align: center;
-    padding: 30px 15px;
-    color: #777;
-    font-size: 13px;
-}
-
 .no-result {
     display: none;
     background: white;
@@ -165,7 +168,15 @@ footer {
     margin-top: 15px;
 }
 
-@media (max-width: 700px) {
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width:700px) {
+
     .cards {
         grid-template-columns: 1fr;
     }
@@ -180,8 +191,13 @@ footer {
 <body>
 
 <header>
+
     <h1>Dyson Yetkili Servisleri</h1>
-    <p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+    <p>
+        Türkiye'nin Teknik Servis Rehberi - Briko
+    </p>
+
 </header>
 
 <a class="home-button" href="/servisrehberi/">
@@ -205,11 +221,30 @@ footer {
                 id="cityFilter"
                 onchange="filterServices()"
             >
+
                 <option value="">Tüm Şehirler</option>
-                <option value="İstanbul">İstanbul</option>
-                <option value="Ankara">Ankara</option>
-                <option value="İzmir">İzmir</option>
+                <option value="Adana">Adana</option>
                 <option value="Antalya">Antalya</option>
+                <option value="Ankara">Ankara</option>
+                <option value="Balıkesir">Balıkesir</option>
+                <option value="Bolu">Bolu</option>
+                <option value="Bursa">Bursa</option>
+                <option value="Denizli">Denizli</option>
+                <option value="Diyarbakır">Diyarbakır</option>
+                <option value="Elazığ">Elazığ</option>
+                <option value="Eskişehir">Eskişehir</option>
+                <option value="Gaziantep">Gaziantep</option>
+                <option value="İstanbul">İstanbul</option>
+                <option value="İzmir">İzmir</option>
+                <option value="Kayseri">Kayseri</option>
+                <option value="Konya">Konya</option>
+                <option value="Malatya">Malatya</option>
+                <option value="Mersin">Mersin</option>
+                <option value="Samsun">Samsun</option>
+                <option value="Trabzon">Trabzon</option>
+                <option value="Şanlıurfa">Şanlıurfa</option>
+                <option value="Ordu">Ordu</option>
+
             </select>
 
         </div>
@@ -220,51 +255,785 @@ footer {
     <div class="cards" id="serviceCards">
 
 
-        <!-- DYSON SERVİS BİLGİSİ -->
+        <!-- ORDU -->
 
-        <div
-            class="card service-card"
-            data-city="İstanbul"
-            data-search="Dyson Yetkili Servis İstanbul"
-        >
+        <div class="card service-card"
+             data-city="Ordu"
+             data-search="Bilim Teknik Ordu Altınordu">
 
-            <span class="badge">
-                Yetkili Servis
-            </span>
+            <span class="badge">Yetkili Servis</span>
 
-            <h2>
-                Dyson Türkiye
-            </h2>
+            <h2>BİLİM TEKNİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Ordu</p>
 
             <p>
-                <strong>📍 Şehir:</strong>
+                <strong>📌 Adres:</strong><br>
+                Yeni Mahalle Şht. Pls. Aydın Güler Sk.<br>
+                No:10 Altınordu / Ordu
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">
+                    ☎️ Ara
+                </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Yeni+Mahalle+Şht+Pls+Aydın+Güler+Sokak+No+10+Altınordu+Ordu"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İSTANBUL ÜMRANİYE -->
+
+        <div class="card service-card"
+             data-city="İstanbul"
+             data-search="DY Elektronik İstanbul Ümraniye">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>DY ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> İstanbul</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Ümraniye / İstanbul
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">
+                    ☎️ Ara
+                </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=DY+Elektronik+Ümraniye+İstanbul"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İSTANBUL ATAŞEHİR -->
+
+        <div class="card service-card"
+             data-city="İstanbul"
+             data-search="DY Elektronik İstanbul Ataşehir Büyükhanlı Plaza">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>DY ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> İstanbul</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Büyükhanlı Plaza,<br>
+                Küçükbakkalköy Mah. Defne Sok.<br>
+                No:3 Ataşehir / İstanbul
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">
+                    ☎️ Ara
+                </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Büyükhanlı+Plaza+Küçükbakkalköy+Mahallesi+Defne+Sokak+No+3+Ataşehir+İstanbul"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ANKARA -->
+
+        <div class="card service-card"
+             data-city="Ankara"
+             data-search="Dyson Ankara Kentpark Çankaya">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>DY ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Ankara</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Kentpark Alışveriş Merkezi -3 Otopark Katı,<br>
+                D3 Girişi. Dumlupınar Bulvarı,<br>
+                Mustafa Kemal Mah. Eskişehir Yolu 7. KM No:164<br>
+                Çankaya / Ankara
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">
+                    ☎️ Ara
+                </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Kentpark+Alışveriş+Merkezi+Dumlupınar+Bulvarı+No+164+Ankara"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- KAYSERİ -->
+
+        <div class="card service-card"
+             data-city="Kayseri"
+             data-search="Bil-Tek Servis Kayseri Kocasinan">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>BİL-TEK SERVİS</h2>
+
+            <p><strong>📍 Şehir:</strong> Kayseri</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Sahabiye Mah. Sivas Cd.<br>
+                Balcıoğlu Apt. No:37/H<br>
+                Kocasinan / Kayseri
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Sahabiye+Mahallesi+Sivas+Caddesi+No+37H+Kocasinan+Kayseri"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İZMİR -->
+
+        <div class="card service-card"
+             data-city="İzmir"
+             data-search="PH Elektronik İzmir Bayraklı Mansuroğlu">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>PH ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> İzmir</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Mansuroğlu Mahallesi Ankara Caddesi No:133/A<br>
+                Bayraklı / İzmir
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Mansuroğlu+Mahallesi+Ankara+Caddesi+No+133A+Bayraklı+İzmir"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ESKİŞEHİR -->
+
+        <div class="card service-card"
+             data-city="Eskişehir"
+             data-search="Çeliktaş Elektronik Alper Çeliktaş Eskişehir Odunpazarı">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ÇELİKTAŞ ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Eskişehir</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Kurtuluş Mahallesi Ünaldi Sokak No:18/A<br>
+                Odunpazarı / Eskişehir
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Kurtuluş+Mahallesi+Ünaldi+Sokak+No+18A+Odunpazarı+Eskişehir"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İSTANBUL KADIKÖY -->
+
+        <div class="card service-card"
+             data-city="İstanbul"
+             data-search="Elsu Elektrik İstanbul Kadıköy Bahariye">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ELSU ELEKTRİK</h2>
+
+            <p><strong>📍 Şehir:</strong> İstanbul</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Bahariye Nailbey Sok. No:30<br>
+                Kadıköy / İstanbul
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Bahariye+Nailbey+Sokak+No+30+Kadıköy+İstanbul"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- DİYARBAKIR -->
+
+        <div class="card service-card"
+             data-city="Diyarbakır"
+             data-search="Fehmi Baytar Best Elektronik Diyarbakır Kayapınar">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>FEHMİ BAYTAR - BEST ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Diyarbakır</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Peyas Mahallesi Selahaddin Eyyubi Bulvarı<br>
+                No:14 DA-D Blok<br>
+                Kayapınar / Diyarbakır
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Peyas+Mahallesi+Selahaddin+Eyyubi+Bulvarı+No+14+Diyarbakır"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOLU -->
+
+        <div class="card service-card"
+             data-city="Bolu"
+             data-search="Feza Elektronik Burhan Çimen Bolu">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>FEZA ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Bolu</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                İzzet Baysal Cad. No:235/B<br>
+                Merkez / Bolu
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=İzzet+Baysal+Caddesi+No+235B+Bolu"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İSTANBUL ALİBEYKÖY -->
+
+        <div class="card service-card"
+             data-city="İstanbul"
+             data-search="Garanti Servis İstanbul Alibeyköy Güzeltepe">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>GARANTİ SERVİS</h2>
+
+            <p><strong>📍 Şehir:</strong> İstanbul</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Alibeyköy Güzeltepe Mahallesi Avcı Sokak No:8/B<br>
                 İstanbul
             </p>
 
-            <p>
-                <strong>📌 Servis Bilgisi:</strong><br>
-                Dyson Türkiye'nin resmi servis ağı üzerinden
-                ürün ve konum bilgisine göre yetkili servis
-                noktası belirlenmektedir.
-            </p>
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Güzeltepe+Mahallesi+Avcı+Sokak+No+8B+Alibeyköy+İstanbul"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAMSUN -->
+
+        <div class="card service-card"
+             data-city="Samsun"
+             data-search="Çağdaş Servis Samsun İlkadım">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ÇAĞDAŞ SERVİS</h2>
+
+            <p><strong>📍 Şehir:</strong> Samsun</p>
 
             <p>
-                <strong>☎️ Dyson Destek:</strong><br>
-                0850 532 11 44
+                <strong>📌 Adres:</strong><br>
+                Liman Mahallesi Öğretmenler Caddesi<br>
+                No:2 İtimat Apt / 4<br>
+                İlkadım / Samsun
             </p>
 
-            <a
-                href="tel:08505321144"
-            >
-                ☎️ Dyson'ı Ara
-            </a>
+            <div class="buttons">
 
-            <a
-                href="https://www.google.com/maps/search/?api=1&query=Dyson+Turkey+Istanbul"
-                target="_blank"
-            >
-                📍 Haritada Ara
-            </a>
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Liman+Mahallesi+Öğretmenler+Caddesi+No+2+İlkadım+Samsun"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BALIKESİR -->
+
+        <div class="card service-card"
+             data-city="Balıkesir"
+             data-search="Kaan Elektronik Balıkesir Bandırma">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>KAAN ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Balıkesir</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Günaydın Mah. Terziler Cd. No:106A<br>
+                Bandırma / Balıkesir
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Günaydın+Mahallesi+Terziler+Caddesi+No+106A+Bandırma+Balıkesir"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADANA -->
+
+        <div class="card service-card"
+             data-city="Adana"
+             data-search="Keskin Elektrikli Ev Aletleri Adana Çukurova">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>KESKİN ELEKTRİKLİ EV ALETLERİ</h2>
+
+            <p><strong>📍 Şehir:</strong> Adana</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Güzelyalı Mah. 81185 Sok.<br>
+                Hazar Apt. B Blok No:10/A<br>
+                Çukurova / Adana
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Güzelyalı+Mahallesi+81185+Sokak+No+10A+Çukurova+Adana"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MERSİN -->
+
+        <div class="card service-card"
+             data-city="Mersin"
+             data-search="Mahir Dağlıoğlu Mersin Akdeniz">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>MAHİR DAĞLIOĞLU</h2>
+
+            <p><strong>📍 Şehir:</strong> Mersin</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Kiremithane Mah. Cengiz Topel Cad.<br>
+                No:54/B Akdeniz / Mersin
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Kiremithane+Mahallesi+Cengiz+Topel+Caddesi+No+54B+Akdeniz+Mersin"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ANTALYA -->
+
+        <div class="card service-card"
+             data-city="Antalya"
+             data-search="Mehmet Özdemir Antalya Muratpaşa">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>MEHMET ÖZDEMİR</h2>
+
+            <p><strong>📍 Şehir:</strong> Antalya</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Şirinyalı Mah. 1486 Sok.<br>
+                Mehmet Hamurlu Apt. No:16/1<br>
+                Muratpaşa / Antalya
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Şirinyalı+Mahallesi+1486+Sokak+No+16+Muratpaşa+Antalya"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- GAZİANTEP -->
+
+        <div class="card service-card"
+             data-city="Gaziantep"
+             data-search="Nuri Bozlak Gaziantep Şehitkamil">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>NURİ BOZLAK</h2>
+
+            <p><strong>📍 Şehir:</strong> Gaziantep</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Gazi Mah. Milli Egemenlik Cad. No:45<br>
+                Şehitkamil / Gaziantep
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Gazi+Mahallesi+Milli+Egemenlik+Caddesi+No+45+Şehitkamil+Gaziantep"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- DENİZLİ -->
+
+        <div class="card service-card"
+             data-city="Denizli"
+             data-search="Onay Teknik Öner Aydın Denizli Merkezefendi">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ONAY TEKNİK - ÖNER AYDIN</h2>
+
+            <p><strong>📍 Şehir:</strong> Denizli</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Değirmenönü Mah. 1598/1 Sk. No:18/A<br>
+                Merkezefendi / Denizli
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Değirmenönü+Mahallesi+1598+1+Sokak+No+18A+Merkezefendi+Denizli"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADANA SEYHAN -->
+
+        <div class="card service-card"
+             data-city="Adana"
+             data-search="Oryal Elektronik Adana Seyhan">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ORYAL ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Adana</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Kurtuluş 64004 Sk. Dostlar Apt.<br>
+                No:28 / D:01 Seyhan / Adana
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Kurtuluş+64004+Sokak+Dostlar+Apt+No+28+Seyhan+Adana"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MALATYA -->
+
+        <div class="card service-card"
+             data-city="Malatya"
+             data-search="Özbek Teknik Ahmet Özbek Malatya Battalgazi">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ÖZBEK TEKNİK - AHMET ÖZBEK</h2>
+
+            <p><strong>📍 Şehir:</strong> Malatya</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Nuriye Mahallesi Mimar Sinan Caddesi No:35B<br>
+                Battalgazi / Malatya
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Nuriye+Mahallesi+Mimar+Sinan+Caddesi+No+35B+Battalgazi+Malatya"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ELAZIĞ -->
+
+        <div class="card service-card"
+             data-city="Elazığ"
+             data-search="Özdev Teknik Ahmet Özbek Elazığ">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>ÖZDEV TEKNİK - AHMET ÖZBEK</h2>
+
+            <p><strong>📍 Şehir:</strong> Elazığ</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                İzzetpaşa Mah. Mehmetçik Sokak No:36/A<br>
+                Merkez / Elazığ
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=İzzetpaşa+Mahallesi+Mehmetçik+Sokak+No+36A+Elazığ"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BURSA -->
+
+        <div class="card service-card"
+             data-city="Bursa"
+             data-search="PS Elektronik Bursa Osmangazi">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>P.S ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Bursa</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Ahmetpaşa Mah. Ermutlu Sok. No:27/C<br>
+                Merkez / Bursa
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Ahmetpaşa+Mahallesi+Ermutlu+Sokak+No+27C+Bursa"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- KONYA -->
+
+        <div class="card service-card"
+             data-city="Konya"
+             data-search="Recep Erdiril Emre Ticaret Konya Karatay">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>RECEP ERDİRİL - EMRE TİCARET</h2>
+
+            <p><strong>📍 Şehir:</strong> Konya</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Aziziye Mahallesi Ayanbey Sokak No:12/A<br>
+                Karatay / Konya
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Aziziye+Mahallesi+Ayanbey+Sokak+No+12A+Karatay+Konya"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- TRABZON -->
+
+        <div class="card service-card"
+             data-city="Trabzon"
+             data-search="Seçkin Elektronik Trabzon Ortahisar">
+
+            <span class="badge">Yetkili Servis</span>
+
+            <h2>SEÇKİN ELEKTRONİK</h2>
+
+            <p><strong>📍 Şehir:</strong> Trabzon</p>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Çarşı Mahallesi Ali Can Sokak No:7<br>
+                Ortahisar / Trabzon
+            </p>
+
+            <div class="buttons">
+
+                <a class="phone" href="tel:08505321144">☎️ Ara</a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Çarşı+Mahallesi+Ali+Can+Sokak+No+7+Ortahisar+Trabzon"
+                   target="_blank">
+                    📍 Yol Tarifi
+                </a>
+
+            </div>
 
         </div>
 
@@ -272,34 +1041,38 @@ footer {
     </div>
 
 
-    <div
-        class="no-result"
-        id="noResult"
-    >
-        Aramanıza uygun servis bulunamadı.
+    <div class="no-result" id="noResult">
+        Aramanıza uygun yetkili servis bulunamadı.
     </div>
 
 
     <div class="info">
 
-        <h2>
-            Dyson Servis Bilgileri
-        </h2>
+        <h2>Dyson Yetkili Servis İletişim</h2>
 
         <p>
-            Dyson yetkili servis bilgileri ürün ve konuma göre
-            resmi Dyson servis ağı üzerinden belirlenmektedir.
-        </p>
-
-        <p>
-            <strong>☎️ Dyson Müşteri Hizmetleri:</strong><br>
+            <strong>☎️ Dyson Çağrı Merkezi:</strong><br>
             0850 532 11 44
         </p>
 
         <p>
-            <strong>🌐 Resmi Dyson Servis:</strong><br>
-            Dyson Türkiye destek sayfasından güncel servis
-            bilgileri kontrol edilebilir.
+            <strong>🏢 İstanbul Servis Merkezi:</strong><br>
+            Büyükhanlı Plaza, Küçükbakkalköy Mahallesi,
+            Defne Sokak No:3<br>
+            Ataşehir / İstanbul
+        </p>
+
+        <p>
+            <strong>🏢 Ankara Servis Merkezi:</strong><br>
+            Kentpark Alışveriş Merkezi -3 Otopark Katı,
+            D3 Girişi, Dumlupınar Bulvarı,
+            Mustafa Kemal Mah. Eskişehir Yolu 7. KM No:164<br>
+            Ankara
+        </p>
+
+        <p>
+            Dyson'ın resmi servis listesinde yer alan
+            yetkili servis noktaları yukarıda gösterilmektedir.
         </p>
 
     </div>
