@@ -38,7 +38,7 @@ header p {
 
 .container {
     width: 94%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 25px auto;
 }
 
@@ -70,8 +70,6 @@ header p {
     line-height: 1.6;
     margin-bottom: 0;
 }
-
-/* ARAMA ALANI */
 
 .search-box {
     background: white;
@@ -162,6 +160,22 @@ header p {
     color: #15803d !important;
 }
 
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    opacity: 0.85;
+}
+
 .no-result {
     display: none;
     background: white;
@@ -205,63 +219,66 @@ footer {
 
 <div class="container">
 
-<a class="back" href="index.html">← Ana Sayfaya Dön</a>
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
 
 <div class="info">
 
-<h2>Xiaomi Akıllı Süpürge Yetkili Servisleri</h2>
+    <h2>Xiaomi Akıllı Süpürge Yetkili Servisleri</h2>
 
-<p>
-Xiaomi robot süpürge ve akıllı süpürge ürünleri için
-yetkili servis noktalarını il, ilçe ve açık adres
-bilgileriyle Briko üzerinden görüntüleyebilirsiniz.
-</p>
+    <p>
+        Xiaomi robot süpürge ve akıllı süpürge ürünleri için
+        yetkili servis noktalarını il, ilçe ve açık adres
+        bilgileriyle Briko üzerinden görüntüleyebilirsiniz.
+    </p>
 
 </div>
 
 
-<!-- SERVİS ARA / ŞEHİR ARA -->
+<!-- SERVİS ARA -->
 
 <div class="search-box">
 
-<h2>🔎 Servis Ara</h2>
+    <h2>🔎 Servis Ara</h2>
 
-<div class="search-row">
+    <div class="search-row">
 
-<input
-type="text"
-id="serviceSearch"
-class="search-input"
-placeholder="Servis, ilçe veya adres ara..."
-onkeyup="filterServices()"
->
+        <input
+            type="text"
+            id="serviceSearch"
+            class="search-input"
+            placeholder="Servis, ilçe veya adres ara..."
+            onkeyup="filterServices()"
+        >
 
-<select
-id="citySearch"
-class="city-select"
-onchange="filterServices()"
->
+        <select
+            id="citySearch"
+            class="city-select"
+            onchange="filterServices()"
+        >
 
-<option value="">📍 Şehir Ara</option>
-<option value="istanbul">İstanbul</option>
-<option value="ankara">Ankara</option>
-<option value="izmir">İzmir</option>
-<option value="adana">Adana</option>
-<option value="trabzon">Trabzon</option>
-<option value="antalya">Antalya</option>
-<option value="samsun">Samsun</option>
-<option value="gaziantep">Gaziantep</option>
-<option value="bursa">Bursa</option>
+            <option value="">📍 Şehir Ara</option>
 
-</select>
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">İzmir</option>
+            <option value="adana">Adana</option>
+            <option value="trabzon">Trabzon</option>
+            <option value="antalya">Antalya</option>
+            <option value="samsun">Samsun</option>
+            <option value="gaziantep">Gaziantep</option>
+            <option value="bursa">Bursa</option>
 
-</div>
+        </select>
+
+    </div>
 
 </div>
 
 
 <div id="noResult" class="no-result">
-Aradığınız kriterlere uygun servis bulunamadı.
+    Aradığınız kriterlere uygun yetkili servis bulunamadı.
 </div>
 
 
@@ -269,273 +286,382 @@ Aradığınız kriterlere uygun servis bulunamadı.
 
 <div class="city service-city" data-city="istanbul">
 
-<div class="city-title">
-İstanbul
-</div>
+    <div class="city-title">
+        İstanbul
+    </div>
 
-<h3 class="district-title">Şişli - Levent</h3>
 
-<div class="services">
+    <h3 class="district-title">
+        Şişli - Levent
+    </h3>
 
-<div class="card service-card">
+    <div class="services">
 
-<h3>Xiaomi ESC Exclusive Service Center İstanbul Levent</h3>
+        <div class="card service-card">
 
-<p>
-<strong>Adres:</strong><br>
-Metrocity AVM, Esentepe Mahallesi,
-Büyükdere Caddesi No:171,
-İç Kapı No:93,
-Şişli / İstanbul
-</p>
+            <h3>
+                Xiaomi ESC Exclusive Service Center İstanbul Levent
+            </h3>
 
-<p>
-<strong>Servis:</strong>
-Xiaomi Yetkili Servis Merkezi
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Metrocity AVM, Esentepe Mahallesi,
+                Büyükdere Caddesi No:171,
+                İç Kapı No:93,
+                Şişli / İstanbul
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p>
+                <strong>🔧 Servis:</strong><br>
+                Xiaomi Yetkili Servis Merkezi
+            </p>
 
-</div>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Metrocity+AVM+Esentepe+Mahallesi+Büyükdere+Caddesi+No+171+Şişli+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
+        </div>
 
-<h3 class="district-title">Zeytinburnu</h3>
+    </div>
 
-<div class="services">
 
-<div class="card service-card">
+    <h3 class="district-title">
+        Zeytinburnu
+    </h3>
 
-<h3>Xiaomi SIS İstanbul Zeytinburnu</h3>
+    <div class="services">
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Mieko
-</p>
+        <div class="card service-card">
 
-<p>
-<strong>Adres:</strong><br>
-Prof. Muammer Aksoy Caddesi No:31,
-Olivium AVM,
-Zeytinburnu / İstanbul
-</p>
+            <h3>
+                Xiaomi SIS İstanbul Zeytinburnu
+            </h3>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Mieko
+            </p>
 
-</div>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Prof. Muammer Aksoy Caddesi No:31,
+                Olivium AVM,
+                Zeytinburnu / İstanbul
+            </p>
 
-</div>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Prof.+Muammer+Aksoy+Caddesi+No+31+Olivium+AVM+Zeytinburnu+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-<h3 class="district-title">Pendik</h3>
+        </div>
 
-<div class="services">
+    </div>
 
-<div class="card service-card">
 
-<h3>Xiaomi SIS İstanbul Pendik</h3>
+    <h3 class="district-title">
+        Pendik
+    </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Mieko
-</p>
+    <div class="services">
 
-<p>
-<strong>Adres:</strong><br>
-Batı Mahallesi,
-Dr. Orhan Altepe Caddesi,
-Sezer Apartmanı No:31,
-Pendik / İstanbul
-</p>
+        <div class="card service-card">
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <h3>
+                Xiaomi SIS İstanbul Pendik
+            </h3>
 
-</div>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Mieko
+            </p>
+
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Batı Mahallesi,
+                Dr. Orhan Altepe Caddesi,
+                Sezer Apartmanı No:31,
+                Pendik / İstanbul
+            </p>
 
-</div>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Batı+Mahallesi+Dr.+Orhan+Altepe+Caddesi+Sezer+Apartmanı+No+31+Pendik+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-<h3 class="district-title">Kadıköy</h3>
+        </div>
 
-<div class="services">
+    </div>
 
-<div class="card service-card">
 
-<h3>Xiaomi ESC İstanbul Kadıköy</h3>
+    <h3 class="district-title">
+        Kadıköy
+    </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Evofone
-</p>
+    <div class="services">
 
-<p>
-<strong>Adres:</strong><br>
-Fahrettin Kerim Gökay Caddesi,
-Baycan Han No:39-41/B,
-Kadıköy / İstanbul
-</p>
+        <div class="card service-card">
+
+            <h3>
+                Xiaomi ESC İstanbul Kadıköy
+            </h3>
+
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Evofone
+            </p>
+
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Fahrettin Kerim Gökay Caddesi,
+                Baycan Han No:39-41/B,
+                Kadıköy / İstanbul
+            </p>
+
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Fahrettin+Kerim+Gökay+Caddesi+Baycan+Han+No+39-41B+Kadıköy+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
 
-</div>
+    </div>
 
 
-<h3 class="district-title">Sarıyer - Maslak</h3>
+    <h3 class="district-title">
+        Sarıyer - Maslak
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi MSC İstanbul Maslak</h3>
+            <h3>
+                Xiaomi MSC İstanbul Maslak
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Mieko
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Mieko
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Maslak Mahallesi,
-Sanatkarlar Sokak,
-Eclipse Sitesi D Blok No:12,
-Sarıyer / İstanbul
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Maslak Mahallesi,
+                Sanatkarlar Sokak,
+                Eclipse Sitesi D Blok No:12,
+                Sarıyer / İstanbul
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Maslak+Mahallesi+Sanatkarlar+Sokak+Eclipse+Sitesi+D+Blok+No+12+Sarıyer+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
 
+    </div>
 
-<h3 class="district-title">Kağıthane</h3>
 
-<div class="services">
+    <h3 class="district-title">
+        Kağıthane
+    </h3>
 
-<div class="card service-card">
+    <div class="services">
 
-<h3>Xiaomi MSC İstanbul Kağıthane</h3>
+        <div class="card service-card">
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Evofone
-</p>
+            <h3>
+                Xiaomi MSC İstanbul Kağıthane
+            </h3>
 
-<p>
-<strong>Adres:</strong><br>
-Kağıthane Ofispark İş Merkezi,
-Merkez Mahallesi,
-Bağlar Caddesi No:14,
-Kağıthane / İstanbul
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Evofone
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Kağıthane Ofispark İş Merkezi,
+                Merkez Mahallesi,
+                Bağlar Caddesi No:14,
+                Kağıthane / İstanbul
+            </p>
 
-</div>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Kağıthane+Ofispark+İş+Merkezi+Merkez+Mahallesi+Bağlar+Caddesi+No+14+Kağıthane+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
+        </div>
 
-<h3 class="district-title">Maltepe</h3>
+    </div>
 
-<div class="services">
 
-<div class="card service-card">
+    <h3 class="district-title">
+        Maltepe
+    </h3>
 
-<h3>Xiaomi MSC İstanbul Maltepe</h3>
+    <div class="services">
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-BDH
-</p>
+        <div class="card service-card">
 
-<p>
-<strong>Adres:</strong><br>
-Bağlarbaşı Mahallesi,
-Cemal Bey Caddesi No:110,
-Maltepe / İstanbul
-</p>
+            <h3>
+                Xiaomi MSC İstanbul Maltepe
+            </h3>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                BDH
+            </p>
 
-</div>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Bağlarbaşı Mahallesi,
+                Cemal Bey Caddesi No:110,
+                Maltepe / İstanbul
+            </p>
 
-</div>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Bağlarbaşı+Mahallesi+Cemal+Bey+Caddesi+No+110+Maltepe+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-<h3 class="district-title">Ataşehir</h3>
+        </div>
 
-<div class="services">
+    </div>
 
-<div class="card service-card">
 
-<h3>Xiaomi MSC İstanbul Ataşehir</h3>
+    <h3 class="district-title">
+        Ataşehir
+    </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Ouno
-</p>
+    <div class="services">
 
-<p>
-<strong>Adres:</strong><br>
-Atilla İlhan Caddesi No:20,
-Ataşehir / İstanbul
-</p>
+        <div class="card service-card">
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <h3>
+                Xiaomi MSC İstanbul Ataşehir
+            </h3>
 
-</div>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Ouno
+            </p>
 
-</div>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Atilla İlhan Caddesi No:20,
+                Ataşehir / İstanbul
+            </p>
 
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-<h3 class="district-title">Kartal</h3>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Atilla+İlhan+Caddesi+No+20+Ataşehir+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-<div class="services">
+        </div>
 
-<div class="card service-card">
+    </div>
 
-<h3>Xiaomi MSC İstanbul Kartal</h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-KVK
-</p>
+    <h3 class="district-title">
+        Kartal
+    </h3>
 
-<p>
-<strong>Adres:</strong><br>
-Soğanlık Yeni Mahallesi,
-D-100 Kuzey Yan Yol,
-Kanat Sanayi Sitesi No:32,
-Kartal / İstanbul
-</p>
+    <div class="services">
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+        <div class="card service-card">
 
-</div>
+            <h3>
+                Xiaomi MSC İstanbul Kartal
+            </h3>
 
-</div>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                KVK
+            </p>
+
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Soğanlık Yeni Mahallesi,
+                D-100 Kuzey Yan Yol,
+                Kanat Sanayi Sitesi No:32,
+                Kartal / İstanbul
+            </p>
+
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yan+Yol+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -544,38 +670,50 @@ Kartal / İstanbul
 
 <div class="city service-city" data-city="ankara">
 
-<div class="city-title">
-Ankara
-</div>
+    <div class="city-title">
+        Ankara
+    </div>
 
-<h3 class="district-title">Çankaya - Kızılay</h3>
+    <h3 class="district-title">
+        Çankaya - Kızılay
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Ankara Kızılay</h3>
+            <h3>
+                Xiaomi Ankara Kızılay
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Evofone
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Evofone
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Korkutreis Mahallesi,
-Gazi Mustafa Kemal Bulvarı No:32/B,
-Demirtepe,
-Çankaya / Ankara
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Korkutreis Mahallesi,
+                Gazi Mustafa Kemal Bulvarı No:32/B,
+                Demirtepe,
+                Çankaya / Ankara
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Gazi+Mustafa+Kemal+Bulvarı+No+32B+Demirtepe+Çankaya+Ankara"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -584,66 +722,90 @@ Demirtepe,
 
 <div class="city service-city" data-city="izmir">
 
-<div class="city-title">
-İzmir
-</div>
+    <div class="city-title">
+        İzmir
+    </div>
 
-<h3 class="district-title">Konak - Alsancak</h3>
+    <h3 class="district-title">
+        Konak - Alsancak
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi İzmir Alsancak</h3>
+            <h3>
+                Xiaomi İzmir Alsancak
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Genpa
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Genpa
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Alsancak Mahallesi,
-Kıbrıs Şehitleri Caddesi No:136/1-B,
-Konak / İzmir
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Alsancak Mahallesi,
+                Kıbrıs Şehitleri Caddesi No:136/1-B,
+                Konak / İzmir
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Kıbrıs+Şehitleri+Caddesi+No+136%2F1B+Konak+İzmir"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 
-<h3 class="district-title">Çankaya</h3>
+    <h3 class="district-title">
+        Çankaya
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi İzmir Çankaya</h3>
+            <h3>
+                Xiaomi İzmir Çankaya
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Genpa
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Genpa
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Şair Eşref Bulvarı,
-No:26/B,
-Çankaya / İzmir
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Şair Eşref Bulvarı,
+                No:26/B,
+                Çankaya / İzmir
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Şair+Eşref+Bulvarı+No+26B+Çankaya+İzmir"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -652,38 +814,50 @@ No:26/B,
 
 <div class="city service-city" data-city="adana">
 
-<div class="city-title">
-Adana
-</div>
+    <div class="city-title">
+        Adana
+    </div>
 
-<h3 class="district-title">Seyhan</h3>
+    <h3 class="district-title">
+        Seyhan
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Adana Seyhan</h3>
+            <h3>
+                Xiaomi Adana Seyhan
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Genpa
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Genpa
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Cemalpaşa Mahallesi,
-63005 Sokak,
-Aydınoğlu İş Merkezi No:27/A,
-Seyhan / Adana
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Cemalpaşa Mahallesi,
+                63005 Sokak,
+                Aydınoğlu İş Merkezi No:27/A,
+                Seyhan / Adana
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Cemalpaşa+Mahallesi+63005+Sokak+Aydınoğlu+İş+Merkezi+No+27A+Seyhan+Adana"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -692,38 +866,50 @@ Seyhan / Adana
 
 <div class="city service-city" data-city="trabzon">
 
-<div class="city-title">
-Trabzon
-</div>
+    <div class="city-title">
+        Trabzon
+    </div>
 
-<h3 class="district-title">Ortahisar</h3>
+    <h3 class="district-title">
+        Ortahisar
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Trabzon Ortahisar</h3>
+            <h3>
+                Xiaomi Trabzon Ortahisar
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-KVK
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                KVK
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Cumhuriyet Mahallesi,
-Nemlioğlu Cemal Sokak,
-Ziya Bey Sitesi A Blok No:16/1,
-Ortahisar / Trabzon
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Cumhuriyet Mahallesi,
+                Nemlioğlu Cemal Sokak,
+                Ziya Bey Sitesi A Blok No:16/1,
+                Ortahisar / Trabzon
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16%2F1+Ortahisar+Trabzon"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -732,37 +918,49 @@ Ortahisar / Trabzon
 
 <div class="city service-city" data-city="antalya">
 
-<div class="city-title">
-Antalya
-</div>
+    <div class="city-title">
+        Antalya
+    </div>
 
-<h3 class="district-title">Muratpaşa</h3>
+    <h3 class="district-title">
+        Muratpaşa
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Antalya</h3>
+            <h3>
+                Xiaomi Antalya
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Evofone
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Evofone
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-İsmet Gökşen Caddesi,
-Hüseyin Akçor 2 Apartmanı No:40/E,
-Muratpaşa / Antalya
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                İsmet Gökşen Caddesi,
+                Hüseyin Akçor 2 Apartmanı No:40/E,
+                Muratpaşa / Antalya
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=İsmet+Gökşen+Caddesi+Hüseyin+Akçor+2+Apartmanı+No+40E+Muratpaşa+Antalya"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -771,37 +969,49 @@ Muratpaşa / Antalya
 
 <div class="city service-city" data-city="samsun">
 
-<div class="city-title">
-Samsun
-</div>
+    <div class="city-title">
+        Samsun
+    </div>
 
-<h3 class="district-title">İlkadım</h3>
+    <h3 class="district-title">
+        İlkadım
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Samsun</h3>
+            <h3>
+                Xiaomi Samsun
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Evofone
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Evofone
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-19 Mayıs Mahallesi,
-Gazi Caddesi No:95/4,
-İlkadım / Samsun
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                19 Mayıs Mahallesi,
+                Gazi Caddesi No:95/4,
+                İlkadım / Samsun
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=19+Mayıs+Mahallesi+Gazi+Caddesi+No+95%2F4+İlkadım+Samsun"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -810,38 +1020,50 @@ Gazi Caddesi No:95/4,
 
 <div class="city service-city" data-city="gaziantep">
 
-<div class="city-title">
-Gaziantep
-</div>
+    <div class="city-title">
+        Gaziantep
+    </div>
 
-<h3 class="district-title">Şehitkamil</h3>
+    <h3 class="district-title">
+        Şehitkamil
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Gaziantep</h3>
+            <h3>
+                Xiaomi Gaziantep
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Mieko
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Mieko
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Değirmiçem Mahallesi,
-Prof. Muammer Aksoy Bulvarı,
-Kepkep Plaza No:20H,
-Şehitkamil / Gaziantep
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Değirmiçem Mahallesi,
+                Prof. Muammer Aksoy Bulvarı,
+                Kepkep Plaza No:20H,
+                Şehitkamil / Gaziantep
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Değirmiçem+Mahallesi+Prof.+Muammer+Aksoy+Bulvarı+Kepkep+Plaza+No+20H+Şehitkamil+Gaziantep"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
@@ -850,43 +1072,55 @@ Kepkep Plaza No:20H,
 
 <div class="city service-city" data-city="bursa">
 
-<div class="city-title">
-Bursa
-</div>
+    <div class="city-title">
+        Bursa
+    </div>
 
-<h3 class="district-title">Osmangazi</h3>
+    <h3 class="district-title">
+        Osmangazi
+    </h3>
 
-<div class="services">
+    <div class="services">
 
-<div class="card service-card">
+        <div class="card service-card">
 
-<h3>Xiaomi Bursa</h3>
+            <h3>
+                Xiaomi Bursa
+            </h3>
 
-<p>
-<strong>Servis Sağlayıcısı:</strong>
-Mieko
-</p>
+            <p>
+                <strong>🔧 Servis Sağlayıcısı:</strong><br>
+                Mieko
+            </p>
 
-<p>
-<strong>Adres:</strong><br>
-Kırcaali Mahallesi,
-Kayalı Sokak No:34,
-Osmangazi / Bursa
-</p>
+            <p>
+                <strong>📍 Adres:</strong><br>
+                Kırcaali Mahallesi,
+                Kayalı Sokak No:34,
+                Osmangazi / Bursa
+            </p>
 
-<p class="authorized">
-✓ Yetkili Servis
-</p>
+            <p class="authorized">
+                ✓ Yetkili Servis
+            </p>
 
-</div>
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=Kırcaali+Mahallesi+Kayalı+Sokak+No+34+Osmangazi+Bursa"
+                target="_blank"
+            >
+                📍 Yol Tarifi
+            </a>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
 
 <footer>
-© 2026 Briko - Türkiye'nin Teknik Servis Rehberi
+    © 2026 Briko - Türkiye'nin Teknik Servis Rehberi
 </footer>
 
 </div>
@@ -897,13 +1131,15 @@ Osmangazi / Bursa
 function filterServices() {
 
     const searchText =
-        document.getElementById("serviceSearch")
+        document
+        .getElementById("serviceSearch")
         .value
         .toLowerCase()
         .trim();
 
     const selectedCity =
-        document.getElementById("citySearch")
+        document
+        .getElementById("citySearch")
         .value
         .toLowerCase();
 
@@ -915,7 +1151,9 @@ function filterServices() {
     cities.forEach(function(city) {
 
         const cityName =
-            city.getAttribute("data-city");
+            city
+            .getAttribute("data-city")
+            .toLowerCase();
 
         const cards =
             city.querySelectorAll(".service-card");
