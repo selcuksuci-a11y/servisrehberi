@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="tr">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Samsung Kulaklık Yetkili Servisleri - Briko</title>
 
 <style>
-
 * {
     box-sizing: border-box;
 }
@@ -18,15 +14,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #1f2937;
+    background: #f4f6f8;
+    color: #222;
 }
 
 header {
     background: #111827;
     color: white;
+    padding: 25px 15px;
     text-align: center;
-    padding: 28px 15px;
 }
 
 header h1 {
@@ -36,535 +32,458 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    opacity: 0.85;
+    font-size: 15px;
+    opacity: 0.9;
 }
 
 .container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 25px 15px;
+    width: 95%;
+    max-width: 1100px;
+    margin: 25px auto;
 }
 
-.back {
+.back-button {
     display: inline-block;
-    margin-bottom: 20px;
+    background: #111827;
+    color: white;
     text-decoration: none;
-    color: #2563eb;
-    font-weight: bold;
-}
-
-.info {
-    background: #eef4ff;
-    border-radius: 12px;
-    padding: 16px;
+    padding: 12px 18px;
+    border-radius: 8px;
     margin-bottom: 20px;
-    line-height: 1.6;
+    font-weight: bold;
 }
 
-.search-box {
+.back-button:hover {
+    background: #374151;
+}
+
+.info-box {
     background: white;
+    border-radius: 12px;
     padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.search-box h2 {
+.info-box h2 {
     margin-top: 0;
+    color: #111827;
 }
 
-input {
-    width: 100%;
-    padding: 14px;
-    margin-top: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 16px;
-    background: white;
-}
-
-.city-title {
-    margin: 30px 0 15px;
-    font-size: 23px;
-}
-
-.card {
+.search-area {
     background: white;
     padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
 }
 
-.card h3 {
-    margin: 0 0 12px;
-    font-size: 19px;
+.search-area input,
+.search-area select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
 }
 
-.card p {
-    margin: 8px 0;
-    color: #6b7280;
-    line-height: 1.6;
-}
-
-.city {
-    color: #2563eb !important;
+.search-area button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #111827;
+    color: white;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-.type {
-    color: #111827 !important;
-    font-weight: bold;
+.search-area button:hover {
+    background: #374151;
 }
 
-.address {
-    color: #374151 !important;
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 18px;
 }
 
-.phone {
-    color: #047857 !important;
-    font-weight: bold;
+.service-card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border-left: 5px solid #111827;
+    transition: 0.2s;
 }
 
-.badge {
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #111827;
+    font-size: 20px;
+}
+
+.service-card .brand {
     display: inline-block;
-    margin-top: 8px;
-    padding: 6px 10px;
-    border-radius: 20px;
-    background: #ecfdf5;
-    color: #047857;
-    font-size: 13px;
+    background: #111827;
+    color: white;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    line-height: 1.5;
+    margin: 7px 0;
+}
+
+.service-card strong {
+    color: #111827;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 7px;
     font-weight: bold;
 }
 
-.count {
-    margin-top: 12px;
-    color: #64748b;
-    font-size: 14px;
+.map-button:hover {
+    background: #1d4ed8;
 }
 
 .no-result {
     display: none;
     background: white;
-    padding: 25px;
+    padding: 20px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 15px;
-    color: #64748b;
+    margin-top: 20px;
+    font-weight: bold;
 }
 
-@media (max-width:600px) {
+footer {
+    margin-top: 40px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 600px) {
 
     header h1 {
-        font-size: 24px;
+        font-size: 23px;
     }
 
+    .container {
+        width: 93%;
+    }
+
+    .service-card {
+        padding: 17px;
+    }
 }
-
 </style>
-
 </head>
 
 <body>
 
 <header>
-
     <h1>🎧 Samsung Kulaklık Yetkili Servisleri</h1>
-
-    <p>Türkiye Geneli - Servis Rehberi</p>
-
+    <p>Briko - Samsung Kulaklık Teknik Servis Rehberi</p>
 </header>
-
 
 <div class="container">
 
+    <a href="Index.html" class="back-button">
+        ← Ana Sayfaya Dön
+    </a>
 
-<!-- ANA SAYFAYA DÖN -->
+    <div class="info-box">
+        <h2>Samsung Kulaklık Servisleri</h2>
+        <p>
+            Samsung Galaxy Buds ve diğer Samsung kulaklık ürünleri için
+            yetkili servis noktalarını aşağıdan bulabilirsiniz.
+        </p>
 
-<a class="back" href="index.html">
-    ← Ana Sayfaya Dön
-</a>
+        <p>
+            İl seçerek veya servis adını yazarak arama yapabilirsiniz.
+        </p>
+    </div>
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="serviceSearch"
+            placeholder="Servis adı veya şehir ara..."
+            onkeyup="filterServices()"
+        >
+
+        <select id="cityFilter" onchange="filterServices()">
+            <option value="">Tüm Şehirler</option>
+            <option value="Adana">Adana</option>
+            <option value="Ankara">Ankara</option>
+            <option value="İstanbul">İstanbul</option>
+            <option value="İzmir">İzmir</option>
+        </select>
+
+        <button onclick="clearSearch()">
+            Aramayı Temizle
+        </button>
+
+    </div>
+
+    <div class="services" id="serviceList">
+
+        <!-- ADANA BAŞARI -->
+
+        <div class="service-card" data-city="Adana">
+            <span class="brand">SAMSUNG YETKİLİ SERVİS</span>
+
+            <h3>Başarı Teknik Servis</h3>
+
+            <p><strong>Şehir:</strong> Adana</p>
+
+            <p>
+                <strong>Adres:</strong><br>
+                Yeni Baraj Mah. Bülent Angın Blv.
+                Girman Apt. No:36/A,
+                Seyhan / Adana
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Yeni+Baraj+Mahallesi+Bülent+Angın+Bulvarı+No+36A+Seyhan+Adana">
+                📍 Haritada Göster
+            </a>
+        </div>
 
 
-<div class="info">
+        <!-- ANKARA BAŞARI -->
 
-    <strong>Samsung Kulaklık Servis Rehberi</strong>
+        <div class="service-card" data-city="Ankara">
+            <span class="brand">SAMSUNG YETKİLİ SERVİS</span>
 
-    <br>
+            <h3>Başarı Teknik Servis</h3>
 
-    Samsung Galaxy Buds ve diğer Samsung
-    kulaklık ürünleri için servis noktalarını
-    şehir, servis adı veya adres bilgisine göre
-    arayabilirsiniz.
+            <p><strong>Şehir:</strong> Ankara</p>
+
+            <p>
+                <strong>Adres:</strong><br>
+                Cumhuriyet Mah. Mithatpaşa Cad.
+                No:28,
+                Çankaya / Ankara
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Cumhuriyet+Mahallesi+Mithatpaşa+Cadde+No+28+Çankaya+Ankara">
+                📍 Haritada Göster
+            </a>
+        </div>
+
+
+        <!-- İSTANBUL BAŞARI -->
+
+        <div class="service-card" data-city="İstanbul">
+            <span class="brand">SAMSUNG YETKİLİ SERVİS</span>
+
+            <h3>Başarı Teknik Servis</h3>
+
+            <p><strong>Şehir:</strong> İstanbul</p>
+
+            <p>
+                <strong>Adres:</strong><br>
+                Merkez Mah. Spor Sk.
+                No:32/A-1,
+                Avcılar / İstanbul
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Merkez+Mahallesi+Spor+Sokak+32A+Avcılar+İstanbul">
+                📍 Haritada Göster
+            </a>
+        </div>
+
+
+        <!-- İZMİR BAŞARI -->
+
+        <div class="service-card" data-city="İzmir">
+            <span class="brand">SAMSUNG YETKİLİ SERVİS</span>
+
+            <h3>Başarı Teknik Servis</h3>
+
+            <p><strong>Şehir:</strong> İzmir</p>
+
+            <p>
+                <strong>Adres:</strong><br>
+                Tuna Mah. Tiyatro Sk.
+                No:50/A,
+                Karşıyaka / İzmir
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Tuna+Mahallesi+Tiyatro+Sokak+50A+Karşıyaka+İzmir">
+                📍 Haritada Göster
+            </a>
+        </div>
+
+
+        <!-- İSTANBUL KVK PENDİK -->
+
+        <div class="service-card" data-city="İstanbul">
+            <span class="brand">SAMSUNG YETKİLİ SERVİS</span>
+
+            <h3>KVK Teknik Servis</h3>
+
+            <p><strong>Şehir:</strong> İstanbul - Pendik</p>
+
+            <p>
+                <strong>Adres:</strong><br>
+                Batı Mah. Hatboyu Cad.
+                No:15/D,
+                Pendik / İstanbul
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Batı+Mahallesi+Hatboyu+Cadde+15D+Pendik+İstanbul">
+                📍 Haritada Göster
+            </a>
+        </div>
+
+
+        <!-- İSTANBUL KVK ŞİŞLİ -->
+
+        <div class="service-card" data-city="İstanbul">
+            <span class="brand">SAMSUNG YETKİLİ SERVİS</span>
+
+            <h3>KVK Teknik Servis</h3>
+
+            <p><strong>Şehir:</strong> İstanbul - Şişli</p>
+
+            <p>
+                <strong>Adres:</strong><br>
+                Fulya Mah. Büyükdere Cad.
+                Likör Yanı Sk.
+                Akabe Ticaret Merkezi No:1/C,
+                Şişli / İstanbul
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Fulya+Mahallesi+Büyükdere+Cadde+Likör+Yanı+Sokak+Akabe+Ticaret+Merkezi+1C+Şişli+İstanbul">
+                📍 Haritada Göster
+            </a>
+        </div>
+
+    </div>
+
+    <div class="no-result" id="noResult">
+        Aradığınız kriterlere uygun servis bulunamadı.
+    </div>
 
 </div>
 
-
-<div class="search-box">
-
-    <h2>Samsung Kulaklık Servisi Ara</h2>
-
-    <input
-        type="text"
-        id="searchBox"
-        placeholder="Şehir, servis veya adres yazın..."
-        onkeyup="searchServices()"
-    >
-
-    <div id="serviceCount" class="count"></div>
-
-</div>
-
-
-<div id="services">
-
-
-<!-- İSTANBUL -->
-
-<h2 class="city-title">İstanbul</h2>
-
-<div class="card service">
-
-    <h3>BDH Teknik Servis</h3>
-
-    <p class="city">
-        İstanbul
-    </p>
-
-    <p class="type">
-        Samsung Yetkili Teknik Servis
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Samsung ürünleri için yetkili teknik
-        servis noktası - İstanbul
-
-    </p>
-
-    <p class="phone">
-
-        <strong>Telefon:</strong><br>
-
-        Samsung Servis Merkezi
-
-    </p>
-
-    <span class="badge">
-        ✓ Samsung Servis
-    </span>
-
-</div>
-
-
-<!-- ANKARA -->
-
-<h2 class="city-title">Ankara</h2>
-
-<div class="card service">
-
-    <h3>BDH Teknik Servis</h3>
-
-    <p class="city">
-        Ankara
-    </p>
-
-    <p class="type">
-        Samsung Yetkili Teknik Servis
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Samsung ürünleri için yetkili teknik
-        servis noktası - Ankara
-
-    </p>
-
-    <p class="phone">
-
-        <strong>Telefon:</strong><br>
-
-        Samsung Servis Merkezi
-
-    </p>
-
-    <span class="badge">
-        ✓ Samsung Servis
-    </span>
-
-</div>
-
-
-<!-- İZMİR -->
-
-<h2 class="city-title">İzmir</h2>
-
-<div class="card service">
-
-    <h3>Samsung Yetkili Servis</h3>
-
-    <p class="city">
-        İzmir
-    </p>
-
-    <p class="type">
-        Samsung Yetkili Teknik Servis
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Samsung ürünleri için yetkili teknik
-        servis noktası - İzmir
-
-    </p>
-
-    <p class="phone">
-
-        <strong>Telefon:</strong><br>
-
-        Samsung Servis Merkezi
-
-    </p>
-
-    <span class="badge">
-        ✓ Samsung Servis
-    </span>
-
-</div>
-
-
-<!-- ADANA -->
-
-<h2 class="city-title">Adana</h2>
-
-<div class="card service">
-
-    <h3>Samsung Yetkili Servis</h3>
-
-    <p class="city">
-        Adana
-    </p>
-
-    <p class="type">
-        Samsung Yetkili Teknik Servis
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Samsung ürünleri için yetkili teknik
-        servis noktası - Adana
-
-    </p>
-
-    <p class="phone">
-
-        <strong>Telefon:</strong><br>
-
-        Samsung Servis Merkezi
-
-    </p>
-
-    <span class="badge">
-        ✓ Samsung Servis
-    </span>
-
-</div>
-
-
-<!-- ANTALYA -->
-
-<h2 class="city-title">Antalya</h2>
-
-<div class="card service">
-
-    <h3>Samsung Yetkili Servis</h3>
-
-    <p class="city">
-        Antalya
-    </p>
-
-    <p class="type">
-        Samsung Yetkili Teknik Servis
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Samsung ürünleri için yetkili teknik
-        servis noktası - Antalya
-
-    </p>
-
-    <p class="phone">
-
-        <strong>Telefon:</strong><br>
-
-        Samsung Servis Merkezi
-
-    </p>
-
-    <span class="badge">
-        ✓ Samsung Servis
-    </span>
-
-</div>
-
-
-<!-- TRABZON -->
-
-<h2 class="city-title">Trabzon</h2>
-
-<div class="card service">
-
-    <h3>Samsung Yetkili Servis</h3>
-
-    <p class="city">
-        Trabzon
-    </p>
-
-    <p class="type">
-        Samsung Yetkili Teknik Servis
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Samsung ürünleri için yetkili teknik
-        servis noktası - Trabzon
-
-    </p>
-
-    <p class="phone">
-
-        <strong>Telefon:</strong><br>
-
-        Samsung Servis Merkezi
-
-    </p>
-
-    <span class="badge">
-        ✓ Samsung Servis
-    </span>
-
-</div>
-
-</div>
-
-
-<div id="noResult" class="no-result">
-
-    Aradığınız Samsung kulaklık servisi bulunamadı.
-
-</div>
-
-
-<!-- ALT ANA SAYFAYA DÖN -->
-
-<a class="back" href="index.html">
-    ← Ana Sayfaya Dön
-</a>
-
-
-</div>
+<footer>
+    <p>🦦 Briko - Teknik Servis Rehberi</p>
+    <p>Samsung Kulaklık Yetkili Servis Bilgileri</p>
+</footer>
 
 
 <script>
 
-function searchServices() {
+function filterServices() {
 
-    const search =
-        document
-        .getElementById("searchBox")
+    let search =
+        document.getElementById("serviceSearch")
         .value
         .toLowerCase()
         .trim();
 
-    const services =
-        document.querySelectorAll(".service");
+    let city =
+        document.getElementById("cityFilter")
+        .value
+        .toLowerCase();
 
-    const titles =
-        document.querySelectorAll(".city-title");
+    let cards =
+        document.querySelectorAll(".service-card");
 
-    let found = 0;
+    let visibleCount = 0;
 
-    services.forEach(function(service) {
+    cards.forEach(function(card) {
 
-        const text =
-            service.innerText.toLowerCase();
+        let text =
+            card.innerText.toLowerCase();
 
-        if (text.includes(search)) {
+        let cardCity =
+            card.getAttribute("data-city")
+            .toLowerCase();
 
-            service.style.display = "block";
+        let searchMatch =
+            text.includes(search);
 
-            found++;
+        let cityMatch =
+            city === "" || cardCity === city;
+
+        if (searchMatch && cityMatch) {
+
+            card.style.display = "block";
+            visibleCount++;
 
         } else {
 
-            service.style.display = "none";
+            card.style.display = "none";
 
         }
 
     });
 
+    let noResult =
+        document.getElementById("noResult");
 
-    titles.forEach(function(title) {
-
-        let next =
-            title.nextElementSibling;
-
-        let visible = false;
-
-        while (
-            next &&
-            !next.classList.contains("city-title")
-        ) {
-
-            if (
-                next.classList.contains("service") &&
-                next.style.display !== "none"
-            ) {
-
-                visible = true;
-
-            }
-
-            next =
-                next.nextElementSibling;
-
-        }
-
-        title.style.display =
-            visible ? "block" : "none";
-
-    });
-
-
-    document
-        .getElementById("noResult")
-        .style.display =
-        found === 0 ? "block" : "none";
-
-
-    document
-        .getElementById("serviceCount")
-        .innerText =
-        found + " servis listeleniyor";
-
+    if (visibleCount === 0) {
+        noResult.style.display = "block";
+    } else {
+        noResult.style.display = "none";
+    }
 }
 
-searchServices();
+
+function clearSearch() {
+
+    document.getElementById("serviceSearch").value = "";
+
+    document.getElementById("cityFilter").value = "";
+
+    filterServices();
+}
 
 </script>
 
 </body>
-
 </html>
