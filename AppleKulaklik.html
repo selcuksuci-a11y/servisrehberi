@@ -32,7 +32,7 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    opacity: .85;
+    opacity: 0.85;
 }
 
 .container {
@@ -129,6 +129,17 @@ select {
     font-weight: bold;
 }
 
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
 .count {
     margin-top: 12px;
     color: #64748b;
@@ -156,7 +167,7 @@ select {
 
 <header>
 
-    <h1>🎧 Apple / AirPods Yetkili Servisleri</h1>
+    <h1>🎧 Apple / AirPods Servisleri</h1>
 
     <p>
         Türkiye Geneli - Briko Servis Rehberi
@@ -167,7 +178,6 @@ select {
 
 <div class="container">
 
-
 <a class="back" href="İndex.html">
     ← Briko Ana Sayfasına Dön
 </a>
@@ -177,9 +187,9 @@ select {
 
     <strong>Apple / AirPods Servis Rehberi</strong><br>
 
-    AirPods için servis ve onarım seçeneklerini
-    şehir, servis adı veya adres bilgisine göre
-    arayabilirsiniz.
+    AirPods için Apple Store ve Apple Yetkili Servis
+    seçeneklerini şehir ve servis adına göre
+    filtreleyebilirsiniz.
 
 </div>
 
@@ -195,15 +205,13 @@ select {
         onkeyup="searchServices()"
     >
 
-    <select id="cityFilter" onchange="searchServices()">
+    <select
+        id="cityFilter"
+        onchange="searchServices()"
+    >
 
         <option value="">Tüm Şehirler</option>
-
-        <option value="Ankara">Ankara</option>
-
         <option value="İstanbul">İstanbul</option>
-
-        <option value="İzmir">İzmir</option>
 
     </select>
 
@@ -215,107 +223,168 @@ select {
 <div id="services">
 
 
-<!-- ANKARA -->
-
-<h2 class="city-title">Ankara</h2>
-
-<div
-    class="card service"
-    data-city="Ankara"
->
-
-    <h3>Apple Yetkili Servis</h3>
-
-    <p class="city">
-        Ankara
-    </p>
-
-    <p class="type">
-        Apple / AirPods Servisi
-    </p>
-
-    <p class="address">
-        <strong>Açık Adres:</strong><br>
-        Yetkili servis adresi doğrulanarak eklenecek.
-    </p>
-
-    <span class="badge">
-        ✓ Yetkili Servis
-    </span>
-
-</div>
-
-
 <!-- İSTANBUL -->
 
-<h2 class="city-title">İstanbul</h2>
+<h2 class="city-title">
+    İstanbul
+</h2>
+
 
 <div
     class="card service"
     data-city="İstanbul"
 >
 
-    <h3>Apple Yetkili Servis</h3>
+    <h3>
+        Apple Zorlu Center
+    </h3>
 
     <p class="city">
-        İstanbul
+        İstanbul - Beşiktaş
     </p>
 
     <p class="type">
-        Apple / AirPods Servisi
+        Apple Store / Genius Bar
     </p>
 
     <p class="address">
+
         <strong>Açık Adres:</strong><br>
-        Yetkili servis adresi doğrulanarak eklenecek.
+
+        Zorlu Center<br>
+        Koru Sok. No: 2<br>
+        Beşiktaş / İstanbul
+
     </p>
 
+
     <span class="badge">
-        ✓ Yetkili Servis
+        ✓ Apple Store
     </span>
+
+
+    <br>
+
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Apple+Zorlu+Center+İstanbul"
+        target="_blank"
+    >
+        🗺️ Yol Tarifi
+    </a>
 
 </div>
 
 
-<!-- İZMİR -->
-
-<h2 class="city-title">İzmir</h2>
 
 <div
     class="card service"
-    data-city="İzmir"
+    data-city="İstanbul"
 >
 
-    <h3>Apple Yetkili Servis</h3>
+    <h3>
+        Apple Bağdat Caddesi
+    </h3>
 
     <p class="city">
-        İzmir
+        İstanbul - Kadıköy
     </p>
 
     <p class="type">
-        Apple / AirPods Servisi
+        Apple Store / Genius Bar
     </p>
 
     <p class="address">
+
         <strong>Açık Adres:</strong><br>
-        Yetkili servis adresi doğrulanarak eklenecek.
+
+        Bağdat Caddesi No: 342<br>
+        Caddebostan<br>
+        Kadıköy / İstanbul
+
     </p>
 
+
     <span class="badge">
-        ✓ Yetkili Servis
+        ✓ Apple Store
     </span>
 
+
+    <br>
+
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Apple+Bağdat+Caddesi+İstanbul"
+        target="_blank"
+    >
+        🗺️ Yol Tarifi
+    </a>
+
+</div>
+
+
+
+<div
+    class="card service"
+    data-city="İstanbul"
+>
+
+    <h3>
+        Apple Akasya
+    </h3>
+
+    <p class="city">
+        İstanbul - Üsküdar
+    </p>
+
+    <p class="type">
+        Apple Store / Genius Bar
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Akasya AVM<br>
+        Acıbadem Mah. Çeçen Sok. No: 25<br>
+        Üsküdar / İstanbul
+
+    </p>
+
+
+    <span class="badge">
+        ✓ Apple Store
+    </span>
+
+
+    <br>
+
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Apple+Akasya+İstanbul"
+        target="_blank"
+    >
+        🗺️ Yol Tarifi
+    </a>
+
 </div>
 
 
 </div>
 
 
-<div id="noResult" class="no-result">
+<div
+    id="noResult"
+    class="no-result"
+>
 
     Aradığınız Apple / AirPods servisi bulunamadı.
 
 </div>
+
 
 </div>
 
@@ -331,36 +400,41 @@ function searchServices() {
         .toLowerCase()
         .trim();
 
+
     const city =
         document
         .getElementById("cityFilter")
         .value
         .toLowerCase();
 
+
     const services =
         document.querySelectorAll(".service");
 
-    const titles =
-        document.querySelectorAll(".city-title");
 
     let found = 0;
+
 
     services.forEach(function(service) {
 
         const text =
             service.innerText.toLowerCase();
 
+
         const serviceCity =
             service
             .getAttribute("data-city")
             .toLowerCase();
 
+
         const searchMatch =
             text.includes(search);
+
 
         const cityMatch =
             city === "" ||
             serviceCity === city;
+
 
         if (
             searchMatch &&
@@ -368,6 +442,7 @@ function searchServices() {
         ) {
 
             service.style.display = "block";
+
             found++;
 
         } else {
@@ -375,37 +450,6 @@ function searchServices() {
             service.style.display = "none";
 
         }
-
-    });
-
-
-    titles.forEach(function(title) {
-
-        let next =
-            title.nextElementSibling;
-
-        let visible = false;
-
-        while (
-            next &&
-            !next.classList.contains("city-title")
-        ) {
-
-            if (
-                next.classList.contains("service") &&
-                next.style.display !== "none"
-            ) {
-
-                visible = true;
-
-            }
-
-            next =
-                next.nextElementSibling;
-        }
-
-        title.style.display =
-            visible ? "block" : "none";
 
     });
 
@@ -427,6 +471,7 @@ function searchServices() {
 searchServices();
 
 </script>
+
 
 </body>
 </html>
