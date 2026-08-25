@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Apple AirPods Yetkili Servisleri - Briko</title>
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Kulaklıklar - Briko</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -14,163 +19,145 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #1f2937;
+    background: #f5f6f8;
+    color: #222;
 }
 
 header {
-    background: #111827;
+    background: #111;
     color: white;
     text-align: center;
-    padding: 28px 15px;
+    padding: 32px 15px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 header p {
-    margin: 8px 0 0;
-    opacity: 0.85;
+    margin: 10px 0 0;
+    color: #ccc;
+    font-size: 16px;
 }
 
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 25px 15px;
+    padding: 25px 15px 40px;
 }
 
 .back {
     display: inline-block;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-decoration: none;
     color: #2563eb;
     font-weight: bold;
 }
 
 .info {
-    background: #eef4ff;
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-.search-box {
     background: white;
-    padding: 20px;
+    padding: 22px;
     border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 30px;
 }
 
-.search-box h2 {
+.info h2 {
     margin-top: 0;
-}
-
-input,
-select {
-    width: 100%;
-    padding: 14px;
-    margin-top: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    font-size: 16px;
-    background: white;
-}
-
-.city-title {
-    margin: 30px 0 15px;
     font-size: 23px;
 }
 
-.card {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.08);
-}
-
-.card h3 {
-    margin: 0 0 12px;
-    font-size: 19px;
-}
-
-.card p {
-    margin: 8px 0;
-    color: #6b7280;
+.info p {
+    margin-bottom: 0;
     line-height: 1.6;
+    color: #555;
 }
 
-.city {
-    color: #2563eb !important;
-    font-weight: bold;
+.section-title {
+    font-size: 24px;
+    margin: 30px 0 15px;
 }
 
-.type {
-    color: #111827 !important;
-    font-weight: bold;
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
-.address {
-    color: #374151 !important;
-}
-
-.badge {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 6px 10px;
-    border-radius: 20px;
-    background: #ecfdf5;
-    color: #047857;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.map-button {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 10px 15px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-}
-
-.count {
-    margin-top: 12px;
-    color: #64748b;
-    font-size: 14px;
-}
-
-.no-result {
-    display: none;
+.brand-card {
+    display: block;
     background: white;
-    padding: 25px;
-    text-align: center;
+    color: #222;
+    text-decoration: none;
+    padding: 23px;
     border-radius: 15px;
-    color: #64748b;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    transition: .2s;
 }
 
-@media (max-width:600px) {
+.brand-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 16px rgba(0,0,0,.12);
+}
+
+.icon {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.brand-card h3 {
+    margin: 0 0 7px;
+    font-size: 20px;
+}
+
+.brand-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
     header h1 {
         font-size: 24px;
     }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
 
-    <h1>🎧 Apple / AirPods Servisleri</h1>
+    <h1>
+        🎧 Kulaklıklar
+    </h1>
 
     <p>
-        Türkiye Geneli - Briko Servis Rehberi
+        Kulaklık markasını seçin
     </p>
 
 </header>
@@ -178,300 +165,118 @@ select {
 
 <div class="container">
 
-<a class="back" href="İndex.html">
-    ← Briko Ana Sayfasına Dön
-</a>
 
-
-<div class="info">
-
-    <strong>Apple / AirPods Servis Rehberi</strong><br>
-
-    AirPods için Apple Store ve Apple Yetkili Servis
-    seçeneklerini şehir ve servis adına göre
-    filtreleyebilirsiniz.
-
-</div>
-
-
-<div class="search-box">
-
-    <h2>🔎 Apple / AirPods Servisi Ara</h2>
-
-    <input
-        type="text"
-        id="searchBox"
-        placeholder="Şehir, servis veya adres yazın..."
-        onkeyup="searchServices()"
-    >
-
-    <select
-        id="cityFilter"
-        onchange="searchServices()"
-    >
-
-        <option value="">Tüm Şehirler</option>
-        <option value="İstanbul">İstanbul</option>
-
-    </select>
-
-    <div id="serviceCount" class="count"></div>
-
-</div>
-
-
-<div id="services">
-
-
-<!-- İSTANBUL -->
-
-<h2 class="city-title">
-    İstanbul
-</h2>
-
-
-<div
-    class="card service"
-    data-city="İstanbul"
->
-
-    <h3>
-        Apple Zorlu Center
-    </h3>
-
-    <p class="city">
-        İstanbul - Beşiktaş
-    </p>
-
-    <p class="type">
-        Apple Store / Genius Bar
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Zorlu Center<br>
-        Koru Sok. No: 2<br>
-        Beşiktaş / İstanbul
-
-    </p>
-
-
-    <span class="badge">
-        ✓ Apple Store
-    </span>
-
-
-    <br>
-
+    <!-- BRİKO ANA SAYFASINA DÖN -->
 
     <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Apple+Zorlu+Center+İstanbul"
-        target="_blank"
+        class="back"
+        href="İndex.html"
     >
-        🗺️ Yol Tarifi
+        ← Briko Ana Sayfasına Dön
     </a>
 
-</div>
+
+    <div class="info">
+
+        <h2>
+            🎧 Kulaklık Servis Rehberi
+        </h2>
+
+        <p>
+            Servis bilgilerine ulaşmak istediğiniz
+            kulaklık markasını seçin.
+        </p>
+
+    </div>
 
 
-
-<div
-    class="card service"
-    data-city="İstanbul"
->
-
-    <h3>
-        Apple Bağdat Caddesi
-    </h3>
-
-    <p class="city">
-        İstanbul - Kadıköy
-    </p>
-
-    <p class="type">
-        Apple Store / Genius Bar
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Bağdat Caddesi No: 342<br>
-        Caddebostan<br>
-        Kadıköy / İstanbul
-
-    </p>
+    <h2 class="section-title">
+        🎧 Kulaklık Markaları
+    </h2>
 
 
-    <span class="badge">
-        ✓ Apple Store
-    </span>
+    <div class="brand-grid">
 
 
-    <br>
+        <!-- APPLE -->
+
+        <a
+            class="brand-card"
+            href="AppleKulaklik.html"
+        >
+
+            <div class="icon">
+                🍎
+            </div>
+
+            <h3>
+                Apple Kulaklık
+            </h3>
+
+            <p>
+                Apple AirPods ve kulaklık servisleri
+            </p>
+
+        </a>
 
 
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Apple+Bağdat+Caddesi+İstanbul"
-        target="_blank"
-    >
-        🗺️ Yol Tarifi
-    </a>
+        <!-- SAMSUNG -->
 
-</div>
+        <a
+            class="brand-card"
+            href="SamsungKulaklik.html"
+        >
 
+            <div class="icon">
+                🎧
+            </div>
 
+            <h3>
+                Samsung
+            </h3>
 
-<div
-    class="card service"
-    data-city="İstanbul"
->
+            <p>
+                Samsung Galaxy Buds servisleri
+            </p>
 
-    <h3>
-        Apple Akasya
-    </h3>
-
-    <p class="city">
-        İstanbul - Üsküdar
-    </p>
-
-    <p class="type">
-        Apple Store / Genius Bar
-    </p>
-
-    <p class="address">
-
-        <strong>Açık Adres:</strong><br>
-
-        Akasya AVM<br>
-        Acıbadem Mah. Çeçen Sok. No: 25<br>
-        Üsküdar / İstanbul
-
-    </p>
+        </a>
 
 
-    <span class="badge">
-        ✓ Apple Store
-    </span>
+        <!-- JBL -->
+
+        <a
+            class="brand-card"
+            href="JBLKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                JBL
+            </h3>
+
+            <p>
+                JBL kulaklık servisleri
+            </p>
+
+        </a>
 
 
-    <br>
-
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Apple+Akasya+İstanbul"
-        target="_blank"
-    >
-        🗺️ Yol Tarifi
-    </a>
-
-</div>
+    </div>
 
 
 </div>
 
 
-<div
-    id="noResult"
-    class="no-result"
->
+<div class="footer">
 
-    Aradığınız Apple / AirPods servisi bulunamadı.
+    Türkiye'nin Teknik Servis Rehberi © 2026
 
 </div>
-
-
-</div>
-
-
-<script>
-
-function searchServices() {
-
-    const search =
-        document
-        .getElementById("searchBox")
-        .value
-        .toLowerCase()
-        .trim();
-
-
-    const city =
-        document
-        .getElementById("cityFilter")
-        .value
-        .toLowerCase();
-
-
-    const services =
-        document.querySelectorAll(".service");
-
-
-    let found = 0;
-
-
-    services.forEach(function(service) {
-
-        const text =
-            service.innerText.toLowerCase();
-
-
-        const serviceCity =
-            service
-            .getAttribute("data-city")
-            .toLowerCase();
-
-
-        const searchMatch =
-            text.includes(search);
-
-
-        const cityMatch =
-            city === "" ||
-            serviceCity === city;
-
-
-        if (
-            searchMatch &&
-            cityMatch
-        ) {
-
-            service.style.display = "block";
-
-            found++;
-
-        } else {
-
-            service.style.display = "none";
-
-        }
-
-    });
-
-
-    document
-        .getElementById("noResult")
-        .style.display =
-        found === 0 ? "block" : "none";
-
-
-    document
-        .getElementById("serviceCount")
-        .innerText =
-        found + " servis listeleniyor";
-
-}
-
-
-searchServices();
-
-</script>
 
 
 </body>
+
 </html>
