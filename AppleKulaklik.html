@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Apple Kulaklık Yetkili Servisleri - Briko</title>
 
@@ -18,15 +19,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f6f8;
-    color: #222;
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
 header {
-    background: #111;
+    background: #111827;
     color: white;
     text-align: center;
-    padding: 30px 15px;
+    padding: 28px 15px;
 }
 
 header h1 {
@@ -36,129 +37,133 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    color: #ccc;
+    opacity: 0.85;
 }
 
 .container {
-    max-width: 1050px;
+    max-width: 1000px;
     margin: auto;
-    padding: 20px 15px 40px;
+    padding: 25px 15px 40px;
 }
 
-.home-area {
-    text-align: center;
-    margin: 10px 0 20px;
-}
-
-.home-button {
+.back {
     display: inline-block;
-    background: #111;
-    color: white;
+    margin-bottom: 20px;
     text-decoration: none;
-    padding: 12px 22px;
-    border-radius: 9px;
+    color: #2563eb;
     font-weight: bold;
 }
 
 .info {
-    background: white;
-    padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
     margin-bottom: 20px;
-}
-
-.info h2 {
-    margin-top: 0;
-}
-
-.info p {
     line-height: 1.6;
-    color: #555;
 }
 
 .search-box {
-    margin-bottom: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-.search-box input {
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
     width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.service-card {
     background: white;
-    padding: 22px;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
     border-radius: 15px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-.service-card h3 {
-    margin: 0 0 10px;
-    font-size: 21px;
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
 }
 
-.service-name {
-    font-weight: bold;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    color: #555;
-    line-height: 1.6;
+.card p {
     margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
 }
 
-.buttons {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-
-.button {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 8px;
+.city {
+    color: #2563eb !important;
     font-weight: bold;
-    font-size: 14px;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
 }
 
 .phone {
-    background: #16803c;
+    color: #047857 !important;
+    font-weight: bold;
 }
 
-.map {
-    background: #2563eb;
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-footer {
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.footer {
     text-align: center;
     padding: 30px 15px;
     color: #777;
     font-size: 13px;
 }
 
-@media (max-width: 700px) {
+@media (max-width:600px) {
 
     header h1 {
-        font-size: 23px;
-    }
-
-    .services {
-        grid-template-columns: 1fr;
+        font-size: 24px;
     }
 
 }
@@ -167,14 +172,19 @@ footer {
 
 </head>
 
+
 <body>
 
 
 <header>
 
-    <h1>🎧 Apple Kulaklık Yetkili Servisleri</h1>
+    <h1>
+        🎧 Apple Kulaklık Yetkili Servisleri
+    </h1>
 
-    <p>Briko - Yetkili Servis Rehberi</p>
+    <p>
+        Türkiye Geneli - Briko Servis Rehberi
+    </p>
 
 </header>
 
@@ -184,262 +194,525 @@ footer {
 
     <!-- ÜST ANA SAYFA -->
 
-    <div class="home-area">
-
-        <a
-            href="javascript:history.back();"
-            class="home-button">
-            Ana Sayfaya Dön
-        </a>
-
-    </div>
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
 
 
     <div class="info">
 
-        <h2>Apple AirPods Servisleri</h2>
+        <strong>
+            Apple Kulaklık Servis Rehberi
+        </strong>
 
-        <p>
-            Apple AirPods ve kulaklık ürünleri için
-            servis bilgileri.
-        </p>
+        <br>
+
+        Apple AirPods ve diğer Apple kulaklık
+        ürünleri için servis noktalarını şehir,
+        servis adı veya adres bilgisine göre
+        arayabilirsiniz.
 
     </div>
 
 
     <div class="search-box">
 
+        <h2>
+            Apple Kulaklık Servisi Ara
+        </h2>
+
         <input
             type="text"
-            id="serviceSearch"
-            placeholder="Şehir veya servis ara..."
-            onkeyup="searchService()">
+            id="searchBox"
+            placeholder="Şehir, servis veya adres yazın..."
+            onkeyup="searchServices()"
+        >
+
+        <div
+            id="serviceCount"
+            class="count">
+        </div>
 
     </div>
 
 
-    <div class="services">
+    <div id="services">
 
 
-        <!-- KVK İSTANBUL -->
+        <!-- İSTANBUL -->
 
-        <div class="service-card">
-
-            <h3>📍 İstanbul</h3>
-
-            <div class="service-name">
-                KVK Teknik Servis - Bostancı
-            </div>
-
-            <p>
-                <strong>Adres:</strong><br>
-                İçerenköy Mahallesi Prof. Ali Nihat Tarlan
-                Caddesi Kara Kartal Sokak No:4,
-                Ataşehir / İstanbul
-            </p>
-
-            <p>
-                <strong>Telefon:</strong>
-                0850 222 15 85
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:08502221585">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Bostancı+İstanbul"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
+        <h2 class="city-title">
+            İstanbul
+        </h2>
 
 
-        <!-- KVK ANKARA -->
+        <div class="card service">
 
-        <div class="service-card">
-
-            <h3>📍 Ankara</h3>
-
-            <div class="service-name">
+            <h3>
                 KVK Teknik Servis
-            </div>
+            </h3>
 
-            <p>
-                <strong>Adres:</strong><br>
-                Ankara KVK Teknik Servis
+            <p class="city">
+                İstanbul
             </p>
 
-            <p>
-                <strong>Telefon:</strong>
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Apple ürünleri için KVK teknik servis
+                noktası - İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
                 0850 222 15 85
+
             </p>
 
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:08502221585">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
+            <span class="badge">
+                ✓ Teknik Servis
+            </span>
 
         </div>
 
 
-        <!-- BAŞARI ANKARA -->
+        <!-- ANKARA -->
 
-        <div class="service-card">
+        <h2 class="city-title">
+            Ankara
+        </h2>
 
-            <h3>📍 Ankara</h3>
 
-            <div class="service-name">
-                Başarı Teknik Servis
-            </div>
+        <div class="card service">
 
-            <p>
-                <strong>Adres:</strong><br>
-                Ankara Başarı Teknik Servis
+            <h3>
+                KVK Teknik Servis
+            </h3>
+
+            <p class="city">
+                Ankara
             </p>
 
-            <p>
-                <strong>Telefon:</strong>
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Apple ürünleri için KVK teknik servis
+                noktası - Ankara
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0850 222 15 85
+
+            </p>
+
+            <span class="badge">
+                ✓ KVK Servis
+            </span>
+
+        </div>
+
+
+        <div class="card service">
+
+            <h3>
+                Başarı Teknik Servis
+            </h3>
+
+            <p class="city">
+                Ankara
+            </p>
+
+            <p class="type">
+                Başarı Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Apple ürünleri için Başarı teknik
+                servis noktası - Ankara
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
                 0312 430 56 65
+
             </p>
 
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:03124305665">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Ankara"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
+            <span class="badge">
+                ✓ Teknik Servis
+            </span>
 
         </div>
 
 
-        <!-- BAŞARI İSTANBUL -->
+        <!-- İZMİR -->
 
-        <div class="service-card">
+        <h2 class="city-title">
+            İzmir
+        </h2>
 
-            <h3>📍 İstanbul</h3>
 
-            <div class="service-name">
+        <div class="card service">
+
+            <h3>
                 Başarı Teknik Servis
-            </div>
+            </h3>
 
-            <p>
-                <strong>Adres:</strong><br>
-                İstanbul Başarı Teknik Servis
+            <p class="city">
+                İzmir
             </p>
 
-            <p>
-                <strong>Telefon:</strong>
-                0216 418 07 00
+            <p class="type">
+                Başarı Teknik Servis
             </p>
 
-            <div class="buttons">
+            <p class="address">
 
-                <a
-                    class="button phone"
-                    href="tel:02164180700">
-                    Ara
-                </a>
+                <strong>
+                    Açık Adres:
+                </strong>
 
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+İstanbul"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
+                <br>
 
-            </div>
+                Apple ürünleri için Başarı teknik
+                servis noktası - İzmir
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0232 483 40 40
+
+            </p>
+
+            <span class="badge">
+                ✓ Teknik Servis
+            </span>
 
         </div>
 
+
+        <!-- ADANA -->
+
+        <h2 class="city-title">
+            Adana
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                KVK Teknik Servis
+            </h3>
+
+            <p class="city">
+                Adana
+            </p>
+
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Apple ürünleri için KVK teknik servis
+                noktası - Adana
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0850 222 15 85
+
+            </p>
+
+            <span class="badge">
+                ✓ KVK Servis
+            </span>
+
+        </div>
+
+
+        <!-- ANTALYA -->
+
+        <h2 class="city-title">
+            Antalya
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                KVK Teknik Servis
+            </h3>
+
+            <p class="city">
+                Antalya
+            </p>
+
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Apple ürünleri için KVK teknik servis
+                noktası - Antalya
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0850 222 15 85
+
+            </p>
+
+            <span class="badge">
+                ✓ KVK Servis
+            </span>
+
+        </div>
+
+
+        <!-- TRABZON -->
+
+        <h2 class="city-title">
+            Trabzon
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                KVK Teknik Servis
+            </h3>
+
+            <p class="city">
+                Trabzon
+            </p>
+
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Apple ürünleri için KVK teknik servis
+                noktası - Trabzon
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0850 222 15 85
+
+            </p>
+
+            <span class="badge">
+                ✓ KVK Servis
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        id="noResult"
+        class="no-result">
+
+        Aradığınız Apple kulaklık servisi
+        bulunamadı.
 
     </div>
 
 
     <!-- ALT ANA SAYFA -->
 
-    <div class="home-area">
-
-        <a
-            href="javascript:history.back();"
-            class="home-button">
-            Ana Sayfaya Dön
-        </a>
-
-    </div>
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
 
 
 </div>
 
 
-<footer>
+<div class="footer">
 
     Türkiye'nin Teknik Servis Rehberi © 2026
 
-</footer>
+</div>
 
 
 <script>
 
-function searchService() {
+function searchServices() {
 
-    const input =
+    const search =
         document
-        .getElementById("serviceSearch")
+        .getElementById("searchBox")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
-    const cards =
-        document.querySelectorAll(".service-card");
 
-    cards.forEach(function(card) {
+    const services =
+        document.querySelectorAll(".service");
+
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+
+    let found = 0;
+
+
+    services.forEach(function(service) {
 
         const text =
-            card.textContent.toLowerCase();
+            service.innerText.toLowerCase();
 
-        if (text.includes(input)) {
 
-            card.style.display = "";
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
 
         } else {
 
-            card.style.display = "none";
+            service.style.display = "none";
 
         }
 
     });
 
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
 }
+
+
+searchServices();
 
 </script>
 
