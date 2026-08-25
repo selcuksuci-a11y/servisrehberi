@@ -35,7 +35,7 @@ header h1 {
 }
 
 header p {
-    margin: 9px 0 0;
+    margin: 8px 0 0;
     color: #ccc;
 }
 
@@ -45,25 +45,17 @@ header p {
     padding: 20px 15px 40px;
 }
 
-.home-top,
-.home-bottom {
+.home-area {
     text-align: center;
-}
-
-.home-top {
-    margin-bottom: 20px;
-}
-
-.home-bottom {
-    margin-top: 30px;
+    margin: 10px 0 20px;
 }
 
 .home-button {
     display: inline-block;
-    padding: 12px 20px;
     background: #111;
     color: white;
     text-decoration: none;
+    padding: 12px 22px;
     border-radius: 9px;
     font-weight: bold;
 }
@@ -73,7 +65,7 @@ header p {
     padding: 22px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 }
 
 .info h2 {
@@ -81,8 +73,8 @@ header p {
 }
 
 .info p {
-    color: #555;
     line-height: 1.6;
+    color: #555;
 }
 
 .search-box {
@@ -95,7 +87,6 @@ header p {
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    outline: none;
 }
 
 .services {
@@ -119,7 +110,6 @@ header p {
 
 .service-name {
     font-weight: bold;
-    color: #111;
     margin-bottom: 12px;
 }
 
@@ -129,22 +119,18 @@ header p {
     margin: 8px 0;
 }
 
-.service-card strong {
-    color: #222;
-}
-
 .buttons {
     display: flex;
-    flex-wrap: wrap;
     gap: 8px;
-    margin-top: 14px;
+    flex-wrap: wrap;
+    margin-top: 15px;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 14px;
     color: white;
     text-decoration: none;
+    padding: 10px 14px;
     border-radius: 8px;
     font-weight: bold;
     font-size: 14px;
@@ -198,10 +184,10 @@ footer {
 
     <!-- ÜST ANA SAYFA -->
 
-    <div class="home-top">
+    <div class="home-area">
 
         <a
-            href="index.html"
+            href="javascript:history.back();"
             class="home-button">
             Ana Sayfaya Dön
         </a>
@@ -214,9 +200,8 @@ footer {
         <h2>Apple AirPods Servisleri</h2>
 
         <p>
-            AirPods ve Apple kulaklık ürünleri için
-            yetkili servis bilgileri aşağıdaki
-            kartlarda gösterilmektedir.
+            Apple AirPods ve kulaklık ürünleri için
+            servis bilgileri.
         </p>
 
     </div>
@@ -228,8 +213,7 @@ footer {
             type="text"
             id="serviceSearch"
             placeholder="Şehir veya servis ara..."
-            onkeyup="searchService()"
-        >
+            onkeyup="searchService()">
 
     </div>
 
@@ -248,14 +232,14 @@ footer {
             </div>
 
             <p>
-                <strong>📌 Adres:</strong><br>
+                <strong>Adres:</strong><br>
                 İçerenköy Mahallesi Prof. Ali Nihat Tarlan
                 Caddesi Kara Kartal Sokak No:4,
                 Ataşehir / İstanbul
             </p>
 
             <p>
-                <strong>📞 Telefon:</strong>
+                <strong>Telefon:</strong>
                 0850 222 15 85
             </p>
 
@@ -269,7 +253,7 @@ footer {
 
                 <a
                     class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Bostancı+Apple+İstanbul"
+                    href="https://www.google.com/maps/search/?api=1&query=KVK+Bostancı+İstanbul"
                     target="_blank">
                     Yol Tarifi
                 </a>
@@ -286,16 +270,16 @@ footer {
             <h3>📍 Ankara</h3>
 
             <div class="service-name">
-                KVK Teknik Servis - Ankara
+                KVK Teknik Servis
             </div>
 
             <p>
-                <strong>📌 Adres:</strong><br>
-                Ankara KVK Apple Yetkili Servis Noktası
+                <strong>Adres:</strong><br>
+                Ankara KVK Teknik Servis
             </p>
 
             <p>
-                <strong>📞 Telefon:</strong>
+                <strong>Telefon:</strong>
                 0850 222 15 85
             </p>
 
@@ -309,133 +293,7 @@ footer {
 
                 <a
                     class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Apple+Ankara"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- KVK ADANA -->
-
-        <div class="service-card">
-
-            <h3>📍 Adana</h3>
-
-            <div class="service-name">
-                KVK Teknik Servis - Adana
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Reşatbey Mahallesi Gazeteci Sinan
-                Tanyıldız Sokak No:29 Güçlü Apt.,
-                Seyhan / Adana
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0850 222 15 85
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:08502221585">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Apple+Adana"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- KVK ANTALYA -->
-
-        <div class="service-card">
-
-            <h3>📍 Antalya</h3>
-
-            <div class="service-name">
-                KVK Teknik Servis - Antalya
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Etiler Mahallesi Adnan Menderes Bulvarı
-                No:67B,
-                Muratpaşa / Antalya
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0850 222 15 85
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:08502221585">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Apple+Antalya"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- KVK TRABZON -->
-
-        <div class="service-card">
-
-            <h3>📍 Trabzon</h3>
-
-            <div class="service-name">
-                KVK Teknik Servis - Trabzon
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Cumhuriyet Mahallesi Nemlioğlu Cemal Sokak
-                Ziyabey Sitesi A Blok No:16/B,
-                Trabzon
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0850 222 15 85
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:08502221585">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=KVK+Apple+Trabzon"
+                    href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara"
                     target="_blank">
                     Yol Tarifi
                 </a>
@@ -456,13 +314,12 @@ footer {
             </div>
 
             <p>
-                <strong>📌 Adres:</strong><br>
-                Armada AVM 3. Kat No:181,
-                Çankaya / Ankara
+                <strong>Adres:</strong><br>
+                Ankara Başarı Teknik Servis
             </p>
 
             <p>
-                <strong>📞 Telefon:</strong>
+                <strong>Telefon:</strong>
                 0312 430 56 65
             </p>
 
@@ -476,7 +333,7 @@ footer {
 
                 <a
                     class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Armada+Ankara"
+                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Ankara"
                     target="_blank">
                     Yol Tarifi
                 </a>
@@ -497,14 +354,12 @@ footer {
             </div>
 
             <p>
-                <strong>📌 Adres:</strong><br>
-                Erenköy Mahallesi Şemsettin Günaltay
-                Caddesi No:213 B/1,
-                Kadıköy / İstanbul
+                <strong>Adres:</strong><br>
+                İstanbul Başarı Teknik Servis
             </p>
 
             <p>
-                <strong>📞 Telefon:</strong>
+                <strong>Telefon:</strong>
                 0216 418 07 00
             </p>
 
@@ -518,216 +373,7 @@ footer {
 
                 <a
                     class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Kadıköy+İstanbul"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- BAŞARI İZMİR -->
-
-        <div class="service-card">
-
-            <h3>📍 İzmir</h3>
-
-            <div class="service-name">
-                Başarı Teknik Servis
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Tuna Mahallesi Tiyatro Sokak No:50/A,
-                Karşıyaka / İzmir
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0232 483 40 40
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:02324834040">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Karşıyaka+İzmir"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- BAŞARI ADANA -->
-
-        <div class="service-card">
-
-            <h3>📍 Adana</h3>
-
-            <div class="service-name">
-                Başarı Teknik Servis
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Reşat Bey Mahallesi Stadyum Caddesi
-                No:41/B,
-                Seyhan / Adana
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0322 457 59 00
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:03224575900">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Adana"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- BAŞARI SAMSUN -->
-
-        <div class="service-card">
-
-            <h3>📍 Samsun</h3>
-
-            <div class="service-name">
-                Başarı Teknik Servis
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Saitbey Mahallesi 100. Yıl Bulvarı
-                No:103/8,
-                İlkadım / Samsun
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0362 431 64 11
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:03624316411">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Samsun"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- BAŞARI ERZURUM -->
-
-        <div class="service-card">
-
-            <h3>📍 Erzurum</h3>
-
-            <div class="service-name">
-                Başarı Teknik Servis
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Muratpaşa Mahallesi İsmetpaşa Caddesi
-                No:26/1,
-                Yakutiye / Erzurum
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0442 235 32 32
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:04422353232">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Erzurum"
-                    target="_blank">
-                    Yol Tarifi
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <!-- BAŞARI DİYARBAKIR -->
-
-        <div class="service-card">
-
-            <h3>📍 Diyarbakır</h3>
-
-            <div class="service-name">
-                Başarı Teknik Servis
-            </div>
-
-            <p>
-                <strong>📌 Adres:</strong><br>
-                Diclekent Mahallesi Kayapınar Caddesi
-                No:61/D,
-                Kayapınar / Diyarbakır
-            </p>
-
-            <p>
-                <strong>📞 Telefon:</strong>
-                0412 229 67 00
-            </p>
-
-            <div class="buttons">
-
-                <a
-                    class="button phone"
-                    href="tel:04122296700">
-                    Ara
-                </a>
-
-                <a
-                    class="button map"
-                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Diyarbakır"
+                    href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+İstanbul"
                     target="_blank">
                     Yol Tarifi
                 </a>
@@ -742,10 +388,10 @@ footer {
 
     <!-- ALT ANA SAYFA -->
 
-    <div class="home-bottom">
+    <div class="home-area">
 
         <a
-            href="index.html"
+            href="javascript:history.back();"
             class="home-button">
             Ana Sayfaya Dön
         </a>
@@ -782,9 +428,13 @@ function searchService() {
             card.textContent.toLowerCase();
 
         if (text.includes(input)) {
+
             card.style.display = "";
+
         } else {
+
             card.style.display = "none";
+
         }
 
     });
