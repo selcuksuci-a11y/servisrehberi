@@ -1,164 +1,730 @@
-<!-- KULAKLIKLAR -->
+<!DOCTYPE html>
+<html lang="tr">
 
-<h2 class="section-title">
-    🎧 Kulaklıklar
-</h2>
+<head>
 
-<div class="brand-grid">
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Türkiye'nin Teknik Servis Rehberi - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 32px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+.intro {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    margin-top: 0;
+    font-size: 23px;
+}
+
+.intro p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 24px;
+    margin: 30px 0 15px;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.brand-card {
+    display: block;
+    background: white;
+    color: #222;
+    text-decoration: none;
+    padding: 23px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    transition: .2s;
+}
+
+.brand-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 16px rgba(0,0,0,.12);
+}
+
+.icon {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.brand-card h3 {
+    margin: 0 0 7px;
+    font-size: 20px;
+}
+
+.brand-card p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
 
 
-    <!-- APPLE KULAKLIK -->
+<body>
 
-    <a
-        class="brand-card"
-        href="AppleKulaklik.html"
-    >
 
-        <div class="icon">
-            🎧
-        </div>
+<header>
 
-        <h3>
-            Apple
-        </h3>
+    <h1>
+        🛠️ Türkiye'nin Teknik Servis Rehberi
+    </h1>
+
+    <p>
+        Yetkili servis bilgilerine kolayca ulaşın
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <div class="intro">
+
+        <h2>
+            Briko'ya Hoş Geldiniz
+        </h2>
 
         <p>
-            Apple AirPods yetkili servisleri
+            Servis bilgilerini görmek istediğiniz
+            marka üzerine tıklayın. Şehir, servis adı,
+            adres ve yol tarifi bilgilerine ulaşabilirsiniz.
         </p>
 
-    </a>
+    </div>
 
 
-    <!-- SAMSUNG KULAKLIK -->
+    <!-- TELEFON MARKALARI -->
 
-    <a
-        class="brand-card"
-        href="SamsungKulaklik.html"
-    >
+    <h2 class="section-title">
+        📱 Telefon Markaları
+    </h2>
 
-        <div class="icon">
-            🎧
-        </div>
-
-        <h3>
-            Samsung
-        </h3>
-
-        <p>
-            Samsung Galaxy Buds yetkili servisleri
-        </p>
-
-    </a>
+    <div class="brand-grid">
 
 
-    <!-- XIAOMI KULAKLIK -->
+        <!-- APPLE -->
 
-    <a
-        class="brand-card"
-        href="XiaomiKulaklik.html"
-    >
+        <a
+            class="brand-card"
+            href="Apple.html"
+        >
 
-        <div class="icon">
-            🎧
-        </div>
+            <div class="icon">
+                📱
+            </div>
 
-        <h3>
-            Xiaomi
-        </h3>
+            <h3>
+                Apple
+            </h3>
 
-        <p>
-            Xiaomi kulaklık yetkili servisleri
-        </p>
+            <p>
+                Apple yetkili servisleri
+            </p>
 
-    </a>
-
-
-    <!-- JBL -->
-
-    <a
-        class="brand-card"
-        href="JBLKulaklik.html"
-    >
-
-        <div class="icon">
-            🎧
-        </div>
-
-        <h3>
-            JBL
-        </h3>
-
-        <p>
-            JBL kulaklık yetkili servisleri
-        </p>
-
-    </a>
+        </a>
 
 
-    <!-- HUAWEI KULAKLIK -->
+        <!-- SAMSUNG -->
 
-    <a
-        class="brand-card"
-        href="HuaweiKulaklik.html"
-    >
+        <a
+            class="brand-card"
+            href="Samsung.html"
+        >
 
-        <div class="icon">
-            🎧
-        </div>
+            <div class="icon">
+                📱
+            </div>
 
-        <h3>
-            Huawei
-        </h3>
+            <h3>
+                Samsung
+            </h3>
 
-        <p>
-            Huawei kulaklık yetkili servisleri
-        </p>
+            <p>
+                Samsung yetkili servisleri
+            </p>
 
-    </a>
-
-
-    <!-- SONY KULAKLIK -->
-
-    <a
-        class="brand-card"
-        href="SonyKulaklik.html"
-    >
-
-        <div class="icon">
-            🎧
-        </div>
-
-        <h3>
-            Sony
-        </h3>
-
-        <p>
-            Sony kulaklık yetkili servisleri
-        </p>
-
-    </a>
+        </a>
 
 
-    <!-- BOSE KULAKLIK -->
+        <!-- XIAOMI -->
 
-    <a
-        class="brand-card"
-        href="BoseKulaklik.html"
-    >
+        <a
+            class="brand-card"
+            href="Xiaomi.html"
+        >
 
-        <div class="icon">
-            🎧
-        </div>
+            <div class="icon">
+                📱
+            </div>
 
-        <h3>
-            Bose
-        </h3>
+            <h3>
+                Xiaomi
+            </h3>
 
-        <p>
-            Bose kulaklık yetkili servisleri
-        </p>
+            <p>
+                Xiaomi yetkili servisleri
+            </p>
 
-    </a>
+        </a>
+
+
+        <!-- HUAWEI -->
+
+        <a
+            class="brand-card"
+            href="Huawei.html"
+        >
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>
+                Huawei
+            </h3>
+
+            <p>
+                Huawei yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- OPPO -->
+
+        <a
+            class="brand-card"
+            href="Oppo.html"
+        >
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>
+                Oppo
+            </h3>
+
+            <p>
+                Oppo yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- VIVO -->
+
+        <a
+            class="brand-card"
+            href="Vivo.html"
+        >
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>
+                Vivo
+            </h3>
+
+            <p>
+                Vivo yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- TECNO -->
+
+        <a
+            class="brand-card"
+            href="Tekno.html"
+        >
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>
+                TECNO
+            </h3>
+
+            <p>
+                TECNO yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- REEDER -->
+
+        <a
+            class="brand-card"
+            href="Reedar.html"
+        >
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>
+                REEDER
+            </h3>
+
+            <p>
+                REEDER yetkili servisleri
+            </p>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- AKILLI SÜPÜRGELER -->
+
+    <h2 class="section-title">
+        🧹 Akıllı Süpürgeler
+    </h2>
+
+    <div class="brand-grid">
+
+
+        <!-- ROBOROCK -->
+
+        <a
+            class="brand-card"
+            href="Roboroc.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Roborock
+            </h3>
+
+            <p>
+                Roborock yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- XIAOMI SÜPÜRGE -->
+
+        <a
+            class="brand-card"
+            href="XiaomiSupurge.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Xiaomi
+            </h3>
+
+            <p>
+                Xiaomi akıllı süpürge yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- DREAME -->
+
+        <a
+            class="brand-card"
+            href="Dreame.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Dreame
+            </h3>
+
+            <p>
+                Dreame yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- ECOVACS -->
+
+        <a
+            class="brand-card"
+            href="Ecovacs.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Ecovacs
+            </h3>
+
+            <p>
+                Ecovacs yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- PHILIPS -->
+
+        <a
+            class="brand-card"
+            href="Philips.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Philips
+            </h3>
+
+            <p>
+                Philips akıllı süpürge yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- IROBOT -->
+
+        <a
+            class="brand-card"
+            href="iRobot.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                iRobot / Roomba
+            </h3>
+
+            <p>
+                iRobot / Roomba yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- DYSON -->
+
+        <a
+            class="brand-card"
+            href="Dyson.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Dyson
+            </h3>
+
+            <p>
+                Dyson yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- KIWI -->
+
+        <a
+            class="brand-card"
+            href="Kiwi.html"
+        >
+
+            <div class="icon">
+                🧹
+            </div>
+
+            <h3>
+                Kiwi
+            </h3>
+
+            <p>
+                Kiwi yetkili servisleri
+            </p>
+
+        </a>
+
+
+    </div>
+
+
+    <!-- KULAKLIKLAR -->
+
+    <h2 class="section-title">
+        🎧 Kulaklıklar
+    </h2>
+
+    <div class="brand-grid">
+
+
+        <!-- APPLE KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="AppleKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                Apple
+            </h3>
+
+            <p>
+                Apple AirPods yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- SAMSUNG KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="SamsungKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                Samsung
+            </h3>
+
+            <p>
+                Samsung Galaxy Buds yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- XIAOMI KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="XiaomiKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                Xiaomi
+            </h3>
+
+            <p>
+                Xiaomi Buds ve Redmi Buds
+                yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- JBL KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="JBLKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                JBL
+            </h3>
+
+            <p>
+                JBL kulaklık servis ve destek
+            </p>
+
+        </a>
+
+
+        <!-- HUAWEI KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="HuaweiKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                Huawei
+            </h3>
+
+            <p>
+                Huawei FreeBuds yetkili servisleri
+            </p>
+
+        </a>
+
+
+        <!-- SONY KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="SonyKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                Sony
+            </h3>
+
+            <p>
+                Sony kulaklık servis ve onarım desteği
+            </p>
+
+        </a>
+
+
+        <!-- BOSE KULAKLIK -->
+
+        <a
+            class="brand-card"
+            href="BoseKulaklik.html"
+        >
+
+            <div class="icon">
+                🎧
+            </div>
+
+            <h3>
+                Bose
+            </h3>
+
+            <p>
+                Bose kulaklık yetkili servisleri
+            </p>
+
+        </a>
+
+
+    </div>
 
 
 </div>
+
+
+<div class="footer">
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</div>
+
+
+</body>
+
+</html>
