@@ -42,7 +42,7 @@ header p {
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 25px 15px 40px;
+    padding: 25px 15px;
 }
 
 .back {
@@ -51,7 +51,6 @@ header p {
     text-decoration: none;
     color: #2563eb;
     font-weight: bold;
-    font-size: 16px;
 }
 
 .info {
@@ -153,13 +152,6 @@ input {
     color: #64748b;
 }
 
-.footer {
-    text-align: center;
-    padding: 30px 15px;
-    color: #777;
-    font-size: 13px;
-}
-
 @media (max-width:600px) {
 
     header h1 {
@@ -174,16 +166,11 @@ input {
 
 <body>
 
-
 <header>
 
-    <h1>
-        🎧 Samsung Kulaklık Yetkili Servisleri
-    </h1>
+    <h1>🎧 Samsung Kulaklık Yetkili Servisleri</h1>
 
-    <p>
-        Türkiye Geneli - Briko Servis Rehberi
-    </p>
+    <p>Türkiye Geneli - Servis Rehberi</p>
 
 </header>
 
@@ -191,379 +178,301 @@ input {
 <div class="container">
 
 
-    <!-- ANA SAYFAYA DÖN -->
+<!-- ANA SAYFAYA DÖN -->
 
-    <a class="back" href="İndex.html">
-        ← Ana Sayfaya Dön
-    </a>
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
 
 
-    <div class="info">
+<div class="info">
 
-        <strong>
-            Samsung Kulaklık Servis Rehberi
-        </strong>
+    <strong>Samsung Kulaklık Servis Rehberi</strong>
 
-        <br>
+    <br>
 
-        Samsung Galaxy Buds ve diğer Samsung
-        kulaklık ürünleri için servis noktalarını
-        şehir, servis adı veya adres bilgisine göre
-        arayabilirsiniz.
-
-    </div>
-
-
-    <div class="search-box">
-
-        <h2>
-            Samsung Kulaklık Servisi Ara
-        </h2>
-
-        <input
-            type="text"
-            id="searchBox"
-            placeholder="Şehir, servis veya adres yazın..."
-            onkeyup="searchServices()"
-        >
-
-        <div
-            id="serviceCount"
-            class="count">
-        </div>
-
-    </div>
-
-
-    <div id="services">
-
-
-        <!-- İSTANBUL -->
-
-        <h2 class="city-title">
-            İstanbul
-        </h2>
-
-        <div class="card service">
-
-            <h3>
-                BDH Teknik Servis
-            </h3>
-
-            <p class="city">
-                İstanbul
-            </p>
-
-            <p class="type">
-                Samsung Yetkili Teknik Servis
-            </p>
-
-            <p class="address">
-
-                <strong>
-                    Açık Adres:
-                </strong>
-
-                <br>
-
-                Samsung ürünleri için yetkili teknik
-                servis noktası - İstanbul
-
-            </p>
-
-            <p class="phone">
-
-                <strong>
-                    Telefon:
-                </strong>
-
-                Samsung Servis Merkezi
-
-            </p>
-
-            <span class="badge">
-                ✓ Samsung Servis
-            </span>
-
-        </div>
-
-
-        <!-- ANKARA -->
-
-        <h2 class="city-title">
-            Ankara
-        </h2>
-
-        <div class="card service">
-
-            <h3>
-                BDH Teknik Servis
-            </h3>
-
-            <p class="city">
-                Ankara
-            </p>
-
-            <p class="type">
-                Samsung Yetkili Teknik Servis
-            </p>
-
-            <p class="address">
-
-                <strong>
-                    Açık Adres:
-                </strong>
-
-                <br>
-
-                Samsung ürünleri için yetkili teknik
-                servis noktası - Ankara
-
-            </p>
-
-            <p class="phone">
-
-                <strong>
-                    Telefon:
-                </strong>
-
-                Samsung Servis Merkezi
-
-            </p>
-
-            <span class="badge">
-                ✓ Samsung Servis
-            </span>
-
-        </div>
-
-
-        <!-- İZMİR -->
-
-        <h2 class="city-title">
-            İzmir
-        </h2>
-
-        <div class="card service">
-
-            <h3>
-                Samsung Yetkili Servis
-            </h3>
-
-            <p class="city">
-                İzmir
-            </p>
-
-            <p class="type">
-                Samsung Yetkili Teknik Servis
-            </p>
-
-            <p class="address">
-
-                <strong>
-                    Açık Adres:
-                </strong>
-
-                <br>
-
-                Samsung ürünleri için yetkili teknik
-                servis noktası - İzmir
-
-            </p>
-
-            <p class="phone">
-
-                <strong>
-                    Telefon:
-                </strong>
-
-                Samsung Servis Merkezi
-
-            </p>
-
-            <span class="badge">
-                ✓ Samsung Servis
-            </span>
-
-        </div>
-
-
-        <!-- ADANA -->
-
-        <h2 class="city-title">
-            Adana
-        </h2>
-
-        <div class="card service">
-
-            <h3>
-                Samsung Yetkili Servis
-            </h3>
-
-            <p class="city">
-                Adana
-            </p>
-
-            <p class="type">
-                Samsung Yetkili Teknik Servis
-            </p>
-
-            <p class="address">
-
-                <strong>
-                    Açık Adres:
-                </strong>
-
-                <br>
-
-                Samsung ürünleri için yetkili teknik
-                servis noktası - Adana
-
-            </p>
-
-            <p class="phone">
-
-                <strong>
-                    Telefon:
-                </strong>
-
-                Samsung Servis Merkezi
-
-            </p>
-
-            <span class="badge">
-                ✓ Samsung Servis
-            </span>
-
-        </div>
-
-
-        <!-- ANTALYA -->
-
-        <h2 class="city-title">
-            Antalya
-        </h2>
-
-        <div class="card service">
-
-            <h3>
-                Samsung Yetkili Servis
-            </h3>
-
-            <p class="city">
-                Antalya
-            </p>
-
-            <p class="type">
-                Samsung Yetkili Teknik Servis
-            </p>
-
-            <p class="address">
-
-                <strong>
-                    Açık Adres:
-                </strong>
-
-                <br>
-
-                Samsung ürünleri için yetkili teknik
-                servis noktası - Antalya
-
-            </p>
-
-            <p class="phone">
-
-                <strong>
-                    Telefon:
-                </strong>
-
-                Samsung Servis Merkezi
-
-            </p>
-
-            <span class="badge">
-                ✓ Samsung Servis
-            </span>
-
-        </div>
-
-
-        <!-- TRABZON -->
-
-        <h2 class="city-title">
-            Trabzon
-        </h2>
-
-        <div class="card service">
-
-            <h3>
-                Samsung Yetkili Servis
-            </h3>
-
-            <p class="city">
-                Trabzon
-            </p>
-
-            <p class="type">
-                Samsung Yetkili Teknik Servis
-            </p>
-
-            <p class="address">
-
-                <strong>
-                    Açık Adres:
-                </strong>
-
-                <br>
-
-                Samsung ürünleri için yetkili teknik
-                servis noktası - Trabzon
-
-            </p>
-
-            <p class="phone">
-
-                <strong>
-                    Telefon:
-                </strong>
-
-                Samsung Servis Merkezi
-
-            </p>
-
-            <span class="badge">
-                ✓ Samsung Servis
-            </span>
-
-        </div>
-
-
-    </div>
-
-
-    <div
-        id="noResult"
-        class="no-result">
-
-        Aradığınız Samsung kulaklık servisi
-        bulunamadı.
-
-    </div>
-
-
-    <!-- ALT ANA SAYFA -->
-
-    <a class="back" href="İndex.html">
-        ← Ana Sayfaya Dön
-    </a>
-
+    Samsung Galaxy Buds ve diğer Samsung
+    kulaklık ürünleri için servis noktalarını
+    şehir, servis adı veya adres bilgisine göre
+    arayabilirsiniz.
 
 </div>
 
 
-<div class="footer">
+<div class="search-box">
 
-    Türkiye'nin Teknik Servis Rehberi © 2026
+    <h2>Samsung Kulaklık Servisi Ara</h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir, servis veya adres yazın..."
+        onkeyup="searchServices()"
+    >
+
+    <div id="serviceCount" class="count"></div>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+<div class="card service">
+
+    <h3>BDH Teknik Servis</h3>
+
+    <p class="city">
+        İstanbul
+    </p>
+
+    <p class="type">
+        Samsung Yetkili Teknik Servis
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Samsung ürünleri için yetkili teknik
+        servis noktası - İstanbul
+
+    </p>
+
+    <p class="phone">
+
+        <strong>Telefon:</strong><br>
+
+        Samsung Servis Merkezi
+
+    </p>
+
+    <span class="badge">
+        ✓ Samsung Servis
+    </span>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="card service">
+
+    <h3>BDH Teknik Servis</h3>
+
+    <p class="city">
+        Ankara
+    </p>
+
+    <p class="type">
+        Samsung Yetkili Teknik Servis
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Samsung ürünleri için yetkili teknik
+        servis noktası - Ankara
+
+    </p>
+
+    <p class="phone">
+
+        <strong>Telefon:</strong><br>
+
+        Samsung Servis Merkezi
+
+    </p>
+
+    <span class="badge">
+        ✓ Samsung Servis
+    </span>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service">
+
+    <h3>Samsung Yetkili Servis</h3>
+
+    <p class="city">
+        İzmir
+    </p>
+
+    <p class="type">
+        Samsung Yetkili Teknik Servis
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Samsung ürünleri için yetkili teknik
+        servis noktası - İzmir
+
+    </p>
+
+    <p class="phone">
+
+        <strong>Telefon:</strong><br>
+
+        Samsung Servis Merkezi
+
+    </p>
+
+    <span class="badge">
+        ✓ Samsung Servis
+    </span>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+<div class="card service">
+
+    <h3>Samsung Yetkili Servis</h3>
+
+    <p class="city">
+        Adana
+    </p>
+
+    <p class="type">
+        Samsung Yetkili Teknik Servis
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Samsung ürünleri için yetkili teknik
+        servis noktası - Adana
+
+    </p>
+
+    <p class="phone">
+
+        <strong>Telefon:</strong><br>
+
+        Samsung Servis Merkezi
+
+    </p>
+
+    <span class="badge">
+        ✓ Samsung Servis
+    </span>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+<div class="card service">
+
+    <h3>Samsung Yetkili Servis</h3>
+
+    <p class="city">
+        Antalya
+    </p>
+
+    <p class="type">
+        Samsung Yetkili Teknik Servis
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Samsung ürünleri için yetkili teknik
+        servis noktası - Antalya
+
+    </p>
+
+    <p class="phone">
+
+        <strong>Telefon:</strong><br>
+
+        Samsung Servis Merkezi
+
+    </p>
+
+    <span class="badge">
+        ✓ Samsung Servis
+    </span>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+<div class="card service">
+
+    <h3>Samsung Yetkili Servis</h3>
+
+    <p class="city">
+        Trabzon
+    </p>
+
+    <p class="type">
+        Samsung Yetkili Teknik Servis
+    </p>
+
+    <p class="address">
+
+        <strong>Açık Adres:</strong><br>
+
+        Samsung ürünleri için yetkili teknik
+        servis noktası - Trabzon
+
+    </p>
+
+    <p class="phone">
+
+        <strong>Telefon:</strong><br>
+
+        Samsung Servis Merkezi
+
+    </p>
+
+    <span class="badge">
+        ✓ Samsung Servis
+    </span>
+
+</div>
+
+</div>
+
+
+<div id="noResult" class="no-result">
+
+    Aradığınız Samsung kulaklık servisi bulunamadı.
+
+</div>
+
+
+<!-- ALT ANA SAYFAYA DÖN -->
+
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
 
 </div>
 
@@ -579,23 +488,18 @@ function searchServices() {
         .toLowerCase()
         .trim();
 
-
     const services =
         document.querySelectorAll(".service");
-
 
     const titles =
         document.querySelectorAll(".city-title");
 
-
     let found = 0;
-
 
     services.forEach(function(service) {
 
         const text =
             service.innerText.toLowerCase();
-
 
         if (text.includes(search)) {
 
@@ -619,7 +523,6 @@ function searchServices() {
 
         let visible = false;
 
-
         while (
             next &&
             !next.classList.contains("city-title")
@@ -638,7 +541,6 @@ function searchServices() {
                 next.nextElementSibling;
 
         }
-
 
         title.style.display =
             visible ? "block" : "none";
@@ -659,11 +561,9 @@ function searchServices() {
 
 }
 
-
 searchServices();
 
 </script>
-
 
 </body>
 
