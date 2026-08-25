@@ -2,8 +2,11 @@
 <html lang="tr">
 
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Apple Kulaklık Yetkili Servisleri - Briko</title>
 
@@ -33,12 +36,12 @@ header h1 {
 }
 
 header p {
-    margin: 8px 0 0;
+    margin: 9px 0 0;
     color: #ccc;
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
     padding: 25px 15px 40px;
 }
@@ -48,7 +51,7 @@ header p {
     padding: 22px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .info h2 {
@@ -70,6 +73,7 @@ header p {
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
+    outline: none;
 }
 
 .services {
@@ -87,12 +91,13 @@ header p {
 }
 
 .service-card h3 {
-    margin-top: 0;
+    margin: 0 0 10px;
     font-size: 21px;
 }
 
 .service-name {
     font-weight: bold;
+    color: #111;
     margin-bottom: 12px;
 }
 
@@ -102,15 +107,34 @@ header p {
     margin: 8px 0;
 }
 
+.service-card strong {
+    color: #222;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
 .button {
     display: inline-block;
-    margin-top: 12px;
-    padding: 11px 16px;
+    padding: 10px 14px;
     background: #111;
     color: white;
     text-decoration: none;
-    border-radius: 9px;
+    border-radius: 8px;
     font-weight: bold;
+    font-size: 14px;
+}
+
+.button.phone {
+    background: #16803c;
+}
+
+.button.map {
+    background: #2563eb;
 }
 
 .home-area {
@@ -126,6 +150,10 @@ header p {
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
+}
+
+.home-button:hover {
+    background: #1d4ed8;
 }
 
 footer {
@@ -148,6 +176,7 @@ footer {
 }
 
 </style>
+
 </head>
 
 
@@ -173,13 +202,15 @@ footer {
         <h2>Apple AirPods Servisleri</h2>
 
         <p>
-            Apple AirPods ve diğer Apple kulaklık ürünleri
-            için yetkili servis bilgileri aşağıdaki kartlarda
-            gösterilmektedir.
+            AirPods ve Apple kulaklık ürünleri için
+            yetkili servis bilgileri şehir bazında
+            aşağıdaki kartlarda gösterilmektedir.
         </p>
 
         <p>
-            Şehir veya servis adı arayabilirsiniz.
+            Servis adresi, telefon ve yol tarifi
+            bilgileri doğrudan kartların içinde
+            bulunmaktadır.
         </p>
 
     </div>
@@ -190,7 +221,7 @@ footer {
         <input
             type="text"
             id="serviceSearch"
-            placeholder="Şehir veya servis ara..."
+            placeholder="Şehir veya servis adı ara..."
             onkeyup="searchService()"
         >
 
@@ -200,32 +231,138 @@ footer {
     <div class="services">
 
 
-        <!-- İSTANBUL -->
+        <!-- İSTANBUL 1 -->
 
         <div class="service-card">
 
             <h3>📍 İstanbul</h3>
 
             <div class="service-name">
-                Apple Yetkili Servis
+                Gürgençler Mall Of İstanbul
+                - Apple Yetkili Servis Sağlayıcısı
             </div>
 
             <p>
-                📌 Adres: Yetkili servis adresi buraya
-                eklenecek.
+                <strong>📌 Adres:</strong><br>
+                Ziya Gökalp Mahallesi,
+                Süleyman Demirel Bulvarı No:7,
+                Mall Of İstanbul,
+                Başakşehir / İstanbul
             </p>
 
             <p>
-                📞 Telefon: Yetkili servis telefonu buraya
-                eklenecek.
+                <strong>📞 Telefon:</strong>
+                0850 302 85 95
             </p>
 
-            <a
-                class="button"
-                href="#"
-            >
-                🗺️ Yol Tarifi
-            </a>
+            <div class="buttons">
+
+                <a
+                    class="button phone"
+                    href="tel:08503028595"
+                >
+                    📞 Ara
+                </a>
+
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=Gürgençler+Mall+Of+İstanbul"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İSTANBUL 2 -->
+
+        <div class="service-card">
+
+            <h3>📍 İstanbul</h3>
+
+            <div class="service-name">
+                TROY Apple Yetkili Servis
+                - Galataport
+            </div>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Kılıçali Paşa Mahallesi,
+                Meclis-i Mebusan Caddesi No:10/1,
+                Galataport F Blok,
+                Beyoğlu / İstanbul
+            </p>
+
+            <p>
+                <strong>📞 Telefon:</strong>
+                0850 532 19 92
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="button phone"
+                    href="tel:08505321992"
+                >
+                    📞 Ara
+                </a>
+
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=TROY+Apple+Galataport+İstanbul"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- İSTANBUL 3 -->
+
+        <div class="service-card">
+
+            <h3>📍 İstanbul</h3>
+
+            <div class="service-name">
+                TROY Apple Yetkili Servis
+            </div>
+
+            <p>
+                <strong>📌 Adres:</strong><br>
+                Ayazağa Mahallesi,
+                Azerbaycan Caddesi No:3/C,
+                Sarıyer / İstanbul
+            </p>
+
+            <p>
+                <strong>📞 Telefon:</strong>
+                0850 532 19 92
+            </p>
+
+            <div class="buttons">
+
+                <a
+                    class="button phone"
+                    href="tel:08505321992"
+                >
+                    📞 Ara
+                </a>
+
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=TROY+Apple+Azerbaycan+Caddesi+İstanbul"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
+
+            </div>
 
         </div>
 
@@ -237,55 +374,42 @@ footer {
             <h3>📍 Ankara</h3>
 
             <div class="service-name">
-                Apple Yetkili Servis
+                TROY Apple Yetkili Servis
+                - Gordion AVM
             </div>
 
             <p>
-                📌 Adres: Yetkili servis adresi buraya
-                eklenecek.
+                <strong>📌 Adres:</strong><br>
+                Gordion AVM,
+                Koru Mahallesi,
+                Ankaralılar Caddesi No:2-A,
+                A Blok Kat:1,
+                Çankaya / Ankara
             </p>
 
             <p>
-                📞 Telefon: Yetkili servis telefonu buraya
-                eklenecek.
+                <strong>📞 Telefon:</strong>
+                0850 532 19 92
             </p>
 
-            <a
-                class="button"
-                href="#"
-            >
-                🗺️ Yol Tarifi
-            </a>
+            <div class="buttons">
 
-        </div>
+                <a
+                    class="button phone"
+                    href="tel:08505321992"
+                >
+                    📞 Ara
+                </a>
 
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=TROY+Apple+Gordion+AVM+Ankara"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
 
-        <!-- İZMİR -->
-
-        <div class="service-card">
-
-            <h3>📍 İzmir</h3>
-
-            <div class="service-name">
-                Apple Yetkili Servis
             </div>
-
-            <p>
-                📌 Adres: Yetkili servis adresi buraya
-                eklenecek.
-            </p>
-
-            <p>
-                📞 Telefon: Yetkili servis telefonu buraya
-                eklenecek.
-            </p>
-
-            <a
-                class="button"
-                href="#"
-            >
-                🗺️ Yol Tarifi
-            </a>
 
         </div>
 
@@ -297,85 +421,131 @@ footer {
             <h3>📍 Bursa</h3>
 
             <div class="service-name">
-                Apple Yetkili Servis
+                TROY Apple Yetkili Servis
+                - Sur Yapı Marka
             </div>
 
             <p>
-                📌 Adres: Yetkili servis adresi buraya
-                eklenecek.
+                <strong>📌 Adres:</strong><br>
+                Odunluk Mahallesi,
+                Akademi Caddesi No:6/A,
+                16110 Nilüfer / Bursa
             </p>
 
             <p>
-                📞 Telefon: Yetkili servis telefonu buraya
-                eklenecek.
+                <strong>📞 Telefon:</strong>
+                0850 532 19 92
             </p>
 
-            <a
-                class="button"
-                href="#"
-            >
-                🗺️ Yol Tarifi
-            </a>
+            <div class="buttons">
+
+                <a
+                    class="button phone"
+                    href="tel:08505321992"
+                >
+                    📞 Ara
+                </a>
+
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=TROY+Apple+Sur+Yapı+Marka+Bursa"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
+
+            </div>
 
         </div>
 
 
-        <!-- ADANA -->
+        <!-- ESKİŞEHİR -->
 
         <div class="service-card">
 
-            <h3>📍 Adana</h3>
+            <h3>📍 Eskişehir</h3>
 
             <div class="service-name">
-                Apple Yetkili Servis
+                TROY Apple Yetkili Servis
+                - Espark AVM
             </div>
 
             <p>
-                📌 Adres: Yetkili servis adresi buraya
-                eklenecek.
+                <strong>📌 Adres:</strong><br>
+                Yılmaz Büyükerşen Bulvarı No:21,
+                Zemin Kat,
+                Eskibağlar / Eskişehir
             </p>
 
             <p>
-                📞 Telefon: Yetkili servis telefonu buraya
-                eklenecek.
+                <strong>📞 Telefon:</strong>
+                0850 532 19 92
             </p>
 
-            <a
-                class="button"
-                href="#"
-            >
-                🗺️ Yol Tarifi
-            </a>
+            <div class="buttons">
+
+                <a
+                    class="button phone"
+                    href="tel:08505321992"
+                >
+                    📞 Ara
+                </a>
+
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=TROY+Apple+Espark+Eskişehir"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
+
+            </div>
 
         </div>
 
 
-        <!-- ANTALYA -->
+        <!-- İSTANBUL 4 -->
 
         <div class="service-card">
 
-            <h3>📍 Antalya</h3>
+            <h3>📍 İstanbul</h3>
 
             <div class="service-name">
-                Apple Yetkili Servis
+                TROY Apple Yetkili Servis
+                - Aqua Florya
             </div>
 
             <p>
-                📌 Adres: Yetkili servis adresi buraya
-                eklenecek.
+                <strong>📌 Adres:</strong><br>
+                Şenlikköy Mahallesi,
+                Yeşilköy Halkalı Caddesi No:28,
+                Zemin Kat,
+                Bakırköy / İstanbul
             </p>
 
             <p>
-                📞 Telefon: Yetkili servis telefonu buraya
-                eklenecek.
+                <strong>📞 Telefon:</strong>
+                0850 532 19 92
             </p>
 
-            <a
-                class="button"
-                href="#"
-            >
-                🗺️ Yol Tarifi
-            </a>
+            <div class="buttons">
+
+                <a
+                    class="button phone"
+                    href="tel:08505321992"
+                >
+                    📞 Ara
+                </a>
+
+                <a
+                    class="button map"
+                    href="https://www.google.com/maps/search/?api=1&query=TROY+Apple+Aqua+Florya+İstanbul"
+                    target="_blank"
+                >
+                    🗺️ Yol Tarifi
+                </a>
+
+            </div>
 
         </div>
 
