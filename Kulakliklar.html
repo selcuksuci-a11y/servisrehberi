@@ -21,8 +21,8 @@ body {
 header {
     background: #111827;
     color: white;
+    padding: 25px 15px;
     text-align: center;
-    padding: 30px 15px;
 }
 
 header h1 {
@@ -31,9 +31,8 @@ header h1 {
 }
 
 header p {
-    margin: 10px 0 0;
+    margin: 8px 0 0;
     color: #d1d5db;
-    font-size: 15px;
 }
 
 .container {
@@ -42,63 +41,86 @@ header p {
     padding: 0 15px;
 }
 
-.intro {
-    background: white;
-    padding: 20px;
-    border-radius: 14px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+.search-box {
+    margin-bottom: 25px;
 }
 
-.intro h2 {
-    margin-top: 0;
+.search-box input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
 }
 
-.intro p {
-    line-height: 1.6;
-    color: #555;
+.search-box input:focus {
+    border-color: #2563eb;
 }
 
 .brands {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+    gap: 18px;
 }
 
 .brand-card {
     background: white;
     border-radius: 14px;
-    padding: 20px;
+    padding: 22px;
     text-align: center;
     box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.2s;
 }
 
-.brand-card h3 {
-    margin: 5px 0 10px;
-    font-size: 20px;
+.brand-card:hover {
+    transform: translateY(-3px);
+}
+
+.brand-card h2 {
+    margin: 0 0 10px;
+    font-size: 21px;
 }
 
 .brand-card p {
     color: #666;
     font-size: 14px;
-    line-height: 1.5;
+    min-height: 38px;
 }
 
-.brand-card .soon {
+.brand-card a {
     display: inline-block;
     margin-top: 10px;
-    padding: 10px 16px;
-    background: #e5e7eb;
-    color: #374151;
+    padding: 11px 18px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
     border-radius: 8px;
-    font-size: 14px;
+    font-weight: bold;
+}
+
+.brand-card a:hover {
+    background: #1d4ed8;
+}
+
+.back {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.back a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
     text-align: center;
-    padding: 30px 15px;
-    color: #777;
-    font-size: 13px;
+    padding: 25px 15px;
+    background: #111827;
+    color: #d1d5db;
+    margin-top: 40px;
+    font-size: 14px;
 }
 </style>
 </head>
@@ -107,82 +129,132 @@ footer {
 
 <header>
     <h1>🎧 Kulaklık Yetkili Servisleri</h1>
-    <p>Briko Teknik Servis Rehberi</p>
+    <p>Briko - Marka bazında yetkili servis rehberi</p>
 </header>
 
 <div class="container">
 
-    <div class="intro">
-        <h2>🎧 Kulaklık Markaları</h2>
-
-        <p>
-            Türkiye'de kullanılan popüler kulaklık markalarının
-            yetkili servis bilgilerine Briko üzerinden ulaşabilirsiniz.
-        </p>
-
-        <p>
-            Marka servis sayfaları hazırlanarak bu bölüm
-            aşama aşama güncellenecektir.
-        </p>
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Kulaklık markası ara..."
+            onkeyup="searchBrands()"
+        >
     </div>
 
-    <div class="brands">
+    <div class="brands" id="brandList">
 
         <div class="brand-card">
-            <h3>Apple</h3>
+            <h2>Apple</h2>
             <p>AirPods ve Apple kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
+            <a href="#">Servisleri Gör</a>
         </div>
 
         <div class="brand-card">
-            <h3>Samsung</h3>
+            <h2>Samsung</h2>
             <p>Galaxy Buds kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
+            <a href="#">Servisleri Gör</a>
         </div>
 
         <div class="brand-card">
-            <h3>Xiaomi</h3>
+            <h2>Xiaomi</h2>
             <p>Redmi Buds ve Xiaomi kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
+            <a href="#">Servisleri Gör</a>
         </div>
 
         <div class="brand-card">
-            <h3>JBL</h3>
+            <h2>JBL</h2>
             <p>JBL kulaklık ve ses ürünleri servisleri</p>
-            <span class="soon">Yakında</span>
+            <a href="#">Servisleri Gör</a>
         </div>
 
         <div class="brand-card">
-            <h3>Sony</h3>
-            <p>Sony kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
+            <h2>Huawei</h2>
+            <p>FreeBuds kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
         </div>
 
         <div class="brand-card">
-            <h3>Soundcore</h3>
-            <p>Anker Soundcore kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
+            <h2>Oppo</h2>
+            <p>Oppo Enco kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
         </div>
 
         <div class="brand-card">
-            <h3>Huawei</h3>
-            <p>Huawei FreeBuds kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
-        </div>
-
-        <div class="brand-card">
-            <h3>Philips</h3>
+            <h2>Philips</h2>
             <p>Philips kulaklık servisleri</p>
-            <span class="soon">Yakında</span>
+            <a href="#">Servisleri Gör</a>
         </div>
 
+        <div class="brand-card">
+            <h2>Sony</h2>
+            <p>Sony kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
+        </div>
+
+        <div class="brand-card">
+            <h2>Anker Soundcore</h2>
+            <p>Soundcore kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
+        </div>
+
+        <div class="brand-card">
+            <h2>Nothing</h2>
+            <p>Nothing Ear kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
+        </div>
+
+        <div class="brand-card">
+            <h2>Beats</h2>
+            <p>Beats kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
+        </div>
+
+        <div class="brand-card">
+            <h2>Monster</h2>
+            <p>Monster kulaklık servisleri</p>
+            <a href="#">Servisleri Gör</a>
+        </div>
+
+    </div>
+
+    <div class="back">
+        <a href="Index.html">← Briko Ana Sayfa</a>
     </div>
 
 </div>
 
 <footer>
-    © 2026 Briko - Teknik Servis Rehberi
+    © 2026 Briko - Yetkili Servis Rehberi
 </footer>
+
+<script>
+function searchBrands() {
+
+    const input = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const cards = document.querySelectorAll(".brand-card");
+
+    cards.forEach(function(card) {
+
+        const brandName = card
+            .querySelector("h2")
+            .textContent
+            .toLowerCase();
+
+        if (brandName.includes(input)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+}
+</script>
 
 </body>
 </html>
