@@ -36,7 +36,7 @@ header p {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: 25px auto;
     padding: 0 15px;
 }
@@ -77,7 +77,7 @@ header p {
 
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 18px;
 }
 
@@ -90,7 +90,14 @@ header p {
 
 .service-card h3 {
     margin-top: 0;
-    font-size: 19px;
+    font-size: 20px;
+    color: #111827;
+}
+
+.service-name {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #2563eb;
 }
 
 .service-card p {
@@ -111,6 +118,18 @@ header p {
 
 .button:hover {
     background: #1d4ed8;
+}
+
+.verify {
+    display: inline-block;
+    margin-top: 8px;
+    margin-left: 5px;
+    padding: 10px 15px;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
 }
 
 .back {
@@ -145,12 +164,18 @@ footer {
 <div class="container">
 
     <div class="info">
-        <h2>Apple Kulaklık Servisleri</h2>
+        <h2>Apple AirPods Servisleri</h2>
 
         <p>
-            AirPods, AirPods Pro ve AirPods Max için
-            yetkili servis bilgilerini şehir bazında
-            burada bulabilirsiniz.
+            AirPods ve diğer Apple kulaklık ürünleri için
+            Apple tarafından listelenen servis noktalarını
+            şehir bazında bulabilirsiniz.
+        </p>
+
+        <p>
+            <strong>Not:</strong> Servise gitmeden önce Apple'ın
+            resmi servis doğrulama sayfasından güncel durumu
+            kontrol etmeniz önerilir.
         </p>
     </div>
 
@@ -158,59 +183,365 @@ footer {
         <input
             type="text"
             id="citySearch"
-            placeholder="Şehir ara..."
-            onkeyup="searchCity()"
+            placeholder="Şehir veya servis adı ara..."
+            onkeyup="searchService()"
         >
     </div>
 
     <div class="services" id="serviceList">
 
+        <!-- İSTANBUL -->
+
         <div class="service-card">
             <h3>İstanbul</h3>
+
+            <div class="service-name">
+                Troy Apple Yetkili Servis - İstanbul Galataport
+            </div>
+
             <p>
-                Apple kulaklık servis bilgileri ve adresleri.
+                Galataport, Kılıç Ali Paşa Mahallesi,
+                Meclis-i Mebusan Caddesi,
+                İstanbul 34433
             </p>
-            <a class="button" href="#">Servis Ara</a>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Istanbul"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <div class="service-card">
+            <h3>İstanbul</h3>
+
+            <div class="service-name">
+                KVK Teknik Servis - Ataköy
+            </div>
+
+            <p>
+                Ataköy 7-8-9-10 Kısım Mahallesi,
+                Bedri Rahmi Eyüpoğlu Caddesi No:4
+                K:1 D:1, İstanbul 34353
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Istanbul"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <div class="service-card">
+            <h3>İstanbul</h3>
+
+            <div class="service-name">
+                Pozitif Teknoloji
+            </div>
+
+            <p>
+                Metrocity AVM,
+                Büyükdere Caddesi No:171,
+                -1. Kat, 1. Levent,
+                İstanbul 34400
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Istanbul"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <!-- ANKARA -->
+
+        <div class="service-card">
+            <h3>Ankara</h3>
+
+            <div class="service-name">
+                Gürgençler - Ankamall
+            </div>
+
+            <p>
+                Ankamall AVM,
+                Gazi Mahallesi Mevlana Bulvarı,
+                Mağaza No:1050,
+                Yenimahalle / Ankara 06560
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Ankara"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
         </div>
 
         <div class="service-card">
             <h3>Ankara</h3>
+
+            <div class="service-name">
+                KVK Teknik Servis - Ankara
+            </div>
+
             <p>
-                Apple kulaklık servis bilgileri ve adresleri.
+                Kızılay Mahallesi,
+                Fevzi Çakmak 1. Sokak,
+                Oran Apt. No:15/B,
+                Çankaya / Ankara 06420
             </p>
-            <a class="button" href="#">Servis Ara</a>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Ankara"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <div class="service-card">
+            <h3>Ankara</h3>
+
+            <div class="service-name">
+                Gürgençler - Ankara Next Level
+            </div>
+
+            <p>
+                Next Level,
+                Kızılırmak Mahallesi,
+                Dumlupınar Bulvarı,
+                Pasifik No:3C1/117,
+                Ankara 06510
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Ankara"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <div class="service-card">
+            <h3>Ankara</h3>
+
+            <div class="service-name">
+                Başarı Teknik Servis - Ankara
+            </div>
+
+            <p>
+                Armada AVM,
+                Beştepe Mahallesi,
+                Dumlupınar Bulvarı No:6/181,
+                Yenimahalle / Ankara 06420
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service/?address=Ankara"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <!-- İZMİR -->
+
+        <div class="service-card">
+            <h3>İzmir</h3>
+
+            <div class="service-name">
+                Egemek
+            </div>
+
+            <p>
+                1385. Sokak, 3/Z-2,
+                İzmir 35210
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service?address=%C4%B0zmir"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
         </div>
 
         <div class="service-card">
             <h3>İzmir</h3>
+
+            <div class="service-name">
+                Başarı Teknik Servis - İzmir
+            </div>
+
             <p>
-                Apple kulaklık servis bilgileri ve adresleri.
+                Şair Eşref Bulvarı No:28B,
+                İzmir 35410
             </p>
-            <a class="button" href="#">Servis Ara</a>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service?address=%C4%B0zmir"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
         </div>
 
         <div class="service-card">
-            <h3>Adana</h3>
+            <h3>İzmir</h3>
+
+            <div class="service-name">
+                Troy Apple Yetkili Servis - Mavibahçe
+            </div>
+
             <p>
-                Apple kulaklık servis bilgileri ve adresleri.
+                Caner Dudayev Bulvarı No:40/Z12,
+                A Blok, Mavibahçe AVM,
+                İzmir 35590
             </p>
-            <a class="button" href="#">Servis Ara</a>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service?address=%C4%B0zmir"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
         </div>
 
         <div class="service-card">
-            <h3>Antalya</h3>
+            <h3>İzmir</h3>
+
+            <div class="service-name">
+                Gürgençler - İzmir Optimum
+            </div>
+
             <p>
-                Apple kulaklık servis bilgileri ve adresleri.
+                İzmir Optimum AVM,
+                Beyazevler Mahallesi,
+                Akçay Caddesi No:101/103,
+                Mağaza B1K-085 / B118,
+                İzmir 35410
             </p>
-            <a class="button" href="#">Servis Ara</a>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service?address=%C4%B0zmir"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
+        </div>
+
+        <!-- BURSA -->
+
+        <div class="service-card">
+            <h3>Bursa</h3>
+
+            <div class="service-name">
+                Troy Apple Yetkili Servis - Bursa Sur Yapı Marka
+            </div>
+
+            <p>
+                Odunluk Mahallesi,
+                Akademi Caddesi,
+                Sur Yapı Marka Rezidans AVM
+                No:6A, İç Kapı No:191,
+                Bursa 16110
+            </p>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service?address=Bursa"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
         </div>
 
         <div class="service-card">
             <h3>Bursa</h3>
+
+            <div class="service-name">
+                Gürgençler - Bursa Korupark
+            </div>
+
             <p>
-                Apple kulaklık servis bilgileri ve adresleri.
+                Emek Adnan Menderes,
+                Korupark,
+                Bursa 16160
             </p>
-            <a class="button" href="#">Servis Ara</a>
+
+            <p>
+                <strong>Destek:</strong> AirPods
+            </p>
+
+            <a
+                class="button"
+                href="https://locate.apple.com/tr/tr/service?address=Bursa"
+                target="_blank"
+            >
+                Apple'da Gör
+            </a>
         </div>
 
     </div>
@@ -228,7 +559,7 @@ footer {
 </footer>
 
 <script>
-function searchCity() {
+function searchService() {
 
     const input = document
         .getElementById("citySearch")
@@ -239,12 +570,9 @@ function searchCity() {
 
     cards.forEach(function(card) {
 
-        const city = card
-            .querySelector("h3")
-            .textContent
-            .toLowerCase();
+        const text = card.textContent.toLowerCase();
 
-        if (city.includes(input)) {
+        if (text.includes(input)) {
             card.style.display = "";
         } else {
             card.style.display = "none";
