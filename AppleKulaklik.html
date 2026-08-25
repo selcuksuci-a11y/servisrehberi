@@ -1,1 +1,432 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Apple AirPods Yetkili Servisleri - Briko</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    opacity: .85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+@media (max-width:600px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>🎧 Apple / AirPods Yetkili Servisleri</h1>
+
+    <p>
+        Türkiye Geneli - Briko Servis Rehberi
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="İndex.html">
+    ← Briko Ana Sayfasına Dön
+</a>
+
+
+<div class="info">
+
+    <strong>Apple / AirPods Servis Rehberi</strong><br>
+
+    AirPods için servis ve onarım seçeneklerini
+    şehir, servis adı veya adres bilgisine göre
+    arayabilirsiniz.
+
+</div>
+
+
+<div class="search-box">
+
+    <h2>🔎 Apple / AirPods Servisi Ara</h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir, servis veya adres yazın..."
+        onkeyup="searchServices()"
+    >
+
+    <select id="cityFilter" onchange="searchServices()">
+
+        <option value="">Tüm Şehirler</option>
+
+        <option value="Ankara">Ankara</option>
+
+        <option value="İstanbul">İstanbul</option>
+
+        <option value="İzmir">İzmir</option>
+
+    </select>
+
+    <div id="serviceCount" class="count"></div>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+<div
+    class="card service"
+    data-city="Ankara"
+>
+
+    <h3>Apple Yetkili Servis</h3>
+
+    <p class="city">
+        Ankara
+    </p>
+
+    <p class="type">
+        Apple / AirPods Servisi
+    </p>
+
+    <p class="address">
+        <strong>Açık Adres:</strong><br>
+        Yetkili servis adresi doğrulanarak eklenecek.
+    </p>
+
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
+
+</div>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+<div
+    class="card service"
+    data-city="İstanbul"
+>
+
+    <h3>Apple Yetkili Servis</h3>
+
+    <p class="city">
+        İstanbul
+    </p>
+
+    <p class="type">
+        Apple / AirPods Servisi
+    </p>
+
+    <p class="address">
+        <strong>Açık Adres:</strong><br>
+        Yetkili servis adresi doğrulanarak eklenecek.
+    </p>
+
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+<div
+    class="card service"
+    data-city="İzmir"
+>
+
+    <h3>Apple Yetkili Servis</h3>
+
+    <p class="city">
+        İzmir
+    </p>
+
+    <p class="type">
+        Apple / AirPods Servisi
+    </p>
+
+    <p class="address">
+        <strong>Açık Adres:</strong><br>
+        Yetkili servis adresi doğrulanarak eklenecek.
+    </p>
+
+    <span class="badge">
+        ✓ Yetkili Servis
+    </span>
+
+</div>
+
+
+</div>
+
+
+<div id="noResult" class="no-result">
+
+    Aradığınız Apple / AirPods servisi bulunamadı.
+
+</div>
+
+</div>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const city =
+        document
+        .getElementById("cityFilter")
+        .value
+        .toLowerCase();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        const serviceCity =
+            service
+            .getAttribute("data-city")
+            .toLowerCase();
+
+        const searchMatch =
+            text.includes(search);
+
+        const cityMatch =
+            city === "" ||
+            serviceCity === city;
+
+        if (
+            searchMatch &&
+            cityMatch
+        ) {
+
+            service.style.display = "block";
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
+}
+
+
+searchServices();
+
+</script>
+
+</body>
+</html>
