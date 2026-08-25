@@ -1,12 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Samsung Kulaklık Yetkili Servisleri - Briko</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -14,15 +20,15 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    color: #222;
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
 header {
     background: #111827;
     color: white;
     text-align: center;
-    padding: 25px 15px;
+    padding: 28px 15px;
 }
 
 header h1 {
@@ -32,131 +38,116 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    font-size: 15px;
+    opacity: 0.85;
 }
 
 .container {
-    width: 95%;
-    max-width: 1100px;
-    margin: 25px auto;
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
 }
 
-.back-button {
+.back {
     display: inline-block;
-    background: #111827;
-    color: white;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 8px;
     margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
     font-weight: bold;
 }
 
-.back-button:hover {
-    background: #374151;
-}
-
-.info-box {
-    background: white;
-    padding: 20px;
+.info {
+    background: #eef4ff;
     border-radius: 12px;
+    padding: 16px;
     margin-bottom: 20px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-}
-
-.info-box h2 {
-    margin-top: 0;
-    color: #111827;
-}
-
-.info-box p {
     line-height: 1.6;
 }
 
-.search-area {
+.search-box {
     background: white;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: 15px;
     margin-bottom: 25px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-.search-area input,
-.search-area select {
-    width: 100%;
-    padding: 13px;
-    margin-bottom: 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 15px;
-}
-
-.search-area button {
-    width: 100%;
-    padding: 13px;
-    border: none;
-    border-radius: 8px;
-    background: #111827;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.search-area button:hover {
-    background: #374151;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    gap: 18px;
-}
-
-.service-card {
-    background: white;
-    border-radius: 14px;
-    padding: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    border-left: 5px solid #111827;
-    transition: 0.2s;
-}
-
-.service-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
+.search-box h2 {
     margin-top: 0;
-    margin-bottom: 10px;
-    color: #111827;
-    font-size: 20px;
 }
 
-.brand {
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
+}
+
+.badge {
     display: inline-block;
-    background: #111827;
-    color: white;
-    padding: 5px 9px;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-bottom: 12px;
-}
-
-.service-card p {
-    line-height: 1.5;
-    margin: 7px 0;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .map-button {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 10px;
+    padding: 9px 13px;
+    border-radius: 8px;
     background: #2563eb;
     color: white;
     text-decoration: none;
-    padding: 10px 14px;
-    border-radius: 7px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -164,50 +155,52 @@ header p {
     background: #1d4ed8;
 }
 
-.no-result {
-    display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-footer {
-    margin-top: 40px;
-    background: #111827;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.count {
+    margin-top: 12px;
+    color: #64748b;
     font-size: 14px;
 }
 
-@media (max-width: 600px) {
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width:600px) {
 
     header h1 {
-        font-size: 23px;
+        font-size: 24px;
     }
 
-    .container {
-        width: 93%;
-    }
-
-    .service-card {
-        padding: 17px;
-    }
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
 
-    <h1>🎧 Samsung Kulaklık Yetkili Servisleri</h1>
+    <h1>
+        🎧 Samsung Kulaklık Yetkili Servisleri
+    </h1>
 
     <p>
-        Briko - Samsung Kulaklık Teknik Servis Rehberi
+        Türkiye Geneli - Briko Servis Rehberi
     </p>
 
 </header>
@@ -215,762 +208,958 @@ footer {
 
 <div class="container">
 
-<a href="Index.html" class="back-button">
-    ← Ana Sayfaya Dön
-</a>
+
+    <!-- ÜST ANA SAYFA -->
+
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
 
 
-<div class="info-box">
+    <div class="info">
 
-    <h2>Samsung Kulaklık Servisleri</h2>
+        <strong>
+            Samsung Kulaklık Servis Rehberi
+        </strong>
 
-    <p>
-        Samsung Galaxy Buds ve diğer Samsung mobil ürünleri
-        için servis noktalarını aşağıdan bulabilirsiniz.
-    </p>
+        <br>
 
-    <p>
-        Servis adı veya şehir seçerek arama yapabilirsiniz.
-    </p>
+        Samsung Galaxy Buds ve diğer Samsung
+        kulaklık ürünleri için servis noktalarını
+        şehir, servis adı veya adres bilgisine göre
+        arayabilirsiniz.
+
+    </div>
+
+
+    <div class="search-box">
+
+        <h2>
+            Samsung Kulaklık Servisi Ara
+        </h2>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Şehir, servis veya adres yazın..."
+            onkeyup="searchServices()"
+        >
+
+        <div
+            id="serviceCount"
+            class="count">
+        </div>
+
+    </div>
+
+
+    <div id="services">
+
+
+        <!-- ==================== -->
+        <!-- İSTANBUL -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            İstanbul
+        </h2>
+
+
+        <!-- KVK PENDİK -->
+
+        <div class="card service">
+
+            <h3>
+                KVK Teknik Servis - Pendik
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Batı Mah. Hatboyu Cad. No:15/D,
+                Pendik / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0850 222 15 85
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Batı+Mahallesi+Hatboyu+Cadde+15D+Pendik+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ KVK Servis
+            </span>
+
+        </div>
+
+
+        <!-- KVK ŞİŞLİ -->
+
+        <div class="card service">
+
+            <h3>
+                KVK Teknik Servis - Şişli
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                KVK Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Fulya Mah. Büyükdere Cad.
+                Likör Yanı Sk. Akabe Ticaret
+                Merkezi No:1/C,
+                Şişli / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0850 222 15 85
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Fulya+Mahallesi+Büyükdere+Cadde+Akabe+Ticaret+Merkezi+No+1C+Şişli+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ KVK Servis
+            </span>
+
+        </div>
+
+
+        <!-- BAŞARI AVCILAR -->
+
+        <div class="card service">
+
+            <h3>
+                Başarı Teknik Servis - Avcılar
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                Başarı Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Merkez Mah. Spor Sk. No:32/A-1,
+                Avcılar / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                Samsung servis noktası
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Merkez+Mahallesi+Spor+Sokak+32A+Avcılar+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Teknik Servis
+            </span>
+
+        </div>
+
+
+        <!-- BDH -->
+
+        <div class="card service">
+
+            <h3>
+                BDH Bilişim Destek Hizmetleri
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                BDH Samsung Servisi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Bağlarbaşı Mah. Cemal Bey Cad.
+                No:110,
+                Maltepe / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung mobil ürünleri bakım
+                ve onarım hizmeti
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Bağlarbaşı+Mahallesi+Cemal+Bey+Cadde+110+Maltepe+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ BDH Servis
+            </span>
+
+        </div>
+
+
+        <!-- OUNO -->
+
+        <div class="card service">
+
+            <h3>
+                Ouno Teknik Servis - Ataşehir
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                Ouno Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Ataşehir / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung mobil ürünleri servis hizmeti
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Ouno+Teknik+Servis+Ataşehir+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Ouno Servis
+            </span>
+
+        </div>
+
+
+        <!-- DESTEK BİLİŞİM -->
+
+        <div class="card service">
+
+            <h3>
+                Destek Bilişim
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                Destek Bilişim Samsung Servisi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                İstanbul - Samsung servis noktası
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung teknik servis
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Samsung+Servisi+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Destek Bilişim
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- ANKARA -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            Ankara
+        </h2>
+
+
+        <!-- BAŞARI -->
+
+        <div class="card service">
+
+            <h3>
+                Başarı Teknik Servis
+            </h3>
+
+            <p class="city">
+                Ankara
+            </p>
+
+            <p class="type">
+                Başarı Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Cumhuriyet Mah.
+                Mithatpaşa Cad. No:110,
+                Çankaya / Ankara
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0312 430 56 65
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Mithatpaşa+Cadde+110+Çankaya+Ankara">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Başarı Servis
+            </span>
+
+        </div>
+
+
+        <!-- BDH -->
+
+        <div class="card service">
+
+            <h3>
+                BDH Bilişim Destek Hizmetleri
+            </h3>
+
+            <p class="city">
+                Ankara
+            </p>
+
+            <p class="type">
+                BDH Samsung Servisi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Kızılay Mah.
+                Necatibey Cad. No:55,
+                Çankaya / Ankara
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung mobil ürünleri bakım
+                ve onarım hizmeti
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Necatibey+Cadde+55+Çankaya+Ankara">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ BDH Servis
+            </span>
+
+        </div>
+
+
+        <!-- DESTEK BİLİŞİM -->
+
+        <div class="card service">
+
+            <h3>
+                Destek Bilişim
+            </h3>
+
+            <p class="city">
+                Ankara
+            </p>
+
+            <p class="type">
+                Destek Bilişim Samsung Servisi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Ankara / Samsung servis noktası
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung teknik servis
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Samsung+Servisi+Ankara">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Destek Bilişim
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- ADANA -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            Adana
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Başarı Teknik Servis
+            </h3>
+
+            <p class="city">
+                Adana
+            </p>
+
+            <p class="type">
+                Başarı Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Yeni Baraj Mah.
+                Bülent Angın Blv.
+                Girman Apt. No:36/A,
+                Seyhan / Adana
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung teknik servis
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Bülent+Angın+Bulvarı+36A+Seyhan+Adana">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Başarı Servis
+            </span>
+
+        </div>
+
+
+        <div class="card service">
+
+            <h3>
+                Destek Bilişim
+            </h3>
+
+            <p class="city">
+                Adana
+            </p>
+
+            <p class="type">
+                Destek Bilişim Samsung Servisi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Cemal Paşa Mah.
+                63009 Sk. No:10,
+                Seyhan / Adana
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung teknik servis
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Cemal+Paşa+63009+Sokak+10+Seyhan+Adana">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Destek Bilişim
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- İZMİR -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            İzmir
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Başarı Teknik Servis
+            </h3>
+
+            <p class="city">
+                İzmir
+            </p>
+
+            <p class="type">
+                Başarı Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Tuna Mah.
+                Tiyatro Sk. No:50/A,
+                Karşıyaka / İzmir
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0232 483 40 40
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Tuna+Mahallesi+Tiyatro+Sokak+50A+Karşıyaka+İzmir">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Başarı Servis
+            </span>
+
+        </div>
+
+
+        <div class="card service">
+
+            <h3>
+                Destek Bilişim
+            </h3>
+
+            <p class="city">
+                İzmir
+            </p>
+
+            <p class="type">
+                Destek Bilişim Samsung Servisi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                İzmir - Samsung servis noktası
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Hizmet:
+                </strong>
+
+                Samsung teknik servis
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Samsung+Servisi+İzmir">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Destek Bilişim
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        id="noResult"
+        class="no-result">
+
+        Aradığınız Samsung kulaklık servisi
+        bulunamadı.
+
+    </div>
+
+
+    <!-- ALT ANA SAYFA -->
+
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
+
 
 </div>
 
 
-<div class="search-area">
+<div class="footer">
 
-    <input
-        type="text"
-        id="serviceSearch"
-        placeholder="Servis adı, şehir veya ilçe ara..."
-        onkeyup="filterServices()"
-    >
-
-    <select
-        id="cityFilter"
-        onchange="filterServices()"
-    >
-
-        <option value="">Tüm Şehirler</option>
-
-        <option value="Adana">Adana</option>
-
-        <option value="Ankara">Ankara</option>
-
-        <option value="İstanbul">İstanbul</option>
-
-        <option value="İzmir">İzmir</option>
-
-    </select>
-
-    <button onclick="clearSearch()">
-        Aramayı Temizle
-    </button>
+    Türkiye'nin Teknik Servis Rehberi © 2026
 
 </div>
-
-
-<div class="services" id="serviceList">
-
-
-<!-- ================================================= -->
-<!-- ADANA - BAŞARI -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="Adana">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Başarı Teknik Servis
-</h3>
-
-<p>
-<strong>Şehir:</strong> Adana
-</p>
-
-<p>
-<strong>İlçe:</strong> Seyhan
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Yeni Baraj Mah. Bülent Angın Blv.
-Girman Apt. No:36/A,
-Seyhan / Adana
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Yeni+Baraj+Mahallesi+Bülent+Angın+Blv+Girman+Apt+36A+Seyhan+Adana">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- ADANA - DESTEK BİLİŞİM -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="Adana">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Destek Bilişim
-</h3>
-
-<p>
-<strong>Şehir:</strong> Adana
-</p>
-
-<p>
-<strong>İlçe:</strong> Seyhan
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Cemal Paşa Mah.
-63009 Sk. No:10,
-Seyhan / Adana
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Cemal+Paşa+Mahallesi+63009+Sokak+No+10+Seyhan+Adana">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- ANKARA - BAŞARI -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="Ankara">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Başarı Teknik Servis
-</h3>
-
-<p>
-<strong>Şehir:</strong> Ankara
-</p>
-
-<p>
-<strong>İlçe:</strong> Çankaya
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Cumhuriyet Mah.
-Mithatpaşa Cad. No:110,
-Çankaya / Ankara
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Cumhuriyet+Mahallesi+Mithatpaşa+Cadde+No+110+Çankaya+Ankara">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- ANKARA - BDH -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="Ankara">
-
-<span class="brand">
-    SAMSUNG ONARIM SERVİSİ
-</span>
-
-<h3>
-    BDH Bilişim Destek Hizmetleri
-</h3>
-
-<p>
-<strong>Şehir:</strong> Ankara
-</p>
-
-<p>
-<strong>İlçe:</strong> Çankaya
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Kızılay Mah.
-Necatibey Cad. No:55,
-Çankaya / Ankara
-</p>
-
-<p>
-<strong>Samsung:</strong><br>
-Samsung mobil cihazlar için bakım
-ve onarım hizmeti.
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Kızılay+Mahallesi+Necatibey+Cadde+No+55+Çankaya+Ankara">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - BDH -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG ONARIM SERVİSİ
-</span>
-
-<h3>
-    BDH Bilişim Destek Hizmetleri
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Maltepe
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Bağlarbaşı Mah.
-Cemal Bey Cad. No:110,
-Maltepe / İstanbul
-</p>
-
-<p>
-<strong>Samsung:</strong><br>
-Samsung mobil cihazlar için bakım
-ve onarım hizmeti.
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Bağlarbaşı+Mahallesi+Cemal+Bey+Cadde+No+110+Maltepe+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - KVK PENDİK -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG YETKİLİ SERVİS
-</span>
-
-<h3>
-    KVK Teknik Servis
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Pendik
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Batı Mah.
-Hatboyu Cad. No:15/D,
-Pendik / İstanbul
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Batı+Mahallesi+Hatboyu+Cadde+No+15D+Pendik+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - KVK ŞİŞLİ -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG YETKİLİ SERVİS
-</span>
-
-<h3>
-    KVK Teknik Servis
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Şişli
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Fulya Mah.
-Büyükdere Cad. Likör Yanı Sk.
-Akabe Ticaret Merkezi No:1/C,
-Şişli / İstanbul
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Fulya+Mahallesi+Büyükdere+Cadde+Likör+Yanı+Sokak+Akabe+Ticaret+Merkezi+No+1C+Şişli+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - DESTEK BİLİŞİM GAZİOSMANPAŞA -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Destek Bilişim
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Gaziosmanpaşa
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Merkez Mah.
-Aladağ Sk. No:2,
-Gaziosmanpaşa / İstanbul
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Merkez+Mahallesi+Aladağ+Sokak+No+2+Gaziosmanpaşa+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - DESTEK BİLİŞİM KADIKÖY -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Destek Bilişim
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Kadıköy
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Osmanağa Mah.
-Rıhtım Cad. Bascavuş Sk.
-No:3/301,
-Kadıköy / İstanbul
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Osmanağa+Mahallesi+Rıhtım+Cadde+Bascavuş+Sokak+No+3+301+Kadıköy+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - DESTEK BİLİŞİM SANCAKTEPE -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Destek Bilişim
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Sancaktepe
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Emek Mah.
-Ordu Cad. No:18 Sarıgazi,
-Sancaktepe / İstanbul
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Emek+Mahallesi+Ordu+Cadde+No+18+Sarıgazi+Sancaktepe+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - DESTEK BİLİŞİM ÜSKÜDAR -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Destek Bilişim
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Üsküdar
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Ünalan Mah.
-Libadiye Cad.
-Emaar Square Sitesi AVM
-Blok No:82/1-1,
-Üsküdar / İstanbul
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Ünalan+Mahallesi+Libadiye+Cadde+Emaar+Square+No+82+1+1+Üsküdar+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İSTANBUL - OUNO -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İstanbul">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Ouno Teknik Servis
-</h3>
-
-<p>
-<strong>Şehir:</strong> İstanbul
-</p>
-
-<p>
-<strong>İlçe:</strong> Ataşehir
-</p>
-
-<p>
-Samsung mobil ürünleri için servis
-hizmeti sunan Ouno servis noktası.
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Ouno+Teknik+Servis+Ataşehir+İstanbul">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İZMİR - BAŞARI -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İzmir">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Başarı Teknik Servis
-</h3>
-
-<p>
-<strong>Şehir:</strong> İzmir
-</p>
-
-<p>
-<strong>İlçe:</strong> Karşıyaka
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Tuna Mah.
-Tiyatro Sk. No:50/A,
-Karşıyaka / İzmir
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Tuna+Mahallesi+Tiyatro+Sokak+No+50A+Karşıyaka+İzmir">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-<!-- ================================================= -->
-<!-- İZMİR - DESTEK BİLİŞİM -->
-<!-- ================================================= -->
-
-<div class="service-card" data-city="İzmir">
-
-<span class="brand">
-    SAMSUNG SERVİS
-</span>
-
-<h3>
-    Destek Bilişim
-</h3>
-
-<p>
-<strong>Şehir:</strong> İzmir
-</p>
-
-<p>
-<strong>İlçe:</strong> Konak
-</p>
-
-<p>
-<strong>Adres:</strong><br>
-Şair Eşref Blv. No:36,
-Konak / İzmir
-</p>
-
-<a
-class="map-button"
-target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Destek+Bilişim+Şair+Eşref+Bulvarı+No+36+Konak+İzmir">
-
-📍 Haritada Göster
-
-</a>
-
-</div>
-
-
-</div>
-
-
-<div class="no-result" id="noResult">
-
-Aradığınız kriterlere uygun servis bulunamadı.
-
-</div>
-
-
-</div>
-
-
-<footer>
-
-<p>
-🦦 Briko - Teknik Servis Rehberi
-</p>
-
-<p>
-Samsung Kulaklık Servisleri
-</p>
-
-</footer>
 
 
 <script>
 
-function filterServices() {
+function searchServices() {
 
-    let search =
+    const search =
         document
-        .getElementById("serviceSearch")
+        .getElementById("searchBox")
         .value
         .toLowerCase()
         .trim();
 
-    let city =
-        document
-        .getElementById("cityFilter")
-        .value
-        .toLowerCase();
 
-    let cards =
-        document.querySelectorAll(".service-card");
+    const services =
+        document.querySelectorAll(".service");
 
-    let visibleCount = 0;
 
-    cards.forEach(function(card) {
+    const titles =
+        document.querySelectorAll(".city-title");
 
-        let text =
-            card.innerText.toLowerCase();
 
-        let cardCity =
-            card
-            .getAttribute("data-city")
-            .toLowerCase();
+    let found = 0;
 
-        let searchMatch =
-            text.includes(search);
 
-        let cityMatch =
-            city === "" ||
-            cardCity === city;
+    services.forEach(function(service) {
 
-        if (searchMatch && cityMatch) {
+        const text =
+            service.innerText.toLowerCase();
 
-            card.style.display = "block";
 
-            visibleCount++;
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
 
         } else {
 
-            card.style.display = "none";
+            service.style.display = "none";
 
         }
 
     });
 
 
-    let noResult =
-        document.getElementById("noResult");
+    titles.forEach(function(title) {
 
-    if (visibleCount === 0) {
+        let next =
+            title.nextElementSibling;
 
-        noResult.style.display = "block";
+        let visible = false;
 
-    } else {
 
-        noResult.style.display = "none";
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
 
-    }
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
 
 }
 
 
-function clearSearch() {
-
-    document
-    .getElementById("serviceSearch")
-    .value = "";
-
-    document
-    .getElementById("cityFilter")
-    .value = "";
-
-    filterServices();
-
-}
+searchServices();
 
 </script>
 
 
 </body>
+
 </html>
