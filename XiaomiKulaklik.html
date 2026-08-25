@@ -1,1 +1,911 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Xiaomi Kulaklık Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 9px 13px;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width:600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        🎧 Xiaomi Kulaklık Yetkili Servisleri
+    </h1>
+
+    <p>
+        Türkiye Geneli - Briko Servis Rehberi
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- ÜST ANA SAYFA -->
+
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
+
+
+    <div class="info">
+
+        <strong>
+            Xiaomi Kulaklık Servis Rehberi
+        </strong>
+
+        <br>
+
+        Xiaomi Buds, Redmi Buds ve diğer Xiaomi
+        kulaklık ürünleri için servis noktalarını
+        şehir, servis adı veya adres bilgisine göre
+        arayabilirsiniz.
+
+        <br><br>
+
+        <strong>
+            Xiaomi Türkiye Servis Hattı:
+        </strong>
+
+        0 800 621 22 26
+
+    </div>
+
+
+    <div class="search-box">
+
+        <h2>
+            Xiaomi Kulaklık Servisi Ara
+        </h2>
+
+        <input
+            type="text"
+            id="searchBox"
+            placeholder="Şehir, servis veya adres yazın..."
+            onkeyup="searchServices()"
+        >
+
+        <div
+            id="serviceCount"
+            class="count">
+        </div>
+
+    </div>
+
+
+    <div id="services">
+
+
+        <!-- ==================== -->
+        <!-- ANKARA -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            Ankara
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Evofone Ankara Kızılay
+            </h3>
+
+            <p class="city">
+                Ankara
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Korkutreis Mah.
+                Gazi Mustafa Kemal Bulvarı
+                No:32/B,
+                Çankaya / Ankara
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                444 21 18
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Evofone+Ankara+Kızılay+Korkutreis+Mahallesi+Gazi+Mustafa+Kemal+Bulvarı+32B+Çankaya+Ankara">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- İSTANBUL -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            İstanbul
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Evofone İstanbul Karaköy
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Hacımimi Mah.
+                Necatibey Cad.
+                Alarko İşhanı No:66 Kat:1,
+                Karaköy - Beyoğlu / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                444 21 18
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Evofone+İstanbul+Karaköy+Hacımimi+Mahallesi+Necatibey+Cadde+66+Beyoğlu+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <div class="card service">
+
+            <h3>
+                Genpa İstanbul Kadıköy
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Servis Merkezi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Fahrettin Kerim Gökay Cad.
+                No:39-41/B,
+                Baycan Han Hasanpaşa,
+                Kadıköy / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0212 359 03 59
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Genpa+Kadıköy+Fahrettin+Kerim+Gökay+Cadde+39+41B+Hasanpaşa+Kadıköy+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <div class="card service">
+
+            <h3>
+                MIEKO Zeytinburnu
+            </h3>
+
+            <p class="city">
+                İstanbul
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Servis Merkezi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Beştelsiz Mah.
+                Prof. Muammer Aksoy Cad.
+                No:30,
+                Zeytinburnu / İstanbul
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0212 285 00 19
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=MIEKO+Zeytinburnu+Prof+Muammer+Aksoy+Cadde+30+İstanbul">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- İZMİR -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            İzmir
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Genpa İzmir Alsancak
+            </h3>
+
+            <p class="city">
+                İzmir
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Servis Merkezi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Alsancak Mah.
+                Kıbrıs Şehitleri Cad.
+                No:136/1-B,
+                Konak / İzmir
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0212 359 03 59
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Genpa+İzmir+Alsancak+Kıbrıs+Şehitleri+Cadde+136+1B+Konak+İzmir">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- ADANA -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            Adana
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Genpa Adana Seyhan
+            </h3>
+
+            <p class="city">
+                Adana
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Servis Merkezi
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                Cemalpaşa Mah.
+                63005 Sk.
+                Aydınoğlu İş Merkezi No:27/A,
+                Seyhan / Adana
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                0212 359 03 59
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Genpa+Adana+Seyhan+Cemalpaşa+63005+Sokak+27A+Adana">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- SAMSUN -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            Samsun
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Evofone Samsun İlkadım
+            </h3>
+
+            <p class="city">
+                Samsun
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                19 Mayıs Mah.
+                Gazi Cad. No:95/4,
+                İlkadım / Samsun
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                444 21 18
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Evofone+Samsun+19+Mayıs+Mahallesi+Gazi+Cadde+95+4+İlkadım+Samsun">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+        <!-- ==================== -->
+        <!-- ANTALYA -->
+        <!-- ==================== -->
+
+        <h2 class="city-title">
+            Antalya
+        </h2>
+
+
+        <div class="card service">
+
+            <h3>
+                Evofone Antalya
+            </h3>
+
+            <p class="city">
+                Antalya
+            </p>
+
+            <p class="type">
+                Xiaomi Yetkili Teknik Servis
+            </p>
+
+            <p class="address">
+
+                <strong>
+                    Açık Adres:
+                </strong>
+
+                <br>
+
+                İsmet Gökşen Cad.
+                Hüseyin Akçor 2 Apt.
+                No:40/E,
+                Muratpaşa - Şirinyalı / Antalya
+
+            </p>
+
+            <p class="phone">
+
+                <strong>
+                    Telefon:
+                </strong>
+
+                444 21 18
+
+            </p>
+
+            <a
+                class="map-button"
+                target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Evofone+Antalya+İsmet+Gökşen+Cadde+40E+Muratpaşa+Antalya">
+
+                📍 Haritada Göster
+
+            </a>
+
+            <br>
+
+            <span class="badge">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
+
+    </div>
+
+
+    <div
+        id="noResult"
+        class="no-result">
+
+        Aradığınız Xiaomi kulaklık servisi
+        bulunamadı.
+
+    </div>
+
+
+    <!-- ALT ANA SAYFA -->
+
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
+
+
+</div>
+
+
+<div class="footer">
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+    <br><br>
+
+    Xiaomi Türkiye Müşteri Hizmetleri:
+    0 800 621 22 26
+
+</div>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const services =
+        document.querySelectorAll(".service");
+
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+
+    let found = 0;
+
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
+}
+
+
+searchServices();
+
+</script>
+
+
+</body>
+
+</html>
