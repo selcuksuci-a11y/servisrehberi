@@ -1,1 +1,733 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>OPPO Kulaklık Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 29px;
+}
+
+header p {
+    margin: 10px 0 0;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.intro {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    margin-top: 0;
+    font-size: 23px;
+}
+
+.intro p {
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.search-box {
+    background: white;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 30px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.city-title {
+    font-size: 22px;
+    margin: 30px 0 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.service-card p {
+    margin: 7px 0;
+    line-height: 1.5;
+    color: #555;
+}
+
+.badge {
+    display: inline-block;
+    background: #198754;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 14px;
+}
+
+.official {
+    background: white;
+    border-left: 5px solid #111;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 25px;
+    line-height: 1.6;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.official a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 20px 12px 35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>
+        🎧 OPPO Kulaklık Yetkili Servisleri
+    </h1>
+
+    <p>
+        OPPO Enco ve diğer OPPO kulaklık ürünleri için
+        Türkiye teknik servis rehberi
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- ANA SAYFAYA DÖN -->
+
+    <a
+        class="back"
+        href="Index.html"
+    >
+        🏠 Ana Sayfaya Dön
+    </a>
+
+
+    <!-- AÇIKLAMA -->
+
+    <div class="intro">
+
+        <h2>
+            OPPO Kulaklık Servisleri
+        </h2>
+
+        <p>
+            OPPO Enco serisi ve diğer OPPO kulaklık ürünleri
+            için Türkiye'deki yetkili servis bilgilerini
+            bulabilirsiniz. Servise gitmeden önce ürün kabulü
+            ve güncel servis durumunu telefonla teyit etmeniz
+            önerilir.
+        </p>
+
+    </div>
+
+
+    <!-- SERVİS ARAMA -->
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="serviceSearch"
+            placeholder="🔎 Şehir veya servis adı ara..."
+            onkeyup="searchServices()"
+        >
+
+    </div>
+
+
+    <!-- İSTANBUL -->
+
+    <h2 class="city-title">
+        📍 İstanbul
+    </h2>
+
+
+    <!-- KVK KARTAL -->
+
+    <div
+        class="service-card"
+        data-search="istanbul kartal kvk oppo kulaklık"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            KVK Teknik Servis - Kartal
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis
+        </p>
+
+        <p>
+            <strong>Adres:</strong><br>
+            Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+            Kanat Sanayi Sitesi No: 32
+            Kartal / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0216 452 84 50
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=KVK+Kartal+İstanbul"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- KVK BAKIRKÖY -->
+
+    <div
+        class="service-card"
+        data-search="istanbul bakırköy kvk oppo kulaklık"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            KVK Teknik Servis - Bakırköy
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis
+        </p>
+
+        <p>
+            <strong>Adres:</strong><br>
+            Kartaltepe Mah. İncirli Cad.
+            İhsan Kalmaz Sokak No: 3/A
+            Bakırköy / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0212 660 59 59
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=KVK+Bakırköy+İstanbul"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- BDH -->
+
+    <div
+        class="service-card"
+        data-search="istanbul maltepe bdh oppo kulaklık aksesuar"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            BDH Bilişim Destek Hizmetleri
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis Merkezi
+        </p>
+
+        <p>
+            <strong>Konum:</strong>
+            Maltepe / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0216 500 17 00
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO telefon ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Maltepe+İstanbul"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- OUNO -->
+
+    <div
+        class="service-card"
+        data-search="istanbul ataşehir ouno oppo kulaklık aksesuar"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            OUNO Service - Ataşehir
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Teknik Servis
+        </p>
+
+        <p>
+            <strong>Adres:</strong><br>
+            Küçükbakkalköy Mah.
+            Işıklar Cad. No:15/B
+            Ataşehir / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0850 502 08 00
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=OUNO+Service+Ataşehir+İstanbul"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- ANKARA -->
+
+    <h2 class="city-title">
+        📍 Ankara
+    </h2>
+
+
+    <!-- KVK ANKARA -->
+
+    <div
+        class="service-card"
+        data-search="ankara kvk oppo kulaklık"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            KVK Teknik Servis - Ankara
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0312 430 60 90
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- ADANA -->
+
+    <h2 class="city-title">
+        📍 Adana
+    </h2>
+
+
+    <div
+        class="service-card"
+        data-search="adana kvk oppo kulaklık"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            KVK Teknik Servis - Adana
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0322 457 47 71
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Adana"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- ANTALYA -->
+
+    <h2 class="city-title">
+        📍 Antalya
+    </h2>
+
+
+    <div
+        class="service-card"
+        data-search="antalya kvk oppo kulaklık"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            KVK Teknik Servis - Antalya
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis
+        </p>
+
+        <p>
+            <strong>Adres:</strong><br>
+            Etiler Mah. Adnan Menderes Bulvarı
+            No:67-B
+            Muratpaşa / Antalya
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0242 243 28 28
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=KVK+Antalya+Etiler+Mahallesi"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- TRABZON -->
+
+    <h2 class="city-title">
+        📍 Trabzon
+    </h2>
+
+
+    <div
+        class="service-card"
+        data-search="trabzon kvk oppo kulaklık"
+    >
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <h3>
+            KVK Teknik Servis - Trabzon
+        </h3>
+
+        <p>
+            <strong>Servis Türü:</strong>
+            OPPO Yetkili Servis
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0462 321 03 21
+        </p>
+
+        <p>
+            <strong>Servis:</strong>
+            OPPO ürünleri ve aksesuarları
+        </p>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Trabzon"
+        >
+            🗺️ Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- OPPO RESMİ DESTEK -->
+
+    <div class="official">
+
+        <h3>
+            🔎 OPPO Resmi Servis Merkezi
+        </h3>
+
+        <p>
+            OPPO Türkiye'nin resmi servis merkezi
+            sayfasından güncel yetkili servis noktasını
+            kontrol edebilirsiniz.
+        </p>
+
+        <p>
+            <strong>OPPO Türkiye Destek:</strong>
+            0850 390 19 55
+        </p>
+
+        <p>
+            OPPO resmi servis sistemi kulaklıklar için
+            seri numarası üzerinden ürün doğrulama ve
+            servis desteği sunmaktadır.
+        </p>
+
+        <a
+            target="_blank"
+            href="https://support.oppo.com/tr/service-center/"
+        >
+            🌐 OPPO Resmi Servis Merkezi
+        </a>
+
+        <br><br>
+
+        <a
+            target="_blank"
+            href="https://support.oppo.com/tr/warranty-check/"
+        >
+            🔐 Garanti / Seri No Sorgulama
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<div class="footer">
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+    <br>
+    Briko 🦦
+
+</div>
+
+
+<script>
+
+function searchServices() {
+
+    let input =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    let cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        let text =
+            card
+            .getAttribute("data-search")
+            .toLowerCase();
+
+        if (text.includes(input)) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
