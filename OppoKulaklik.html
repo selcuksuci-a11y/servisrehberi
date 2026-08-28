@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -20,26 +19,25 @@ content="width=device-width, initial-scale=1.0">
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f6f8;
-    color: #222;
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
 header {
-    background: #111;
+    background: #111827;
     color: white;
     text-align: center;
-    padding: 30px 15px;
+    padding: 28px 15px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 29px;
+    font-size: 28px;
 }
 
 header p {
-    margin: 10px 0 0;
-    color: #ccc;
-    font-size: 16px;
+    margin: 8px 0 0;
+    opacity: 0.85;
 }
 
 .container {
@@ -51,112 +49,123 @@ header p {
 .back {
     display: inline-block;
     margin-bottom: 20px;
-    padding: 10px 16px;
-    background: #111;
-    color: white;
     text-decoration: none;
-    border-radius: 10px;
-    font-size: 14px;
+    color: #2563eb;
+    font-weight: bold;
 }
 
-.intro {
-    background: white;
-    padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    margin-bottom: 25px;
-}
-
-.intro h2 {
-    margin-top: 0;
-    font-size: 23px;
-}
-
-.intro p {
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
     line-height: 1.6;
-    margin-bottom: 0;
 }
 
 .search-box {
     background: white;
-    padding: 18px;
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-.search-box input {
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
     width: 100%;
     padding: 14px;
-    border: 1px solid #ddd;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 16px;
+    background: white;
 }
 
 .city-title {
-    font-size: 22px;
     margin: 30px 0 15px;
+    font-size: 23px;
 }
 
-.service-card {
+.card {
     background: white;
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-.service-card h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+.card h3 {
+    margin: 0 0 12px;
     font-size: 19px;
 }
 
-.service-card p {
-    margin: 7px 0;
-    line-height: 1.5;
-    color: #555;
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
 }
 
 .badge {
     display: inline-block;
-    background: #198754;
-    color: white;
+    margin-top: 8px;
     padding: 6px 10px;
     border-radius: 20px;
-    font-size: 12px;
-    margin-bottom: 10px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .map-button {
     display: inline-block;
-    margin-top: 12px;
-    padding: 10px 14px;
-    background: #111;
+    margin-top: 15px;
+    padding: 11px 16px;
+    background: #2563eb;
     color: white;
     text-decoration: none;
-    border-radius: 9px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
     font-size: 14px;
 }
 
-.official {
+.no-result {
+    display: none;
     background: white;
-    border-left: 5px solid #111;
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 25px;
-    line-height: 1.6;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-}
-
-.official a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 14px;
-    background: #111;
-    color: white;
-    text-decoration: none;
-    border-radius: 9px;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
 }
 
 .footer {
@@ -166,14 +175,10 @@ header p {
     font-size: 13px;
 }
 
-@media (max-width: 700px) {
+@media (max-width:600px) {
 
     header h1 {
-        font-size: 23px;
-    }
-
-    .container {
-        padding: 20px 12px 35px;
+        font-size: 24px;
     }
 
 }
@@ -181,6 +186,7 @@ header p {
 </style>
 
 </head>
+
 
 <body>
 
@@ -192,8 +198,7 @@ header p {
     </h1>
 
     <p>
-        OPPO Enco ve diğer OPPO kulaklık ürünleri için
-        Türkiye teknik servis rehberi
+        Türkiye Geneli - Briko Servis Rehberi
     </p>
 
 </header>
@@ -202,481 +207,457 @@ header p {
 <div class="container">
 
 
-    <!-- ANA SAYFAYA DÖN -->
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+    <strong>
+        OPPO Kulaklık Servis Rehberi
+    </strong>
+
+    <br>
+
+    OPPO Enco ve diğer OPPO kulaklık ürünleri için
+    teknik servis bilgilerine buradan ulaşabilirsiniz.
+
+    <br><br>
+
+    Servise gitmeden önce kulaklık ürünlerinin servis
+    kapsamında kabul edilip edilmediğinin ilgili servis
+    noktasıyla teyit edilmesi önerilir.
+
+</div>
+
+
+<div class="search-box">
+
+    <h2>
+        OPPO Kulaklık Servisi Ara
+    </h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir, servis veya adres yazın..."
+        onkeyup="searchServices()"
+    >
+
+    <div
+        id="serviceCount"
+        class="count">
+    </div>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- İSTANBUL - KARTAL -->
+
+<h2 class="city-title">
+    İstanbul - Kartal
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        İstanbul / Kartal
+    </p>
+
+    <p class="type">
+        KVK Teknik Servis - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+        Kanat Sanayi Sitesi No: 32
+        (Titanic Otel Yanı)
+        Kartal / İstanbul
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        KVK Teknik Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ OPPO Kulaklık Servisi
+    </span>
+
+    <br>
 
     <a
-        class="back"
-        href="Index.html"
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yanyol+Cadde+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul"
+        target="_blank"
+        rel="noopener"
     >
-        🏠 Ana Sayfaya Dön
+        🗺️ Haritada Göster
     </a>
 
-
-    <!-- AÇIKLAMA -->
-
-    <div class="intro">
-
-        <h2>
-            OPPO Kulaklık Servisleri
-        </h2>
-
-        <p>
-            OPPO Enco serisi ve diğer OPPO kulaklık ürünleri
-            için Türkiye'deki yetkili servis bilgilerini
-            bulabilirsiniz. Servise gitmeden önce ürün kabulü
-            ve güncel servis durumunu telefonla teyit etmeniz
-            önerilir.
-        </p>
-
-    </div>
+</div>
 
 
-    <!-- SERVİS ARAMA -->
 
-    <div class="search-box">
+<!-- İSTANBUL - BAKIRKÖY -->
 
-        <input
-            type="text"
-            id="serviceSearch"
-            placeholder="🔎 Şehir veya servis adı ara..."
-            onkeyup="searchServices()"
-        >
-
-    </div>
+<h2 class="city-title">
+    İstanbul - Bakırköy
+</h2>
 
 
-    <!-- İSTANBUL -->
+<div class="card service">
 
-    <h2 class="city-title">
-        📍 İstanbul
-    </h2>
+    <h3>
+        KVK Teknik Servis
+    </h3>
 
+    <p class="city">
+        İstanbul / Bakırköy
+    </p>
 
-    <!-- KVK KARTAL -->
+    <p class="type">
+        KVK Teknik Servis - Yetkili Servis
+    </p>
 
-    <div
-        class="service-card"
-        data-search="istanbul kartal kvk oppo kulaklık"
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Kartaltepe Mah. İncirli Cad.
+        İhsan Kalmaz Sokak No: 3/A
+        Bakırköy / İstanbul
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        KVK Teknik Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ OPPO Kulaklık Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Kartaltepe+Mahallesi+İncirli+Cadde+İhsan+Kalmaz+Sokak+No+3%2FA+Bakırköy+İstanbul"
+        target="_blank"
+        rel="noopener"
     >
+        🗺️ Haritada Göster
+    </a>
 
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            KVK Teknik Servis - Kartal
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis
-        </p>
-
-        <p>
-            <strong>Adres:</strong><br>
-            Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
-            Kanat Sanayi Sitesi No: 32
-            Kartal / İstanbul
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0216 452 84 50
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=KVK+Kartal+İstanbul"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- KVK BAKIRKÖY -->
 
-    <div
-        class="service-card"
-        data-search="istanbul bakırköy kvk oppo kulaklık"
+<!-- ANKARA -->
+
+<h2 class="city-title">
+    Ankara
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Ankara / Çankaya
+    </p>
+
+    <p class="type">
+        KVK Teknik Servis - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Kızılay Mah. Fevzi Çakmak 1 Sokak
+        Oran Apt. No: 15/B
+        Çankaya / Ankara
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        KVK Teknik Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ OPPO Kulaklık Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Kızılay+Mahallesi+Fevzi+Çakmak+1+Sokak+Oran+Apt+No+15%2FB+Çankaya+Ankara"
+        target="_blank"
+        rel="noopener"
     >
+        🗺️ Haritada Göster
+    </a>
 
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            KVK Teknik Servis - Bakırköy
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis
-        </p>
-
-        <p>
-            <strong>Adres:</strong><br>
-            Kartaltepe Mah. İncirli Cad.
-            İhsan Kalmaz Sokak No: 3/A
-            Bakırköy / İstanbul
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0212 660 59 59
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=KVK+Bakırköy+İstanbul"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- BDH -->
 
-    <div
-        class="service-card"
-        data-search="istanbul maltepe bdh oppo kulaklık aksesuar"
+<!-- ADANA -->
+
+<h2 class="city-title">
+    Adana
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Adana / Seyhan
+    </p>
+
+    <p class="type">
+        KVK Teknik Servis - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Reşatbey Mah. Turan Cemal Beriker Bulvarı
+        Günep Panorama B Blok No: 8/B
+        Seyhan / Adana
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        KVK Teknik Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ OPPO Kulaklık Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Reşatbey+Mahallesi+Turan+Cemal+Beriker+Bulvarı+Günep+Panorama+B+Blok+No+8%2FB+Seyhan+Adana"
+        target="_blank"
+        rel="noopener"
     >
+        🗺️ Haritada Göster
+    </a>
 
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            BDH Bilişim Destek Hizmetleri
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis Merkezi
-        </p>
-
-        <p>
-            <strong>Konum:</strong>
-            Maltepe / İstanbul
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0216 500 17 00
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO telefon ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Maltepe+İstanbul"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- OUNO -->
 
-    <div
-        class="service-card"
-        data-search="istanbul ataşehir ouno oppo kulaklık aksesuar"
+<!-- ANTALYA -->
+
+<h2 class="city-title">
+    Antalya
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Antalya / Muratpaşa
+    </p>
+
+    <p class="type">
+        KVK Teknik Servis - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Etiler Mah. Adnan Menderes Bulvarı No: 67/B
+        Muratpaşa / Antalya
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        KVK Teknik Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ OPPO Kulaklık Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Etiler+Mahallesi+Adnan+Menderes+Bulvarı+No+67%2FB+Muratpaşa+Antalya"
+        target="_blank"
+        rel="noopener"
     >
+        🗺️ Haritada Göster
+    </a>
 
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            OUNO Service - Ataşehir
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Teknik Servis
-        </p>
-
-        <p>
-            <strong>Adres:</strong><br>
-            Küçükbakkalköy Mah.
-            Işıklar Cad. No:15/B
-            Ataşehir / İstanbul
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0850 502 08 00
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=OUNO+Service+Ataşehir+İstanbul"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- ANKARA -->
 
-    <h2 class="city-title">
-        📍 Ankara
-    </h2>
+<!-- TRABZON -->
+
+<h2 class="city-title">
+    Trabzon
+</h2>
 
 
-    <!-- KVK ANKARA -->
+<div class="card service">
 
-    <div
-        class="service-card"
-        data-search="ankara kvk oppo kulaklık"
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Trabzon / Ortahisar
+    </p>
+
+    <p class="type">
+        KVK Teknik Servis - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Cumhuriyet Mah. Nemlioğlu Cemal Sokak
+        Ziya Bey Sitesi A Blok No: 16/1
+        Ortahisar / Trabzon
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        KVK Teknik Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ OPPO Kulaklık Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16%2F1+Ortahisar+Trabzon"
+        target="_blank"
+        rel="noopener"
     >
+        🗺️ Haritada Göster
+    </a>
 
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            KVK Teknik Servis - Ankara
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0312 430 60 90
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- ADANA -->
-
-    <h2 class="city-title">
-        📍 Adana
-    </h2>
+</div>
 
 
-    <div
-        class="service-card"
-        data-search="adana kvk oppo kulaklık"
-    >
+<div
+    id="noResult"
+    class="no-result">
 
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
+    Aradığınız OPPO kulaklık
+    servisi bulunamadı.
 
-        <h3>
-            KVK Teknik Servis - Adana
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0322 457 47 71
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Adana"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
+</div>
 
 
-    <!-- ANTALYA -->
-
-    <h2 class="city-title">
-        📍 Antalya
-    </h2>
+<br>
 
 
-    <div
-        class="service-card"
-        data-search="antalya kvk oppo kulaklık"
-    >
-
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            KVK Teknik Servis - Antalya
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis
-        </p>
-
-        <p>
-            <strong>Adres:</strong><br>
-            Etiler Mah. Adnan Menderes Bulvarı
-            No:67-B
-            Muratpaşa / Antalya
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0242 243 28 28
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=KVK+Antalya+Etiler+Mahallesi"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
-
-
-    <!-- TRABZON -->
-
-    <h2 class="city-title">
-        📍 Trabzon
-    </h2>
-
-
-    <div
-        class="service-card"
-        data-search="trabzon kvk oppo kulaklık"
-    >
-
-        <span class="badge">
-            ✓ Yetkili Servis
-        </span>
-
-        <h3>
-            KVK Teknik Servis - Trabzon
-        </h3>
-
-        <p>
-            <strong>Servis Türü:</strong>
-            OPPO Yetkili Servis
-        </p>
-
-        <p>
-            <strong>Telefon:</strong>
-            0462 321 03 21
-        </p>
-
-        <p>
-            <strong>Servis:</strong>
-            OPPO ürünleri ve aksesuarları
-        </p>
-
-        <a
-            class="map-button"
-            target="_blank"
-            href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Trabzon"
-        >
-            🗺️ Haritada Göster
-        </a>
-
-    </div>
-
-
-    <!-- OPPO RESMİ DESTEK -->
-
-    <div class="official">
-
-        <h3>
-            🔎 OPPO Resmi Servis Merkezi
-        </h3>
-
-        <p>
-            OPPO Türkiye'nin resmi servis merkezi
-            sayfasından güncel yetkili servis noktasını
-            kontrol edebilirsiniz.
-        </p>
-
-        <p>
-            <strong>OPPO Türkiye Destek:</strong>
-            0850 390 19 55
-        </p>
-
-        <p>
-            OPPO resmi servis sistemi kulaklıklar için
-            seri numarası üzerinden ürün doğrulama ve
-            servis desteği sunmaktadır.
-        </p>
-
-        <a
-            target="_blank"
-            href="https://support.oppo.com/tr/service-center/"
-        >
-            🌐 OPPO Resmi Servis Merkezi
-        </a>
-
-        <br><br>
-
-        <a
-            target="_blank"
-            href="https://support.oppo.com/tr/warranty-check/"
-        >
-            🔐 Garanti / Seri No Sorgulama
-        </a>
-
-    </div>
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
 
 
 </div>
@@ -685,8 +666,6 @@ header p {
 <div class="footer">
 
     Türkiye'nin Teknik Servis Rehberi © 2026
-    <br>
-    Briko 🦦
 
 </div>
 
@@ -695,35 +674,96 @@ header p {
 
 function searchServices() {
 
-    let input =
+    const search =
         document
-        .getElementById("serviceSearch")
+        .getElementById("searchBox")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
-    let cards =
-        document.querySelectorAll(".service-card");
 
-    cards.forEach(function(card) {
+    const services =
+        document.querySelectorAll(".service");
 
-        let text =
-            card
-            .getAttribute("data-search")
-            .toLowerCase();
 
-        if (text.includes(input)) {
+    const titles =
+        document.querySelectorAll(".city-title");
 
-            card.style.display = "block";
+
+    let found = 0;
+
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
 
         } else {
 
-            card.style.display = "none";
+            service.style.display = "none";
 
         }
 
     });
 
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
 }
+
+
+searchServices();
 
 </script>
 
