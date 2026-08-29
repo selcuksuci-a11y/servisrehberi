@@ -37,7 +37,7 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    opacity: .85;
+    opacity: 0.85;
 }
 
 .container {
@@ -81,7 +81,6 @@ input {
     border: 1px solid #d1d5db;
     border-radius: 10px;
     font-size: 16px;
-    background: white;
 }
 
 .city-title {
@@ -104,7 +103,6 @@ input {
 
 .card p {
     margin: 8px 0;
-    color: #6b7280;
     line-height: 1.6;
 }
 
@@ -149,6 +147,10 @@ input {
     font-weight: bold;
 }
 
+.map-button:hover {
+    background: #1d4ed8;
+}
+
 .count {
     margin-top: 12px;
     color: #64748b;
@@ -187,13 +189,13 @@ input {
 
 <header>
 
-    <h1>
-        📱 Apple iPad Yetkili Servisleri
-    </h1>
+<h1>
+📱 Apple iPad Yetkili Servisleri
+</h1>
 
-    <p>
-        Türkiye Geneli - Briko Servis Rehberi
-    </p>
+<p>
+Türkiye Geneli - Briko Servis Rehberi
+</p>
 
 </header>
 
@@ -202,48 +204,47 @@ input {
 
 
 <a class="back" href="index.html">
-    ← Ana Sayfaya Dön
+← Ana Sayfaya Dön
 </a>
 
 
 <div class="info">
 
-    <strong>
-        Apple iPad Servis Rehberi
-    </strong>
+<strong>
+Apple iPad Servis Rehberi
+</strong>
 
-    <br><br>
+<br><br>
 
-    iPad ürünleri için doğrulanmış
-    Apple Yetkili Servis Sağlayıcısı
-    bilgileri aşağıda listelenmiştir.
+Apple tarafından yayımlanan iPad garanti
+belgesindeki servis merkezi bilgileri
+adres ve telefonlarıyla listelenmiştir.
 
-    <br><br>
+<br><br>
 
-    KVK Teknik Servis, Apple ürünlerine
-    Apple Yetkili Servis Sağlayıcısı olarak
-    hizmet verdiğini belirtmektedir.
+Servise gitmeden önce güncel yetkili servis
+durumunun Apple üzerinden doğrulanması önerilir.
 
 </div>
 
 
 <div class="search-box">
 
-    <h2>
-        Apple iPad Servisi Ara
-    </h2>
+<h2>
+Apple iPad Yetkili Servisi Ara
+</h2>
 
-    <input
-        type="text"
-        id="searchBox"
-        placeholder="Şehir, servis veya adres yazın..."
-        onkeyup="searchServices()"
-    >
+<input
+type="text"
+id="searchBox"
+placeholder="Şehir, servis veya adres yazın..."
+onkeyup="searchServices()"
+>
 
-    <div
-        id="serviceCount"
-        class="count">
-    </div>
+<div
+id="serviceCount"
+class="count">
+</div>
 
 </div>
 
@@ -251,456 +252,1187 @@ input {
 <div id="services">
 
 
-<!-- İSTANBUL - BOSTANCI -->
-
-<h2 class="city-title">
-    İstanbul - Ataşehir
-</h2>
-
-<div class="card service">
-
-    <h3>
-        KVK Bostancı Apple
-    </h3>
-
-    <p class="city">
-        İstanbul / Ataşehir
-    </p>
-
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
-
-    <p class="address">
-
-        <strong>
-            Açık Adres:
-        </strong>
-
-        <br>
-
-        İçerenköy Mah. Prof. Ali Nihat Tarlan Cad.
-        Büyük Kara Kartal Sokak No: 4
-        Ataşehir / İstanbul
-
-    </p>
-
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
-
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
-
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=İçerenköy+Mahallesi+Prof+Ali+Nihat+Tarlan+Cadde+Büyük+Kara+Kartal+Sokak+No+4+Ataşehir+İstanbul"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
-
-</div>
-
-
-<!-- İSTANBUL - ATAKÖY -->
-
-<h2 class="city-title">
-    İstanbul - Ataköy
-</h2>
-
-<div class="card service">
-
-    <h3>
-        KVK Ataköy Apple
-    </h3>
-
-    <p class="city">
-        İstanbul / Ataköy
-    </p>
-
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
-
-    <p class="address">
-
-        <strong>
-            Açık Adres:
-        </strong>
-
-        <br>
-
-        Ataköy / İstanbul
-
-    </p>
-
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
-
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
-
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=KVK+Ataköy+Apple+İstanbul"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
-
-</div>
-
-
-<!-- İSTANBUL - BAKIRKÖY -->
-
-<h2 class="city-title">
-    İstanbul - Bakırköy
-</h2>
-
-<div class="card service">
-
-    <h3>
-        KVK Teknik Servis
-    </h3>
-
-    <p class="city">
-        İstanbul / Bakırköy
-    </p>
-
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
-
-    <p class="address">
-
-        <strong>
-            Açık Adres:
-        </strong>
-
-        <br>
-
-        Kartaltepe Mah. İncirli Cad.
-        İhsan Kalmaz Sokak No: 3/A
-        Bakırköy / İstanbul
-
-    </p>
-
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
-
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
-
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Kartaltepe+Mahallesi+İncirli+Cadde+İhsan+Kalmaz+Sokak+No+3%2FA+Bakırköy+İstanbul"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
-
-</div>
-
-
-<!-- İSTANBUL - KARTAL -->
-
-<h2 class="city-title">
-    İstanbul - Kartal
-</h2>
-
-<div class="card service">
-
-    <h3>
-        KVK Teknik Servis
-    </h3>
-
-    <p class="city">
-        İstanbul / Kartal
-    </p>
-
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
-
-    <p class="address">
-
-        <strong>
-            Açık Adres:
-        </strong>
-
-        <br>
-
-        Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
-        Kanat Sanayi Sitesi No: 32
-        (Titanic Otel Yanı)
-        Kartal / İstanbul
-
-    </p>
-
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
-
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
-
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yanyol+Cadde+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
-
-</div>
-
-
-<!-- ANKARA -->
-
-<h2 class="city-title">
-    Ankara
-</h2>
-
-<div class="card service">
-
-    <h3>
-        KVK Teknik Servis
-    </h3>
-
-    <p class="city">
-        Ankara / Çankaya
-    </p>
-
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
-
-    <p class="address">
-
-        <strong>
-            Açık Adres:
-        </strong>
-
-        <br>
-
-        Kızılay Mah. Fevzi Çakmak 1 Sokak
-        Oran Apt. No: 15/B
-        Çankaya / Ankara
-
-    </p>
-
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
-
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
-
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Kızılay+Mahallesi+Fevzi+Çakmak+1+Sokak+Oran+Apt+No+15%2FB+Çankaya+Ankara"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
-
-</div>
-
-
-<!-- ADANA -->
-
-<h2 class="city-title">
-    Adana
-</h2>
-
-<div class="card service">
-
-    <h3>
-        KVK Teknik Servis
-    </h3>
-
-    <p class="city">
-        Adana / Seyhan
-    </p>
-
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
-
-    <p class="address">
-
-        <strong>
-            Açık Adres:
-        </strong>
-
-        <br>
-
-        Reşatbey Mah. Turan Cemal Beriker Bulvarı
-        Günep Panorama B Blok No: 8/B
-        Seyhan / Adana
-
-    </p>
-
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
-
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
-
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Reşatbey+Mahallesi+Turan+Cemal+Beriker+Bulvarı+Günep+Panorama+B+Blok+No+8%2FB+Seyhan+Adana"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
-
-</div>
-
-
+<!-- ================================================= -->
 <!-- ANTALYA -->
+<!-- ================================================= -->
 
 <h2 class="city-title">
-    Antalya
+Antalya
 </h2>
 
 <div class="card service">
 
-    <h3>
-        KVK Teknik Servis
-    </h3>
+<h3>
+Artı Bilgi
+</h3>
 
-    <p class="city">
-        Antalya / Muratpaşa
-    </p>
+<p class="city">
+Antalya / Muratpaşa
+</p>
 
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
 
-    <p class="address">
+<p class="address">
 
-        <strong>
-            Açık Adres:
-        </strong>
+<strong>Açık Adres:</strong><br>
 
-        <br>
+Tahil Pazarı Mah. Şarampol Cad.
+Zemin Kat No: 35
+Mark Antalya AVM
+Muratpaşa / Antalya
 
-        Etiler Mah. Adnan Menderes Bulvarı No: 67/B
-        Muratpaşa / Antalya
+</p>
 
-    </p>
+<p class="phone">
+<strong>Telefon:</strong>
+0 242 240 88 01
+</p>
 
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
 
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
+<br>
 
-    <br>
-
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Etiler+Mahallesi+Adnan+Menderes+Bulvarı+No+67%2FB+Muratpaşa+Antalya"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Tahil+Pazarı+Mahallesi+Şarampol+Cadde+No+35+Mark+Antalya+AVM+Muratpaşa+Antalya"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
 
 </div>
 
 
-<!-- TRABZON -->
+<!-- ================================================= -->
+<!-- İSTANBUL - ESENYURT -->
+<!-- ================================================= -->
 
 <h2 class="city-title">
-    Trabzon
+İstanbul - Esenyurt
 </h2>
 
 <div class="card service">
 
-    <h3>
-        KVK Teknik Servis
-    </h3>
+<h3>
+Artı Bilgi
+</h3>
 
-    <p class="city">
-        Trabzon / Ortahisar
-    </p>
+<p class="city">
+İstanbul / Esenyurt
+</p>
 
-    <p class="type">
-        Apple Yetkili Servis Sağlayıcısı
-    </p>
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
 
-    <p class="address">
+<p class="address">
 
-        <strong>
-            Açık Adres:
-        </strong>
+<strong>Açık Adres:</strong><br>
 
-        <br>
+Güzelyurt Mah. 1. Cad.
+No: 33/A Marmarapark AVM
+Kat: 2 No: 408
+Esenyurt / İstanbul
 
-        Cumhuriyet Mah. Nemlioğlu Cemal Sokak
-        Ziya Bey Sitesi A Blok No: 16/1
-        Ortahisar / Trabzon
+</p>
 
-    </p>
+<p class="phone">
+<strong>Telefon:</strong>
+0 212 853 00 96
+</p>
 
-    <p class="phone">
-        <strong>Telefon:</strong>
-        KVK Teknik Servis
-    </p>
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
 
-    <span class="badge">
-        ✓ Apple iPad Yetkili Servisi
-    </span>
+<br>
 
-    <br>
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Güzelyurt+Mahallesi+1+Cadde+No+33%2FA+Marmarapark+AVM+Esenyurt+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
 
-    <a
-        class="map-button"
-        href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16%2F1+Ortahisar+Trabzon"
-        target="_blank"
-        rel="noopener"
-    >
-        🗺️ Haritada Göster
-    </a>
+</div>
+
+
+<!-- ================================================= -->
+<!-- ERZURUM -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Erzurum - Yakutiye
+</h2>
+
+<div class="card service">
+
+<h3>
+Aynet Bilgi Teknolojileri
+</h3>
+
+<p class="city">
+Erzurum / Yakutiye
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Lalapaşa Mah. Hastaneler Cad.
+No: 29/B
+Yakutiye / Erzurum
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 442 213 92 13
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Lalapaşa+Mahallesi+Hastaneler+Cadde+No+29%2FB+Yakutiye+Erzurum"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- ANKARA -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Ankara - Çankaya
+</h2>
+
+<div class="card service">
+
+<h3>
+Bireysel Bilgi Elektronik
+</h3>
+
+<p class="city">
+Ankara / Çankaya
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Gazi Mustafa Kemal Bulvarı
+Gülseren Sok. No: 6/C-14
+Maltepe / Çankaya / Ankara
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 312 229 37 14
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Gazi+Mustafa+Kemal+Bulvarı+Gülseren+Sokak+No+6%2FC-14+Maltepe+Çankaya+Ankara"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İSTANBUL - KAĞITHANE -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İstanbul - Kağıthane
+</h2>
+
+<div class="card service">
+
+<h3>
+Dünya Bilgi Teknolojileri
+</h3>
+
+<p class="city">
+İstanbul / Kağıthane
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Ortabayır Mah. Dere Boyu Cad.
+No: 144/A
+Kağıthane / İstanbul
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 212 270 20 52
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Ortabayır+Mahallesi+Dere+Boyu+Cadde+No+144%2FA+Kağıthane+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İZMİR -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İzmir - Alsancak
+</h2>
+
+<div class="card service">
+
+<h3>
+Egemek Bilişim
+</h3>
+
+<p class="city">
+İzmir / Alsancak
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+1385 Sok. No: 3/Z-2
+Yeni Asır İş Merkezi
+Alsancak / İzmir
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 232 446 00 63
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=1385+Sokak+No+3%2FZ-2+Yeni+Asır+İş+Merkezi+Alsancak+İzmir"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- MUĞLA -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Muğla - Bodrum
+</h2>
+
+<div class="card service">
+
+<h3>
+Gümüşelma Bilgi
+</h3>
+
+<p class="city">
+Muğla / Bodrum
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Yeniköy Mah. Oasis AVM
+No: 83-B-78
+Bodrum / Muğla
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 252 317 05 55
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Yeniköy+Mahallesi+Oasis+AVM+No+83-B-78+Bodrum+Muğla"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İSTANBUL - ŞİŞLİ -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İstanbul - Şişli
+</h2>
+
+<div class="card service">
+
+<h3>
+Gürgençler
+</h3>
+
+<p class="city">
+İstanbul / Şişli
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Cevahir AVM
+19 Mayıs Mah. Büyükdere Cad.
+No: 22
+Şişli / İstanbul
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 302 85 95
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Cevahir+AVM+19+Mayıs+Mahallesi+Büyükdere+Cadde+No+22+Şişli+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- KONYA -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Konya - Selçuklu
+</h2>
+
+<div class="card service">
+
+<h3>
+Gürgençler
+</h3>
+
+<p class="city">
+Konya / Selçuklu
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Nişantaşı Mah.
+Dr. Hulusi Baybal Cad.
+Sefa İş Merkezi No: 28/B
+Selçuklu / Konya
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 302 85 95
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Nişantaşı+Mahallesi+Dr+Hulusi+Baybal+Cadde+Sefa+İş+Merkezi+28%2FB+Selçuklu+Konya"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- MERSİN -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Mersin - Yenişehir
+</h2>
+
+<div class="card service">
+
+<h3>
+Gürgençler
+</h3>
+
+<p class="city">
+Mersin / Yenişehir
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Eğriçam Mah.
+Adnan Menderes Bulvarı
+Marina AVM Sitesi B1 Blok
+No: 33 BC
+Yenişehir / Mersin
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 302 85 95
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Eğriçam+Mahallesi+Adnan+Menderes+Bulvarı+Marina+AVM+No+33+BC+Yenişehir+Mersin"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- DİYARBAKIR -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Diyarbakır - Yenişehir
+</h2>
+
+<div class="card service">
+
+<h3>
+Hizmet Elektronik
+</h3>
+
+<p class="city">
+Diyarbakır / Yenişehir
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Kooperatifler Mah.
+Kurt İsmail Paşa 3. Sk. No: 22/A
+Yenişehir / Diyarbakır
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 550 43 44
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Kooperatifler+Mahallesi+Kurt+İsmail+Paşa+3+Sokak+No+22%2FA+Yenişehir+Diyarbakır"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- VAN -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Van - İpekyolu
+</h2>
+
+<div class="card service">
+
+<h3>
+Hizmet Elektronik
+</h3>
+
+<p class="city">
+Van / İpekyolu
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Şerefiye Mah.
+Santral 2 Sok.
+Haydaroğlu İş Merkezi A Blok No: 2
+İpekyolu / Van
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 550 43 44
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Şerefiye+Mahallesi+Santral+2+Sokak+Haydaroğlu+İş+Merkezi+No+2+İpekyolu+Van"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İSTANBUL - KADIKÖY -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İstanbul - Kadıköy
+</h2>
+
+<div class="card service">
+
+<h3>
+Koç Sistem
+</h3>
+
+<p class="city">
+İstanbul / Kadıköy
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Sarayardı Cad. No: 19
+Acıbadem / Kadıköy / İstanbul
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 399 96 09
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Sarayardı+Cadde+No+19+Acıbadem+Kadıköy+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İSTANBUL - ATAŞEHİR -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İstanbul - Ataşehir
+</h2>
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis
+</h3>
+
+<p class="city">
+İstanbul / Ataşehir
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+İçerenköy Mah.
+Prof. Ali Nihat Tarlan Cad.
+Kara Kartal Sok. No: 4
+Ataşehir / İstanbul
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 222 15 85
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=İçerenköy+Mahallesi+Prof+Ali+Nihat+Tarlan+Cadde+Kara+Kartal+Sokak+No+4+Ataşehir+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İSTANBUL - BEŞİKTAŞ -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İstanbul - Beşiktaş
+</h2>
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis
+</h3>
+
+<p class="city">
+İstanbul / Beşiktaş
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Cihannuma Mah.
+Barbaros Bulvarı
+Gürel Apt. No: 49/B
+Beşiktaş / İstanbul
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 222 15 85
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Cihannuma+Mahallesi+Barbaros+Bulvarı+Gürel+Apt+No+49%2FB+Beşiktaş+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- İSTANBUL - MECİDİYEKÖY -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+İstanbul - Şişli / Mecidiyeköy
+</h2>
+
+<div class="card service">
+
+<h3>
+Ofis İletişim
+</h3>
+
+<p class="city">
+İstanbul / Şişli
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Büyükdere Cad.
+Raşit Rıza Sok. No: 4/1
+Mecidiyeköy / Şişli / İstanbul
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 212 219 88 77
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Büyükdere+Cadde+Raşit+Rıza+Sokak+No+4%2F1+Mecidiyeköy+Şişli+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- ESKİŞEHİR -->
+<!-- ================================================= -->
+
+<h2 class="city-title">
+Eskişehir - Odunpazarı
+</h2>
+
+<div class="card service">
+
+<h3>
+Zentech Teknik Servis
+</h3>
+
+<p class="city">
+Eskişehir / Odunpazarı
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+İstiklal Mah.
+Çınarcık Sok. No: 3/A
+Odunpazarı / Eskişehir
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 250 00 99
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=İstiklal+Mahallesi+Çınarcık+Sokak+No+3%2FA+Odunpazarı+Eskişehir"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- GAZİANTEP -->
+
+<h2 class="city-title">
+Gaziantep - Şehitkamil
+</h2>
+
+<div class="card service">
+
+<h3>
+Zentech Teknik Servis
+</h3>
+
+<p class="city">
+Gaziantep / Şehitkamil
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Yaprak Mah.
+İstasyon Cad.
+Forum AVM No: 76
+FFL Blok No: 40
+Şehitkamil / Gaziantep
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 250 00 99
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Yaprak+Mahallesi+İstasyon+Cadde+Forum+AVM+No+76+Şehitkamil+Gaziantep"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- KAYSERİ -->
+
+<h2 class="city-title">
+Kayseri - Kocasinan
+</h2>
+
+<div class="card service">
+
+<h3>
+Zentech Teknik Servis
+</h3>
+
+<p class="city">
+Kayseri / Kocasinan
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Fatih Mah.
+Oğuz Cad.
+Sergen Apt. 9/A
+Kocasinan / Kayseri
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 250 00 99
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Fatih+Mahallesi+Oğuz+Cadde+Sergen+Apt+9%2FA+Kocasinan+Kayseri"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İZMİR - KARŞIYAKA -->
+
+<h2 class="city-title">
+İzmir - Karşıyaka
+</h2>
+
+<div class="card service">
+
+<h3>
+Zentech Teknik Servis
+</h3>
+
+<p class="city">
+İzmir / Karşıyaka
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Alaybey Mah.
+Şehit Asım Aksoy Cad. No: 47/B
+Karşıyaka / İzmir
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 250 00 99
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Alaybey+Mahallesi+Şehit+Asım+Aksoy+Cadde+No+47%2FB+Karşıyaka+İzmir"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- SAMSUN -->
+
+<h2 class="city-title">
+Samsun - İlkadım
+</h2>
+
+<div class="card service">
+
+<h3>
+Zentech Teknik Servis
+</h3>
+
+<p class="city">
+Samsun / İlkadım
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+Hançerli Mah.
+608. Sok. No: 5/1
+Faktör İş Merkezi
+İlkadım / Samsun
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 250 00 99
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Hançerli+Mahallesi+608+Sokak+No+5%2F1+Faktör+İş+Merkezi+İlkadım+Samsun"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- BURSA -->
+
+<h2 class="city-title">
+Bursa - Nilüfer
+</h2>
+
+<div class="card service">
+
+<h3>
+Zentech Teknik Servis
+</h3>
+
+<p class="city">
+Bursa / Nilüfer
+</p>
+
+<p class="type">
+Apple Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+
+<strong>Açık Adres:</strong><br>
+
+23 Nisan Mah.
+Mithatpaşa Cad.
+Tuğtaş Rezidans No: 2/D
+Nilüfer / Bursa
+
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 850 250 00 99
+</p>
+
+<span class="badge">
+✓ Apple iPad Servis Merkezi
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=23+Nisan+Mahallesi+Mithatpaşa+Cadde+Tuğtaş+Rezidans+No+2%2FD+Nilüfer+Bursa"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
 
 </div>
 
@@ -709,11 +1441,11 @@ input {
 
 
 <div
-    id="noResult"
-    class="no-result">
+id="noResult"
+class="no-result">
 
-    Aradığınız Apple iPad
-    yetkili servisi bulunamadı.
+Aradığınız Apple iPad
+servisi bulunamadı.
 
 </div>
 
@@ -722,7 +1454,7 @@ input {
 
 
 <a class="back" href="index.html">
-    ← Ana Sayfaya Dön
+← Ana Sayfaya Dön
 </a>
 
 
@@ -731,7 +1463,7 @@ input {
 
 <div class="footer">
 
-    Türkiye'nin Teknik Servis Rehberi © 2026
+Türkiye'nin Teknik Servis Rehberi © 2026
 
 </div>
 
