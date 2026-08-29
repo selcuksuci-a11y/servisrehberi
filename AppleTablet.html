@@ -1,1 +1,826 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Apple iPad Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    opacity: .85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width:600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>
+        📱 Apple iPad Yetkili Servisleri
+    </h1>
+
+    <p>
+        Türkiye Geneli - Briko Servis Rehberi
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+    <strong>
+        Apple iPad Servis Rehberi
+    </strong>
+
+    <br><br>
+
+    iPad ürünleri için doğrulanmış
+    Apple Yetkili Servis Sağlayıcısı
+    bilgileri aşağıda listelenmiştir.
+
+    <br><br>
+
+    KVK Teknik Servis, Apple ürünlerine
+    Apple Yetkili Servis Sağlayıcısı olarak
+    hizmet verdiğini belirtmektedir.
+
+</div>
+
+
+<div class="search-box">
+
+    <h2>
+        Apple iPad Servisi Ara
+    </h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir, servis veya adres yazın..."
+        onkeyup="searchServices()"
+    >
+
+    <div
+        id="serviceCount"
+        class="count">
+    </div>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- İSTANBUL - BOSTANCI -->
+
+<h2 class="city-title">
+    İstanbul - Ataşehir
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Bostancı Apple
+    </h3>
+
+    <p class="city">
+        İstanbul / Ataşehir
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        İçerenköy Mah. Prof. Ali Nihat Tarlan Cad.
+        Büyük Kara Kartal Sokak No: 4
+        Ataşehir / İstanbul
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=İçerenköy+Mahallesi+Prof+Ali+Nihat+Tarlan+Cadde+Büyük+Kara+Kartal+Sokak+No+4+Ataşehir+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- İSTANBUL - ATAKÖY -->
+
+<h2 class="city-title">
+    İstanbul - Ataköy
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Ataköy Apple
+    </h3>
+
+    <p class="city">
+        İstanbul / Ataköy
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Ataköy / İstanbul
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=KVK+Ataköy+Apple+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- İSTANBUL - BAKIRKÖY -->
+
+<h2 class="city-title">
+    İstanbul - Bakırköy
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        İstanbul / Bakırköy
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Kartaltepe Mah. İncirli Cad.
+        İhsan Kalmaz Sokak No: 3/A
+        Bakırköy / İstanbul
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Kartaltepe+Mahallesi+İncirli+Cadde+İhsan+Kalmaz+Sokak+No+3%2FA+Bakırköy+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- İSTANBUL - KARTAL -->
+
+<h2 class="city-title">
+    İstanbul - Kartal
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        İstanbul / Kartal
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+        Kanat Sanayi Sitesi No: 32
+        (Titanic Otel Yanı)
+        Kartal / İstanbul
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yanyol+Cadde+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">
+    Ankara
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Ankara / Çankaya
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Kızılay Mah. Fevzi Çakmak 1 Sokak
+        Oran Apt. No: 15/B
+        Çankaya / Ankara
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Kızılay+Mahallesi+Fevzi+Çakmak+1+Sokak+Oran+Apt+No+15%2FB+Çankaya+Ankara"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">
+    Adana
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Adana / Seyhan
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Reşatbey Mah. Turan Cemal Beriker Bulvarı
+        Günep Panorama B Blok No: 8/B
+        Seyhan / Adana
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Reşatbey+Mahallesi+Turan+Cemal+Beriker+Bulvarı+Günep+Panorama+B+Blok+No+8%2FB+Seyhan+Adana"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">
+    Antalya
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Antalya / Muratpaşa
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Etiler Mah. Adnan Menderes Bulvarı No: 67/B
+        Muratpaşa / Antalya
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Etiler+Mahallesi+Adnan+Menderes+Bulvarı+No+67%2FB+Muratpaşa+Antalya"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">
+    Trabzon
+</h2>
+
+<div class="card service">
+
+    <h3>
+        KVK Teknik Servis
+    </h3>
+
+    <p class="city">
+        Trabzon / Ortahisar
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Cumhuriyet Mah. Nemlioğlu Cemal Sokak
+        Ziya Bey Sitesi A Blok No: 16/1
+        Ortahisar / Trabzon
+
+    </p>
+
+    <p class="phone">
+        <strong>Telefon:</strong>
+        KVK Teknik Servis
+    </p>
+
+    <span class="badge">
+        ✓ Apple iPad Yetkili Servisi
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16%2F1+Ortahisar+Trabzon"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+</div>
+
+
+<div
+    id="noResult"
+    class="no-result">
+
+    Aradığınız Apple iPad
+    yetkili servisi bulunamadı.
+
+</div>
+
+
+<br>
+
+
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<div class="footer">
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</div>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
+}
+
+searchServices();
+
+</script>
+
+</body>
+
+</html>
