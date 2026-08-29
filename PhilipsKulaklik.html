@@ -1,1 +1,755 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Philips Kulaklık Yetkili Servisleri - Briko</title>
+
+<meta name="description"
+content="Philips kulaklık yetkili servisleri. Türkiye genelinde Philips kulaklık servis adresleri, telefon bilgileri ve servis noktalarını Briko üzerinden bulun.">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(135deg, #111827, #2563eb);
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 12px;
+    font-size: 30px;
+}
+
+header p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 12px 18px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #2563eb;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.info-box h2 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.search-area {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.search-area input,
+.search-area select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background: #111827;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 18px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    color: #111827;
+    font-size: 19px;
+}
+
+.badge {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    line-height: 1.5;
+    margin: 8px 0;
+}
+
+.phone {
+    font-weight: bold;
+    color: #2563eb;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.official-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.official-button:hover {
+    background: #374151;
+}
+
+.no-result {
+    display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .container {
+        padding: 14px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🎧 Philips Kulaklık Yetkili Servisleri</h1>
+
+    <p>
+        Philips kulaklık servislerini Briko üzerinden kolayca bulun.
+        Türkiye genelindeki servis noktalarını şehir ve servis adı
+        üzerinden arayabilirsiniz.
+    </p>
+</header>
+
+<div class="container">
+
+    <a class="back-button" href="Index.html">
+        🏠 Ana Sayfaya Dön
+    </a>
+
+    <div class="info-box">
+
+        <h2>Philips Kulaklık Servisi</h2>
+
+        <p>
+            Philips kulaklığınızla ilgili teknik servis, garanti,
+            onarım ve destek ihtiyaçlarınız için yetkili servis
+            noktalarını kullanabilirsiniz.
+        </p>
+
+        <p>
+            Servise gitmeden önce telefonla iletişime geçerek
+            kulaklık ürün grubuna hizmet verip vermediğini
+            doğrulamanız önerilir.
+        </p>
+
+    </div>
+
+
+    <div class="search-area">
+
+        <h2>🔎 Servis Ara</h2>
+
+        <label for="search">
+            Servis adı veya şehir:
+        </label>
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Örneğin: Ankara, İstanbul, Elektronik..."
+            onkeyup="filterServices()"
+        >
+
+        <label for="cityFilter">
+            Şehir seç:
+        </label>
+
+        <select id="cityFilter" onchange="filterServices()">
+
+            <option value="all">
+                Tüm Şehirler
+            </option>
+
+            <option value="ankara">
+                Ankara
+            </option>
+
+            <option value="istanbul">
+                İstanbul
+            </option>
+
+            <option value="izmir">
+                İzmir
+            </option>
+
+            <option value="adana">
+                Adana
+            </option>
+
+            <option value="antalya">
+                Antalya
+            </option>
+
+            <option value="bursa">
+                Bursa
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <!-- ANKARA -->
+
+    <div class="city-section" data-city="ankara">
+
+        <h2 class="city-title">
+            📍 Ankara
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service-card"
+                 data-search="ankara philips yetkili servis elektronik">
+
+                <span class="badge">
+                    ✓ Yetkili Servis
+                </span>
+
+                <h3>
+                    Philips Yetkili Servis
+                </h3>
+
+                <p>
+                    📍 Ankara
+                </p>
+
+                <p>
+                    Philips ürün grubu için servis hizmeti
+                </p>
+
+                <p class="phone">
+                    📞 Güncel telefon için Philips Servis Bulucu
+                </p>
+
+                <a
+                    class="map-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Philips+Yetkili+Servis+Ankara"
+                    target="_blank">
+                    📍 Haritada Göster
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- İSTANBUL -->
+
+    <div class="city-section" data-city="istanbul">
+
+        <h2 class="city-title">
+            📍 İstanbul
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service-card"
+                 data-search="istanbul philips yetkili servis elektronik">
+
+                <span class="badge">
+                    ✓ Yetkili Servis
+                </span>
+
+                <h3>
+                    Philips Yetkili Servis
+                </h3>
+
+                <p>
+                    📍 İstanbul
+                </p>
+
+                <p>
+                    Philips ürün grubu için servis hizmeti
+                </p>
+
+                <p class="phone">
+                    📞 Güncel telefon için Philips Servis Bulucu
+                </p>
+
+                <a
+                    class="map-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Philips+Yetkili+Servis+Istanbul"
+                    target="_blank">
+                    📍 Haritada Göster
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- İZMİR -->
+
+    <div class="city-section" data-city="izmir">
+
+        <h2 class="city-title">
+            📍 İzmir
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service-card"
+                 data-search="izmir philips yetkili servis elektronik">
+
+                <span class="badge">
+                    ✓ Yetkili Servis
+                </span>
+
+                <h3>
+                    Philips Yetkili Servis
+                </h3>
+
+                <p>
+                    📍 İzmir
+                </p>
+
+                <p>
+                    Philips ürün grubu için servis hizmeti
+                </p>
+
+                <p class="phone">
+                    📞 Güncel telefon için Philips Servis Bulucu
+                </p>
+
+                <a
+                    class="map-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Philips+Yetkili+Servis+Izmir"
+                    target="_blank">
+                    📍 Haritada Göster
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ADANA -->
+
+    <div class="city-section" data-city="adana">
+
+        <h2 class="city-title">
+            📍 Adana
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service-card"
+                 data-search="adana philips yetkili servis elektronik">
+
+                <span class="badge">
+                    ✓ Yetkili Servis
+                </span>
+
+                <h3>
+                    Philips Yetkili Servis
+                </h3>
+
+                <p>
+                    📍 Adana
+                </p>
+
+                <p>
+                    Philips ürün grubu için servis hizmeti
+                </p>
+
+                <p class="phone">
+                    📞 Güncel telefon için Philips Servis Bulucu
+                </p>
+
+                <a
+                    class="map-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Philips+Yetkili+Servis+Adana"
+                    target="_blank">
+                    📍 Haritada Göster
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ANTALYA -->
+
+    <div class="city-section" data-city="antalya">
+
+        <h2 class="city-title">
+            📍 Antalya
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service-card"
+                 data-search="antalya philips yetkili servis elektronik">
+
+                <span class="badge">
+                    ✓ Yetkili Servis
+                </span>
+
+                <h3>
+                    Philips Yetkili Servis
+                </h3>
+
+                <p>
+                    📍 Antalya
+                </p>
+
+                <p>
+                    Philips ürün grubu için servis hizmeti
+                </p>
+
+                <p class="phone">
+                    📞 Güncel telefon için Philips Servis Bulucu
+                </p>
+
+                <a
+                    class="map-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Philips+Yetkili+Servis+Antalya"
+                    target="_blank">
+                    📍 Haritada Göster
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BURSA -->
+
+    <div class="city-section" data-city="bursa">
+
+        <h2 class="city-title">
+            📍 Bursa
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service-card"
+                 data-search="bursa philips yetkili servis elektronik">
+
+                <span class="badge">
+                    ✓ Yetkili Servis
+                </span>
+
+                <h3>
+                    Philips Yetkili Servis
+                </h3>
+
+                <p>
+                    📍 Bursa
+                </p>
+
+                <p>
+                    Philips ürün grubu için servis hizmeti
+                </p>
+
+                <p class="phone">
+                    📞 Güncel telefon için Philips Servis Bulucu
+                </p>
+
+                <a
+                    class="map-button"
+                    href="https://www.google.com/maps/search/?api=1&query=Philips+Yetkili+Servis+Bursa"
+                    target="_blank">
+                    📍 Haritada Göster
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="noResult" class="no-result">
+
+        🔍 Aradığınız kriterlere uygun servis bulunamadı.
+
+    </div>
+
+
+    <div class="info-box">
+
+        <h2>🌐 Resmî Philips Servis</h2>
+
+        <p>
+            Güncel Philips yetkili servis adreslerini ve telefon
+            bilgilerini Philips'in resmi servis bulucusundan
+            kontrol edebilirsiniz.
+        </p>
+
+        <a
+            class="official-button"
+            href="https://www.philips.com.tr/c-w/support-home/yetkili-servis-konumu"
+            target="_blank">
+            Philips Resmî Yetkili Servis Bulucu
+        </a>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    🦦 <strong>Briko - Servis Rehberi</strong>
+
+    <br>
+
+    Philips Kulaklık Yetkili Servisleri
+
+    <br><br>
+
+    Servise gitmeden önce servis noktasının
+    kulaklık ürün grubuna hizmet verip vermediğini
+    telefonla teyit etmeniz önerilir.
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const searchText =
+        document.getElementById("search")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const selectedCity =
+        document.getElementById("cityFilter")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    const sections =
+        document.querySelectorAll(".city-section");
+
+    let visibleCount = 0;
+
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        const cardSearch =
+            card.getAttribute("data-search")
+            .toLowerCase();
+
+        const section =
+            card.closest(".city-section");
+
+        const city =
+            section.getAttribute("data-city")
+            .toLowerCase();
+
+
+        const matchesText =
+            text.includes(searchText) ||
+            cardSearch.includes(searchText);
+
+
+        const matchesCity =
+            selectedCity === "all" ||
+            city === selectedCity;
+
+
+        if (matchesText && matchesCity) {
+
+            card.style.display = "block";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    sections.forEach(function(section) {
+
+        const cardsInside =
+            section.querySelectorAll(".service-card");
+
+        let sectionVisible = false;
+
+        cardsInside.forEach(function(card) {
+
+            if (card.style.display !== "none") {
+                sectionVisible = true;
+            }
+
+        });
+
+
+        if (sectionVisible) {
+
+            section.style.display = "block";
+
+        } else {
+
+            section.style.display = "none";
+
+        }
+
+    });
+
+
+    const noResult =
+        document.getElementById("noResult");
+
+
+    if (visibleCount === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
