@@ -52,7 +52,7 @@ header p {
     padding: 22px;
     border-radius: 15px;
     box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .intro h2 {
@@ -65,39 +65,53 @@ header p {
     margin-bottom: 0;
 }
 
+
+/* ================================================= */
+/* ANA SAYFA FİLTRELEME */
+/* ================================================= */
+
 .search-box {
-    margin-top: 22px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+    margin-bottom: 30px;
 }
 
-.search-box label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    font-size: 15px;
+.search-box h2 {
+    margin: 0 0 10px;
+    font-size: 21px;
 }
 
-#brandSearch {
+.search-box input {
     width: 100%;
-    padding: 15px 17px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
     font-size: 16px;
     outline: none;
-    background: #fafafa;
-    transition: .2s;
 }
 
-#brandSearch:focus {
-    border-color: #111;
-    background: white;
-    box-shadow: 0 0 0 3px rgba(17,17,17,.08);
+.search-box input:focus {
+    border-color: #2563eb;
 }
 
-.search-result {
-    margin: 12px 0 0;
-    color: #666;
+.filter-count {
+    margin-top: 10px;
+    color: #64748b;
     font-size: 14px;
 }
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
 
 .section-title {
     font-size: 24px;
@@ -127,14 +141,6 @@ header p {
     box-shadow: 0 5px 16px rgba(0,0,0,.12);
 }
 
-.brand-card.hidden {
-    display: none;
-}
-
-.section-title.hidden {
-    display: none;
-}
-
 .icon {
     font-size: 34px;
     margin-bottom: 10px;
@@ -150,20 +156,6 @@ header p {
     color: #666;
     font-size: 14px;
     line-height: 1.5;
-}
-
-.no-results {
-    display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    color: #666;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-}
-
-.no-results.visible {
-    display: block;
 }
 
 .footer {
@@ -185,15 +177,6 @@ header p {
 
     .section-title {
         font-size: 22px;
-    }
-
-    .intro {
-        padding: 18px;
-    }
-
-    #brandSearch {
-        font-size: 16px;
-        padding: 14px;
     }
 
 }
@@ -232,27 +215,49 @@ header p {
         adres ve yol tarifi bilgilerine ulaşabilirsiniz.
     </p>
 
-    <div class="search-box">
+</div>
 
-        <label for="brandSearch">
-            Marka veya kategori ara
-        </label>
 
-        <input
-            type="search"
-            id="brandSearch"
-            placeholder="Örn: Samsung, kulaklık, tablet..."
-            autocomplete="off"
-            aria-label="Marka veya kategori ara">
+<!-- ================================================= -->
+<!-- ANA SAYFA FİLTRELEME -->
+<!-- ================================================= -->
 
-        <p class="search-result" id="searchResult">
-            Tüm marka ve kategoriler gösteriliyor.
-        </p>
+<div class="search-box">
 
+    <h2>
+        🔎 Marka veya Kategori Ara
+    </h2>
+
+    <input
+        type="text"
+        id="mainSearch"
+        placeholder="Örneğin: Samsung, Apple, Kulaklık, Tablet, Süpürge..."
+        onkeyup="filterMainPage()"
+    >
+
+    <div
+        id="filterCount"
+        class="filter-count">
     </div>
 
 </div>
 
+
+<div
+    id="noResult"
+    class="no-result">
+
+    Aradığınız marka veya kategori bulunamadı.
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- TELEFON MARKALARI -->
+<!-- MEVCUT ÇALIŞAN BÖLÜM - DOKUNULMADI -->
+<!-- ================================================= -->
+
+<div class="filter-section">
 
 <h2 class="section-title">
     📱 Telefon Markaları
@@ -260,11 +265,13 @@ header p {
 
 <div class="brand-grid">
 
+
 <a class="brand-card" href="Apple.html">
     <div class="icon">📱</div>
     <h3>Apple</h3>
     <p>Apple yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="Samsung.html">
     <div class="icon">📱</div>
@@ -272,11 +279,13 @@ header p {
     <p>Samsung yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="Xiaomi.html">
     <div class="icon">📱</div>
     <h3>Xiaomi</h3>
     <p>Xiaomi yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="Huawei.html">
     <div class="icon">📱</div>
@@ -284,11 +293,13 @@ header p {
     <p>Huawei yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="Oppo.html">
     <div class="icon">📱</div>
     <h3>Oppo</h3>
     <p>Oppo yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="Vivo.html">
     <div class="icon">📱</div>
@@ -296,11 +307,13 @@ header p {
     <p>Vivo yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="Tekno.html">
     <div class="icon">📱</div>
     <h3>TECNO</h3>
     <p>TECNO yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="Reedar.html">
     <div class="icon">📱</div>
@@ -308,8 +321,18 @@ header p {
     <p>REEDER yetkili servisleri</p>
 </a>
 
+
 </div>
 
+</div>
+
+
+<!-- ================================================= -->
+<!-- AKILLI SÜPÜRGELER -->
+<!-- MEVCUT ÇALIŞAN BÖLÜM - DOKUNULMADI -->
+<!-- ================================================= -->
+
+<div class="filter-section">
 
 <h2 class="section-title">
     🧹 Akıllı Süpürgeler
@@ -317,11 +340,13 @@ header p {
 
 <div class="brand-grid">
 
+
 <a class="brand-card" href="Roboroc.html">
     <div class="icon">🧹</div>
     <h3>Roborock</h3>
     <p>Roborock yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="XiaomiSupurge.html">
     <div class="icon">🧹</div>
@@ -329,11 +354,13 @@ header p {
     <p>Xiaomi akıllı süpürge yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="Dreame.html">
     <div class="icon">🧹</div>
     <h3>Dreame</h3>
     <p>Dreame yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="Ecovacs.html">
     <div class="icon">🧹</div>
@@ -341,11 +368,13 @@ header p {
     <p>Ecovacs yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="Philips.html">
     <div class="icon">🧹</div>
     <h3>Philips</h3>
     <p>Philips akıllı süpürge yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="iRobot.html">
     <div class="icon">🧹</div>
@@ -353,11 +382,13 @@ header p {
     <p>iRobot / Roomba yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="Dyson.html">
     <div class="icon">🧹</div>
     <h3>Dyson</h3>
     <p>Dyson yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="Kiwi.html">
     <div class="icon">🧹</div>
@@ -365,8 +396,18 @@ header p {
     <p>Kiwi yetkili servisleri</p>
 </a>
 
+
 </div>
 
+</div>
+
+
+<!-- ================================================= -->
+<!-- KULAKLIKLAR -->
+<!-- 12 MEVCUT MARKA - KORUNDU -->
+<!-- ================================================= -->
+
+<div class="filter-section">
 
 <h2 class="section-title">
     🎧 Kulaklıklar
@@ -374,11 +415,13 @@ header p {
 
 <div class="brand-grid">
 
+
 <a class="brand-card" href="AppleKulaklik.html">
     <div class="icon">🎧</div>
     <h3>Apple</h3>
     <p>Apple AirPods yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="SamsungKulaklik.html">
     <div class="icon">🎧</div>
@@ -386,11 +429,13 @@ header p {
     <p>Samsung Galaxy Buds yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="XiaomiKulaklik.html">
     <div class="icon">🎧</div>
     <h3>Xiaomi</h3>
     <p>Xiaomi Buds ve Redmi Buds yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="JBLKulaklik.html">
     <div class="icon">🎧</div>
@@ -398,11 +443,13 @@ header p {
     <p>JBL kulaklık servis ve destek</p>
 </a>
 
+
 <a class="brand-card" href="HuaweiKulaklik.html">
     <div class="icon">🎧</div>
     <h3>Huawei</h3>
     <p>Huawei FreeBuds yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="SonyKulaklik.html">
     <div class="icon">🎧</div>
@@ -410,11 +457,13 @@ header p {
     <p>Sony kulaklık servis ve onarım desteği</p>
 </a>
 
+
 <a class="brand-card" href="BoseKulaklik.html">
     <div class="icon">🎧</div>
     <h3>Bose</h3>
     <p>Bose kulaklık yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="AnkerKulaklik.html">
     <div class="icon">🎧</div>
@@ -422,11 +471,13 @@ header p {
     <p>Anker / Soundcore kulaklık yetkili servisleri</p>
 </a>
 
+
 <a class="brand-card" href="OppoKulaklik.html">
     <div class="icon">🎧</div>
     <h3>OPPO</h3>
     <p>OPPO Enco kulaklık yetkili servisleri</p>
 </a>
+
 
 <a class="brand-card" href="JabraKulaklik.html">
     <div class="icon">🎧</div>
@@ -434,11 +485,13 @@ header p {
     <p>Jabra kulaklık servis ve destek</p>
 </a>
 
+
 <a class="brand-card" href="BeatsKulaklik.html">
     <div class="icon">🎧</div>
     <h3>Beats</h3>
     <p>Beats kulaklık servis ve destek</p>
 </a>
+
 
 <a class="brand-card" href="MarshallKulaklik.html">
     <div class="icon">🎧</div>
@@ -446,8 +499,18 @@ header p {
     <p>Marshall kulaklık yetkili servisleri</p>
 </a>
 
+
 </div>
 
+</div>
+
+
+<!-- ================================================= -->
+<!-- TABLETLER -->
+<!-- YENİ BÖLÜM - EN SONDA -->
+<!-- ================================================= -->
+
+<div class="filter-section">
 
 <h2 class="section-title">
     📲 Tabletler
@@ -455,23 +518,41 @@ header p {
 
 <div class="brand-grid">
 
+
 <a class="brand-card" href="SamsungTablet.html">
+
     <div class="icon">📲</div>
-    <h3>Samsung</h3>
-    <p>Samsung Galaxy Tab yetkili servisleri</p>
+
+    <h3>
+        Samsung
+    </h3>
+
+    <p>
+        Samsung Galaxy Tab yetkili servisleri
+    </p>
+
 </a>
+
 
 <a class="brand-card" href="AppleTablet.html">
+
     <div class="icon">📲</div>
-    <h3>Apple</h3>
-    <p>Apple iPad yetkili servisleri</p>
+
+    <h3>
+        Apple
+    </h3>
+
+    <p>
+        Apple iPad yetkili servisleri
+    </p>
+
 </a>
 
+
 </div>
 
-<div class="no-results" id="noResults">
-    Aramanızla eşleşen marka veya kategori bulunamadı.
 </div>
+
 
 </div>
 
@@ -485,59 +566,101 @@ header p {
 
 <script>
 
-const searchInput = document.getElementById("brandSearch");
-const searchResult = document.getElementById("searchResult");
-const noResults = document.getElementById("noResults");
-const sections = document.querySelectorAll(".section-title");
+function filterMainPage() {
 
-function normalizeText(text) {
-    return text
-        .toLocaleLowerCase("tr-TR")
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
-}
+    const search =
+        document
+        .getElementById("mainSearch")
+        .value
+        .toLowerCase()
+        .trim();
 
-function filterBrands() {
-    const searchTerm = normalizeText(searchInput.value.trim());
-    let visibleCardCount = 0;
+    const sections =
+        document.querySelectorAll(".filter-section");
 
-    sections.forEach(sectionTitle => {
-        const brandGrid = sectionTitle.nextElementSibling;
-        const cards = brandGrid.querySelectorAll(".brand-card");
-        let visibleSectionCardCount = 0;
+    let totalFound = 0;
 
-        cards.forEach(card => {
-            const searchableText = normalizeText(card.textContent);
-            const isMatch = searchTerm === "" || searchableText.includes(searchTerm);
+    sections.forEach(function(section) {
 
-            card.classList.toggle("hidden", !isMatch);
+        const title =
+            section.querySelector(".section-title");
 
-            if (isMatch) {
-                visibleSectionCardCount++;
-                visibleCardCount++;
+        const cards =
+            section.querySelectorAll(".brand-card");
+
+        let sectionFound = 0;
+
+        cards.forEach(function(card) {
+
+            const text =
+                card.innerText.toLowerCase();
+
+            if (text.includes(search)) {
+
+                card.style.display = "block";
+                sectionFound++;
+                totalFound++;
+
+            } else {
+
+                card.style.display = "none";
+
             }
+
         });
 
-        sectionTitle.classList.toggle(
-            "hidden",
-            visibleSectionCardCount === 0
-        );
+        /*
+         * Arama boşsa bütün bölümler görünür.
+         * Arama varsa sadece eşleşen kartların
+         * bulunduğu bölümler görünür.
+         */
+
+        if (search === "") {
+
+            section.style.display = "block";
+
+        } else {
+
+            section.style.display =
+                sectionFound > 0 ? "block" : "none";
+
+        }
+
     });
 
-    noResults.classList.toggle("visible", visibleCardCount === 0);
 
-    if (searchTerm === "") {
-        searchResult.textContent =
-            "Tüm marka ve kategoriler gösteriliyor.";
+    const noResult =
+        document.getElementById("noResult");
+
+    const count =
+        document.getElementById("filterCount");
+
+
+    if (search === "") {
+
+        noResult.style.display = "none";
+
+        count.innerText =
+            "Tüm marka ve kategoriler listeleniyor.";
+
     } else {
-        searchResult.textContent =
-            visibleCardCount + " sonuç gösteriliyor.";
+
+        noResult.style.display =
+            totalFound === 0 ? "block" : "none";
+
+        count.innerText =
+            totalFound +
+            " sonuç bulundu.";
+
     }
+
 }
 
-searchInput.addEventListener("input", filterBrands);
+
+filterMainPage();
 
 </script>
+
 
 </body>
 
