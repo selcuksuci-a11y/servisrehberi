@@ -1,1 +1,780 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Beats Kulaklık Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    opacity: 0.85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width:600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>
+        🎧 Beats Kulaklık Servisleri
+    </h1>
+
+    <p>
+        Türkiye Geneli - Briko Servis Rehberi
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- ÜST ANA SAYFA -->
+
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+    <strong>
+        Beats Kulaklık Servis Rehberi
+    </strong>
+
+    <br>
+
+    Beats markalı kulaklık ve ses ürünleri
+    Apple'ın Türkiye'deki garanti kapsamı
+    içerisindedir.
+
+    <br><br>
+
+    Garanti kapsamında servis gerektiğinde
+    Apple Yetkili Servis Sağlayıcısı veya
+    Apple tarafından belirtilen servis
+    kanalları kullanılmalıdır.
+
+</div>
+
+
+<div class="search-box">
+
+    <h2>
+        Beats Kulaklık Servisi Ara
+    </h2>
+
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir, servis veya adres yazın..."
+        onkeyup="searchServices()"
+    >
+
+    <div
+        id="serviceCount"
+        class="count">
+    </div>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">
+    İstanbul
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        Apple Yetkili Servis Sağlayıcısı
+    </h3>
+
+    <p class="city">
+        İstanbul / Şişli
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Metrocity AVM,
+        Levent, Büyükdere Cd. No:171
+        Kat: -1 B116
+        Şişli / İstanbul
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        0212 210 04 44
+
+    </p>
+
+    <span class="badge">
+        ✓ Apple Yetkili Servis Sağlayıcısı
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Metrocity+AVM+Büyükdere+Cd+No+171+Şişli+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">
+    Ankara
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        Apple Yetkili Servis Sağlayıcısı
+    </h3>
+
+    <p class="city">
+        Ankara / Çankaya
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Hilal Mahallesi,
+        677. Sokak No:44/A
+        Çankaya / Ankara
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        0312 441 62 33
+
+    </p>
+
+    <span class="badge">
+        ✓ Apple Yetkili Servis Sağlayıcısı
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=677+Sokak+No+44%2FA+Çankaya+Ankara"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">
+    İzmir
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        Apple Yetkili Servis Sağlayıcısı
+    </h3>
+
+    <p class="city">
+        İzmir / Konak
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        İsmet Kaptan Mahallesi,
+        Şair Eşref Bulvarı No:28/B
+        Konak / İzmir
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        0232 483 40 43
+
+    </p>
+
+    <span class="badge">
+        ✓ Apple Yetkili Servis Sağlayıcısı
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Şair+Eşref+Bulvarı+No+28%2FB+Konak+İzmir"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- İSTANBUL - BAKIRKÖY -->
+
+<h2 class="city-title">
+    İstanbul - Bakırköy
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        TROY Apple Yetkili Servis Sağlayıcısı
+    </h3>
+
+    <p class="city">
+        İstanbul / Bakırköy
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Aqua Florya AVM,
+        Şenlikköy,
+        Yeşilköy Halkalı Cd. No:28
+        Kat: -2
+        Bakırköy / İstanbul
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        0850 532 19 92
+
+    </p>
+
+    <span class="badge">
+        ✓ Apple Yetkili Servis Sağlayıcısı
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Aqua+Florya+AVM+Yeşilköy+Halkalı+Cd+No+28+Bakırköy+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- İSTANBUL - KANYON -->
+
+<h2 class="city-title">
+    İstanbul - Levent
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        TROY Apple Yetkili Servis Sağlayıcısı
+    </h3>
+
+    <p class="city">
+        İstanbul / Beşiktaş
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Kanyon AVM,
+        Levent, Büyükdere Cd. No:185
+        Kat: -2
+        Beşiktaş / İstanbul
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        0850 532 19 92
+
+    </p>
+
+    <span class="badge">
+        ✓ Apple Yetkili Servis Sağlayıcısı
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Kanyon+AVM+Büyükdere+Cd+No+185+Levent+İstanbul"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+<!-- ESKİŞEHİR -->
+
+<h2 class="city-title">
+    Eskişehir
+</h2>
+
+
+<div class="card service">
+
+    <h3>
+        TROY Apple Yetkili Servis Sağlayıcısı
+    </h3>
+
+    <p class="city">
+        Eskişehir / Tepebaşı
+    </p>
+
+    <p class="type">
+        Apple Yetkili Servis Sağlayıcısı
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Espark AVM,
+        Eskibağlar Mahallesi,
+        Yılmaz Büyükerşen Bulvarı No:21
+        Z/21
+        Tepebaşı / Eskişehir
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        0850 532 19 92
+
+    </p>
+
+    <span class="badge">
+        ✓ Apple Yetkili Servis Sağlayıcısı
+    </span>
+
+    <br>
+
+    <a
+        class="map-button"
+        href="https://www.google.com/maps/search/?api=1&query=Espark+AVM+Yılmaz+Büyükerşen+Bulvarı+No+21+Eskişehir"
+        target="_blank"
+        rel="noopener"
+    >
+        🗺️ Haritada Göster
+    </a>
+
+</div>
+
+
+</div>
+
+
+<div
+    id="noResult"
+    class="no-result">
+
+    Aradığınız Beats kulaklık
+    servisi bulunamadı.
+
+</div>
+
+
+<br>
+
+
+<!-- ALT ANA SAYFA -->
+
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<div class="footer">
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</div>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const services =
+        document.querySelectorAll(".service");
+
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+
+    let found = 0;
+
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
+}
+
+
+searchServices();
+
+</script>
+
+
+</body>
+
+</html>
