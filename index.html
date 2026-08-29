@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Türkiye'nin Teknik Servis Rehberi - Briko</title>
+<title>Philips Kulaklık Yetkili Servisleri - Briko</title>
 
 <style>
 
@@ -19,26 +19,25 @@ content="width=device-width, initial-scale=1.0">
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f5f6f8;
-    color: #222;
+    background: #f5f7fa;
+    color: #1f2937;
 }
 
 header {
-    background: #111;
+    background: #111827;
     color: white;
     text-align: center;
-    padding: 32px 15px;
+    padding: 28px 15px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 header p {
-    margin: 10px 0 0;
-    color: #ccc;
-    font-size: 16px;
+    margin: 8px 0 0;
+    opacity: 0.85;
 }
 
 .container {
@@ -47,67 +46,126 @@ header p {
     padding: 25px 15px 40px;
 }
 
-.intro {
-    background: white;
-    padding: 22px;
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    margin-bottom: 30px;
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
 }
 
-.intro h2 {
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2 {
     margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    margin: 30px 0 15px;
     font-size: 23px;
 }
 
-.intro p {
-    line-height: 1.6;
-    margin-bottom: 0;
-}
-
-.section-title {
-    font-size: 24px;
-    margin: 30px 0 15px;
-}
-
-.brand-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-}
-
-.brand-card {
-    display: block;
+.card {
     background: white;
-    color: #222;
-    text-decoration: none;
-    padding: 23px;
+    padding: 20px;
     border-radius: 15px;
-    border: 1px solid #eee;
-    box-shadow: 0 2px 10px rgba(0,0,0,.08);
-    transition: .2s;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
 }
 
-.brand-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 16px rgba(0,0,0,.12);
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
 }
 
-.icon {
-    font-size: 34px;
-    margin-bottom: 10px;
+.card p {
+    margin: 8px 0;
+    color: #6b7280;
+    line-height: 1.6;
 }
 
-.brand-card h3 {
-    margin: 0 0 7px;
-    font-size: 20px;
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
 }
 
-.brand-card p {
-    margin: 0;
-    color: #666;
+.type {
+    color: #111827 !important;
+    font-weight: bold;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
     font-size: 14px;
-    line-height: 1.5;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
 }
 
 .footer {
@@ -117,18 +175,10 @@ header p {
     font-size: 13px;
 }
 
-@media (max-width: 700px) {
+@media (max-width:600px) {
 
     header h1 {
         font-size: 24px;
-    }
-
-    .brand-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        font-size: 22px;
     }
 
 }
@@ -142,415 +192,434 @@ header p {
 <header>
 
     <h1>
-        🛠️ Türkiye'nin Teknik Servis Rehberi
+        🎧 Philips Kulaklık Yetkili Servisleri
     </h1>
 
     <p>
-        Yetkili servis bilgilerine kolayca ulaşın
+        Türkiye Geneli - Briko Servis Rehberi
     </p>
 
 </header>
 
 <div class="container">
 
-    <div class="intro">
+<!-- ANA SAYFAYA DÖN - ÜST -->
 
-        <h2>
-            Briko'ya Hoş Geldiniz
-        </h2>
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
 
-        <p>
-            Servis bilgilerini görmek istediğiniz
-            marka üzerine tıklayın. Şehir, servis adı,
-            adres ve yol tarifi bilgilerine ulaşabilirsiniz.
-        </p>
+<div class="info">
 
-    </div>
+    <strong>
+        Philips Kulaklık Servis Rehberi
+    </strong>
 
+    <br>
 
-    <!-- TELEFON MARKALARI -->
+    Philips kulaklık ürünleri için teknik servis
+    bilgilerine buradan ulaşabilirsiniz.
 
-    <h2 class="section-title">
-        📱 Telefon Markaları
+    <br><br>
+
+    Servise gitmeden önce kulaklık ürünlerinin servis
+    kapsamında kabul edilip edilmediğinin ilgili servis
+    noktasıyla teyit edilmesi önerilir.
+
+</div>
+
+<div class="search-box">
+
+    <h2>
+        Philips Kulaklık Servisi Ara
     </h2>
 
-    <div class="brand-grid">
-
-
-        <a class="brand-card" href="Apple.html">
-
-            <div class="icon">📱</div>
-
-            <h3>Apple</h3>
-
-            <p>
-                Apple yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Samsung.html">
-
-            <div class="icon">📱</div>
-
-            <h3>Samsung</h3>
-
-            <p>
-                Samsung yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Xiaomi.html">
-
-            <div class="icon">📱</div>
-
-            <h3>Xiaomi</h3>
-
-            <p>
-                Xiaomi yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Huawei.html">
-
-            <div class="icon">📱</div>
-
-            <h3>Huawei</h3>
-
-            <p>
-                Huawei yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Oppo.html">
-
-            <div class="icon">📱</div>
-
-            <h3>Oppo</h3>
-
-            <p>
-                Oppo yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Vivo.html">
-
-            <div class="icon">📱</div>
-
-            <h3>Vivo</h3>
-
-            <p>
-                Vivo yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Tekno.html">
-
-            <div class="icon">📱</div>
-
-            <h3>TECNO</h3>
-
-            <p>
-                TECNO yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Reedar.html">
-
-            <div class="icon">📱</div>
-
-            <h3>REEDER</h3>
-
-            <p>
-                REEDER yetkili servisleri
-            </p>
-
-        </a>
-
-    </div>
-
-
-    <!-- AKILLI SÜPÜRGELER -->
-
-    <h2 class="section-title">
-        🧹 Akıllı Süpürgeler
-    </h2>
-
-    <div class="brand-grid">
-
-
-        <a class="brand-card" href="Roboroc.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Roborock</h3>
-
-            <p>
-                Roborock yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="XiaomiSupurge.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Xiaomi</h3>
-
-            <p>
-                Xiaomi akıllı süpürge yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Dreame.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Dreame</h3>
-
-            <p>
-                Dreame yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Ecovacs.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Ecovacs</h3>
-
-            <p>
-                Ecovacs yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Philips.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Philips</h3>
-
-            <p>
-                Philips akıllı süpürge yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="iRobot.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>iRobot / Roomba</h3>
-
-            <p>
-                iRobot / Roomba yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Dyson.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Dyson</h3>
-
-            <p>
-                Dyson yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="Kiwi.html">
-
-            <div class="icon">🧹</div>
-
-            <h3>Kiwi</h3>
-
-            <p>
-                Kiwi yetkili servisleri
-            </p>
-
-        </a>
-
-    </div>
-
-
-    <!-- KULAKLIKLAR -->
-
-    <h2 class="section-title">
-        🎧 Kulaklıklar
-    </h2>
-
-    <div class="brand-grid">
-
-
-        <a class="brand-card" href="AppleKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Apple</h3>
-
-            <p>
-                Apple AirPods yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="SamsungKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Samsung</h3>
-
-            <p>
-                Samsung Galaxy Buds yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="XiaomiKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Xiaomi</h3>
-
-            <p>
-                Xiaomi Buds ve Redmi Buds
-                yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="JBLKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>JBL</h3>
-
-            <p>
-                JBL kulaklık servis ve destek
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="HuaweiKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Huawei</h3>
-
-            <p>
-                Huawei FreeBuds yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="SonyKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Sony</h3>
-
-            <p>
-                Sony kulaklık servis ve onarım desteği
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="BoseKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Bose</h3>
-
-            <p>
-                Bose kulaklık yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="AnkerKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Anker / Soundcore</h3>
-
-            <p>
-                Anker / Soundcore kulaklık
-                yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <a class="brand-card" href="OppoKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>OPPO</h3>
-
-            <p>
-                OPPO Enco kulaklık yetkili servisleri
-            </p>
-
-        </a>
-
-
-        <!-- PHILIPS KULAKLIK -->
-
-        <a class="brand-card" href="PhilipsKulaklik.html">
-
-            <div class="icon">🎧</div>
-
-            <h3>Philips</h3>
-
-            <p>
-                Philips kulaklık yetkili servisleri
-            </p>
-
-        </a>
-
-
+    <input
+        type="text"
+        id="searchBox"
+        placeholder="Şehir, servis veya adres yazın..."
+        onkeyup="searchServices()"
+    >
+
+    <div
+        id="serviceCount"
+        class="count">
     </div>
 
 </div>
 
+<div id="services">
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">
+    İstanbul
+</h2>
+
+<div class="card service">
+
+    <h3>
+        Philips Yetkili Servis
+    </h3>
+
+    <p class="city">
+        İstanbul
+    </p>
+
+    <p class="type">
+        Philips Kulaklık - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Philips kulaklık servis kabulü ve güncel
+        adres bilgisi için servis noktasından
+        önceden teyit alınması önerilir.
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        Philips Yetkili Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ Philips Kulaklık Servisi
+    </span>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">
+    Ankara
+</h2>
+
+<div class="card service">
+
+    <h3>
+        Philips Yetkili Servis
+    </h3>
+
+    <p class="city">
+        Ankara
+    </p>
+
+    <p class="type">
+        Philips Kulaklık - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Philips kulaklık servis kabulü ve güncel
+        adres bilgisi için servis noktasından
+        önceden teyit alınması önerilir.
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        Philips Yetkili Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ Philips Kulaklık Servisi
+    </span>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">
+    İzmir
+</h2>
+
+<div class="card service">
+
+    <h3>
+        Philips Yetkili Servis
+    </h3>
+
+    <p class="city">
+        İzmir
+    </p>
+
+    <p class="type">
+        Philips Kulaklık - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Philips kulaklık servis kabulü ve güncel
+        adres bilgisi için servis noktasından
+        önceden teyit alınması önerilir.
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        Philips Yetkili Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ Philips Kulaklık Servisi
+    </span>
+
+</div>
+
+
+<!-- BURSA -->
+
+<h2 class="city-title">
+    Bursa
+</h2>
+
+<div class="card service">
+
+    <h3>
+        Philips Yetkili Servis
+    </h3>
+
+    <p class="city">
+        Bursa
+    </p>
+
+    <p class="type">
+        Philips Kulaklık - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Philips kulaklık servis kabulü ve güncel
+        adres bilgisi için servis noktasından
+        önceden teyit alınması önerilir.
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        Philips Yetkili Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ Philips Kulaklık Servisi
+    </span>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">
+    Antalya
+</h2>
+
+<div class="card service">
+
+    <h3>
+        Philips Yetkili Servis
+    </h3>
+
+    <p class="city">
+        Antalya
+    </p>
+
+    <p class="type">
+        Philips Kulaklık - Yetkili Servis
+    </p>
+
+    <p class="address">
+
+        <strong>
+            Açık Adres:
+        </strong>
+
+        <br>
+
+        Philips kulaklık servis kabulü ve güncel
+        adres bilgisi için servis noktasından
+        önceden teyit alınması önerilir.
+
+    </p>
+
+    <p class="phone">
+
+        <strong>
+            Telefon:
+        </strong>
+
+        Philips Yetkili Servis
+
+    </p>
+
+    <span class="badge">
+        ✓ Philips Kulaklık Servisi
+    </span>
+
+</div>
+
+
+</div>
+
+
+<div
+    id="noResult"
+    class="no-result">
+
+    Aradığınız Philips kulaklık
+    servisi bulunamadı.
+
+</div>
+
+
+<br>
+
+<!-- ANA SAYFAYA DÖN - ALT -->
+
+<a class="back" href="index.html">
+    ← Ana Sayfaya Dön
+</a>
+
+</div>
 
 <div class="footer">
 
     Türkiye'nin Teknik Servis Rehberi © 2026
 
 </div>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
+}
+
+searchServices();
+
+</script>
 
 </body>
 
