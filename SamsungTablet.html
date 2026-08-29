@@ -1,1 +1,1358 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Samsung Tablet Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1f2937;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    opacity: .85;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.info {
+    background: #eef4ff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.search-box {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin: 30px 0 15px;
+    font-size: 23px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.card p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.city {
+    color: #2563eb !important;
+    font-weight: bold;
+}
+
+.type {
+    font-weight: bold;
+    color: #111827 !important;
+}
+
+.address {
+    color: #374151 !important;
+}
+
+.phone {
+    color: #047857 !important;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #ecfdf5;
+    color: #047857;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 11px 16px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.count {
+    margin-top: 12px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+    color: #64748b;
+}
+
+.footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width:600px) {
+
+    header h1 {
+        font-size: 24px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<h1>
+📱 Samsung Tablet Yetkili Servisleri
+</h1>
+
+<p>
+Türkiye Geneli - Briko Servis Rehberi
+</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<strong>
+Samsung Tablet Servis Rehberi
+</strong>
+
+<br><br>
+
+Samsung Galaxy Tab ve diğer Samsung tablet
+ürünleri için yetkili servis bilgileri.
+
+<br><br>
+
+Samsung, servis merkezlerinin güncel adres
+ve iletişim bilgilerinin resmi servis bulucu
+üzerinden cihaz kategorisi seçilerek
+kontrol edilmesini önermektedir.
+
+</div>
+
+
+<div class="search-box">
+
+<h2>
+Samsung Tablet Yetkili Servisi Ara
+</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Şehir, servis veya adres yazın..."
+onkeyup="searchServices()"
+>
+
+<div id="serviceCount" class="count"></div>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">
+Adana - Seyhan
+</h2>
+
+<div class="card service">
+
+<h3>
+Başarı Teknik Servis
+</h3>
+
+<p class="city">
+Adana / Seyhan
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Yeni Baraj Mah. Bülent Angın Blv.
+Girman Apt. No: 36/A
+Seyhan / Adana
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 322 457 59 00
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Yeni+Baraj+Mahallesi+Bülent+Angın+Bulvarı+Girman+Apt+No+36%2FA+Seyhan+Adana"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANKARA BAŞARI -->
+
+<h2 class="city-title">
+Ankara - Çankaya
+</h2>
+
+<div class="card service">
+
+<h3>
+Başarı Teknik Servis
+</h3>
+
+<p class="city">
+Ankara / Çankaya
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Cumhuriyet Mah. Mithatpaşa Cad.
+No: 28/28
+Çankaya / Ankara
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 312 430 56 65
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Mithatpaşa+Cadde+No+28%2F28+Çankaya+Ankara"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANKARA SİMGE -->
+
+<h2 class="city-title">
+Ankara - Keçiören
+</h2>
+
+<div class="card service">
+
+<h3>
+Simge Via Elektronik
+</h3>
+
+<p class="city">
+Ankara / Keçiören
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Etlik Cad. No: 205
+Etlik / Keçiören / Ankara
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 312 322 77 44
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Etlik+Cadde+No+205+Keçiören+Ankara"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">
+Antalya - Muratpaşa
+</h2>
+
+<div class="card service">
+
+<h3>
+Yıldırım Elektronik
+</h3>
+
+<p class="city">
+Antalya / Muratpaşa
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Muratpaşa / Antalya
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Yıldırım+Elektronik+Samsung+Yetkili+Servis+Muratpaşa+Antalya"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- BURSA -->
+
+<h2 class="city-title">
+Bursa - Osmangazi
+</h2>
+
+<div class="card service">
+
+<h3>
+Ebru Elektronik
+</h3>
+
+<p class="city">
+Bursa / Osmangazi
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Osmangazi / Bursa
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Ebru+Elektronik+Samsung+Yetkili+Servis+Osmangazi+Bursa"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- DİYARBAKIR -->
+
+<h2 class="city-title">
+Diyarbakır - Yenişehir
+</h2>
+
+<div class="card service">
+
+<h3>
+Hizmet Elektronik
+</h3>
+
+<p class="city">
+Diyarbakır / Yenişehir
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Yenişehir / Diyarbakır
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Hizmet+Elektronik+Samsung+Yetkili+Servis+Yenişehir+Diyarbakır"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ERZURUM -->
+
+<h2 class="city-title">
+Erzurum - Yakutiye
+</h2>
+
+<div class="card service">
+
+<h3>
+Emir Elektronik
+</h3>
+
+<p class="city">
+Erzurum / Yakutiye
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Yakutiye / Erzurum
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Emir+Elektronik+Samsung+Yetkili+Servis+Yakutiye+Erzurum"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL ATAŞEHİR -->
+
+<h2 class="city-title">
+İstanbul - Ataşehir
+</h2>
+
+<div class="card service">
+
+<h3>
+Ouno Ataşehir
+</h3>
+
+<p class="city">
+İstanbul / Ataşehir
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Ataşehir / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Ouno+Ataşehir+Samsung+Yetkili+Servis"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL AVCILAR -->
+
+<h2 class="city-title">
+İstanbul - Avcılar
+</h2>
+
+<div class="card service">
+
+<h3>
+Başarı Teknik Servis
+</h3>
+
+<p class="city">
+İstanbul / Avcılar
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Merkez Mah. Spor Sok. 32/A D:1
+Avcılar / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 212 660 25 02
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Merkez+Mahallesi+Spor+Sokak+32%2FA+Avcılar+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL BAKIRKÖY -->
+
+<h2 class="city-title">
+İstanbul - Bakırköy
+</h2>
+
+<div class="card service">
+
+<h3>
+MTA Elektronik
+</h3>
+
+<p class="city">
+İstanbul / Bakırköy
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Bakırköy / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=MTA+Elektronik+Samsung+Yetkili+Servis+Bakırköy+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL GAZİOSMANPAŞA -->
+
+<h2 class="city-title">
+İstanbul - Gaziosmanpaşa
+</h2>
+
+<div class="card service">
+
+<h3>
+Destek Bilişim
+</h3>
+
+<p class="city">
+İstanbul / Gaziosmanpaşa
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Merkez Mah. Aladağ Sok. No: 2
+Gaziosmanpaşa / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+444 04 90
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Merkez+Mahallesi+Aladağ+Sokak+No+2+Gaziosmanpaşa+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL KADIKÖY -->
+
+<h2 class="city-title">
+İstanbul - Kadıköy
+</h2>
+
+<div class="card service">
+
+<h3>
+Destek Bilişim
+</h3>
+
+<p class="city">
+İstanbul / Kadıköy
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Osmanağa Mah. Rıhtım Cad.
+Başçavuş Sok. No: 3
+Kadıköy / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+444 04 90
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Osmanağa+Mahallesi+Rıhtım+Cadde+Başçavuş+Sokak+No+3+Kadıköy+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL KARTAL -->
+
+<h2 class="city-title">
+İstanbul - Kartal
+</h2>
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis
+</h3>
+
+<p class="city">
+İstanbul / Kartal
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Soğanlık Yeni Mah.
+D-100 Kuzey Yan Yol
+Kanat Sanayi Sitesi No: 32
+Kartal / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung KVK Servisi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yan+Yol+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL PENDİK -->
+
+<h2 class="city-title">
+İstanbul - Pendik
+</h2>
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis
+</h3>
+
+<p class="city">
+İstanbul / Pendik
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Batı Mah. Hatboyu Cad.
+Sıra Dükkanlar No: 15/D
+Pendik / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung KVK Servisi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Batı+Mahallesi+Hatboyu+Cadde+No+15%2FD+Pendik+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL SANCAKTEPE -->
+
+<h2 class="city-title">
+İstanbul - Sancaktepe
+</h2>
+
+<div class="card service">
+
+<h3>
+Destek Bilişim
+</h3>
+
+<p class="city">
+İstanbul / Sancaktepe
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Emek Mah. Ordu Cad. No: 18
+Sancaktepe / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+444 04 90
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Emek+Mahallesi+Ordu+Cadde+No+18+Sancaktepe+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL ŞİŞLİ -->
+
+<h2 class="city-title">
+İstanbul - Şişli
+</h2>
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis
+</h3>
+
+<p class="city">
+İstanbul / Şişli
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Fulya Mah. Likör Yanı Sok.
+Akabe İş Hanı Apt. No: 1/C
+Şişli / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung KVK Servisi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Fulya+Mahallesi+Likör+Yanı+Sokak+Akabe+İş+Hanı+No+1%2FC+Şişli+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL ÜMRANİYE -->
+
+<h2 class="city-title">
+İstanbul - Ümraniye
+</h2>
+
+<div class="card service">
+
+<h3>
+Danıştek Bilişim
+</h3>
+
+<p class="city">
+İstanbul / Ümraniye
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Atakent Mah. Alemdağ Cad. No: 308
+Ümraniye / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 216 316 03 03
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Atakent+Mahallesi+Alemdağ+Cadde+No+308+Ümraniye+İstanbul"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İSTANBUL ÜSKÜDAR -->
+
+<h2 class="city-title">
+İstanbul - Üsküdar
+</h2>
+
+<div class="card service">
+
+<h3>
+Destek Bilişim
+</h3>
+
+<p class="city">
+İstanbul / Üsküdar
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Emaar Square AVM
+Üsküdar / İstanbul
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+444 04 90
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Emaar+Square+AVM+Üsküdar+İstanbul+Samsung"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İZMİR KARŞIYAKA -->
+
+<h2 class="city-title">
+İzmir - Karşıyaka
+</h2>
+
+<div class="card service">
+
+<h3>
+Başarı Teknik Servis
+</h3>
+
+<p class="city">
+İzmir / Karşıyaka
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+Tuna Mah. Tiyatro Sok. No: 50/A
+Karşıyaka / İzmir
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0 232 483 40 40
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Tuna+Mahallesi+Tiyatro+Sokak+No+50%2FA+Karşıyaka+İzmir"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İZMİR KONAK -->
+
+<h2 class="city-title">
+İzmir - Konak
+</h2>
+
+<div class="card service">
+
+<h3>
+Destek Bilişim
+</h3>
+
+<p class="city">
+İzmir / Konak
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+İsmet Kaptan Mah.
+Şair Eşref Bulvarı No: 36/A
+Konak / İzmir
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+444 77 11
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=İsmet+Kaptan+Mahallesi+Şair+Eşref+Bulvarı+No+36%2FA+Konak+İzmir"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+<!-- SAMSUN -->
+
+<h2 class="city-title">
+Samsun - İlkadım
+</h2>
+
+<div class="card service">
+
+<h3>
+Bayrak Elektronik
+</h3>
+
+<p class="city">
+Samsun / İlkadım
+</p>
+
+<p class="type">
+Samsung Yetkili Servis Merkezi
+</p>
+
+<p class="address">
+<strong>Açık Adres:</strong><br>
+İlkadım / Samsun
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+Samsung Servis Merkezi
+</p>
+
+<span class="badge">
+✓ Samsung Yetkili Servis
+</span>
+
+<br>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Bayrak+Elektronik+Samsung+Yetkili+Servis+İlkadım+Samsun"
+target="_blank"
+rel="noopener">
+🗺️ Haritada Göster
+</a>
+
+</div>
+
+
+</div>
+
+
+<div id="noResult" class="no-result">
+
+Aradığınız Samsung tablet servisi bulunamadı.
+
+</div>
+
+
+<br>
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<div class="footer">
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</div>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("searchBox")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+            service.style.display = "block";
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+    titles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let visible = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                visible = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            visible ? "block" : "none";
+
+    });
+
+    document
+        .getElementById("noResult")
+        .style.display =
+        found === 0 ? "block" : "none";
+
+    document
+        .getElementById("serviceCount")
+        .innerText =
+        found + " servis listeleniyor";
+
+}
+
+searchServices();
+
+</script>
+
+
+</body>
+
+</html>
