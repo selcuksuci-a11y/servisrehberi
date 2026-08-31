@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Xiaomi Tablet Yetkili Servisleri - Briko</title>
 
-<meta name="description" content="Xiaomi Tablet yetkili servisleri. KVK, OUNO, BDH, Evofone ve Mieko servis noktaları. Briko Servis Rehberi.">
+<meta name="description"
+content="Xiaomi Tablet yetkili servisleri. KVK, OUNO, BDH, Evofone ve Mieko servis noktaları. Briko Servis Rehberi.">
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -23,7 +29,7 @@ body {
 header {
     background: linear-gradient(135deg, #111827, #374151);
     color: white;
-    padding: 28px 15px;
+    padding: 30px 15px;
     text-align: center;
 }
 
@@ -35,7 +41,7 @@ header h1 {
 header p {
     margin: 0;
     font-size: 15px;
-    opacity: 0.92;
+    opacity: .92;
 }
 
 .container {
@@ -44,106 +50,149 @@ header p {
     padding: 20px 15px 50px;
 }
 
+/* ANA SAYFA BUTONU */
+
 .back-button {
-    display: block;
-    width: fit-content;
-    margin: 5px 0 20px;
-    padding: 11px 18px;
+    display: inline-block;
+    margin: 5px 0 22px;
+    padding: 12px 18px;
     background: #111827;
-    color: white;
+    color: #fff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
 }
 
 .back-button:hover {
-    opacity: 0.85;
+    opacity: .85;
 }
+
+/* BİLGİ KUTUSU */
 
 .info-box {
-    background: white;
-    border-radius: 12px;
-    padding: 18px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-    line-height: 1.6;
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.07);
+    line-height: 1.65;
 }
 
+/* ARAMA */
+
 .search-box {
-    margin: 20px 0 25px;
+    margin: 20px 0 28px;
 }
 
 .search-box input {
     width: 100%;
-    padding: 14px;
+    padding: 15px;
     border: 1px solid #d1d5db;
-    border-radius: 9px;
+    border-radius: 10px;
     font-size: 16px;
     outline: none;
+    background: white;
 }
 
 .search-box input:focus {
     border-color: #111827;
 }
 
+/* ŞEHİR */
+
 .city-title {
-    margin: 30px 0 15px;
-    font-size: 22px;
-    color: #111827;
+    margin: 32px 0 16px;
+    padding-left: 12px;
     border-left: 5px solid #111827;
-    padding-left: 10px;
+    color: #111827;
+    font-size: 22px;
 }
 
+/* SERVİS KARTI */
+
 .service-card {
-    background: white;
-    border-radius: 13px;
+    background: #fff;
+    border-radius: 14px;
     padding: 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+    margin-bottom: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.08);
+    border: 1px solid #e5e7eb;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 12px;
 }
 
 .service-name {
     font-size: 19px;
     font-weight: bold;
-    margin-bottom: 10px;
     color: #111827;
+    line-height: 1.4;
 }
 
 .authorized {
     display: inline-block;
+    white-space: nowrap;
     background: #e8f5e9;
     color: #137333;
     border: 1px solid #b7dfba;
-    padding: 5px 9px;
+    padding: 6px 10px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: bold;
-    margin-bottom: 14px;
 }
 
+/* SERVİS BİLGİLERİ */
+
 .service-info {
-    line-height: 1.7;
     font-size: 15px;
+    line-height: 1.7;
+    color: #333;
 }
 
 .service-info strong {
     color: #111827;
 }
 
-.phone {
-    display: inline-block;
-    margin-top: 12px;
-    padding: 9px 13px;
-    background: #111827;
-    color: white;
-    text-decoration: none;
-    border-radius: 7px;
-    font-weight: bold;
+/* BUTONLAR */
+
+.service-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
 }
 
-.phone:hover {
-    opacity: 0.85;
+.phone-button,
+.map-button {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
 }
+
+.phone-button {
+    background: #111827;
+    color: white;
+}
+
+.map-button {
+    background: #2563eb;
+    color: white;
+}
+
+.phone-button:hover,
+.map-button:hover {
+    opacity: .85;
+}
+
+/* SONUÇ YOK */
 
 .no-result {
     display: none;
@@ -154,6 +203,8 @@ header p {
     color: #666;
 }
 
+/* ALT */
+
 footer {
     text-align: center;
     padding: 25px 15px;
@@ -162,10 +213,20 @@ footer {
     font-size: 13px;
 }
 
+/* MOBİL */
+
 @media (max-width: 600px) {
 
     header h1 {
         font-size: 23px;
+    }
+
+    .service-header {
+        display: block;
+    }
+
+    .authorized {
+        margin-top: 10px;
     }
 
     .city-title {
@@ -173,13 +234,24 @@ footer {
     }
 
     .service-card {
-        padding: 16px;
+        padding: 17px;
     }
+
+    .phone-button,
+    .map-button {
+        width: 100%;
+        text-align: center;
+    }
+
 }
+
 </style>
+
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -191,11 +263,18 @@ footer {
 
 </header>
 
+
 <div class="container">
+
+
+    <!-- ANA SAYFAYA DÖN -->
 
     <a href="index.html" class="back-button">
         ← Ana Sayfaya Dön
     </a>
+
+
+    <!-- BİLGİ -->
 
     <div class="info-box">
 
@@ -203,8 +282,8 @@ footer {
 
         <br><br>
 
-        Xiaomi Tablet cihazlarınız için Türkiye'deki servis noktalarını
-        şehir ve servis adına göre arayabilirsiniz.
+        Xiaomi Tablet cihazlarınız için Türkiye'deki servis
+        noktalarını şehir ve servis adına göre arayabilirsiniz.
 
         <br><br>
 
@@ -212,6 +291,9 @@ footer {
         merkezinde kabul edildiğini teyit etmeniz önerilir.
 
     </div>
+
+
+    <!-- ARAMA -->
 
     <div class="search-box">
 
@@ -223,413 +305,1088 @@ footer {
 
     </div>
 
+
     <div id="noResult" class="no-result">
+
         Aramanızla eşleşen servis bulunamadı.
+
     </div>
 
 
-    <h2 class="city-title">📍 İstanbul</h2>
+    <!-- ========================= -->
+    <!-- İSTANBUL -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 İstanbul
+    </h2>
+
+
+    <!-- KVK KARTAL -->
 
     <div class="service-card">
-        <div class="service-name">KVK Teknik Servis – Kartal</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                KVK Teknik Servis – Kartal
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
-            Soğanlık Yeni Mah. D-100 Kuzey Yan Yol
-            Kanat Sanayi Sitesi No:32
+
+            <strong>📍 Adres:</strong><br>
+
+            Soğanlık Yeni Mah. D-100 Kuzey Yan Yol,
+            Kanat Sanayi Sitesi No:32,
             34880 Kartal / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
-            KVK Teknik Servis
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
 
             <br><br>
 
-            <strong>Telefon:</strong>
+            <strong>📞 Telefon:</strong><br>
+
             Xiaomi servis merkezi üzerinden teyit ediniz.
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Kartal+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- OUNO ATAŞEHİR -->
+
     <div class="service-card">
-        <div class="service-name">OUNO Teknik Servis – Ataşehir</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                OUNO Teknik Servis – Ataşehir
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
-            Atilla İlhan Cd. No:20
+
+            <strong>📍 Adres:</strong><br>
+
+            Atilla İlhan Cd. No:20,
             34750 Ataşehir / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
-            OUNO Teknik Servis Hizmetleri A.Ş.
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
 
             <br><br>
 
-            <strong>Telefon:</strong>
+            <strong>📞 Telefon:</strong><br>
+
             0850 502 08 00
+
         </div>
 
-        <a class="phone" href="tel:+908505020800">
-            📞 0850 502 08 00
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+908505020800">
+
+                📞 0850 502 08 00
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=OUNO+Teknik+Servis+Atasehir+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- BDH MALTEPE -->
+
     <div class="service-card">
-        <div class="service-name">BDH Bilişim Destek Hizmetleri – Maltepe</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                BDH Bilişim Destek Hizmetleri – Maltepe
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Bağlarbaşı Mahallesi,
-            Cemal Bey Caddesi No:110
+            Cemal Bey Caddesi No:110,
             34844 Maltepe / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
-            BDH Bilişim Destek Hizmetleri A.Ş.
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
 
             <br><br>
 
-            <strong>Telefon:</strong>
+            <strong>📞 Telefon:</strong><br>
+
             0850 622 57 87
+
         </div>
 
-        <a class="phone" href="tel:+908506225787">
-            📞 0850 622 57 87
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+908506225787">
+
+                📞 0850 622 57 87
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=BDH+Bili%C5%9Fim+Maltepe+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- EVOFONE KAĞITHANE -->
+
     <div class="service-card">
-        <div class="service-name">Evofone – Kağıthane</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Evofone – Kağıthane
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Kağıthane OFİSPARK İş Merkezi,
-            Merkez Mah. Bağlar Cad. No:14
+            Merkez Mah. Bağlar Cad. No:14,
             34406 Kağıthane / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Evofone
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
+            444 2 118
+
         </div>
 
-        <a class="phone" href="tel:+902124442118">
-            📞 444 2 118
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+902124442118">
+
+                📞 444 2 118
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Evofone+Kagithane+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- EVOFONE KADIKÖY -->
+
     <div class="service-card">
-        <div class="service-name">Evofone – Kadıköy</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Evofone – Kadıköy
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Fahrettin Kerim Gökay Caddesi,
-            Baycan Han No:39-41/B
+            Baycan Han No:39-41/B,
             34722 Kadıköy / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Evofone
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
+            444 2 118
+
         </div>
 
-        <a class="phone" href="tel:+902124442118">
-            📞 444 2 118
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+902124442118">
+
+                📞 444 2 118
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Evofone+Kadikoy+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- MIEKO MASLAK -->
+
     <div class="service-card">
-        <div class="service-name">Mieko – Maslak</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Mieko – Maslak
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Maslak Mah. Sanatkarlar Sok.
-            Eclipse Sitesi D Blok No:12
+            Eclipse Sitesi D Blok No:12,
             Sarıyer / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
             Mieko
+
         </div>
 
-        <a class="phone" href="tel:+902122850019">
-            📞 Mieko
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Mieko+Maslak+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- MIEKO ZEYTİNBURNU -->
+
     <div class="service-card">
-        <div class="service-name">Mieko – Zeytinburnu</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Mieko – Zeytinburnu
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
-            Prof. Muammer Aksoy Cad. No:31
-            Olivium AVM
+
+            <strong>📍 Adres:</strong><br>
+
+            Prof. Muammer Aksoy Cad. No:31,
+            Olivium AVM,
             Zeytinburnu / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
             Mieko
+
         </div>
 
-        <a class="phone" href="tel:+902122850019">
-            📞 Mieko
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Mieko+Zeytinburnu+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
+    <!-- MIEKO PENDİK -->
+
     <div class="service-card">
-        <div class="service-name">Mieko – Pendik</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Mieko – Pendik
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Batı Mah. Dr. Orhan Altepe Cad.
-            Sezer Apt. No:31
+            Sezer Apt. No:31,
             Pendik / İstanbul
 
             <br><br>
 
-            <strong>Servis:</strong>
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
             Mieko
+
         </div>
 
-        <a class="phone" href="tel:+902122850019">
-            📞 Mieko
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Mieko+Pendik+Istanbul"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Ankara</h2>
+    <!-- ========================= -->
+    <!-- ANKARA -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Ankara
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">KVK Teknik Servis – Ankara</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                KVK Teknik Servis – Ankara
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
-            Kızılay Mah. Fevzi Çakmak 1 Sokak
-            Oran Apartmanı No:15/B
+
+            <strong>📍 Adres:</strong><br>
+
+            Kızılay Mah. Fevzi Çakmak 1 Sokak,
+            Oran Apartmanı No:15/B,
             06420 Çankaya / Ankara
 
             <br><br>
 
-            <strong>Servis:</strong>
-            KVK Teknik Servis
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara+Kizilay"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
     <div class="service-card">
-        <div class="service-name">Evofone – Ankara Kızılay</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Evofone – Ankara Kızılay
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Korkutreis Mah.
-            Gazi Mustafa Kemal Bulvarı No:32/B
+            Gazi Mustafa Kemal Bulvarı No:32/B,
             Demirtepe, Çankaya / Ankara
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Evofone
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
+            444 2 118
+
         </div>
 
-        <a class="phone" href="tel:+902124442118">
-            📞 444 2 118
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+902124442118">
+
+                📞 444 2 118
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Evofone+Ankara+Kizilay"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 İzmir</h2>
+    <!-- ========================= -->
+    <!-- İZMİR -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 İzmir
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">Evofone – İzmir Çankaya</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Evofone – İzmir Çankaya
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             İsmet Kaptan Mah.
-            Şair Eşref Bulvarı No:26/B
+            Şair Eşref Bulvarı No:26/B,
             Konak / İzmir
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Evofone
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
+            444 2 118
+
         </div>
 
-        <a class="phone" href="tel:+902124442118">
-            📞 444 2 118
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+902124442118">
+
+                📞 444 2 118
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Evofone+Izmir+Cankaya"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
     <div class="service-card">
-        <div class="service-name">KVK Teknik Servis – İzmir Konak</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                KVK Teknik Servis – İzmir Konak
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             İsmet Kaptan Mah.
-            1365. Sk. No:7/B
+            1365. Sk. No:7/B,
             35210 Konak / İzmir
 
             <br><br>
 
-            <strong>Servis:</strong>
-            KVK Teknik Servis
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Izmir+Konak"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Samsun</h2>
+    <!-- ========================= -->
+    <!-- SAMSUN -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Samsun
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">Evofone – Samsun</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Evofone – Samsun
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             19 Mayıs Mah.
-            Gazi Cad. No:95/4
+            Gazi Cad. No:95/4,
             İlkadım / Samsun
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Evofone
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
+            444 2 118
+
         </div>
 
-        <a class="phone" href="tel:+902124442118">
-            📞 444 2 118
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+902124442118">
+
+                📞 444 2 118
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Evofone+Samsun"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Antalya</h2>
+    <!-- ========================= -->
+    <!-- ANTALYA -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Antalya
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">Evofone – Antalya</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Evofone – Antalya
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             İsmet Gökşen Cad.
-            Hüseyin Akçor 2 Apt. No:40/E
+            Hüseyin Akçor 2 Apt. No:40/E,
             Muratpaşa, Şirinyalı / Antalya
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Evofone
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
+            <br><br>
+
+            <strong>📞 Telefon:</strong><br>
+
+            444 2 118
+
         </div>
 
-        <a class="phone" href="tel:+902124442118">
-            📞 444 2 118
-        </a>
+
+        <div class="service-buttons">
+
+            <a class="phone-button"
+               href="tel:+902124442118">
+
+                📞 444 2 118
+
+            </a>
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Evofone+Antalya"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Adana</h2>
+    <!-- ========================= -->
+    <!-- ADANA -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Adana
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">KVK Teknik Servis – Adana Seyhan</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                KVK Teknik Servis – Adana Seyhan
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Reşatbey,
-            Turhan Cemal Beriker Bulvarı
-            Günep Panorama B Blok No:8
+            Turhan Cemal Beriker Bulvarı,
+            Günep Panorama B Blok No:8,
             01120 Seyhan / Adana
 
             <br><br>
 
-            <strong>Servis:</strong>
-            KVK Teknik Servis
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Adana+Seyhan"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Trabzon</h2>
+    <!-- ========================= -->
+    <!-- TRABZON -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Trabzon
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">KVK Teknik Servis – Trabzon</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                KVK Teknik Servis – Trabzon
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Cumhuriyet Mah.
             Nemlioğlu Cemal Sok.
-            Ziya Bey Sitesi A Blok No:16/1
+            Ziya Bey Sitesi A Blok No:16/1,
             61050 Ortahisar / Trabzon
 
             <br><br>
 
-            <strong>Servis:</strong>
-            KVK Teknik Servis
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Trabzon"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Bursa</h2>
+    <!-- ========================= -->
+    <!-- BURSA -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Bursa
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">Mieko – Bursa</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Mieko – Bursa
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Kırcaali Mah.
-            Kayalı Sk. No:34
+            Kayalı Sk. No:34,
             16220 Osmangazi / Bursa
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Mieko
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Mieko+Bursa"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
 
-    <h2 class="city-title">📍 Gaziantep</h2>
+    <!-- ========================= -->
+    <!-- GAZİANTEP -->
+    <!-- ========================= -->
+
+    <h2 class="city-title">
+        📍 Gaziantep
+    </h2>
+
 
     <div class="service-card">
-        <div class="service-name">Mieko – Gaziantep</div>
-        <span class="authorized">✓ Xiaomi Yetkili Servis</span>
+
+        <div class="service-header">
+
+            <div class="service-name">
+                Mieko – Gaziantep
+            </div>
+
+            <span class="authorized">
+                ✓ Xiaomi Yetkili Servis
+            </span>
+
+        </div>
+
 
         <div class="service-info">
-            <strong>Adres:</strong><br>
+
+            <strong>📍 Adres:</strong><br>
+
             Değirmiçem Mah.
-            Prof. Muammer Aksoy Bulvarı
-            Kepkep Plaza No:20H
+            Prof. Muammer Aksoy Bulvarı,
+            Kepkep Plaza No:20H,
             Gaziantep
 
             <br><br>
 
-            <strong>Servis:</strong>
-            Mieko
+            <strong>🔧 Servis Türü:</strong><br>
+
+            Xiaomi Tablet Yetkili Servis
+
         </div>
+
+
+        <div class="service-buttons">
+
+            <a class="map-button"
+               href="https://www.google.com/maps/search/?api=1&query=Mieko+Gaziantep"
+               target="_blank">
+
+                🗺️ Yol Tarifi
+
+            </a>
+
+        </div>
+
     </div>
 
+
+    <!-- ALT BİLGİ -->
 
     <div class="info-box">
 
@@ -654,14 +1411,20 @@ footer {
     </div>
 
 
+    <!-- ANA SAYFAYA DÖN -->
+
     <a href="index.html" class="back-button">
         ← Ana Sayfaya Dön
     </a>
 
+
 </div>
 
+
 <footer>
+
     © 2026 Briko Servis Rehberi • Xiaomi Tablet Yetkili Servisleri
+
 </footer>
 
 
@@ -669,7 +1432,8 @@ footer {
 
 function searchServices() {
 
-    const input = document
+    const input =
+        document
         .getElementById("serviceSearch")
         .value
         .toLowerCase()
@@ -683,6 +1447,7 @@ function searchServices() {
 
     let found = 0;
 
+
     cards.forEach(function(card) {
 
         const text =
@@ -691,6 +1456,7 @@ function searchServices() {
         if (text.includes(input)) {
 
             card.style.display = "block";
+
             found++;
 
         } else {
@@ -701,10 +1467,14 @@ function searchServices() {
 
     });
 
+
     titles.forEach(function(title) {
 
-        let next = title.nextElementSibling;
+        let next =
+            title.nextElementSibling;
+
         let hasVisibleCard = false;
+
 
         while (
             next &&
@@ -720,19 +1490,25 @@ function searchServices() {
 
             }
 
-            next = next.nextElementSibling;
+            next =
+                next.nextElementSibling;
+
         }
+
 
         title.style.display =
             hasVisibleCard ? "block" : "none";
 
     });
 
+
     document.getElementById("noResult").style.display =
         found === 0 ? "block" : "none";
+
 }
 
 </script>
+
 
 </body>
 </html>
