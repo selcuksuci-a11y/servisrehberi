@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lenovo Tablet Yetkili Servisleri - Briko</title>
+
+<meta name="description"
+content="Lenovo Tablet yetkili servis merkezi. BDH yetkili servis adresi ve iletişim bilgileri.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 16px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.city-title {
+    font-size: 22px;
+    margin: 25px 0 12px;
+    color: #111827;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f7ed;
+    color: #16803c;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.bottom-back {
+    margin-top: 25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Lenovo Tablet Yetkili Servisleri</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+</header>
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+<div class="info">
+
+<strong>Lenovo Tablet Servis Bilgisi</strong>
+
+<p>
+Lenovo Türkiye'nin güncel servis bilgilerine göre
+Legion, Yoga, IdeaPad, IdeaCentre, Tab ve Lenovo V Serisi
+tüketici ürünlerinin yetkili servis hizmeti BDH tarafından
+sağlanmaktadır.
+</p>
+
+<p>
+<strong>Lenovo Çağrı Merkezi:</strong>
+0212 912 01 34
+</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Servis veya şehir ara..."
+onkeyup="searchServices()">
+
+</div>
+
+<h2 class="city-title">📍 İstanbul</h2>
+
+<div class="card service">
+
+<h3>BDH – Bilişim Destek Hizmetleri</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Bağlarbaşı Mahallesi, Cemal Bey Caddesi No:110,
+Maltepe / İstanbul
+</p>
+
+<p>
+<strong>Servis Türü:</strong><br>
+Lenovo Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>Lenovo Çağrı Merkezi:</strong><br>
+0212 912 01 34
+</p>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Destek+Hizmetleri+Bağlarbaşı+Cemal+Bey+Caddesi+No+110+Maltepe+İstanbul"
+target="_blank">
+📍 Haritada Göster
+</a>
+
+</div>
+
+<a class="back bottom-back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+<script>
+
+function searchServices() {
+
+    const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
