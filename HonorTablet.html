@@ -1,1 +1,514 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Honor Tablet Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 18px;
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.info-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-box h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin-top: 28px;
+    margin-bottom: 12px;
+    font-size: 21px;
+    color: #111827;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #dcfce7;
+    color: #166534;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Honor Tablet Yetkili Servisleri</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi - Briko 🦦</p>
+
+</header>
+
+<div class="container">
+
+<a href="index.html" class="back-button">
+← Ana Sayfaya Dön
+</a>
+
+<div class="info-box">
+
+<h2>Honor Tablet Servis Bilgileri</h2>
+
+<p>
+Honor Tablet cihazlarınız için Türkiye'deki yetkili servis noktalarını
+Briko üzerinden şehir bazında bulabilirsiniz.
+</p>
+
+<p>
+<strong>Honor Müşteri Hizmetleri:</strong>
+0850 3 999 777
+</p>
+
+<p>
+Servis bilgileri HONOR Türkiye'nin resmi servis merkezi
+bilgileri esas alınarak hazırlanmıştır.
+</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Şehir veya servis adı ara..."
+onkeyup="searchServices()">
+
+</div>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Kartal</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+Kanat Sanayi Sitesi No:32
+(Titanic Otel Yanı)
+Kartal / İstanbul
+</p>
+
+<p>
+<strong>Servis Türü:</strong> Honor Yetkili Servis Merkezi
+</p>
+
+<p>
+<strong>Telefon:</strong> 0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Kartal+Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yanyol+Cad+No+32+Kartal+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Bakırköy</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Kartaltepe Mah. İncirli Cad.
+İhsan Kalmaz Sokak No:3/1-2
+Bakırköy / İstanbul
+</p>
+
+<p>
+<strong>Servis Türü:</strong> Honor Yetkili Servis Merkezi
+</p>
+
+<p>
+<strong>Telefon:</strong> 0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Bakırköy+Kartaltepe+Mahallesi+İncirli+Cad+İhsan+Kalmaz+Sokak+No+3+Bakırköy+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Ankara</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Kızılay Mah. Fevzi Çakmak 1 Sokak,
+Oran Apt. No:15/B
+Çankaya / Ankara
+</p>
+
+<p>
+<strong>Servis Türü:</strong> Honor Yetkili Servis Merkezi
+</p>
+
+<p>
+<strong>Telefon:</strong> 0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Ankara+Kızılay+Fevzi+Çakmak+1+Sokak+Oran+Apt+No+15+B+Çankaya+Ankara">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Adana</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Reşatbey Mah. Turan Cemal Beriker Bulvarı,
+Günep Panorama B Blok No:8/B
+Seyhan / Adana
+</p>
+
+<p>
+<strong>Servis Türü:</strong> Honor Yetkili Servis Merkezi
+</p>
+
+<p>
+<strong>Telefon:</strong> 0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Adana+Reşatbey+Turan+Cemal+Beriker+Bulvarı+Günep+Panorama+No+8+B+Seyhan+Adana">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Antalya</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Etiler Mah. Adnan Menderes Bulvarı No:67/B
+Muratpaşa / Antalya
+</p>
+
+<p>
+<strong>Servis Türü:</strong> Honor Yetkili Servis Merkezi
+</p>
+
+<p>
+<strong>Telefon:</strong> 0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Antalya+Etiler+Mahallesi+Adnan+Menderes+Bulvarı+No+67+B+Muratpaşa+Antalya">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Trabzon</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Cumhuriyet Mah. Nemlioğlu Cemal Sokak,
+Ziya Bey Sitesi A Blok No:16/1
+Ortahisar / Trabzon
+</p>
+
+<p>
+<strong>Servis Türü:</strong> Honor Yetkili Servis Merkezi
+</p>
+
+<p>
+<strong>Telefon:</strong> 0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Trabzon+Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+No+16+Ortahisar+Trabzon">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="no-result" id="noResult">
+Aramanıza uygun servis bulunamadı.
+</div>
+
+
+<br>
+
+<a href="index.html" class="back-button">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function searchServices() {
+
+    const searchText =
+        document.getElementById("serviceSearch")
+        .value
+        .toLocaleLowerCase("tr-TR")
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    const cities =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText
+            .toLocaleLowerCase("tr-TR");
+
+        if (text.includes(searchText)) {
+
+            card.style.display = "block";
+            found++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    cities.forEach(function(city) {
+
+        let next = city.nextElementSibling;
+        let hasVisibleCard = false;
+
+        while (next) {
+
+            if (next.classList.contains("city-title")) {
+                break;
+            }
+
+            if (
+                next.classList.contains("service-card") &&
+                next.style.display !== "none"
+            ) {
+                hasVisibleCard = true;
+            }
+
+            next = next.nextElementSibling;
+
+        }
+
+        city.style.display =
+            hasVisibleCard ? "block" : "none";
+
+    });
+
+
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
+
+}
+
+</script>
+
+</body>
+
+</html>
