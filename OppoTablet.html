@@ -1,1 +1,925 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>OPPO Tablet Yetkili Servisleri - Briko</title>
+
+<meta name="description"
+content="OPPO Tablet yetkili servisleri. KVK, OUNO ve BDH servis noktaları.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    color: #ccc;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.info strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.search-box {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #111;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f7ec;
+    color: #16803c;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    opacity: 0.85;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>
+OPPO Tablet Yetkili Servisleri
+</h1>
+
+<p>
+Türkiye'nin Teknik Servis Rehberi - Briko 🦦
+</p>
+
+</header>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<strong>
+OPPO Tablet Servis Bilgileri
+</strong>
+
+<p>
+OPPO Tablet cihazlarınız için KVK, OUNO ve BDH
+yetkili servis noktalarını Briko içerisinde bulabilirsiniz.
+</p>
+
+<p>
+Servise gitmeden önce cihazınızın modelini ve garanti
+durumunu servis merkezi ile teyit etmeniz önerilir.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis veya şehir ara..."
+onkeyup="searchServices()"
+>
+
+</div>
+
+
+<div id="services">
+
+
+<!-- ==================== İSTANBUL ==================== -->
+
+<h2 class="city-title">
+İstanbul
+</h2>
+
+
+<!-- KVK KARTAL -->
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis - Kartal
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+Kanat Sanayi Sitesi No:32
+(Titanic Otel Yanı)
+Kartal / İstanbul
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>E-posta:</strong><br>
+musteridestek@kvkteknikservis.com
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yanyol+Cadde+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- KVK BAKIRKÖY -->
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis - Bakırköy
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Kartaltepe Mah. İncirli Cad.
+İhsan Kalmaz Sokak No:3/A
+Bakırköy / İstanbul
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>E-posta:</strong><br>
+musteridestek@kvkteknikservis.com
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Kartaltepe+Mahallesi+İncirli+Caddesi+İhsan+Kalmaz+Sokak+No+3A+Bakırköy+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- OUNO -->
+
+<div class="card service">
+
+<h3>
+OUNO Teknik Servis - Ataşehir
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Küçükbakkalköy Mah.
+Işıklar Caddesi No:15/A
+34750 Ataşehir / İstanbul
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>Teknik Servis:</strong><br>
+0850 502 08 00
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Küçükbakkalköy+Işıklar+Caddesi+No+15A+Ataşehir+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- BDH MERKEZ -->
+
+<div class="card service">
+
+<h3>
+BDH - İstanbul Merkez
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Bağlarbaşı Mahallesi,
+Cemal Bey Caddesi No:110
+34844 Maltepe / İstanbul
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Bağlarbaşı+Mahallesi+Cemal+Bey+Caddesi+No+110+Maltepe+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- BDH FLATOFİS -->
+
+<div class="card service">
+
+<h3>
+BDH - İstanbul Flatofis
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Flatofis,
+Ortakçılar Cad. No:78
+1. Bodrum Kat D Blok No:70
+Eyüp / İstanbul
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Flatofis+Ortakçılar+Caddesi+No+78+Eyüp+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== ANKARA ==================== -->
+
+<h2 class="city-title">
+Ankara
+</h2>
+
+
+<!-- KVK ANKARA -->
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis - Ankara
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+KVK Ankara Teknik Servis
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>E-posta:</strong><br>
+musteridestek@kvkteknikservis.com
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Ankara+Teknik+Servis">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- BDH ANKARA -->
+
+<div class="card service">
+
+<h3>
+BDH - Ankara
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Necatibey Cad. No:55/B
+Çankaya / Ankara
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Necatibey+Caddesi+No+55B+Çankaya+Ankara">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== ADANA ==================== -->
+
+<h2 class="city-title">
+Adana
+</h2>
+
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis - Adana
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+KVK Adana Teknik Servis
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>E-posta:</strong><br>
+musteridestek@kvkteknikservis.com
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Adana+Teknik+Servis">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service">
+
+<h3>
+BDH - Adana
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Mahfesığmaz Mah. 79021 Sk.
+Özden Apartmanı No:15
+Çukurova / Adana
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Mahfesığmaz+Mahallesi+79021+Sokak+Özden+Apartmanı+No+15+Çukurova+Adana">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== ANTALYA ==================== -->
+
+<h2 class="city-title">
+Antalya
+</h2>
+
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis - Antalya
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Etiler Mah. Adnan Menderes Bulvarı No:67/B
+Muratpaşa / Antalya
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>E-posta:</strong><br>
+musteridestek@kvkteknikservis.com
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Etiler+Mahallesi+Adnan+Menderes+Bulvarı+No+67B+Muratpaşa+Antalya">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== TRABZON ==================== -->
+
+<h2 class="city-title">
+Trabzon
+</h2>
+
+
+<div class="card service">
+
+<h3>
+KVK Teknik Servis - Trabzon
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Cumhuriyet Mah. Nemlioğlu Cemal Sokak
+Ziya Bey Sitesi A Blok No:16/1
+Ortahisar / Trabzon
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<p>
+<strong>E-posta:</strong><br>
+musteridestek@kvkteknikservis.com
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16+Trabzon">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service">
+
+<h3>
+BDH - Trabzon
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Yıldızlı Mah. Taşana Küme Evleri
+Yalıpark Sitesi
+Akçaabat / Trabzon
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Yıldızlı+Mahallesi+Taşana+Küme+Evleri+Yalıpark+Sitesi+Akçaabat+Trabzon">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== ERZURUM ==================== -->
+
+<h2 class="city-title">
+Erzurum
+</h2>
+
+
+<div class="card service">
+
+<h3>
+BDH - Erzurum
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Vani Efendi Mah.
+Haşıl Efendi Sk.
+Çağla İş Merkezi Kat:3
+Yakutiye / Erzurum
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Vani+Efendi+Mahallesi+Haşıl+Efendi+Sokak+Çağla+İş+Merkezi+Erzurum">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== İZMİR ==================== -->
+
+<h2 class="city-title">
+İzmir
+</h2>
+
+
+<div class="card service">
+
+<h3>
+BDH - İzmir
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Mansuroğlu Mah.
+288/3 Sok. No:2
+Bayraklı / İzmir
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Mansuroğlu+Mahallesi+288+3+Sokak+No+2+Bayraklı+İzmir">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ==================== KOCAELİ ==================== -->
+
+<h2 class="city-title">
+Kocaeli
+</h2>
+
+
+<div class="card service">
+
+<h3>
+BDH - Kocaeli
+</h3>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<p>
+<strong>Adres:</strong><br>
+Alikahya Mahallesi
+Atatürk Caddesi No:44
+İzmit / Kocaeli
+</p>
+
+<p>
+<strong>Servis:</strong><br>
+OPPO Tablet Yetkili Servis
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Alikahya+Mahallesi+Atatürk+Caddesi+No+44+İzmit+Kocaeli">
+Haritada Göster
+</a>
+
+</div>
+
+
+</div>
+
+
+<div
+class="no-result"
+id="noResult">
+
+Aradığınız servis bulunamadı.
+
+</div>
+
+
+<br>
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi - Briko 🦦
+
+</footer>
+
+
+<script>
+
+function searchServices() {
+
+    const search =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    let found = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+            card.style.display = "block";
+
+            found++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    const cityTitles =
+        document.querySelectorAll(".city-title");
+
+    cityTitles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+
+        let cityHasResult = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                cityHasResult = true;
+
+            }
+
+            next = next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            cityHasResult ? "block" : "none";
+
+    });
+
+
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
+
+}
+
+</script>
+
+</body>
+
+</html>
