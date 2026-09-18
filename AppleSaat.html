@@ -1,1 +1,813 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Apple Watch Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.info h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.info p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.city-title {
+    font-size: 23px;
+    margin: 30px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #e9f7ed;
+    color: #16803c;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.map-button:hover {
+    background: #333;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    color: #777;
+}
+
+.footer-back {
+    margin-top: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .city-title {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1> Apple Watch Yetkili Servisleri</h1>
+
+    <p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+</header>
+
+
+<div class="container">
+
+
+    <a class="back" href="index.html">
+        ← Ana Sayfaya Dön
+    </a>
+
+
+    <div class="info">
+
+        <h2>Apple Watch Servis Bilgileri</h2>
+
+        <p>
+            Apple Watch cihazlarınız için Türkiye'deki
+            yetkili servis noktalarını şehir ve ilçe
+            bazında bulabilirsiniz.
+        </p>
+
+        <p>
+            Apple, Apple Watch için Apple Store veya
+            Apple Yetkili Servis Sağlayıcılarından
+            yüz yüze servis alınabileceğini belirtmektedir.
+        </p>
+
+        <p>
+            Servise gitmeden önce ilgili servis noktasını
+            arayarak Apple Watch hizmeti ve randevu
+            durumunu teyit etmeniz önerilir.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="serviceSearch"
+            placeholder="Servis, şehir veya ilçe ara..."
+            onkeyup="filterServices()"
+        >
+
+    </div>
+
+
+    <div id="noResult" class="no-result">
+
+        Aramanızla eşleşen servis bulunamadı.
+
+    </div>
+
+
+    <!-- ANKARA -->
+
+    <h2 class="city-title">Ankara</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Armada</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Armada AVM 3. Kat No:181,
+            Çankaya / Ankara
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0312 430 56 65
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Armada+Ankara"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Kızılay</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Cumhuriyet Mahallesi,
+            Mithatpaşa Caddesi No:28/28,
+            Kızılay / Ankara
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0312 430 56 65
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Kızılay+Ankara"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- İSTANBUL -->
+
+    <h2 class="city-title">İstanbul</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Erenköy</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Erenköy Mahallesi,
+            Şemsettin Günaltay Caddesi
+            No:213 B/1,
+            Kadıköy / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0216 418 07 00
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Erenköy+Kadıköy+İstanbul"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Şirinevler</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Şirinevler Mahallesi,
+            Adnan Kahveci Bulvarı No:178/A,
+            Bahçelievler / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0212 660 25 02
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Şirinevler+Bahçelievler+İstanbul"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Avcılar</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Merkez Mahallesi,
+            Namık Kemal Caddesi,
+            Spor Sokak No:32 A-B,
+            Avcılar / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0212 660 25 02
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Avcılar+İstanbul"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="card service-card">
+
+        <h3>OUNO</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Küçükbakkalköy,
+            Işıklar Caddesi No:15/B,
+            Ataşehir / İstanbul
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0850 502 08 07
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=OUNO+Küçükbakkalköy+Işıklar+Caddesi+15B+Ataşehir+İstanbul"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- İZMİR -->
+
+    <h2 class="city-title">İzmir</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Karşıyaka</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Tuna Mahallesi,
+            Tiyatro Sokak No:50/A,
+            Karşıyaka / İzmir
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0232 483 40 40
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Karşıyaka+İzmir"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Çankaya</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            İsmet Paşa Mahallesi,
+            Şair Eşref Bulvarı No:18/A,
+            Çankaya / İzmir
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0232 483 40 43
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Çankaya+İzmir"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- ADANA -->
+
+    <h2 class="city-title">Adana</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Reşatbey</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Reşat Bey Mahallesi,
+            Stadyum Caddesi,
+            Reşat Bey Konsept No:41/B,
+            Seyhan / Adana
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0322 457 59 00
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Reşatbey+Adana"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Yeni Baraj</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Yeni Baraj Mahallesi,
+            Şehit Yüzbaşı Bülent Argın Bulvarı,
+            Girman Apartmanı No:36/A,
+            Seyhan / Adana
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0322 457 59 00
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Yeni+Baraj+Adana"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- SAMSUN -->
+
+    <h2 class="city-title">Samsun</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Samsun</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Saitbey Mahallesi,
+            100. Yıl Bulvarı No:103/8,
+            İlkadım / Samsun
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0362 431 64 11
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Samsun"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- ERZURUM -->
+
+    <h2 class="city-title">Erzurum</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Erzurum</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Muratpaşa Mahallesi,
+            İsmetpaşa Caddesi,
+            Akgün Apartmanı Site Zemin Kat No:26/1,
+            Yakutiye / Erzurum
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0442 235 32 32
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Erzurum"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <!-- DİYARBAKIR -->
+
+    <h2 class="city-title">Diyarbakır</h2>
+
+
+    <div class="card service-card">
+
+        <h3>Başarı Teknik Servis - Diyarbakır</h3>
+
+        <p>
+            <strong>Adres:</strong>
+            Dicle Kent Mahallesi,
+            Kayapınar Caddesi,
+            Batı Hastane Karşısı,
+            Raman 2 Sitesi D Blok No:61/DE,
+            Kayapınar / Diyarbakır
+        </p>
+
+        <p>
+            <strong>Telefon:</strong>
+            0412 229 67 00
+        </p>
+
+        <span class="badge">
+            ✓ Yetkili Servis
+        </span>
+
+        <br>
+
+        <a
+            class="map-button"
+            target="_blank"
+            href="https://www.google.com/maps/search/?api=1&query=Başarı+Teknik+Servis+Diyarbakır"
+        >
+            📍 Haritada Göster
+        </a>
+
+    </div>
+
+
+    <div class="footer-back">
+
+        <a class="back" href="index.html">
+            ← Ana Sayfaya Dön
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<footer>
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const input =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    const cityTitles =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            card.style.display = "block";
+
+            found++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    cityTitles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+        let hasVisibleCard = false;
+
+        while (next) {
+
+            if (next.classList.contains("city-title")) {
+                break;
+            }
+
+            if (
+                next.classList.contains("service-card") &&
+                next.style.display !== "none"
+            ) {
+                hasVisibleCard = true;
+            }
+
+            next = next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            hasVisibleCard ? "block" : "none";
+
+    });
+
+
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
