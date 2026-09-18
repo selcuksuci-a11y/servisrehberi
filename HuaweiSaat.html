@@ -1,1 +1,536 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Huawei Watch Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+header p {
+    margin: 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin: 5px 0 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    border-left: 5px solid #111827;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+    font-size: 22px;
+}
+
+.service {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.service h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.service p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #217a35;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #777;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .city-title {
+        font-size: 20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>Huawei Watch Yetkili Servisleri</h1>
+
+<p>Türkiye genelindeki Huawei Watch servis noktaları - Briko</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<strong>Huawei Watch Servis Bilgisi</strong><br><br>
+
+Huawei'nin Türkiye resmi destek sisteminde
+<strong>Akıllı Saat</strong> ürünleri için servis merkezi hizmeti bulunmaktadır.
+
+<br><br>
+
+Bu sayfada Huawei için hizmet veren
+<strong>KVK Yetkili Servis noktaları</strong> yer almaktadır.
+
+<br><br>
+
+Servis bilgileri Huawei Türkiye ve KVK'nın resmi servis
+bilgileri esas alınarak hazırlanmıştır.
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis, şehir veya ilçe ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+
+<div class="service">
+
+<h3>KVK Teknik Servis Kartal</h3>
+
+<p>
+📍 Soğanlık Yeni Mahallesi,
+D-100 Kuzey Yanyol Caddesi,
+Kanat Sanayi Sitesi No: 32
+(Titanik Otel Yanı)
+Kartal / İstanbul
+</p>
+
+<p>
+🔧 Huawei Yetkili Servis Sağlayıcısı
+</p>
+
+<p>
+🕐 Çalışma Saatleri: 08:30 - 18:00
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Kartal+Soğanlık+Yeni+Mahallesi">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+
+<div class="service">
+
+<h3>KVK Teknik Servis Ankara</h3>
+
+<p>
+📍 Kızılay Mahallesi,
+Fevzi Çakmak 1 Sokak,
+Oran Apartmanı No: 15/B,
+06420 Çankaya / Ankara
+</p>
+
+<p>
+🔧 Huawei Yetkili Servis Sağlayıcısı
+</p>
+
+<p>
+🕐 Çalışma Saatleri: 08:30 - 18:00
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara+Kızılay+Fevzi+Çakmak+1+Sokak">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+
+<div class="service">
+
+<h3>KVK Teknik Servis Merkezi Adana</h3>
+
+<p>
+📍 Reşatbey Mahallesi,
+Turan Cemal Beriker Bulvarı,
+Güneş Panorama İş Merkezi A3 Dükkan,
+Seyhan / Adana
+</p>
+
+<p>
+🔧 Huawei Yetkili Servis Sağlayıcısı
+</p>
+
+<p>
+🕐 Çalışma Saatleri: 08:30 - 18:00
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Merkezi+Adana+Reşatbey">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+
+<div class="service">
+
+<h3>KVK Teknik Servis Merkezi Antalya</h3>
+
+<p>
+📍 Etiler Mahallesi,
+Adnan Menderes Bulvarı No: 67-B,
+07040 Muratpaşa / Antalya
+</p>
+
+<p>
+🔧 Huawei Yetkili Servis Sağlayıcısı
+</p>
+
+<p>
+🕐 Çalışma Saatleri: 08:30 - 18:00
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Merkezi+Antalya+Etiler+Mahallesi">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+
+<div class="service">
+
+<h3>KVK Teknik Servis Merkezi Trabzon</h3>
+
+<p>
+📍 Cumhuriyet Bulvarı,
+Nemlioğlu Cemal Sokak,
+Ziya Bey Sitesi A Blok No: 16/1,
+61050 Trabzon
+</p>
+
+<p>
+🔧 Huawei Yetkili Servis Sağlayıcısı
+</p>
+
+<p>
+🕐 Çalışma Saatleri: 08:30 - 18:00
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Merkezi+Trabzon+Cumhuriyet+Bulvarı">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+
+<div
+class="no-result"
+id="noResult">
+
+Aramanızla eşleşen servis bulunamadı.
+
+</div>
+
+
+<br>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const input =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    const cities =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            service.style.display = "block";
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+
+    cities.forEach(function(city) {
+
+        let next =
+            city.nextElementSibling;
+
+        let hasService = false;
+
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                hasService = true;
+
+            }
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        city.style.display =
+            hasService ? "block" : "none";
+
+    });
+
+
+    document.getElementById("noResult").style.display =
+        found === 0 ? "block" : "none";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
