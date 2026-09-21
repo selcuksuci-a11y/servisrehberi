@@ -1,1 +1,531 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>HONOR Watch Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 10px 15px;
+    background: white;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.back:hover {
+    background: #eef0f3;
+}
+
+.info {
+    background: white;
+    border-left: 5px solid #111827;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.info strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.search-box {
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #111827;
+}
+
+.city-title {
+    margin: 25px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+    font-size: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f7ed;
+    color: #18743a;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #374151;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>HONOR Watch Yetkili Servisleri</h1>
+
+<p>HONOR Akıllı Saat Yetkili Servis Noktaları - Briko</p>
+
+</header>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<strong>HONOR Watch Servis Bilgileri</strong>
+
+HONOR akıllı saat ve giyilebilir ürünleriniz için
+Türkiye'deki yetkili servis noktaları.
+
+<br><br>
+
+<strong>HONOR Destek Hattı:</strong>
+
+0850 3 999 777
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis, şehir veya ilçe ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+
+<div class="card service">
+
+<h3>KVK Teknik Servis - Kartal</h3>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<p>
+<strong>Adres:</strong><br>
+Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+Kanat Sanayi Sitesi No:32
+<br>
+Kartal / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0 850 222 15 85
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Kartal+Soğanlık+Yeni+Mah+D-100+Kuzey+Yanyol+Cad+Kanat+Sanayi+Sitesi+No+32+İstanbul">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+<div class="card service">
+
+<h3>KVK Teknik Servis - Bakırköy</h3>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<p>
+<strong>Adres:</strong><br>
+Kartaltepe Mah. İncirli Cad.
+İhsan Kalmaz Sokak No:3/1-2
+<br>
+Bakırköy / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0 850 222 15 85
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Bakırköy+Kartaltepe+Mah+İncirli+Cad+İhsan+Kalmaz+Sokak+No+3+1-2+İstanbul">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+
+<div class="card service">
+
+<h3>KVK Teknik Servis - Ankara</h3>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<p>
+<strong>Adres:</strong><br>
+Kızılay Mah. Fevzi Çakmak 1 Sokak,
+Oran Apt. No:15/B
+<br>
+Çankaya / Ankara
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0 850 222 15 85
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara+Kızılay+Mah+Fevzi+Çakmak+1+Sokak+Oran+Apt+No+15B+Çankaya+Ankara">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+
+<div class="card service">
+
+<h3>KVK Teknik Servis - Adana</h3>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<p>
+<strong>Adres:</strong><br>
+Reşatbey Mah. Turan Cemal Beriker Bulvarı
+Günep Panorama B Blok No:8
+<br>
+Seyhan / Adana
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0 850 222 15 85
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Adana+Reşatbey+Mah+Turan+Cemal+Beriker+Bulvarı+Günep+Panorama+B+Blok+No+8+Seyhan+Adana">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+
+<div class="card service">
+
+<h3>KVK Teknik Servis - Antalya</h3>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<p>
+<strong>Adres:</strong><br>
+Etiler Mah. Adnan Menderes Bulvarı No:67-B
+<br>
+Muratpaşa / Antalya
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0 850 222 15 85
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Antalya+Etiler+Mah+Adnan+Menderes+Bulvarı+No+67B+Muratpaşa+Antalya">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+
+<div class="card service">
+
+<h3>KVK Teknik Servis - Trabzon</h3>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<p>
+<strong>Adres:</strong><br>
+Cumhuriyet Mah. Nemlioğlu Cemal Sokak
+Ziya Bey Sitesi A Blok No:16/1
+<br>
+Ortahisar / Trabzon
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0 850 222 15 85
+</p>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Trabzon+Cumhuriyet+Mah+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16+1+Ortahisar+Trabzon">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+<div class="no-result" id="noResult">
+
+Aradığınız servis veya şehir bulunamadı.
+
+</div>
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const search =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    const cityTitles =
+        document.querySelectorAll(".city-title");
+
+    let visible = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+            card.style.display = "block";
+            visible++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    cityTitles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+        let hasVisibleCard = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service") &&
+                next.style.display !== "none"
+            ) {
+
+                hasVisibleCard = true;
+
+            }
+
+            next = next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            hasVisibleCard ? "block" : "none";
+
+    });
+
+
+    const noResult =
+        document.getElementById("noResult");
+
+    if (visible === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
