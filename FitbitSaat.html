@@ -1,1 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Fitbit Watch Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    line-height: 1.6;
+}
+
+.info strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.city-title {
+    font-size: 22px;
+    margin: 25px 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #ddd;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f7ee;
+    color: #147a3d;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.map-button:hover {
+    opacity: 0.9;
+}
+
+.hidden {
+    display: none;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    color: #666;
+    margin-top: 15px;
+}
+
+footer {
+    margin-top: 35px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>Fitbit Watch Yetkili Servisleri</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<strong>Fitbit Watch Servis Bilgileri</strong>
+
+Fitbit akıllı saat ve takip cihazları için yetkili teknik
+servis bilgilerini Briko üzerinden bulabilirsiniz.
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis ara..."
+onkeyup="filterServices()">
+
+<input
+type="text"
+id="citySearch"
+placeholder="Şehir ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<div id="serviceList">
+
+
+<h2 class="city-title">İzmir</h2>
+
+
+<div class="card service-card">
+
+<h3>Providyo Yetkili Teknik Servis</h3>
+
+<p>
+<strong>Servis Türü:</strong><br>
+Fitbit Yetkili Teknik Servis
+</p>
+
+<p>
+<strong>Adres:</strong><br>
+Halkapınar Mahallesi 1202 Sokak No:89
+<br>
+Konak / İzmir
+</p>
+
+<p>
+<strong>Telefon:</strong><br>
+0850 808 03 54
+</p>
+
+<p>
+<strong>WhatsApp:</strong><br>
+0538 083 64 38
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Providyo+Halkapınar+Mahallesi+1202+Sokak+No+89+Konak+İzmir">
+
+Haritada Göster
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div
+id="noResult"
+class="no-result">
+
+Aradığınız servis veya şehir bulunamadı.
+
+</div>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceInput =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cityInput =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    const cityTitles =
+        document.querySelectorAll(".city-title");
+
+    let visibleCount = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        const serviceMatch =
+            serviceInput === "" ||
+            text.includes(serviceInput);
+
+        const cityMatch =
+            cityInput === "" ||
+            text.includes(cityInput);
+
+        if (serviceMatch && cityMatch) {
+
+            card.classList.remove("hidden");
+
+            visibleCount++;
+
+        } else {
+
+            card.classList.add("hidden");
+
+        }
+
+    });
+
+
+    cityTitles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+        let hasVisibleCard = false;
+
+        while (next) {
+
+            if (next.classList &&
+                next.classList.contains("city-title")) {
+
+                break;
+            }
+
+            if (next.classList &&
+                next.classList.contains("service-card") &&
+                !next.classList.contains("hidden")) {
+
+                hasVisibleCard = true;
+
+            }
+
+            next = next.nextElementSibling;
+
+        }
+
+        if (hasVisibleCard) {
+
+            title.style.display = "block";
+
+        } else {
+
+            title.style.display = "none";
+
+        }
+
+    });
+
+
+    const noResult =
+        document.getElementById("noResult");
+
+    if (visibleCount === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
