@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 
@@ -68,6 +67,10 @@ header p {
     font-size: 21px;
 }
 
+.info p {
+    line-height: 1.6;
+}
+
 .search-box {
     background: white;
     padding: 15px;
@@ -78,7 +81,7 @@ header p {
 
 .search-box input {
     width: 100%;
-    padding: 12px;
+    padding: 13px;
     border: 1px solid #ccc;
     border-radius: 7px;
     font-size: 16px;
@@ -86,7 +89,7 @@ header p {
 
 .city-title {
     font-size: 22px;
-    margin: 25px 0 12px;
+    margin: 28px 0 12px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 8px;
 }
@@ -101,11 +104,12 @@ header p {
 
 .card h3 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    font-size: 19px;
 }
 
 .card p {
-    margin: 7px 0;
+    margin: 8px 0;
     line-height: 1.5;
 }
 
@@ -113,7 +117,7 @@ header p {
     display: inline-block;
     background: #e8f5e9;
     color: #187a2f;
-    padding: 5px 9px;
+    padding: 6px 10px;
     border-radius: 5px;
     font-size: 13px;
     font-weight: bold;
@@ -123,19 +127,24 @@ header p {
 .map-button {
     display: inline-block;
     margin-top: 12px;
-    padding: 9px 14px;
+    padding: 10px 15px;
     background: #111827;
     color: white;
     text-decoration: none;
     border-radius: 6px;
 }
 
+.map-button:hover {
+    opacity: 0.9;
+}
+
 .no-result {
     display: none;
     background: white;
-    padding: 18px;
+    padding: 20px;
     border-radius: 10px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 footer {
@@ -151,7 +160,9 @@ footer {
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -164,6 +175,7 @@ footer {
 
 <div class="container">
 
+
 <a href="index.html" class="back">
 ← Ana Sayfaya Dön
 </a>
@@ -174,8 +186,14 @@ footer {
 <h2>HONOR Akıllı Bileklik Yetkili Servisleri</h2>
 
 <p>
-HONOR Akıllı Bileklik için Türkiye'deki yetkili servis noktalarını
-şehir ve servis bilgileriyle birlikte bulabilirsiniz.
+HONOR Akıllı Bileklik kullanıcıları için Türkiye'deki
+HONOR yetkili servis noktalarını şehir bazında
+bulabilirsiniz.
+</p>
+
+<p>
+Servis adresleri HONOR Türkiye'nin yayınladığı
+yetkili servis bilgileri esas alınarak hazırlanmıştır.
 </p>
 
 </div>
@@ -186,7 +204,7 @@ HONOR Akıllı Bileklik için Türkiye'deki yetkili servis noktalarını
 <input
 type="text"
 id="serviceSearch"
-placeholder="Servis veya şehir ara..."
+placeholder="Servis, şehir veya ilçe ara..."
 onkeyup="searchServices()">
 
 </div>
@@ -195,39 +213,26 @@ onkeyup="searchServices()">
 <div id="serviceList">
 
 
-<h2 class="city-title">Ankara</h2>
-
-<div class="card service">
-
-<h3>HONOR Yetkili Servis</h3>
-
-<p><strong>Adres:</strong> Ankara</p>
-
-<p><strong>Telefon:</strong> Yetkili servis iletişim bilgisi için servis merkezinden bilgi alınız.</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<br>
-
-<a
-class="map-button"
-href="https://www.google.com/maps/search/?api=1&query=HONOR+yetkili+servis+Ankara"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
+<!-- İSTANBUL -->
 
 <h2 class="city-title">İstanbul</h2>
 
+
 <div class="card service">
 
-<h3>HONOR Yetkili Servis</h3>
+<h3>HONOR Yetkili Servis Merkezi KVK İstanbul</h3>
 
-<p><strong>Adres:</strong> İstanbul</p>
+<p>
+<strong>Adres:</strong><br>
+Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
+Kanat Sanayi Sitesi No:32
+Kartal / İstanbul
+</p>
 
-<p><strong>Telefon:</strong> Yetkili servis iletişim bilgisi için servis merkezinden bilgi alınız.</p>
+<p>
+<strong>Telefon:</strong>
+0850 222 1 585
+</p>
 
 <span class="badge">✓ Yetkili Servis</span>
 
@@ -235,23 +240,308 @@ Haritada Göster
 
 <a
 class="map-button"
-href="https://www.google.com/maps/search/?api=1&query=HONOR+yetkili+servis+Istanbul"
+href="https://maps.app.goo.gl/NiLjx4jaXnab2SbG6"
 target="_blank">
 Haritada Göster
 </a>
 
 </div>
 
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis Merkezi KVK Bakırköy</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Kartaltepe Mah. İncirli Cad.
+İhsan Kalmaz Sokak No:3/1-2
+Bakırköy / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://maps.app.goo.gl/bmosimt2Pit3qNz58"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis Merkezi KVK Ankara</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Kızılay Mah. Fevzi Çakmak 1 Sokak
+Oran Apt. No:15/B
+Çankaya / Ankara
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://maps.app.goo.gl/3S4q1ECeWjqYPt6dA"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">Adana</h2>
+
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis Merkezi KVK Adana</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Reşatbey Mah. Turan Cemal Beriker Bulvarı
+Günep Panorama B Blok No:8/B
+Seyhan / Adana
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://maps.app.goo.gl/qVSuT8RiVbozKVkCA"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis Merkezi KVK Antalya</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Etiler Mah. Adnan Menderes Bulvarı No:67/B
+Muratpaşa / Antalya
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://maps.app.goo.gl/jvK1xkizmL2t4Eng7"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">Trabzon</h2>
+
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis Merkezi KVK Trabzon</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Cumhuriyet Mah. Nemlioğlu Cemal Sokak
+Ziya Bey Sitesi A Blok No:16/1
+Ortahisar / Trabzon
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 222 1 585
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://maps.app.goo.gl/9xM2bSbP1FURtqNt7"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- FIXSMART ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+
+<div class="card service">
+
+<h3>FixSmart HONOR Yetkili Servis Merkezi Ankara - Kızılay</h3>
+
+<p>
+<strong>Adres:</strong><br>
+GMK Bulvarı No:23/B
+Kızılay, Çankaya / Ankara
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 811 66 00
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=FixSmart+HONOR+Ankara+Kizilay"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- FIXSMART İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+
+<div class="card service">
+
+<h3>FixSmart HONOR Yetkili Servis Merkezi İstanbul - Merter</h3>
+
+<p>
+<strong>Adres:</strong><br>
+General Ali Rıza Gürcan Cad.
+Alparslan İş Merkezi No:29 / Z1
+Güngören / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 811 66 00
+</p>
+
+<p>
+<strong>Not:</strong>
+Tüm Türkiye'den kargo ile gönderim kabul edilmektedir.
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=FixSmart+HONOR+Merter+Istanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service">
+
+<h3>FixSmart HONOR Yetkili Servis Merkezi İstanbul - Merter 2</h3>
+
+<p>
+<strong>Adres:</strong><br>
+General Ali Rıza Gürcan Cad.
+Alparslan İş Merkezi No:27 / B
+Güngören / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 811 66 00
+</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=FixSmart+HONOR+Merter+2+Istanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- FIXSMART İZMİR -->
 
 <h2 class="city-title">İzmir</h2>
 
+
 <div class="card service">
 
-<h3>HONOR Yetkili Servis</h3>
+<h3>FixSmart HONOR Yetkili Servis Merkezi İzmir - MaviBahçe</h3>
 
-<p><strong>Adres:</strong> İzmir</p>
+<p>
+<strong>Adres:</strong><br>
+Mavişehir Mah. Caher Dudayev Bulvarı No:40
+MaviBahçe AVM A-Blok
+Zemin Kat No:Z08
+Karşıyaka / İzmir
+</p>
 
-<p><strong>Telefon:</strong> Yetkili servis iletişim bilgisi için servis merkezinden bilgi alınız.</p>
+<p>
+<strong>Telefon:</strong>
+0850 811 66 00
+</p>
 
 <span class="badge">✓ Yetkili Servis</span>
 
@@ -259,28 +549,32 @@ Haritada Göster
 
 <a
 class="map-button"
-href="https://www.google.com/maps/search/?api=1&query=HONOR+yetkili+servis+Izmir"
+href="https://www.google.com/maps/search/?api=1&query=FixSmart+HONOR+MaviBahce+Izmir"
 target="_blank">
 Haritada Göster
 </a>
 
 </div>
+
 
 </div>
 
 
 <div id="noResult" class="no-result">
 
-Servis bulunamadı.
+<strong>Servis bulunamadı.</strong><br>
+Lütfen şehir, ilçe veya servis adını kontrol edin.
 
 </div>
 
 
 <br>
 
+
 <a href="index.html" class="back">
 ← Ana Sayfaya Dön
 </a>
+
 
 </div>
 
@@ -297,9 +591,11 @@ Türkiye'nin Teknik Servis Rehberi © 2026
 function searchServices() {
 
     const input =
-        document.getElementById("serviceSearch")
+        document
+        .getElementById("serviceSearch")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
     const services =
         document.querySelectorAll(".service");
@@ -308,6 +604,7 @@ function searchServices() {
         document.querySelectorAll(".city-title");
 
     let found = 0;
+
 
     services.forEach(function(service) {
 
@@ -331,22 +628,38 @@ function searchServices() {
 
     cityTitles.forEach(function(title) {
 
-        const next = title.nextElementSibling;
+        let next = title.nextElementSibling;
+        let visibleService = false;
 
-        if (
-            next &&
-            next.classList.contains("service")
-        ) {
+        while (next) {
 
-            if (next.style.display === "none") {
+            if (next.classList &&
+                next.classList.contains("city-title")) {
 
-                title.style.display = "none";
+                break;
+            }
 
-            } else {
+            if (next.classList &&
+                next.classList.contains("service")) {
 
-                title.style.display = "block";
+                if (next.style.display !== "none") {
+                    visibleService = true;
+                }
 
             }
+
+            next = next.nextElementSibling;
+        }
+
+
+        if (input === "") {
+
+            title.style.display = "block";
+
+        } else {
+
+            title.style.display =
+                visibleService ? "block" : "none";
 
         }
 
@@ -355,17 +668,22 @@ function searchServices() {
 
     if (found === 0) {
 
-        document.getElementById("noResult").style.display = "block";
+        document
+        .getElementById("noResult")
+        .style.display = "block";
 
     } else {
 
-        document.getElementById("noResult").style.display = "none";
+        document
+        .getElementById("noResult")
+        .style.display = "none";
 
     }
 
 }
 
 </script>
+
 
 </body>
 
