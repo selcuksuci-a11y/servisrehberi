@@ -1,1 +1,286 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Polar Akıllı Bileklik Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 17px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.city-title {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    line-height: 1.6;
+    margin: 7px 0;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f7ed;
+    color: #16743b;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+}
+
+.hidden {
+    display: none;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 Briko</p>
+
+</header>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>POLAR Akıllı Bileklik Yetkili Servisleri</h2>
+
+<p>
+POLAR akıllı bileklik ve giyilebilir ürünleriniz için
+Türkiye'deki yetkili servis bilgilerini burada bulabilirsiniz.
+</p>
+
+<p>
+Servise göndermeden önce ürün modelinizi ve garanti durumunuzu
+kontrol etmeniz önerilir.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis veya şehir ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<h2 class="city-title">İstanbul</h2>
+
+
+<div class="card service">
+
+<h3>Finspor Dış Ticaret Ltd. Şti.</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Nüzhetiye Cad. No:42/D<br>
+Beşiktaş / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0 212 259 70 57
+</p>
+
+<p>
+<strong>Servis Türü:</strong>
+POLAR Yetkili Servis / Onarım
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="map-button"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Finspor+Nüzhetiye+Cad.+No%3A42%2FD+Beşiktaş+İstanbul">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="info">
+
+<h3>POLAR Destek</h3>
+
+<p>
+Polar ürünleriyle ilgili destek, onarım ve ürün bilgilerine
+Polar Türkiye destek sayfasından ulaşabilirsiniz.
+</p>
+
+</div>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const search =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+
+            service.classList.remove("hidden");
+
+        } else {
+
+            service.classList.add("hidden");
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
