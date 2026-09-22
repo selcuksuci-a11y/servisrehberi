@@ -62,20 +62,12 @@ header p {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.info strong {
-    color: #111827;
-}
-
 .search-box {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
     margin-bottom: 25px;
 }
 
 .search-box input {
-    flex: 1;
-    min-width: 220px;
+    width: 100%;
     padding: 13px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -118,10 +110,6 @@ header p {
     font-size: 13px;
     font-weight: bold;
     margin-top: 8px;
-}
-
-.phone {
-    font-weight: bold;
 }
 
 .map-button {
@@ -192,11 +180,6 @@ HONOR Türkiye destek hattı:
 <strong>0850 3 999 777</strong>
 </p>
 
-<p>
-<strong>Destek saatleri:</strong>
-Pazartesi-Cuma 09:00-20:00
-</p>
-
 </div>
 
 
@@ -214,24 +197,17 @@ onkeyup="filterServices()">
 <div id="services">
 
 
-<!-- İSTANBUL KARTAL -->
-
 <h2 class="city-title">İstanbul</h2>
 
 <div class="card service">
 
-<h3>HONOR Yetkili Servis Merkezi KVK Kartal</h3>
+<h3>KVK Teknik Servis - Kartal</h3>
 
 <p>
 <strong>Adres:</strong><br>
 Soğanlık Yeni Mah. D-100 Kuzey Yanyol Cad.
 Kanat Sanayi Sitesi No:32
-(Titanic Otel Yanı)
 Kartal / İstanbul
-</p>
-
-<p class="phone">
-☎ 0850 222 1 585
 </p>
 
 <span class="badge">
@@ -243,18 +219,16 @@ Kartal / İstanbul
 <a
 class="map-button"
 target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mah+D-100+Kuzey+Yanyol+Cad+Kanat+Sanayi+Sitesi+No+32+Kartal+İstanbul">
+href="https://www.google.com/maps/search/?api=1&query=KVK+Kartal+İstanbul">
 📍 Haritada Göster
 </a>
 
 </div>
 
 
-<!-- İSTANBUL BAKIRKÖY -->
-
 <div class="card service">
 
-<h3>HONOR Yetkili Servis Merkezi KVK Bakırköy</h3>
+<h3>KVK Teknik Servis - Bakırköy</h3>
 
 <p>
 <strong>Adres:</strong><br>
@@ -263,10 +237,6 @@ Kartaltepe Mah. İncirli Cad.
 Bakırköy / İstanbul
 </p>
 
-<p class="phone">
-☎ 0850 222 1 585
-</p>
-
 <span class="badge">
 ✓ Yetkili Servis
 </span>
@@ -276,30 +246,24 @@ Bakırköy / İstanbul
 <a
 class="map-button"
 target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Kartaltepe+Mah+İncirli+Cad+İhsan+Kalmaz+Sokak+No+3%2F1-2+Bakırköy+İstanbul">
+href="https://www.google.com/maps/search/?api=1&query=KVK+Bakırköy+İstanbul">
 📍 Haritada Göster
 </a>
 
 </div>
 
-
-<!-- ANKARA -->
 
 <h2 class="city-title">Ankara</h2>
 
 <div class="card service">
 
-<h3>HONOR Yetkili Servis Merkezi KVK Ankara</h3>
+<h3>KVK Teknik Servis - Ankara</h3>
 
 <p>
 <strong>Adres:</strong><br>
 Kızılay Mah. Fevzi Çakmak 1 Sokak,
-Oran Apt. No:15/B
+Oran Apartmanı No:15/B
 Çankaya / Ankara
-</p>
-
-<p class="phone">
-☎ 0850 222 1 585
 </p>
 
 <span class="badge">
@@ -311,20 +275,18 @@ Oran Apt. No:15/B
 <a
 class="map-button"
 target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Kızılay+Mah+Fevzi+Çakmak+1+Sokak+Oran+Apt+No+15%2FB+Çankaya+Ankara">
+href="https://www.google.com/maps/search/?api=1&query=KVK+Kızılay+Ankara">
 📍 Haritada Göster
 </a>
 
 </div>
 
 
-<!-- ADANA -->
-
 <h2 class="city-title">Adana</h2>
 
 <div class="card service">
 
-<h3>HONOR Yetkili Servis Merkezi KVK Adana</h3>
+<h3>KVK Teknik Servis - Adana</h3>
 
 <p>
 <strong>Adres:</strong><br>
@@ -333,10 +295,6 @@ Günep Panorama B Blok No:8
 Seyhan / Adana
 </p>
 
-<p class="phone">
-☎ 0850 222 1 585
-</p>
-
 <span class="badge">
 ✓ Yetkili Servis
 </span>
@@ -346,29 +304,23 @@ Seyhan / Adana
 <a
 class="map-button"
 target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Reşatbey+Mah+Turhan+Cemal+Beriker+Bulvarı+Günep+Panorama+B+Blok+No+8+Seyhan+Adana">
+href="https://www.google.com/maps/search/?api=1&query=KVK+Adana+Seyhan">
 📍 Haritada Göster
 </a>
 
 </div>
 
-
-<!-- ANTALYA -->
 
 <h2 class="city-title">Antalya</h2>
 
 <div class="card service">
 
-<h3>HONOR Yetkili Servis Merkezi KVK Antalya</h3>
+<h3>KVK Teknik Servis - Antalya</h3>
 
 <p>
 <strong>Adres:</strong><br>
 Etiler Mah. Adnan Menderes Bulvarı No:67-B
-07040 Muratpaşa / Antalya
-</p>
-
-<p class="phone">
-☎ 0850 222 1 585
+Muratpaşa / Antalya
 </p>
 
 <span class="badge">
@@ -380,20 +332,18 @@ Etiler Mah. Adnan Menderes Bulvarı No:67-B
 <a
 class="map-button"
 target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Etiler+Mah+Adnan+Menderes+Bulvarı+No+67-B+Muratpaşa+Antalya">
+href="https://www.google.com/maps/search/?api=1&query=KVK+Antalya+Muratpaşa">
 📍 Haritada Göster
 </a>
 
 </div>
 
 
-<!-- TRABZON -->
-
 <h2 class="city-title">Trabzon</h2>
 
 <div class="card service">
 
-<h3>HONOR Yetkili Servis Merkezi KVK Trabzon</h3>
+<h3>KVK Teknik Servis - Trabzon</h3>
 
 <p>
 <strong>Adres:</strong><br>
@@ -402,10 +352,6 @@ Ziya Bey Sitesi A Blok No:16/1
 Ortahisar / Trabzon
 </p>
 
-<p class="phone">
-☎ 0850 222 1 585
-</p>
-
 <span class="badge">
 ✓ Yetkili Servis
 </span>
@@ -415,7 +361,7 @@ Ortahisar / Trabzon
 <a
 class="map-button"
 target="_blank"
-href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+A+Blok+No+16%2F1+Ortahisar+Trabzon">
+href="https://www.google.com/maps/search/?api=1&query=KVK+Trabzon+Ortahisar">
 📍 Haritada Göster
 </a>
 
@@ -490,9 +436,7 @@ function filterServices() {
                 next.classList.contains("service") &&
                 next.style.display !== "none"
             ) {
-
                 visible = true;
-
             }
 
             next = next.nextElementSibling;
