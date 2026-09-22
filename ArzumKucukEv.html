@@ -1,1 +1,293 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Arzum Küçük Ev Aletleri Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #172033;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #172033;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back:hover {
+    text-decoration: underline;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.info h2 {
+    margin-top: 0;
+    color: #172033;
+}
+
+.search-box {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.search-box h2 {
+    margin-top: 0;
+    color: #172033;
+}
+
+.search-box p {
+    line-height: 1.6;
+}
+
+select {
+    width: 100%;
+    max-width: 500px;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background: white;
+}
+
+.service-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 25px;
+    background: #172033;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.service-button:hover {
+    background: #263653;
+}
+
+.note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f0f3f7;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Arzum Küçük Ev Aletleri Servisleri</h1>
+
+<p>🦦 Briko - Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>Arzum Küçük Ev Aletleri</h2>
+
+<p>
+Arzum küçük ev aletleriniz için yetkili servis
+bilgilerine Briko üzerinden kolayca ulaşabilirsiniz.
+</p>
+
+<p>
+Bulunduğunuz şehri seçerek Arzum'un güncel yetkili
+servis bilgilerine ulaşabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<h2>🔎 Yetkili Servis Bul</h2>
+
+<p>
+Bulunduğunuz şehri seçin ve Arzum'un resmi yetkili
+servis arama sayfasına geçin.
+</p>
+
+
+<select id="city">
+
+<option value="">
+Şehir Seçiniz
+</option>
+
+<option>Ankara</option>
+<option>Adana</option>
+<option>Antalya</option>
+<option>Balıkesir</option>
+<option>Bursa</option>
+<option>Çanakkale</option>
+<option>Denizli</option>
+<option>Diyarbakır</option>
+<option>Erzurum</option>
+<option>Eskişehir</option>
+<option>Gaziantep</option>
+<option>Hatay</option>
+<option>Mersin</option>
+<option>İstanbul</option>
+<option>İzmir</option>
+<option>Kayseri</option>
+<option>Kocaeli</option>
+<option>Konya</option>
+<option>Malatya</option>
+<option>Manisa</option>
+<option>Muğla</option>
+<option>Sakarya</option>
+<option>Samsun</option>
+<option>Şanlıurfa</option>
+<option>Tekirdağ</option>
+<option>Trabzon</option>
+<option>Van</option>
+<option>Diğer</option>
+
+</select>
+
+
+<br>
+
+
+<button class="service-button"
+onclick="findService()">
+
+🔎 Yetkili Servis Bul
+
+</button>
+
+
+<div class="note">
+
+<strong>ℹ️ Bilgi</strong><br><br>
+
+Servis adresleri ve iletişim bilgileri değişebileceği
+için güncel yetkili servis bilgileri Arzum'un resmi
+servis bulucu sayfasından görüntülenir.
+
+</div>
+
+</div>
+
+
+<br>
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function findService() {
+
+    const city = document.getElementById("city").value;
+
+    if (city === "") {
+
+        alert("Lütfen şehir seçiniz.");
+
+        return;
+
+    }
+
+    window.open(
+        "https://www.arzum.com.tr/yetkili-servisler",
+        "_blank"
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
