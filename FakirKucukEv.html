@@ -1,1 +1,297 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Fakir Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info strong {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.city-title {
+    font-size: 22px;
+    margin: 25px 0 12px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.map-button:hover {
+    opacity: 0.85;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Fakir Yetkili Servisleri</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+</header>
+
+
+<div class="container">
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<strong>Fakir Yetkili Servisleri</strong>
+
+<p>
+Fakir küçük ev aletleri için yetkili servis noktalarını
+şehir ve ilçe bazında kolayca bulabilirsiniz.
+</p>
+
+</div>
+
+
+<input
+type="text"
+id="serviceSearch"
+class="search-box"
+placeholder="Servis veya şehir ara..."
+onkeyup="searchServices()"
+>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+<div class="card service">
+
+<h3>Fakir Yetkili Servis</h3>
+
+<p><strong>Adres:</strong> Servis bilgisi eklenecek</p>
+
+<p><strong>Telefon:</strong> Servis bilgisi eklenecek</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a
+href="#"
+class="map-button"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="card service">
+
+<h3>Fakir Yetkili Servis</h3>
+
+<p><strong>Adres:</strong> Servis bilgisi eklenecek</p>
+
+<p><strong>Telefon:</strong> Servis bilgisi eklenecek</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a
+href="#"
+class="map-button"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service">
+
+<h3>Fakir Yetkili Servis</h3>
+
+<p><strong>Adres:</strong> Servis bilgisi eklenecek</p>
+
+<p><strong>Telefon:</strong> Servis bilgisi eklenecek</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a
+href="#"
+class="map-button"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function searchServices() {
+
+    const input =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
