@@ -1,1 +1,372 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>HONOR Akıllı Bileklik Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info h2 {
+    margin-top: 0;
+    font-size: 21px;
+}
+
+.search-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.city-title {
+    font-size: 22px;
+    margin: 25px 0 12px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #187a2f;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 9px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    margin-top: 40px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 Briko</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>HONOR Akıllı Bileklik Yetkili Servisleri</h2>
+
+<p>
+HONOR Akıllı Bileklik için Türkiye'deki yetkili servis noktalarını
+şehir ve servis bilgileriyle birlikte bulabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis veya şehir ara..."
+onkeyup="searchServices()">
+
+</div>
+
+
+<div id="serviceList">
+
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis</h3>
+
+<p><strong>Adres:</strong> Ankara</p>
+
+<p><strong>Telefon:</strong> Yetkili servis iletişim bilgisi için servis merkezinden bilgi alınız.</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=HONOR+yetkili+servis+Ankara"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<h2 class="city-title">İstanbul</h2>
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis</h3>
+
+<p><strong>Adres:</strong> İstanbul</p>
+
+<p><strong>Telefon:</strong> Yetkili servis iletişim bilgisi için servis merkezinden bilgi alınız.</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=HONOR+yetkili+servis+Istanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="card service">
+
+<h3>HONOR Yetkili Servis</h3>
+
+<p><strong>Adres:</strong> İzmir</p>
+
+<p><strong>Telefon:</strong> Yetkili servis iletişim bilgisi için servis merkezinden bilgi alınız.</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=HONOR+yetkili+servis+Izmir"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<div id="noResult" class="no-result">
+
+Servis bulunamadı.
+
+</div>
+
+
+<br>
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function searchServices() {
+
+    const input =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const services =
+        document.querySelectorAll(".service");
+
+    const cityTitles =
+        document.querySelectorAll(".city-title");
+
+    let found = 0;
+
+    services.forEach(function(service) {
+
+        const text =
+            service.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            service.style.display = "block";
+
+            found++;
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+
+    cityTitles.forEach(function(title) {
+
+        const next = title.nextElementSibling;
+
+        if (
+            next &&
+            next.classList.contains("service")
+        ) {
+
+            if (next.style.display === "none") {
+
+                title.style.display = "none";
+
+            } else {
+
+                title.style.display = "block";
+
+            }
+
+        }
+
+    });
+
+
+    if (found === 0) {
+
+        document.getElementById("noResult").style.display = "block";
+
+    } else {
+
+        document.getElementById("noResult").style.display = "none";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>
