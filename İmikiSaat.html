@@ -1,1 +1,293 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>İMİKİ Akıllı Saat Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #111827;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.city-title {
+    font-size: 22px;
+    margin: 25px 0 12px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.service-type {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.phone {
+    margin: 8px 0;
+}
+
+.badge {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #18752b;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 15px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+    background: #111827;
+    color: white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>İMİKİ Akıllı Saat Yetkili Servisleri</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+</header>
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+<div class="info">
+
+<h2>İMİKİ Akıllı Saat Servisleri</h2>
+
+<p>
+İMİKİ akıllı saatler için Türkiye'deki yetkili servis
+ve satış sonrası destek bilgileri.
+</p>
+
+<p>
+İMİKİ'nin Türkiye resmi distribütörü Teknovizyon'dur.
+</p>
+
+</div>
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis veya şehir ara..."
+onkeyup="filterServices()">
+
+</div>
+
+<h2 class="city-title">Afyonkarahisar</h2>
+
+<div class="card service">
+
+<h3>Teknovizyon</h3>
+
+<div class="service-type">
+İMİKİ Türkiye Resmi Distribütörü
+</div>
+
+<p>
+<strong>Adres:</strong><br>
+Dumlupınar, Atatürk Blv. No:7,
+03200 Merkez/Afyonkarahisar
+</p>
+
+<p class="phone">
+<strong>Telefon:</strong>
+0552 115 11 50
+</p>
+
+<p>
+<strong>E-posta:</strong>
+kurumsal@teknovizyon.net.tr
+</p>
+
+<span class="badge">
+✓ İMİKİ Türkiye Resmi Distribütörü
+</span>
+
+<br>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Teknovizyon+Dumlupınar+Atatürk+Blv+No+7+Afyonkarahisar"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+<div class="no-result" id="noResult">
+
+Aradığınız servis veya şehir bulunamadı.
+
+</div>
+
+<br>
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+<script>
+
+function filterServices() {
+
+    const input =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service");
+
+    let found = false;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            card.style.display = "block";
+            found = true;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+    document.getElementById("noResult").style.display =
+        found ? "none" : "block";
+}
+
+</script>
+
+</body>
+
+</html>
