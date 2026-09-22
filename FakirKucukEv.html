@@ -60,6 +60,7 @@ header p {
     border-radius: 10px;
     margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    line-height: 1.6;
 }
 
 .info strong {
@@ -76,29 +77,20 @@ header p {
     margin-bottom: 20px;
 }
 
-.city-title {
-    font-size: 22px;
-    margin: 25px 0 12px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 8px;
-}
-
 .card {
     background: white;
-    padding: 18px;
-    margin-bottom: 15px;
+    padding: 20px;
+    margin-bottom: 18px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.card h3 {
+.card h2 {
     margin-top: 0;
-    margin-bottom: 10px;
 }
 
 .card p {
-    margin: 7px 0;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 .badge {
@@ -112,18 +104,25 @@ header p {
     font-weight: bold;
 }
 
-.map-button {
+.button {
     display: inline-block;
-    margin-top: 12px;
-    padding: 10px 15px;
+    margin-top: 15px;
+    padding: 12px 18px;
     background: #222;
     color: white;
     text-decoration: none;
     border-radius: 7px;
+    font-weight: bold;
 }
 
-.map-button:hover {
+.button:hover {
     opacity: 0.85;
+}
+
+.phone {
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 footer {
@@ -133,15 +132,12 @@ footer {
     font-size: 14px;
 }
 
-.hidden {
-    display: none;
-}
-
 </style>
 
 </head>
 
 <body>
+
 
 <header>
 
@@ -154,6 +150,7 @@ footer {
 
 <div class="container">
 
+
 <a href="index.html" class="back">
 ← Ana Sayfaya Dön
 </a>
@@ -164,13 +161,13 @@ footer {
 <strong>Fakir Yetkili Servisleri</strong>
 
 <p>
-Ankara'da Fakir küçük ev aletleri için yetkili servis
-noktalarını şehir ve ilçe bazında bulabilirsiniz.
+Türkiye genelindeki Fakir yetkili servislerini
+şehir ve ilçe seçerek bulabilirsiniz.
 </p>
 
 <p>
-Fakir Müşteri Hizmetleri:
-<strong>444 0 241</strong>
+Fakir'in resmi servis sistemi üzerinden
+güncel servis bilgilerine ulaşabilirsiniz.
 </p>
 
 </div>
@@ -178,347 +175,76 @@ Fakir Müşteri Hizmetleri:
 
 <input
 type="text"
-id="serviceSearch"
 class="search-box"
-placeholder="Servis, ilçe veya adres ara..."
-onkeyup="searchServices()"
+placeholder="Şehir veya ilçe ara..."
+onkeyup="searchInfo()"
 >
 
 
-<h2 class="city-title">Ankara</h2>
-
-
-<!-- PURSAKLAR -->
-
 <div class="card service">
 
-<h3>ANKARA TEKNİK SOĞUTMA</h3>
+<h2>🇹🇷 Türkiye Geneli Fakir Yetkili Servisleri</h2>
 
-<p><strong>İlçe:</strong> Pursaklar</p>
+<p>
+Fakir yetkili servisleri il ve ilçe bazında
+resmi servis sistemi üzerinden görüntülenmektedir.
+</p>
 
-<p><strong>Adres:</strong> Cumhuriyet Cad. No:26/9-A</p>
+<span class="badge">
+✓ Yetkili Servis Bilgileri
+</span>
 
-<p><strong>Telefon:</strong> (0312) 527 15 26</p>
-
-<span class="badge">✓ Yetkili Servis</span>
+<br>
 
 <a
-href="https://www.google.com/maps/search/?api=1&query=ANKARA+TEKNİK+SOĞUTMA+Cumhuriyet+Cad.+No+26%2F9-A+Pursaklar+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
+href="https://destek.fakir.com.tr/home/services"
+target="_blank"
+class="button">
+
+Fakir Yetkili Servislerini Bul
+
 </a>
 
 </div>
 
 
-<!-- ÇANKAYA -->
-
 <div class="card service">
 
-<h3>AYRİS SÜPER TEKNİK</h3>
+<h2>📞 Fakir Müşteri Hizmetleri</h2>
 
-<p><strong>İlçe:</strong> Çankaya</p>
+<p>
+Fakir servis ve ürün desteği için:
+</p>
 
-<p><strong>Adres:</strong> Bahçelievler Mahallesi Cengizhan Caddesi Uyum Apt. No:16/B</p>
-
-<p><strong>Telefon:</strong> (0312) 222 21 38</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
+<p>
 <a
-href="https://www.google.com/maps/search/?api=1&query=AYRİS+SÜPER+TEKNİK+Cengizhan+Caddesi+No+16%2FB+Çankaya+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
+href="tel:4440241"
+class="phone">
+
+<strong>444 0 241</strong>
+
 </a>
+</p>
 
 </div>
 
 
-<!-- GÖLBAŞI -->
-
 <div class="card service">
 
-<h3>BEKS</h3>
+<h2>📍 Briko Harita Araması</h2>
 
-<p><strong>İlçe:</strong> Gölbaşı</p>
-
-<p><strong>Adres:</strong> Seğmenler Mahallesi Cemal Gürsel Caddesi 939. Sokak No:15/B</p>
-
-<p><strong>Telefon:</strong> (0312) 484 21 19</p>
-
-<span class="badge">✓ Yetkili Servis</span>
+<p>
+Bulduğunuz Fakir servisinin adresini
+Google Haritalar üzerinden kontrol edebilirsiniz.
+</p>
 
 <a
-href="https://www.google.com/maps/search/?api=1&query=BEKS+Seğmenler+Mahallesi+Cemal+Gürsel+Caddesi+939+Sokak+No+15%2FB+Gölbaşı+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
+href="https://www.google.com/maps/search/Fakir+Yetkili+Servis"
+target="_blank"
+class="button">
 
-</div>
+Haritada Fakir Servisi Ara
 
-
-<!-- ÇANKAYA -->
-
-<div class="card service">
-
-<h3>ÇAĞRI TEKNİK</h3>
-
-<p><strong>İlçe:</strong> Çankaya</p>
-
-<p><strong>Adres:</strong> Oğuzlar Mah. Barış Manço Cad. No:27/B</p>
-
-<p><strong>Telefon:</strong> (0312) 286 69 60</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=ÇAĞRI+TEKNİK+Barış+Manço+Cad.+No+27%2FB+Çankaya+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- MAMAK -->
-
-<div class="card service">
-
-<h3>CAN ELEKTRONİK</h3>
-
-<p><strong>İlçe:</strong> Mamak</p>
-
-<p><strong>Adres:</strong> Hocalı Mah. 651. Sk. 19/A Köşebaşı</p>
-
-<p><strong>Telefon:</strong> (0312) 370 03 70</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=CAN+ELEKTRONİK+Hocalı+Mahallesi+651+Sokak+19%2FA+Mamak+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- SİNCAN -->
-
-<div class="card service">
-
-<h3>CAN ELEKTRONİK</h3>
-
-<p><strong>İlçe:</strong> Sincan</p>
-
-<p><strong>Adres:</strong> İstasyon Mahallesi Kaya Caddesi No:5/A</p>
-
-<p><strong>Telefon:</strong> (0312) 270 31 75</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=CAN+ELEKTRONİK+Kaya+Caddesi+No+5%2FA+Sincan+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- BEYPAZARI -->
-
-<div class="card service">
-
-<h3>DOĞAN TEKNİK</h3>
-
-<p><strong>İlçe:</strong> Beypazarı</p>
-
-<p><strong>Adres:</strong> Beytepe Mahallesi Kayhan Güven Caddesi No:22/C</p>
-
-<p><strong>Telefon:</strong> (0312) 762 89 19</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=DOĞAN+TEKNİK+Kayhan+Güven+Caddesi+No+22%2FC+Beypazarı+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- ETİMESGUT -->
-
-<div class="card service">
-
-<h3>HİLAL</h3>
-
-<p><strong>İlçe:</strong> Etimesgut</p>
-
-<p><strong>Adres:</strong> İstasyon Mahallesi Güzelyurt Caddesi No:7/B</p>
-
-<p><strong>Telefon:</strong> (0312) 244 45 58</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=HİLAL+Güzelyurt+Caddesi+No+7%2FB+Etimesgut+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- ÇANKAYA -->
-
-<div class="card service">
-
-<h3>KAR SOĞUTMA</h3>
-
-<p><strong>İlçe:</strong> Çankaya</p>
-
-<p><strong>Adres:</strong> Aydınlar Mah. Hürriyet Cad. No:149/A</p>
-
-<p><strong>Telefon:</strong> (0312) 480 70 83</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=KAR+SOĞUTMA+Hürriyet+Cad.+No+149%2FA+Çankaya+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- YENİMAHALLE -->
-
-<div class="card service">
-
-<h3>KARAKAYA TEKNİK</h3>
-
-<p><strong>İlçe:</strong> Yenimahalle</p>
-
-<p><strong>Adres:</strong> 405. Cad. No:58 A Demetevler</p>
-
-<p><strong>Telefon:</strong> (0312) 345 72 10</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=KARAKAYA+TEKNİK+405.+Cadde+No+58+A+Demetevler+Yenimahalle+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- ÇUBUK -->
-
-<div class="card service">
-
-<h3>MERT TEKNİK</h3>
-
-<p><strong>İlçe:</strong> Çubuk</p>
-
-<p><strong>Adres:</strong> Cumhuriyet Mahallesi Sami Efendi Sokak No:10/D</p>
-
-<p><strong>Telefon:</strong> (0312) 837 99 45</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=MERT+TEKNİK+Sami+Efendi+Sokak+No+10%2FD+Çubuk+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- ETİMESGUT -->
-
-<div class="card service">
-
-<h3>MİNİHOME</h3>
-
-<p><strong>İlçe:</strong> Etimesgut</p>
-
-<p><strong>Adres:</strong> Eryaman Mah. 2. Cad. No:33/B</p>
-
-<p><strong>Telefon:</strong> (0312) 999 99 48</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=MİNİHOME+Eryaman+Mahallesi+2.+Cadde+No+33%2FB+Etimesgut+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- ALTINDAĞ -->
-
-<div class="card service">
-
-<h3>SEHER ELEKTRİK</h3>
-
-<p><strong>İlçe:</strong> Altındağ</p>
-
-<p><strong>Adres:</strong> Sanayi Cad. Mustafa Koloğlu İş Merkezi 7/10</p>
-
-<p><strong>Telefon:</strong> (0312) 311 76 46</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=SEHER+ELEKTRİK+Sanayi+Cad.+Mustafa+Koloğlu+İş+Merkezi+7%2F10+Altındağ+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
-</a>
-
-</div>
-
-
-<!-- POLATLI -->
-
-<div class="card service">
-
-<h3>TUNÇ TEKNİK</h3>
-
-<p><strong>İlçe:</strong> Polatlı</p>
-
-<p><strong>Adres:</strong> Cumhuriyet Mah. Altay Cad. No:27/1</p>
-
-<p><strong>Telefon:</strong> (0312) 623 31 09</p>
-
-<span class="badge">✓ Yetkili Servis</span>
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=TUNÇ+TEKNİK+Altay+Cad.+No+27%2F1+Polatlı+Ankara"
-class="map-button"
-target="_blank">
-Haritada Göster
 </a>
 
 </div>
@@ -527,6 +253,7 @@ Haritada Göster
 <a href="index.html" class="back">
 ← Ana Sayfaya Dön
 </a>
+
 
 </div>
 
@@ -540,10 +267,10 @@ Türkiye'nin Teknik Servis Rehberi © 2026
 
 <script>
 
-function searchServices() {
+function searchInfo() {
 
     const input =
-        document.getElementById("serviceSearch")
+        document.querySelector(".search-box")
         .value
         .toLowerCase()
         .trim();
@@ -556,10 +283,14 @@ function searchServices() {
         const text =
             card.innerText.toLowerCase();
 
-        if (text.includes(input)) {
+        if (text.includes(input) || input === "") {
+
             card.style.display = "";
+
         } else {
+
             card.style.display = "none";
+
         }
 
     });
@@ -567,6 +298,7 @@ function searchServices() {
 }
 
 </script>
+
 
 </body>
 
