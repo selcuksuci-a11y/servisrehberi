@@ -1,1 +1,804 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Xiaomi Akıllı Bileklik Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    min-width: 220px;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    padding: 12px 15px;
+    background: #111;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 10px;
+    background: #e8f5e9;
+    color: #176b2c;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.home-link {
+    display: block;
+    text-align: center;
+    margin: 30px 0 10px;
+    color: #111;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    margin-top: 40px;
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 Xiaomi Akıllı Bileklik Yetkili Servisleri</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi - Briko</p>
+
+</header>
+
+
+<div class="container">
+
+<a href="index.html" class="back">← Ana Sayfaya Dön</a>
+
+
+<div class="info">
+
+<h2>Xiaomi Smart Band Servisleri</h2>
+
+<p>
+Xiaomi Smart Band ve diğer Xiaomi ekosistem ürünleri için
+Türkiye'deki yetkili servis noktalarını şehir ve servis adına
+göre bulabilirsiniz.
+</p>
+
+<p>
+Xiaomi Türkiye'nin resmi satış sonrası servis ağı;
+Evofone, KVK, MIEKO, OUNO ve BDH gibi servis iş ortaklarını
+içermektedir.
+</p>
+
+<p>
+<strong>Xiaomi Müşteri Hizmetleri:</strong>
+0 800 621 22 26
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis veya şehir ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">📍 İstanbul</h2>
+
+
+<div class="card service-card">
+
+<h3>Evofone - İstanbul Kadıköy</h3>
+
+<p>
+<strong>Adres:</strong>
+Fahrettin Kerim Gökay Caddesi,
+Baycan Han No:39-41/B,
+34722 Kadıköy / İstanbul
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Fahrettin+Kerim+Gökay+Caddesi+Baycan+Han+39-41%2FB+Kadıköy+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>Evofone - İstanbul Kağıthane</h3>
+
+<p>
+<strong>Adres:</strong>
+Kağıthane Ofispark İş Merkezi,
+Merkez Mah. Bağlar Cad. No:14,
+34406 Kağıthane / İstanbul
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Kağıthane+Ofispark+İş+Merkezi+Bağlar+Caddesi+No+14+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>MIEKO - İstanbul Zeytinburnu</h3>
+
+<p>
+<strong>Adres:</strong>
+Prof. Muammer Aksoy Cad. No:31,
+Olivium AVM,
+34020 Zeytinburnu / İstanbul
+</p>
+
+<p><strong>Telefon:</strong> 0850 515 14 14</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Prof.+Muammer+Aksoy+Caddesi+31+Olivium+AVM+Zeytinburnu+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>MIEKO - İstanbul Pendik</h3>
+
+<p>
+<strong>Adres:</strong>
+Batı Mah. Dr. Orhan Altepe Cad.
+Sezer Apt. No:31,
+Pendik / İstanbul
+</p>
+
+<p><strong>Telefon:</strong> 0850 515 14 14</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Batı+Mahallesi+Dr.+Orhan+Altepe+Caddesi+31+Pendik+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>MIEKO - İstanbul Maslak</h3>
+
+<p>
+<strong>Adres:</strong>
+Maslak Mah. Sanatkarlar Sok.
+Eclipse Sitesi D Blok No:12,
+Sarıyer / İstanbul
+</p>
+
+<p><strong>Telefon:</strong> 0850 515 14 14</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Maslak+Mahallesi+Sanatkarlar+Sokak+Eclipse+Sitesi+D+Blok+12+Sarıyer+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>BDH - İstanbul Maltepe</h3>
+
+<p>
+<strong>Adres:</strong>
+Bağlarbaşı Mahallesi,
+Cemal Bey Caddesi No:110,
+34844 Maltepe / İstanbul
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Bağlarbaşı+Mahallesi+Cemal+Bey+Caddesi+110+Maltepe+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>OUNO - İstanbul Ataşehir</h3>
+
+<p>
+<strong>Adres:</strong>
+Atilla İlhan Cd. No:20,
+34750 Ataşehir / İstanbul
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Atilla+İlhan+Caddesi+20+Ataşehir+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>KVK - İstanbul Kartal</h3>
+
+<p>
+<strong>Adres:</strong>
+Soğanlık Yeni Mah.
+D-100 Kuzey Yan Yol,
+Kanat San. Sit. No:32,
+34880 Kartal / İstanbul
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Soğanlık+Yeni+Mahallesi+D-100+Kuzey+Yan+Yol+Kanat+Sanayi+Sitesi+32+Kartal+İstanbul"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">📍 Ankara</h2>
+
+
+<div class="card service-card">
+
+<h3>Evofone - Ankara Kızılay</h3>
+
+<p>
+<strong>Adres:</strong>
+Korkutreis Mah.
+Gazi Mustafa Kemal Bulvarı 32/B,
+Demirtepe, Çankaya / Ankara
+</p>
+
+<p><strong>Telefon:</strong> 444 2 118</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Korkutreis+Mahallesi+Gazi+Mustafa+Kemal+Bulvarı+32+B+Çankaya+Ankara"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>KVK - Ankara Çankaya</h3>
+
+<p>
+<strong>Adres:</strong>
+Kızılay Mah.
+Fevzi Çakmak 1 Sokak,
+Oran Apartmanı No:15/B,
+06420 Çankaya / Ankara
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Kızılay+Mahallesi+Fevzi+Çakmak+1+Sokak+Oran+Apartmanı+15+B+Çankaya+Ankara"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">📍 İzmir</h2>
+
+
+<div class="card service-card">
+
+<h3>Evofone - İzmir Çankaya</h3>
+
+<p>
+<strong>Adres:</strong>
+İsmet Kaptan Mah.
+Şair Eşref Bulvarı No:26/B,
+Konak / İzmir
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=İsmet+Kaptan+Mahallesi+Şair+Eşref+Bulvarı+26+B+Konak+İzmir"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>Evofone - İzmir Alsancak</h3>
+
+<p>
+<strong>Adres:</strong>
+Alsancak Mah.
+Kıbrıs Şehitleri Caddesi No:136/1-B,
+Konak / İzmir
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Kıbrıs+Şehitleri+Caddesi+136+1+B+Alsancak+İzmir"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>KVK - İzmir Konak</h3>
+
+<p>
+<strong>Adres:</strong>
+İsmet Kaptan,
+1365. Sk. No:7/B,
+35210 Konak / İzmir
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=İsmet+Kaptan+1365+Sokak+7+B+Konak+İzmir"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">📍 Antalya</h2>
+
+
+<div class="card service-card">
+
+<h3>Evofone - Antalya</h3>
+
+<p>
+<strong>Adres:</strong>
+İsmet Gökşen Cad.
+Hüseyin Akçor 2 Apt. No:40/E,
+Muratpaşa, Şirinyalı / Antalya
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=İsmet+Gökşen+Caddesi+40+E+Muratpaşa+Antalya"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- SAMSUN -->
+
+<h2 class="city-title">📍 Samsun</h2>
+
+
+<div class="card service-card">
+
+<h3>Evofone - Samsun İlkadım</h3>
+
+<p>
+<strong>Adres:</strong>
+19 Mayıs Mah.
+Gazi Cad. No:95/4,
+İlkadım / Samsun
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=19+Mayıs+Mahallesi+Gazi+Caddesi+95+4+İlkadım+Samsun"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- BURSA -->
+
+<h2 class="city-title">📍 Bursa</h2>
+
+
+<div class="card service-card">
+
+<h3>MIEKO - Bursa</h3>
+
+<p>
+<strong>Adres:</strong>
+Kırcaali Mah.
+Kayalı Sok. No:34,
+16220 Osmangazi / Bursa
+</p>
+
+<p><strong>Telefon:</strong> 0850 515 14 14</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Kırcaali+Mahallesi+Kayalı+Sokak+34+Osmangazi+Bursa"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- GAZİANTEP -->
+
+<h2 class="city-title">📍 Gaziantep</h2>
+
+
+<div class="card service-card">
+
+<h3>MIEKO - Gaziantep</h3>
+
+<p>
+<strong>Adres:</strong>
+Değirmiçem Mah.
+Prof. Muammer Aksoy Bulvarı,
+Kepkep Plaza No:20/H,
+Gaziantep
+</p>
+
+<p><strong>Telefon:</strong> 0850 515 14 14</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Kepkep+Plaza+20+H+Gaziantep"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">📍 Adana</h2>
+
+
+<div class="card service-card">
+
+<h3>KVK - Adana Seyhan</h3>
+
+<p>
+<strong>Adres:</strong>
+Reşatbey,
+Turhan Cemal Beriker Bulvarı,
+Günep Panorama B Blok No:8,
+01120 Seyhan / Adana
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Reşatbey+Turhan+Cemal+Beriker+Bulvarı+Günep+Panorama+8+Seyhan+Adana"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">📍 Trabzon</h2>
+
+
+<div class="card service-card">
+
+<h3>KVK - Trabzon Ortahisar</h3>
+
+<p>
+<strong>Adres:</strong>
+Cumhuriyet Mah.
+Nemlioğlu Cemal Sok.
+Ziya Bey Sitesi A Blok No:16/1,
+61050 Ortahisar / Trabzon
+</p>
+
+<p><strong>Servis Türü:</strong> Xiaomi Yetkili Servis Merkezi</p>
+
+<span class="badge">✓ Yetkili Servis</span>
+
+<a class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Cumhuriyet+Mahallesi+Nemlioğlu+Cemal+Sokak+Ziya+Bey+Sitesi+16+1+Trabzon"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<a href="index.html" class="home-link">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const input =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+            card.classList.remove("hidden");
+        } else {
+            card.classList.add("hidden");
+        }
+
+    });
+
+
+    titles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+        let hasVisibleCard = false;
+
+        while (next && !next.classList.contains("city-title")) {
+
+            if (
+                next.classList.contains("service-card") &&
+                !next.classList.contains("hidden")
+            ) {
+                hasVisibleCard = true;
+            }
+
+            next = next.nextElementSibling;
+        }
+
+        if (hasVisibleCard || input === "") {
+            title.classList.remove("hidden");
+        } else {
+            title.classList.add("hidden");
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
