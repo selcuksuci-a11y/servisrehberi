@@ -1,1 +1,347 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Homend Küçük Ev Aletleri Yetkili Servisleri - Briko</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #1f2937;
+    color: white;
+    padding: 25px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 27px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 15px 40px;
+}
+
+.home-link {
+    display: inline-block;
+    text-decoration: none;
+    background: #ffffff;
+    color: #1f2937;
+    padding: 11px 16px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-weight: bold;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+h2 {
+    margin-top: 0;
+    color: #1f2937;
+    font-size: 23px;
+}
+
+h3 {
+    color: #1f2937;
+    margin-top: 0;
+}
+
+.info-box {
+    background: #eef4ff;
+    border-left: 5px solid #2563eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 18px 0;
+    line-height: 1.6;
+}
+
+.search-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    background: #f9fafb;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-top: 18px;
+    font-weight: bold;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.green-button {
+    background: #16a34a;
+}
+
+.phone {
+    font-size: 21px;
+    font-weight: bold;
+    color: #2563eb;
+    margin: 8px 0;
+}
+
+.service-note {
+    line-height: 1.7;
+    color: #444;
+}
+
+footer {
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 18px 10px;
+    font-size: 14px;
+}
+
+@media (max-width: 650px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>🦦 Briko</h1>
+
+    <p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+    <a href="index.html" class="home-link">
+        ← Ana Sayfaya Dön
+    </a>
+
+
+    <div class="card">
+
+        <h2>
+            Homend Küçük Ev Aletleri Yetkili Servisleri
+        </h2>
+
+        <p>
+            Homend küçük ev aletleri için Türkiye genelindeki
+            yetkili servis noktalarını resmi Homend servis
+            sistemi üzerinden görüntüleyebilirsiniz.
+        </p>
+
+
+        <div class="info-box">
+
+            <strong>ℹ️ Servis Bilgisi</strong>
+
+            <br><br>
+
+            Homend'in resmi servis sistemi üzerinden
+            il, ilçe veya servis adı ile arama yaparak
+            size uygun yetkili servis noktasını
+            bulabilirsiniz.
+
+        </div>
+
+
+        <h3>🔎 Homend Servis Ara</h3>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                placeholder="İl veya ilçe bilgisi"
+                readonly
+            >
+
+            <input
+                type="text"
+                placeholder="Yetkili servis / servis adı"
+                readonly
+            >
+
+        </div>
+
+
+        <a
+            href="https://www.homend.com.tr/bilgilendirme/kea-yetkili-servisleri"
+            target="_blank"
+            class="button"
+        >
+            🔎 Resmi Homend Yetkili Servislerini Bul
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>🛠️ Yetkili Servis Desteği</h3>
+
+        <p class="service-note">
+
+            Homend'in resmi servis listesinde
+            yetkili servis noktalarının adres ve
+            iletişim bilgilerini görüntüleyebilirsiniz.
+
+            <br><br>
+
+            Servis işlemleri için öncelikle resmi
+            Homend yetkili servis listesini kullanmanız
+            önerilir.
+
+        </p>
+
+
+        <a
+            href="https://www.homend.com.tr/bilgilendirme/kea-yetkili-servisleri"
+            target="_blank"
+            class="button green-button"
+        >
+            ✓ Yetkili Servis Listesine Git
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>📞 Homend Müşteri Hizmetleri</h3>
+
+        <p>
+            Homend müşteri hizmetleri üzerinden
+            ürün ve servis desteği alabilirsiniz.
+        </p>
+
+        <div class="phone">
+            0850 222 32 45
+        </div>
+
+        <p>
+            Çalışma saatleri:
+            <strong>09:00 - 20:00</strong>
+        </p>
+
+        <a
+            href="tel:08502223245"
+            class="button"
+        >
+            📞 Homend'i Ara
+        </a>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>💬 Homend Destek</h3>
+
+        <p class="service-note">
+
+            Teknik servis, ürün desteği ve diğer
+            konularda Homend'in resmi yardım ve
+            iletişim kanallarından destek alabilirsiniz.
+
+        </p>
+
+
+        <a
+            href="https://www.homend.com.tr/yardim"
+            target="_blank"
+            class="button"
+        >
+            🛠️ Homend Yardım ve Destek
+        </a>
+
+
+        <a
+            href="https://www.homend.com.tr/iletisim"
+            target="_blank"
+            class="button"
+        >
+            ✉️ Homend İletişim
+        </a>
+
+    </div>
+
+
+    <a href="index.html" class="home-link">
+        ← Ana Sayfaya Dön
+    </a>
+
+</div>
+
+
+<footer>
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+</body>
+
+</html>
