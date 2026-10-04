@@ -1,1 +1,503 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Altus Klima Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #0066b3;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 11px 16px;
+    background: #0066b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #004f8a;
+}
+
+.info {
+    background: white;
+    border-left: 5px solid #0066b3;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info h2 {
+    margin-top: 0;
+    color: #0066b3;
+}
+
+.search-box {
+    background: white;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+    color: #0066b3;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0066b3;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 15px;
+    margin: 5px 5px 5px 0;
+    background: #0066b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #004f8a;
+}
+
+.green {
+    background: #198754;
+}
+
+.green:hover {
+    background: #146c43;
+}
+
+.orange {
+    background: #e67e22;
+}
+
+.orange:hover {
+    background: #ca6f1e;
+}
+
+.warning {
+    background: #fff8e1;
+    border-left: 5px solid #f0ad4e;
+    padding: 16px;
+    margin-top: 15px;
+    border-radius: 7px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>🦦 SUCİ</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>❄️ Altus Klima Yetkili Servisleri</h2>
+
+<p>
+Altus klima ürünleri için Türkiye genelindeki yetkili
+servis noktalarına Altus'un resmi servis bulma sistemi
+üzerinden ulaşabilirsiniz.
+</p>
+
+<p>
+Altus, Arçelik A.Ş. bünyesinde bulunan bir markadır.
+Servis bilgilerinin güncel tutulması amacıyla SUCİ üzerinde
+tek tek servis adresleri yerine resmi servis ağına
+yönlendirme yapılmaktadır.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<h2>🔎 Servis Ara</h2>
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Şehir veya ilçe adını yazabilirsiniz..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📍 Altus Yetkili Servis Bul</h3>
+
+<p>
+Şehrinizi, ilçenizi veya adresinizi girerek size en yakın
+Altus yetkili servis noktasını resmi Altus servis bulma
+sisteminden görüntüleyebilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.altus.com.tr/servis-bul"
+target="_blank">
+
+✓ Yetkili Servis Bul
+
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📅 Servis Randevusu</h3>
+
+<p>
+Altus klima için servis randevusu ve teknik servis işlemlerini
+resmi Altus destek kanalları üzerinden gerçekleştirebilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.altus.com.tr/"
+target="_blank">
+
+📅 Servis Randevusu
+
+</a>
+
+<p>
+Resmi Altus sitesinde <strong>Servis Randevusu</strong>
+kanalı bulunmaktadır.
+</p>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>🇹🇷 SERBİS Yetkili Servis Doğrulama</h3>
+
+<p>
+Yetkili servis bilgisini ayrıca T.C. Ticaret Bakanlığı'nın
+Servis Bilgi Sistemi (SERBİS) üzerinden doğrulayabilirsiniz.
+</p>
+
+<p>
+SERBİS üzerinden üretici/ithalatçı, marka, ürün, il ve ilçe
+seçerek yetkili servis sorgulaması yapılabilir.
+</p>
+
+<a
+class="button green"
+href="https://www.servis.gov.tr/Genel/Sorgu"
+target="_blank">
+
+✓ SERBİS'ten Doğrula
+
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>🛠️ Klima Teknik Destek</h3>
+
+<p>
+Altus klima ile ilgili arıza, kullanım, teknik destek ve
+servis konularında resmi Altus Yardım Merkezi'ni
+kullanabilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.altus.com.tr/destek/yardim-merkezi/klima"
+target="_blank">
+
+🔧 Klima Yardım Merkezi
+
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>🛡️ Altus Klima Garanti</h3>
+
+<p>
+Altus'un resmi garanti sayfasında klimalar için
+<strong>+4 yıl ek garanti</strong> seçeneği bulunmaktadır.
+Ek garanti yetkili servisler aracılığıyla sunulmaktadır.
+</p>
+
+<p>
+Ayrıca Altus ürünlerinde garanti uygulamaları resmi
+destek sistemi üzerinden takip edilebilmektedir.
+</p>
+
+<a
+class="button orange"
+href="https://www.altus.com.tr/garanti"
+target="_blank">
+
+🛡️ Garanti Bilgilerini Gör
+
+</a>
+
+<div class="warning">
+
+<strong>Önemli:</strong>
+
+Ek garanti imkanından yararlanmak isteyen müşterilerin,
+Altus'un resmi garanti koşullarında belirtilen süre ve
+şartlara uyması gerekir.
+
+Güncel koşulları resmi garanti sayfasından kontrol edin.
+
+</div>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📞 Altus Müşteri Hizmetleri</h3>
+
+<p>
+Altus 7/24 Çağrı Destek Merkezi üzerinden servis ve
+ürün desteği alabilirsiniz.
+</p>
+
+<p>
+<strong>Çağrı Destek Merkezi:</strong>
+0850 210 0 888
+</p>
+
+<a
+class="button"
+href="tel:08502100888">
+
+📞 0850 210 0 888
+
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📚 Altus Destek ve Kullanım Kılavuzları</h3>
+
+<p>
+Altus ürünleri için kullanım kılavuzları, garanti
+uygulamaları ve diğer destek içeriklerine resmi
+Yardım Merkezi üzerinden ulaşabilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.altus.com.tr/destek/yardim-merkezi"
+target="_blank">
+
+📚 Yardım Merkezi
+
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>❄️ Altus Klima</h3>
+
+<p>
+Altus'un resmi web sitesinde klima ürünlerini ve
+Isıtma - Soğutma kategorisini inceleyebilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.altus.com.tr/"
+target="_blank">
+
+❄️ Altus Resmi Sitesi
+
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📌 SUCİ Servis Notu</h3>
+
+<p>
+Altus'un Türkiye genelinde yaygın yetkili servis ağı
+bulunduğu için SUCİ üzerinde bütün servis adresleri
+tek tek sabitlenmemektedir.
+</p>
+
+<p>
+En güncel servis adresi için önce resmi Altus
+<strong>Yetkili Servis Bul</strong> sistemini,
+ardından servis doğrulaması için <strong>SERBİS</strong>'i
+kullanmanız önerilir.
+</p>
+
+</div>
+
+
+<br>
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const search =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (
+            search === "" ||
+            text.includes(search)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
