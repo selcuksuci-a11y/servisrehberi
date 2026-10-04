@@ -1,1 +1,432 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Lenovo Bilgisayar Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 25px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.phone {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.official {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.map {
+    display: inline-block;
+    background: #e5e7eb;
+    color: #111827;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media (max-width: 700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+    <p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+    <a href="index.html" class="back">
+        ← Ana Sayfaya Dön
+    </a>
+
+
+    <div class="info">
+
+        <h2>Lenovo Bilgisayar Yetkili Servisleri</h2>
+
+        <p>
+            Lenovo dizüstü bilgisayar, masaüstü bilgisayar,
+            ThinkPad, IdeaPad, Yoga, Legion ve diğer Lenovo
+            bilgisayar ürünleri için servis ve destek bilgilerini
+            SUCİ üzerinden kolayca bulabilirsiniz.
+        </p>
+
+        <p>
+            Güncel Lenovo yetkili servis noktaları ve servis
+            seçenekleri Lenovo'nun resmi servis sistemi üzerinden
+            kontrol edilebilir.
+        </p>
+
+    </div>
+
+
+    <div class="search-area">
+
+        <input
+            type="text"
+            id="serviceSearch"
+            placeholder="Servis ara..."
+            onkeyup="filterServices()"
+        >
+
+        <input
+            type="text"
+            id="citySearch"
+            placeholder="Şehir ara..."
+            onkeyup="filterServices()"
+        >
+
+    </div>
+
+
+    <div id="serviceList">
+
+
+        <div class="service-card"
+             data-service="Lenovo Resmi Servis Yetkili Servis Sağlayıcısı"
+             data-city="Türkiye">
+
+            <h3>
+                Lenovo Resmi Servis Noktaları
+            </h3>
+
+            <p>
+                ✓ Yetkili Servis
+            </p>
+
+            <p>
+                Lenovo bilgisayarınız için güncel yetkili servis
+                sağlayıcılarını Lenovo'nun resmi servis bulma
+                sistemi üzerinden arayabilirsiniz.
+            </p>
+
+            <a
+                href="https://support.lenovo.com/tr/tr/lenovo-service-provider"
+                target="_blank"
+                class="official">
+
+                Lenovo Servis Noktası Bul
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card"
+             data-service="BDH Lenovo Yetkili Servis"
+             data-city="İstanbul Ankara İzmir">
+
+            <h3>
+                Lenovo Yetkili Servis - BDH
+            </h3>
+
+            <p>
+                Lenovo Türkiye'nin resmi bilgilerine göre tüketici
+                ürünlerinde yetkili servis hizmeti BDH tarafından
+                sağlanmaktadır.
+            </p>
+
+            <p>
+                ✓ Yetkili Servis
+            </p>
+
+            <p>
+                <strong>Servis Noktaları:</strong><br>
+                İstanbul - Anadolu / Maltepe<br>
+                İstanbul - Avrupa / Metrocity<br>
+                İzmir - Bayraklı<br>
+                Ankara - Kızılay
+            </p>
+
+            <a
+                href="https://support.lenovo.com/tr/tr/lenovo-service-provider"
+                target="_blank"
+                class="official">
+
+                Güncel Servis Bilgilerini Gör
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card"
+             data-service="Lenovo Müşteri Hizmetleri Teknik Destek"
+             data-city="Türkiye">
+
+            <h3>
+                Lenovo Müşteri Hizmetleri
+            </h3>
+
+            <p>
+                Lenovo bilgisayarınızla ilgili servis, teknik destek
+                ve ürün bilgileri için Lenovo müşteri destek merkezi
+                ile iletişime geçebilirsiniz.
+            </p>
+
+            <div class="phone">
+                📞 0212 912 01 34
+            </div>
+
+            <p>
+                ✓ Lenovo Resmi Destek
+            </p>
+
+            <a
+                href="https://www.lenovo.com/tr/tr/contact/"
+                target="_blank"
+                class="official">
+
+                Lenovo Müşteri Hizmetleri
+
+            </a>
+
+        </div>
+
+
+        <div class="service-card"
+             data-service="Lenovo Teknik Destek"
+             data-city="Türkiye">
+
+            <h3>
+                Lenovo Teknik Destek
+            </h3>
+
+            <p>
+                Seri numarası üzerinden ürününüzü tanımlayabilir,
+                teknik destek, garanti, onarım ve diğer servis
+                seçeneklerine ulaşabilirsiniz.
+            </p>
+
+            <a
+                href="https://support.lenovo.com/tr/tr"
+                target="_blank"
+                class="official">
+
+                Lenovo Teknik Desteğe Git
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="note">
+
+        <strong>Bilgi:</strong><br>
+
+        Lenovo servis noktalarının adresleri ve hizmet kapsamları
+        değişebileceğinden, servis işlemi öncesinde güncel bilgilerin
+        Lenovo'nun resmi servis sağlayıcı bulma sistemi üzerinden
+        kontrol edilmesi önerilir.
+
+    </div>
+
+
+    <br>
+
+    <a href="index.html" class="back">
+        ← Ana Sayfaya Dön
+    </a>
+
+</div>
+
+
+<footer>
+
+    Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceText =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cityText =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const service =
+            card.getAttribute("data-service")
+            .toLowerCase();
+
+        const city =
+            card.getAttribute("data-city")
+            .toLowerCase();
+
+        if (
+            service.includes(serviceText) &&
+            city.includes(cityText)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+
+</html>
