@@ -1,1 +1,487 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Samsung Bilgisayar Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.phone {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.official {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media(max-width:700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>Samsung Bilgisayar Yetkili Servisleri</h2>
+
+<p>
+Samsung marka dizüstü bilgisayar, notebook ve diğer
+Samsung bilgisayar ürünleri için teknik servis ve destek
+bilgilerine buradan ulaşabilirsiniz.
+</p>
+
+<p>
+Samsung Türkiye'nin resmi destek sistemi üzerinden
+yetkili servis merkezlerini bulabilir, onarım durumunu
+takip edebilir ve teknik destek alabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis ara..."
+onkeyup="filterServices()"
+>
+
+<input
+type="text"
+id="citySearch"
+placeholder="Şehir ara..."
+onkeyup="filterServices()"
+>
+
+</div>
+
+
+<!-- YETKİLİ SERVİS -->
+
+<div
+class="service-card"
+data-service="Samsung Yetkili Servis Samsung Servis Merkezi Teknik Servis"
+data-city="Türkiye">
+
+<h3>
+🛠️ Samsung Yetkili Servis Merkezleri
+</h3>
+
+<p>
+Samsung Türkiye'nin resmi servis merkezi sistemi
+üzerinden ürün grubunu ve konumunuzu seçerek size
+en yakın yetkili servis merkezini bulabilirsiniz.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/service-center/"
+target="_blank"
+class="official">
+
+Samsung Yetkili Servis Bul
+
+</a>
+
+</div>
+
+
+<!-- SERVİS DURUMU -->
+
+<div
+class="service-card"
+data-service="Samsung Teknik Servis Durumu Onarım Durumu Servis Durumu Onarım Takibi"
+data-city="Türkiye">
+
+<h3>
+🔧 Teknik Servis Durumu Sorgula
+</h3>
+
+<p>
+Samsung'un resmi <strong>Online Onarım Takibi</strong>
+sistemi üzerinden servise gönderdiğiniz cihazınızın
+onarım sürecini takip edebilirsiniz.
+</p>
+
+<p>
+Sistem üzerinden kayıt numarası ve istenen iletişim
+bilgilerini girerek servis kaydınızın güncel durumunu
+görüntüleyebilirsiniz.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/your-service/track-repair-sms"
+target="_blank"
+class="official">
+
+🔧 Servis Durumunu Sorgula
+
+</a>
+
+</div>
+
+
+<!-- MÜŞTERİ HİZMETLERİ -->
+
+<div
+class="service-card"
+data-service="Samsung Müşteri Hizmetleri Çağrı Merkezi İletişim Telefon"
+data-city="Türkiye">
+
+<h3>
+📞 Samsung Türkiye Müşteri Hizmetleri
+</h3>
+
+<p>
+Samsung Türkiye müşteri hizmetlerinden teknik destek,
+servis ve ürünlerinizle ilgili yardım alabilirsiniz.
+</p>
+
+<div class="phone">
+444 77 11
+</div>
+
+<p>
+Samsung Türkiye'nin resmi iletişim kanalları üzerinden
+telefon, canlı destek ve diğer destek seçeneklerine
+ulaşabilirsiniz.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/contact/"
+target="_blank"
+class="official">
+
+Samsung İletişim ve Destek
+
+</a>
+
+</div>
+
+
+<!-- GARANTİ -->
+
+<div
+class="service-card"
+data-service="Samsung Garanti Garanti Durumu Garanti Bilgileri"
+data-city="Türkiye">
+
+<h3>
+📋 Samsung Garanti Bilgileri
+</h3>
+
+<p>
+Samsung ürününüzün garanti süresi, garanti koşulları
+ve garanti kapsamındaki servis işlemleri hakkında
+resmi Samsung destek sayfasından bilgi alabilirsiniz.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/warranty/"
+target="_blank"
+class="official">
+
+Samsung Garanti Bilgileri
+
+</a>
+
+</div>
+
+
+<!-- TEKNİK DESTEK -->
+
+<div
+class="service-card"
+data-service="Samsung Teknik Destek Sürücü Yazılım Kılavuz Bilgisayar Notebook"
+data-city="Türkiye">
+
+<h3>
+💻 Samsung Bilgisayar Teknik Destek
+</h3>
+
+<p>
+Samsung bilgisayar ürünleri için kullanım kılavuzları,
+ürün bilgileri ve diğer teknik destek seçeneklerine
+Samsung'un resmi destek sistemi üzerinden
+ulaşabilirsiniz.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/"
+target="_blank"
+class="official">
+
+Samsung Teknik Destek
+
+</a>
+
+</div>
+
+
+<!-- ONARIM TALEBİ -->
+
+<div
+class="service-card"
+data-service="Samsung Servis Talebi Onarım Talebi Servis Başvurusu"
+data-city="Türkiye">
+
+<h3>
+📦 Samsung Onarım / Servis Talebi
+</h3>
+
+<p>
+Samsung cihazınız için resmi servis ve onarım talebi
+oluşturabilir, mevcut hizmet seçeneklerini
+görüntüleyebilir ve yetkili servis merkezi ziyaretinizi
+planlayabilirsiniz.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/apps-services/i-need-to-request-a-repair-for-my-samsung-device-in-turkey/"
+target="_blank"
+class="official">
+
+Samsung Servis Talebi Oluştur
+
+</a>
+
+</div>
+
+
+<div class="note">
+
+<strong>Bilgi:</strong><br>
+
+SUCİ, Samsung'un Türkiye genelindeki servis adreslerini
+tek tek listelemek yerine kullanıcıları Samsung'un resmi
+yetkili servis ve destek sistemine yönlendirmektedir.
+
+Servis merkezi, teknik servis durumu, garanti ve servis
+başvurusu işlemlerinde Samsung'un resmi sistemindeki
+güncel bilgiler kullanılmalıdır.
+
+</div>
+
+
+<br>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceText =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cityText =
+        document
+        .getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const service =
+            card
+            .getAttribute("data-service")
+            .toLowerCase();
+
+        const city =
+            card
+            .getAttribute("data-city")
+            .toLowerCase();
+
+        if (
+            service.includes(serviceText) &&
+            city.includes(cityText)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
