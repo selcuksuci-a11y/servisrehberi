@@ -5,8 +5,7 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Grundig Beyaz Eşya Yetkili Servisleri - SUCİ</title>
 
@@ -26,8 +25,8 @@ body {
 header {
     background: #0b6e8e;
     color: white;
-    padding: 25px 15px;
     text-align: center;
+    padding: 25px 15px;
 }
 
 header h1 {
@@ -48,9 +47,9 @@ header p {
 
 .back {
     display: inline-block;
-    text-decoration: none;
     background: #0b6e8e;
     color: white;
+    text-decoration: none;
     padding: 12px 18px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -61,94 +60,58 @@ header p {
     background: #095a73;
 }
 
-.info {
+.box {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.info h2 {
+.box h2 {
     margin-top: 0;
     color: #0b6e8e;
 }
 
-.info p {
+.box p {
     line-height: 1.6;
 }
 
-.search-box {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
+.info {
+    background: #eaf6fa;
+    border-left: 5px solid #0b6e8e;
 }
 
-.search-box h2 {
-    margin-top: 0;
-    color: #0b6e8e;
-}
-
-input {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 16px;
-    margin-bottom: 12px;
+.search-area {
+    text-align: center;
 }
 
 .btn {
     display: block;
-    text-align: center;
-    text-decoration: none;
+    width: 100%;
     background: #0b6e8e;
     color: white;
+    text-decoration: none;
     padding: 14px;
     border-radius: 8px;
+    margin-top: 12px;
     font-weight: bold;
-    margin-top: 10px;
+    text-align: center;
 }
 
 .btn:hover {
     background: #095a73;
 }
 
-.products {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
-}
-
-.products h2 {
-    color: #0b6e8e;
-    margin-top: 0;
-}
-
 .products ul {
-    padding-left: 20px;
-    line-height: 1.9;
+    line-height: 2;
+    padding-left: 22px;
 }
 
-.contact {
-    background: #eaf6fa;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.contact h2 {
-    color: #0b6e8e;
-    margin-top: 0;
-}
-
-.contact a {
-    color: #0b6e8e;
+.phone {
+    font-size: 20px;
     font-weight: bold;
+    color: #0b6e8e;
     text-decoration: none;
 }
 
@@ -166,6 +129,7 @@ footer {
 
 <body>
 
+
 <header>
 
 <h1>Grundig Beyaz Eşya Yetkili Servisleri</h1>
@@ -177,43 +141,45 @@ footer {
 
 <div class="container">
 
+
 <a href="index.html" class="back">
 ← Ana Sayfaya Dön
 </a>
 
 
-<div class="info">
+<div class="box">
 
-<h2>Grundig Yetkili Servis</h2>
+<h2>Grundig Yetkili Servisleri</h2>
 
 <p>
 Grundig beyaz eşya ürünleriniz için Türkiye genelindeki
-yetkili servis noktalarına Grundig'in resmi servis sistemi
+yetkili servis noktalarına resmi Grundig servis sistemi
 üzerinden ulaşabilirsiniz.
 </p>
 
 <p>
-SUCİ olarak çok sayıda servis noktasını tek tek listelemek
-yerine, güncel ve yetkili servis bilgilerine doğrudan
-Grundig'in resmi servis sistemi üzerinden ulaşmanızı öneriyoruz.
+Güncel servis adresleri değişebildiği için SUCİ üzerinde
+tek tek adres listesi yerine Grundig'in resmi yetkili servis
+sistemine yönlendirme yapılmaktadır.
 </p>
 
 </div>
 
 
-<div class="search-box">
+<div class="box search-area">
 
 <h2>Servis Ara</h2>
 
-<input
-type="text"
-id="serviceSearch"
-placeholder="Şehir veya ilçe yazın..."
->
+<p>
+Şehir, ilçe ve mahalle seçerek size en uygun Grundig
+yetkili servisini resmi Grundig sistemi üzerinden
+bulabilirsiniz.
+</p>
 
 <a
-href="https://www.grundig.com.tr/yetkili-servis/"
+href="https://www.grundig.com.tr/yetkili-servis"
 target="_blank"
+rel="noopener noreferrer"
 class="btn"
 >
 🔎 Grundig Yetkili Servis Bul
@@ -222,7 +188,28 @@ class="btn"
 </div>
 
 
-<div class="products">
+<div class="box">
+
+<h2>Teknik Destek ve Servis Randevusu</h2>
+
+<p>
+Grundig resmi servis sistemi üzerinden teknik destek
+alabilir ve servis randevusu oluşturabilirsiniz.
+</p>
+
+<a
+href="https://www.grundig.com.tr/yetkili-servis"
+target="_blank"
+rel="noopener noreferrer"
+class="btn"
+>
+📅 Servis Randevusu / Yetkili Servis
+</a>
+
+</div>
+
+
+<div class="box products">
 
 <h2>Grundig Beyaz Eşya Ürünleri</h2>
 
@@ -253,50 +240,33 @@ class="btn"
 </div>
 
 
-<div class="contact">
+<div class="box">
 
 <h2>Grundig Müşteri Hizmetleri</h2>
 
 <p>
-<strong>Çağrı Merkezi:</strong>
-<a href="tel:08502100888">
+<strong>7/24 Çağrı Destek Merkezi</strong>
+</p>
+
+<a
+href="tel:08502100888"
+class="phone"
+>
 0850 210 0 888
 </a>
-</p>
 
 <p>
-<strong>Alternatif Telefon:</strong>
-<a href="tel:02165858888">
-0216 585 8 888
-</a>
-</p>
-
-<p>
-<strong>WhatsApp:</strong>
-<a href="tel:05444440888">
-0544 444 08 88
-</a>
-</p>
-
-<p>
-Grundig ürününüzle ilgili servis veya teknik destek
-talebinizi müşteri hizmetleri üzerinden iletebilirsiniz.
+Grundig resmi web sitesinden teknik destek, servis
+randevusu ve yetkili servis bilgilerine ulaşabilirsiniz.
 </p>
 
 <a
 href="https://www.grundig.com.tr/"
 target="_blank"
+rel="noopener noreferrer"
 class="btn"
 >
 🌐 Grundig Resmi Web Sitesi
-</a>
-
-<a
-href="https://www.grundig.com.tr/yetkili-servis/"
-target="_blank"
-class="btn"
->
-📍 Yetkili Servis Sistemi
 </a>
 
 </div>
@@ -305,6 +275,7 @@ class="btn"
 <a href="index.html" class="back">
 ← Ana Sayfaya Dön
 </a>
+
 
 </div>
 
@@ -319,26 +290,6 @@ Türkiye'nin Teknik Servis Rehberi © 2026
 
 </footer>
 
-
-<script>
-
-const searchInput = document.getElementById("serviceSearch");
-
-searchInput.addEventListener("input", function() {
-
-    if (this.value.trim() !== "") {
-
-        this.style.borderColor = "#0b6e8e";
-
-    } else {
-
-        this.style.borderColor = "#ccc";
-
-    }
-
-});
-
-</script>
 
 </body>
 
