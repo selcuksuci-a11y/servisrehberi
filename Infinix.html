@@ -1,1 +1,622 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Infinix Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #1f2937;
+}
+
+.info-box {
+    background: white;
+    border-left: 5px solid #111827;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.city-title {
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-size: 21px;
+    color: #111827;
+    border-bottom: 2px solid #111827;
+    padding-bottom: 8px;
+}
+
+.service-card {
+    background: white;
+    padding: 18px;
+    margin-bottom: 14px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.badge {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.map-button:hover {
+    background: #1d4ed8;
+}
+
+.phone-button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 6px;
+    padding: 10px 14px;
+    background: #059669;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+@media (max-width: 700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 SUCİ</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info-box">
+
+<h2>Infinix Yetkili Servisleri</h2>
+
+<p>
+Infinix cep telefonları için Türkiye'deki yetkili servis hizmetleri
+Carlcare tarafından sağlanmaktadır.
+</p>
+
+<p>
+SUCİ üzerinde doğrulanabilen Infinix servis noktalarını şehir bazında
+bulabilir, adres ve telefon bilgilerine ulaşabilirsiniz.
+</p>
+
+<p>
+<strong>Infinix Müşteri Hizmetleri:</strong>
+0850 822 38 86
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis ara..."
+onkeyup="filterServices()">
+
+<input
+type="text"
+id="citySearch"
+placeholder="Şehir ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<div id="serviceList">
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">İstanbul</h2>
+
+
+<div class="service-card">
+
+<h3>Carlcare Infinix Yetkili Servis - Bakırköy</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Kartaltepe Mahallesi,
+İncirli Caddesi,
+İhsan Kalmaz Sokak No: 3/1-2,
+Bakırköy / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0212 660 58 69
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="phone-button"
+href="tel:02126605869">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Carlcare+Infinix+Bakirkoy+Istanbul"
+target="_blank">
+📍 Haritada Göster
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Carlcare Infinix Yetkili Servis - Maltepe</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Bağlarbaşı Mahallesi,
+Cemal Bey Caddesi No: 110,
+Maltepe / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0216 500 16 10
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="phone-button"
+href="tel:02165001610">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Carlcare+Infinix+Maltepe+Istanbul"
+target="_blank">
+📍 Haritada Göster
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Carlcare Infinix Yetkili Servis - Ataşehir</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Atilla Mahallesi,
+İlhan Sokak No: 20,
+Ataşehir / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0850 502 07 10
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="phone-button"
+href="tel:08505020710">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Carlcare+Infinix+Atasehir+Istanbul"
+target="_blank">
+📍 Haritada Göster
+</a>
+
+</div>
+
+
+<!-- İZMİR -->
+
+<h2 class="city-title">İzmir</h2>
+
+
+<div class="service-card">
+
+<h3>Carlcare Infinix Yetkili Servis - İzmir</h3>
+
+<p>
+<strong>Adres:</strong><br>
+İsmet Kaptan Mahallesi,
+1365 Sokak,
+Çankaya Caddesi No: 7B,
+Konak / İzmir
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0232 489 58 69
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="phone-button"
+href="tel:02324895869">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Carlcare+Infinix+Izmir+Konak"
+target="_blank">
+📍 Haritada Göster
+</a>
+
+</div>
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">Antalya</h2>
+
+
+<div class="service-card">
+
+<h3>Carlcare Infinix Yetkili Servis - Antalya</h3>
+
+<p>
+<strong>Adres:</strong><br>
+Etiler Mahallesi,
+Adnan Menderes Bulvarı No: 67-B,
+Muratpaşa / Antalya
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0242 243 27 38
+</p>
+
+<span class="badge">
+✓ Yetkili Servis
+</span>
+
+<br>
+
+<a
+class="phone-button"
+href="tel:02422432738">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-button"
+href="https://www.google.com/maps/search/?api=1&query=Carlcare+Infinix+Antalya+Muratpasa"
+target="_blank">
+📍 Haritada Göster
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="info-box">
+
+<h2>Infinix Destek</h2>
+
+<p>
+Türkiye Infinix resmi servis sağlayıcısı Carlcare'dir.
+</p>
+
+<p>
+<strong>Müşteri Hizmetleri:</strong>
+0850 822 38 86
+</p>
+
+<p>
+<strong>E-posta:</strong>
+service@carlcare.com
+</p>
+
+<p>
+Servis merkezi, garanti kontrolü ve onarım durumu gibi işlemler
+Carlcare üzerinden de takip edilebilir.
+</p>
+
+<a
+class="map-button"
+href="https://www.carlcare.com/tr/service-center/"
+target="_blank">
+🔎 Carlcare Servis Merkezi
+</a>
+
+</div>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceSearch =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const citySearch =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    const titles =
+        document.querySelectorAll(".city-title");
+
+    let visibleCount = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        const serviceMatch =
+            text.includes(serviceSearch);
+
+        const cityMatch =
+            citySearch === "" ||
+            card.previousElementSibling?.innerText
+                .toLowerCase()
+                .includes(citySearch) ||
+            text.includes(citySearch);
+
+        if (serviceMatch && cityMatch) {
+
+            card.style.display = "block";
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    titles.forEach(function(title) {
+
+        let next = title.nextElementSibling;
+        let hasVisibleCard = false;
+
+        while (
+            next &&
+            !next.classList.contains("city-title")
+        ) {
+
+            if (
+                next.classList.contains("service-card") &&
+                next.style.display !== "none"
+            ) {
+
+                hasVisibleCard = true;
+                break;
+
+            }
+
+            next = next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            hasVisibleCard ? "block" : "none";
+
+    });
+
+
+    let noResult =
+        document.getElementById("noResult");
+
+    if (visibleCount === 0) {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+<div
+id="noResult"
+class="no-result">
+
+Infinix servis sonucu bulunamadı.
+
+</div>
+
+</body>
+
+</html>
