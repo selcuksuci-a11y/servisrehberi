@@ -1,1 +1,482 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>LG Bilgisayar Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.phone {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.official {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media(max-width:700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>LG Bilgisayar Yetkili Servisleri</h2>
+
+<p>
+LG marka bilgisayar ve monitör ürünleri için
+Türkiye genelindeki yetkili servis ve teknik destek
+bilgilerine SUCİ üzerinden kolayca ulaşabilirsiniz.
+</p>
+
+<p>
+LG'nin resmi servis sistemi üzerinden adresinizi ve
+ürün tipinizi seçerek size en uygun yetkili servis
+merkezini bulabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+id="serviceSearch"
+type="text"
+placeholder="Servis ara..."
+onkeyup="filterServices()"
+>
+
+<input
+id="citySearch"
+type="text"
+placeholder="Şehir ara..."
+onkeyup="filterServices()"
+>
+
+</div>
+
+
+<div
+class="service-card"
+data-service="LG Yetkili Servis Merkezi Teknik Servis"
+data-city="Türkiye"
+>
+
+<h3>🔧 LG Yetkili Servis Merkezi</h3>
+
+<p>
+LG'nin resmi servis merkezi arama sistemi üzerinden
+adresinizi ve ürün tipinizi seçerek size en yakın
+LG Yetkili Servis Merkezi'ni bulabilirsiniz.
+</p>
+
+<a
+href="https://www.lg.com/tr/destek/contact-us/teknik-servis-arama/"
+target="_blank"
+class="official"
+>
+Yetkili Servis Bul
+</a>
+
+</div>
+
+
+<div
+class="service-card"
+data-service="LG Teknik Servis Durumu Onarım Takibi Tamir Takibi"
+data-city="Türkiye"
+>
+
+<h3>🔧 Teknik Servis Durumu Sorgula</h3>
+
+<p>
+LG ürününüz için oluşturduğunuz onarım talebinin
+durumunu resmi LG sistemi üzerinden takip edebilirsiniz.
+</p>
+
+<p>
+Onarım takibi için LG'nin resmi sisteminde
+makbuz numarası ve telefon numarası bilgileri
+kullanılmaktadır.
+</p>
+
+<a
+href="https://www.lg.com/tr/destek/product-support/teknik-servis-randevu/"
+target="_blank"
+class="official"
+>
+Teknik Servis Durumunu Sorgula
+</a>
+
+</div>
+
+
+<div
+class="service-card"
+data-service="LG Tamir Talebi Onarım Servis Randevu"
+data-city="Türkiye"
+>
+
+<h3>🛠️ LG Tamir / Onarım Talebi</h3>
+
+<p>
+LG ürününüz için resmi internet sitesi üzerinden
+online onarım talebi oluşturabilirsiniz.
+</p>
+
+<p>
+Servis talebinizi oluşturduktan sonra onarım sürecini
+aynı resmi sistem üzerinden takip edebilirsiniz.
+</p>
+
+<a
+href="https://www.lg.com/tr/destek/product-support/teknik-servis-randevu/"
+target="_blank"
+class="official"
+>
+Onarım Talebi Oluştur
+</a>
+
+</div>
+
+
+<div
+class="service-card"
+data-service="LG Müşteri Hizmetleri Teknik Destek Telefon"
+data-city="Türkiye"
+>
+
+<h3>📞 LG Müşteri Hizmetleri</h3>
+
+<p>
+LG Türkiye teknik destek ve müşteri hizmetleri
+kanalı üzerinden ürünlerinizle ilgili destek
+alabilirsiniz.
+</p>
+
+<div class="phone">
+444 6 543
+</div>
+
+<p>
+Çalışma saatleri:
+Haftanın her günü 09:00 - 20:00
+</p>
+
+<a
+href="https://www.lg.com/tr/destek/contact-us/telefon/"
+target="_blank"
+class="official"
+>
+LG Destek Hattı
+</a>
+
+</div>
+
+
+<div
+class="service-card"
+data-service="LG WhatsApp Destek İletişim"
+data-city="Türkiye"
+>
+
+<h3>💬 LG WhatsApp Destek</h3>
+
+<p>
+LG Türkiye, teknik destek ve müşteri iletişimi için
+WhatsApp üzerinden de destek sunmaktadır.
+</p>
+
+<div class="phone">
++90 530 918 65 43
+</div>
+
+<p>
+Çalışma saatleri:
+Haftanın her günü 09:00 - 20:00
+</p>
+
+<a
+href="https://www.lg.com/tr/destek/contact-us/"
+target="_blank"
+class="official"
+>
+LG İletişim Sayfası
+</a>
+
+</div>
+
+
+<div
+class="service-card"
+data-service="LG Ürün Desteği Garanti Teknik Destek"
+data-city="Türkiye"
+>
+
+<h3>📋 LG Ürün Desteği ve Garanti</h3>
+
+<p>
+LG resmi destek merkezi üzerinden ürün modelinizi
+arayabilir, ürün desteği, garanti bilgileri,
+kılavuzlar ve sorun giderme seçeneklerine ulaşabilirsiniz.
+</p>
+
+<a
+href="https://www.lg.com/tr/destek/"
+target="_blank"
+class="official"
+>
+LG Resmi Destek Merkezi
+</a>
+
+<a
+href="https://www.lg.com/tr/destek/garanti/"
+target="_blank"
+class="official"
+>
+Garanti Bilgileri
+</a>
+
+</div>
+
+
+<div class="note">
+
+<strong>Bilgi:</strong><br>
+
+LG'nin Türkiye genelinde çok sayıda yetkili servis
+noktası bulunduğu için SUCİ üzerinde yüzlerce servis
+adresi tek tek listelenmemiştir.
+
+Servis adresleri ve güncel servis bilgileri,
+LG Türkiye'nin resmi yetkili servis arama sistemi
+üzerinden görüntülenmektedir.
+
+SUCİ yalnızca kullanıcıyı doğru resmi servis
+kanalına yönlendirmektedir.
+
+</div>
+
+
+<br>
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceText =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cityText =
+        document
+        .getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const service =
+            card
+            .getAttribute("data-service")
+            .toLowerCase();
+
+        const city =
+            card
+            .getAttribute("data-city")
+            .toLowerCase();
+
+        if (
+            service.includes(serviceText) &&
+            city.includes(cityText)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
