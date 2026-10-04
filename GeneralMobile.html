@@ -1,1 +1,1077 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>General Mobile Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 17px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: block;
+    text-decoration: none;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #1f2937;
+}
+
+.info-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.city-title {
+    background: #111827;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    margin: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.authorized {
+    color: #047857;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.call-btn,
+.map-btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 11px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.call-btn {
+    background: #111827;
+    color: white;
+}
+
+.map-btn {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .call-btn,
+    .map-btn {
+        text-align: center;
+        width: 100%;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 SUCİ</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info-box">
+
+<h2>General Mobile Yetkili Servisleri</h2>
+
+<p>
+General Mobile cep telefonları için Türkiye'deki yetkili
+teknik servis noktalarını şehir bazında bulabilirsiniz.
+</p>
+
+<p>
+General Mobile'ın resmi destek sistemi, yetkili servis
+noktaları ve servis işlemleri için Telpa altyapısını
+kullanmaktadır.
+</p>
+
+<p>
+<strong>General Mobile / Telpa Teknik Servis:</strong>
+0850 955 15 15
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="🔎 Servis ara..."
+onkeyup="filterServices()"
+>
+
+<input
+type="text"
+id="citySearch"
+placeholder="🏙️ Şehir ara..."
+onkeyup="filterServices()"
+>
+
+</div>
+
+
+<div id="serviceList">
+
+
+<h2 class="city-title">Adana</h2>
+
+<div class="service-card">
+
+<h3>Eren DTM</h3>
+
+<p>
+📍 Karasoku Mah. Mısır Çarşısı Girişi No:15/A,
+Seyhan / Adana
+</p>
+
+<p>☎️ 0322 351 97 01</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:03223519701">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Eren+DTM+Karasoku+Mahallesi+M%C4%B1s%C4%B1r+%C3%87ar%C5%9F%C4%B1s%C4%B1+Adana">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Ankara</h2>
+
+<div class="service-card">
+
+<h3>Arı Servis</h3>
+
+<p>
+📍 Korkutreis Mah. Hanımeli Sok. No:13/B,
+Necatibey, Çankaya / Ankara
+</p>
+
+<p>☎️ 0312 432 33 33</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:03124323333">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Ar%C4%B1+Servis+Korkutreis+Han%C4%B1meli+Sokak+13%2FB+Ankara">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Balıkesir</h2>
+
+<div class="service-card">
+
+<h3>Link Center</h3>
+
+<p>
+📍 Anafartalar Cad. No:76/C,
+Altıeylül / Balıkesir
+</p>
+
+<p>☎️ 0266 244 74 16</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:02662447416">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Link+Center+Anafartalar+Cad+76%2FC+Bal%C4%B1kesir">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Giresun</h2>
+
+<div class="service-card">
+
+<h3>Girtek</h3>
+
+<p>
+📍 Kapu Mah. Gazi Cad. Kılıçcı İş Hanı No:87,
+Merkez / Giresun
+</p>
+
+<p>☎️ 0454 216 02 37</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:04542160237">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Girtek+Kapu+Mahallesi+Gazi+Caddesi+Giresun">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">İstanbul</h2>
+
+
+<div class="service-card">
+
+<h3>C.T.S.</h3>
+
+<p>
+📍 Çalışlar Sok. No:5,
+Güngören / İstanbul
+</p>
+
+<p>☎️ 0212 553 48 43</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:02125534843">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=CTS+%C3%87al%C4%B1%C5%9Flar+Sokak+5+G%C3%BCng%C3%B6ren+%C4%B0stanbul">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Telpa</h3>
+
+<p>
+📍 Hamidiye Mah. Anadolu Cad. No:14,
+Kağıthane / İstanbul
+</p>
+
+<p>☎️ 0850 955 15 15</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:08509551515">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Telpa+Hamidiye+Mahallesi+Anadolu+Caddesi+14+Ka%C4%9F%C4%B1thane+%C4%B0stanbul">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Toryum Tek</h3>
+
+<p>
+📍 Alemdağ Cad. Karanfil Sok. No:17/A,
+Ümraniye / İstanbul
+</p>
+
+<p>☎️ 0216 344 62 16</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:02163446216">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Toryum+Tek+Alemda%C4%9F+Caddesi+Karanfil+Sokak+17%2FA+%C3%9Cmraniye+%C4%B0stanbul">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>Yasir</h3>
+
+<p>
+📍 Batı Mah. Burhan Toprak Cad. No:18/A,
+Pendik / İstanbul
+</p>
+
+<p>☎️ 0216 390 02 50</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:02163900250">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Yasir+Telekom+Pendik+%C4%B0stanbul">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">İzmir</h2>
+
+<div class="service-card">
+
+<h3>Bepa Bilişim</h3>
+
+<p>
+📍 İsmet Kaptan Mah. Gazi Bulvarı,
+Çankaya İş Merkezi No:90,
+İç Kapı No:103, Konak / İzmir
+</p>
+
+<p>☎️ 0555 023 57 67</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:05550235767">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Bepa+Bili%C5%9Fim+%C4%B0zmir">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Kocaeli</h2>
+
+<div class="service-card">
+
+<h3>İletkom</h3>
+
+<p>
+📍 Alemdar Cad. Soydan İş Merkezi Asma Kat No:34/70,
+İzmit / Kocaeli
+</p>
+
+<p>☎️ 0262 331 63 63</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:02623316363">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=%C4%B0letkom+Alemdar+Caddesi+Soydan+%C4%B0%C5%9F+Merkezi+Kocaeli">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Konya</h2>
+
+<div class="service-card">
+
+<h3>Tevfik Elektronik</h3>
+
+<p>
+📍 Nalçacı Cad. Dünya Sitesi Altı No:40/A,
+Selçuklu / Konya
+</p>
+
+<p>☎️ 0332 233 81 62</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:03322338162">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Tevfik+Elektronik+Nal%C3%A7ac%C4%B1+Caddesi+Konya">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Malatya</h2>
+
+<div class="service-card">
+
+<h3>Er GSM</h3>
+
+<p>
+📍 İnönü Mah. Belediye Sok.,
+Malatya Park AVM Yanı Geçici Ticaret Merkezi
+B2 Blok No:4, Yeşilyurt / Malatya
+</p>
+
+<p>☎️ 0535 668 28 28</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:05356682828">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Er+GSM+Malatya">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Manisa</h2>
+
+<div class="service-card">
+
+<h3>Kontrel Elektronik</h3>
+
+<p>
+📍 Arda Mah. Yümlü Gediz Cad. No:11/A,
+Şehzadeler / Manisa
+</p>
+
+<p>☎️ 0236 237 02 02</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:02362370202">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Kontrel+Elektronik+Manisa">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Mersin</h2>
+
+<div class="service-card">
+
+<h3>My Murat Yüksekbaş</h3>
+
+<p>
+📍 Camişerif Mah. Uray Cad. Sezer İş Hanı
+No:35 Bağımsız Bölüm 5,
+Akdeniz / Mersin
+</p>
+
+<p>☎️ 0324 237 77 04</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:03242377704">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=My+Murat+Y%C3%BCksekba%C5%9F+Mersin">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Samsun</h2>
+
+<div class="service-card">
+
+<h3>AET Teknoloji</h3>
+
+<p>
+📍 Çiftehamam Cad. No:26/04,
+İlkadım / Samsun
+</p>
+
+<p>☎️ 0362 234 59 59</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:03622345959">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=AET+Teknoloji+Samsun">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Trabzon</h2>
+
+<div class="service-card">
+
+<h3>Seçkin</h3>
+
+<p>
+📍 Çarşı Mah. Alican Sok. No:7,
+Ortahisar / Trabzon
+</p>
+
+<p>☎️ 0462 230 59 73</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:04622305973">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Se%C3%A7kin+%C3%87ar%C5%9F%C4%B1+Mahallesi+Alican+Sokak+Trabzon">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+<h2 class="city-title">Zonguldak</h2>
+
+<div class="service-card">
+
+<h3>Ne-O GSM</h3>
+
+<p>
+📍 Meşrutiyet Mah. Tahir Karaoğuz Sok. No:21/C,
+Merkez / Zonguldak
+</p>
+
+<p>☎️ 0372 252 54 12</p>
+
+<p class="authorized">
+✓ Yetkili Servis
+</p>
+
+<div class="buttons">
+
+<a
+class="call-btn"
+href="tel:03722525412">
+☎ Servisi Ara
+</a>
+
+<a
+class="map-btn"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=Ne-O+GSM+Zonguldak">
+📍 Haritada Göster
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<div
+id="noResult"
+class="no-result">
+
+General Mobile servis sonucu bulunamadı.
+
+</div>
+
+
+<div class="info-box">
+
+<h2>General Mobile Destek</h2>
+
+<p>
+📞 Teknik Servis / Destek:
+<strong>0850 955 15 15</strong>
+</p>
+
+<p>
+💬 WhatsApp Destek:
+<strong>0553 507 18 18</strong>
+</p>
+
+<p>
+General Mobile cihazınız için servis kaydı,
+cihaz takibi ve garanti sorgulama işlemleri Telpa
+üzerinden gerçekleştirilebilir.
+</p>
+
+<p>
+<strong>✓ General Mobile Yetkili Servis Ağı</strong>
+</p>
+
+</div>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceSearch =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const citySearch =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const serviceList =
+        document.getElementById("serviceList");
+
+    const cards =
+        serviceList.querySelectorAll(".service-card");
+
+    const cityTitles =
+        serviceList.querySelectorAll(".city-title");
+
+    let visibleCount = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        let city = "";
+
+        let previous =
+            card.previousElementSibling;
+
+        while (previous) {
+
+            if (
+                previous.classList
+                .contains("city-title")
+            ) {
+
+                city =
+                    previous.innerText.toLowerCase();
+
+                break;
+
+            }
+
+            previous =
+                previous.previousElementSibling;
+        }
+
+        const serviceMatch =
+            text.includes(serviceSearch);
+
+        const cityMatch =
+            city.includes(citySearch);
+
+        if (
+            serviceMatch &&
+            cityMatch
+        ) {
+
+            card.style.display = "block";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    cityTitles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let hasVisibleCard = false;
+
+        while (next) {
+
+            if (
+                next.classList
+                .contains("city-title")
+            ) {
+
+                break;
+
+            }
+
+            if (
+                next.classList
+                .contains("service-card") &&
+                next.style.display !== "none"
+            ) {
+
+                hasVisibleCard = true;
+
+                break;
+
+            }
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+        title.style.display =
+            hasVisibleCard
+            ? "block"
+            : "none";
+
+    });
+
+
+    document.getElementById("noResult")
+        .style.display =
+        visibleCount === 0
+        ? "block"
+        : "none";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
