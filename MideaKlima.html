@@ -1,1 +1,472 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Midea Klima Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #0066b3;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 11px 16px;
+    background: #0066b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #004f8a;
+}
+
+.info {
+    background: white;
+    border-left: 5px solid #0066b3;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info h2 {
+    margin-top: 0;
+    color: #0066b3;
+}
+
+.search-box {
+    background: white;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    margin-top: 0;
+    color: #0066b3;
+}
+
+input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #0066b3;
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 15px;
+    margin: 5px 5px 5px 0;
+    background: #0066b3;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #004f8a;
+}
+
+.green {
+    background: #198754;
+}
+
+.green:hover {
+    background: #146c43;
+}
+
+.orange {
+    background: #e67e22;
+}
+
+.orange:hover {
+    background: #ca6f1e;
+}
+
+.warning {
+    background: #fff8e1;
+    border-left: 5px solid #f0ad4e;
+    padding: 16px;
+    margin-top: 15px;
+    border-radius: 7px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #666;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 SUCİ</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>🌬️ Midea Klima Yetkili Servisleri</h2>
+
+<p>
+Midea klimalar için Türkiye genelindeki yetkili servis noktalarına
+resmî servis ağı üzerinden ulaşabilirsiniz.
+</p>
+
+<p>
+Midea klima servis ağı Türkiye'de FG Europe tarafından yayınlanan
+yetkili servis listesi üzerinden il bazında görüntülenebilmektedir.
+</p>
+
+<p>
+SUCİ olarak servis adreslerini tek tek sabitlemek yerine,
+güncel servis bilgilerinin değişebilmesi nedeniyle resmî servis
+kaynağına yönlendirme yapılmaktadır.
+</p>
+
+</div>
+
+
+<div class="search-box">
+
+<h2>🔎 Servis Ara</h2>
+
+<input
+type="text"
+placeholder="Şehir veya ilçe adını yazabilirsiniz..."
+id="serviceSearch"
+onkeyup="filterServices()">
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📍 Midea Yetkili Servislerini Bul</h3>
+
+<p>
+FG Europe'un resmî Midea klima servis ağı sayfasından
+ilinizi seçerek güncel yetkili servis noktalarını,
+adres ve telefon bilgilerini görüntüleyebilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.fgeurope.com.tr/bayiler/servis"
+target="_blank">
+✓ Yetkili Servis Bul
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>🇹🇷 SERBİS Yetkili Servis Doğrulama</h3>
+
+<p>
+Yetkili servis bilgisini T.C. Ticaret Bakanlığı'nın
+Servis Bilgi Sistemi (SERBİS) üzerinden de kontrol edebilirsiniz.
+</p>
+
+<p>
+SERBİS üzerinden üretici/ithalatçı, marka, ürün, il ve ilçe
+seçerek yetkili servis sorgulaması yapılabilir.
+</p>
+
+<a
+class="button green"
+href="https://www.servis.gov.tr/Genel/Sorgu"
+target="_blank">
+✓ SERBİS'ten Doğrula
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>🛠️ Servis / Teknik Destek</h3>
+
+<p>
+Midea klima servis ve teknik destek talepleri için
+FG Europe'un Türkiye iletişim kanallarını kullanabilirsiniz.
+</p>
+
+<p>
+<strong>FG Europe Midea Klima Destek Hattı:</strong>
+444 85 49
+</p>
+
+<p>
+<strong>E-posta:</strong>
+info@fgeurope.com.tr
+</p>
+
+<a
+class="button"
+href="tel:4448549">
+📞 444 85 49
+</a>
+
+<a
+class="button"
+href="mailto:info@fgeurope.com.tr">
+✉️ E-posta Gönder
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>🛡️ Midea Klima Garanti Bilgileri</h3>
+
+<p>
+Midea klimalarda garanti süresi ve model bazındaki özel garanti
+koşulları FG Europe tarafından yayınlanmaktadır.
+</p>
+
+<p>
+Belirli duvar tipi split modellerinde yetkili servis kurulumu ve
+periyodik bakım şartlarına bağlı olarak daha uzun garanti süreleri
+bulunmaktadır.
+</p>
+
+<p>
+Güncel garanti koşullarını satın aldığınız modele göre kontrol etmek
+için resmî garanti sayfasını kullanabilirsiniz.
+</p>
+
+<a
+class="button orange"
+href="https://www.fgeurope.com.tr/garanti"
+target="_blank">
+🛡️ Garanti Koşullarını Gör
+</a>
+
+<div class="warning">
+
+<strong>Önemli:</strong>
+
+Midea'nın bazı duvar tipi split klima modellerinde
+6 veya 8 yıla kadar garanti koşulları bulunabilmektedir.
+Bu süreler model, yetkili servis montajı ve periyodik bakım
+şartlarına bağlıdır.
+
+Satın aldığınız model için güncel şartları mutlaka
+resmî garanti sayfasından kontrol edin.
+
+</div>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📞 Midea Türkiye / FG Europe İletişim</h3>
+
+<p>
+Midea klima ürünleri için Türkiye'deki resmî dağıtım ve servis
+kanallarına FG Europe üzerinden ulaşabilirsiniz.
+</p>
+
+<p>
+<strong>Telefon:</strong> 444 85 49
+</p>
+
+<p>
+<strong>E-posta:</strong> info@fgeurope.com.tr
+</p>
+
+<p>
+<strong>Adres:</strong><br>
+Aydınevler Mahallesi Sanayi Caddesi
+Sancak Sokak No:7
+Maltepe / İstanbul
+</p>
+
+<a
+class="button"
+href="https://www.fgeurope.com.tr/"
+target="_blank">
+🌐 Resmî Midea Klima Sitesi
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>❄️ Midea Klima Ürünleri</h3>
+
+<p>
+Midea'nın Türkiye'de satışta bulunan duvar tipi ve ticari klima
+ürünlerini FG Europe üzerinden inceleyebilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.fgeurope.com.tr/"
+target="_blank">
+❄️ Midea Klima Ürünleri
+</a>
+
+</div>
+
+
+<div class="card service-card">
+
+<h3>📌 SUCİ Servis Notu</h3>
+
+<p>
+Midea'nın Türkiye genelinde çok sayıda servis noktası bulunduğu için
+SUCİ üzerinde tüm servis adresleri tek tek listelenmemektedir.
+</p>
+
+<p>
+En güncel servis noktası için önce FG Europe'un resmî servis
+listesini, ardından gerekli durumlarda SERBİS'i kullanmanız önerilir.
+</p>
+
+</div>
+
+
+<br>
+
+<a class="back" href="index.html">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const search =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (
+            search === "" ||
+            text.includes(search)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
