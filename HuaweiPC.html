@@ -1,1 +1,485 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Huawei Bilgisayar Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.phone {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.official {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media(max-width:700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>Huawei Bilgisayar Yetkili Servisleri</h2>
+
+<p>
+Huawei marka dizüstü bilgisayar ve MateBook ürünleri için
+teknik servis, onarım ve destek bilgilerine buradan
+ulaşabilirsiniz.
+</p>
+
+<p>
+Huawei Türkiye'nin resmi destek sistemi üzerinden servis
+merkezlerini bulabilir, teknik servis onarım durumunu
+sorgulayabilir ve cihazınızla ilgili destek alabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis ara..."
+onkeyup="filterServices()"
+>
+
+<input
+type="text"
+id="citySearch"
+placeholder="Şehir ara..."
+onkeyup="filterServices()"
+>
+
+</div>
+
+
+<!-- YETKİLİ SERVİS -->
+
+<div
+class="service-card"
+data-service="Huawei Yetkili Servis Huawei Servis Merkezi Teknik Servis"
+data-city="Türkiye">
+
+<h3>
+🛠️ Huawei Yetkili Servis Merkezleri
+</h3>
+
+<p>
+Huawei'nin resmi servis merkezi sistemi üzerinden
+şehir ve adres bilgisi girerek size en yakın yetkili
+servis merkezini bulabilirsiniz.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/service-center/"
+target="_blank"
+class="official">
+
+Huawei Servis Merkezi Bul
+
+</a>
+
+</div>
+
+
+<!-- SERVİS DURUMU -->
+
+<div
+class="service-card"
+data-service="Huawei Teknik Servis Durumu Onarım Durumu Servis Durumu Teknik Servis"
+data-city="Türkiye">
+
+<h3>
+🔧 Teknik Servis Durumu Sorgula
+</h3>
+
+<p>
+Huawei'nin resmi <strong>Teknik Servis Onarım Durumu</strong>
+sistemi üzerinden servise gönderdiğiniz cihazınızın
+onarım durumunu kontrol edebilirsiniz.
+</p>
+
+<p>
+Sorgulama için cihazınızın <strong>SN / IMEI numarasını</strong>
+ve ekranda istenen doğrulama bilgilerini kullanabilirsiniz.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/inquiry/"
+target="_blank"
+class="official">
+
+🔧 Servis Durumunu Sorgula
+
+</a>
+
+</div>
+
+
+<!-- MÜŞTERİ HİZMETLERİ -->
+
+<div
+class="service-card"
+data-service="Huawei Müşteri Hizmetleri İletişim Telefon Yardım Hattı"
+data-city="Türkiye">
+
+<h3>
+📞 Huawei Türkiye Müşteri Hizmetleri
+</h3>
+
+<p>
+Huawei Türkiye resmi destek hattı üzerinden ürününüzle
+ilgili teknik destek, servis ve onarım konularında
+yardım alabilirsiniz.
+</p>
+
+<div class="phone">
+444 79 88
+</div>
+
+<p>
+Destek hattı haftanın her günü
+09:00 - 19:00 saatleri arasında hizmet vermektedir.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/contact-us/"
+target="_blank"
+class="official">
+
+Huawei İletişim ve Destek
+
+</a>
+
+</div>
+
+
+<!-- GARANTİ -->
+
+<div
+class="service-card"
+data-service="Huawei Garanti Garanti Durumu Garanti Sorgulama"
+data-city="Türkiye">
+
+<h3>
+📋 Huawei Garanti ve Destek Durumu
+</h3>
+
+<p>
+Huawei resmi destek sistemi üzerinden cihazınızın
+garanti süresi ve destek hizmetleriyle ilgili
+bilgilere ulaşabilirsiniz.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/"
+target="_blank"
+class="official">
+
+Garanti ve Destek Bilgileri
+
+</a>
+
+</div>
+
+
+<!-- TEKNİK DESTEK -->
+
+<div
+class="service-card"
+data-service="Huawei Teknik Destek MateBook PC Sürücü Yazılım Kılavuz"
+data-city="Türkiye">
+
+<h3>
+💻 Huawei PC Teknik Destek
+</h3>
+
+<p>
+MateBook ürünleri için sürücüler, PC Manager,
+kullanım kılavuzları ve diğer teknik destek
+seçeneklerine Huawei'nin resmi destek sayfasından
+ulaşabilirsiniz.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/pcs/"
+target="_blank"
+class="official">
+
+Huawei PC Teknik Destek
+
+</a>
+
+</div>
+
+
+<!-- ONARIM HİZMETİ -->
+
+<div
+class="service-card"
+data-service="Huawei Onarım Servisi Kargo Onarım Kapıdan Kapıya Servis"
+data-city="Türkiye">
+
+<h3>
+📦 Huawei Onarım Hizmeti
+</h3>
+
+<p>
+Huawei'nin resmi onarım hizmetleri üzerinden cihazınızı
+servise gönderme seçenekleri ve onarım süreci hakkında
+bilgi alabilirsiniz.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/express-repair/"
+target="_blank"
+class="official">
+
+Huawei Onarım Hizmetleri
+
+</a>
+
+</div>
+
+
+<div class="note">
+
+<strong>Bilgi:</strong><br>
+
+SUCİ, Huawei'nin Türkiye genelindeki servis adreslerini
+tek tek listelemek yerine kullanıcıları Huawei'nin resmi
+servis merkezi ve destek sistemine yönlendirmektedir.
+
+Servis merkezi, teknik servis onarım durumu, garanti ve
+teknik destek işlemlerinde Huawei'nin resmi sistemindeki
+güncel bilgiler kullanılmalıdır.
+
+</div>
+
+
+<br>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceText =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cityText =
+        document
+        .getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const service =
+            card
+            .getAttribute("data-service")
+            .toLowerCase();
+
+        const city =
+            card
+            .getAttribute("data-city")
+            .toLowerCase();
+
+        if (
+            service.includes(serviceText) &&
+            city.includes(cityText)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
