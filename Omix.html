@@ -1,1 +1,739 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>OMIX Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #111827;
+    color: white;
+    padding: 13px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.info-box {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+
+.city-title {
+    background: #111827;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-top: 25px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 12px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.service-type {
+    color: #166534;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    margin: 7px 0;
+    line-height: 1.5;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    background: #111827;
+}
+
+.btn-map {
+    background: #2563eb;
+}
+
+.no-result {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 30px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 SUCİ</h1>
+
+<p>Türkiye'nin Teknik Servis Rehberi</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info-box">
+
+<h2>OMIX Yetkili Servisleri</h2>
+
+<p>
+OMIX cep telefonları için Türkiye'deki yetkili servis noktalarını
+SUCİ üzerinden kolayca bulabilirsiniz.
+</p>
+
+<p>
+Bu sayfada güncel olarak doğrulanabilen
+<strong>KVK Teknik Servis</strong> ve
+<strong>BDH Bilişim Destek Hizmetleri</strong>
+servis noktaları yer almaktadır.
+</p>
+
+<p>
+<strong>Not:</strong> Genpa servis noktaları bu listeye dahil edilmemiştir.
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="🔎 Servis ara..."
+onkeyup="filterServices()">
+
+<input
+type="text"
+id="citySearch"
+placeholder="🏙️ Şehir ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<div id="serviceList">
+
+
+<!-- İSTANBUL -->
+
+<h2 class="city-title">
+İstanbul
+</h2>
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Kartal</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> KVK Teknik Servis
+</p>
+
+<p>
+<strong>Adres:</strong>
+Soğanlık Yeni Mah. D-100 Kuzey Yan Yol Cad.
+Kanat Sanayi Sitesi No:32,
+Kartal / İstanbul
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Kartal+İstanbul"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Bakırköy</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> KVK Teknik Servis
+</p>
+
+<p>
+<strong>Şube:</strong> Bakırköy / İstanbul
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Bakırköy+İstanbul"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<div class="service-card">
+
+<h3>BDH Bilişim Destek Hizmetleri - Maltepe</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> BDH Bilişim Destek Hizmetleri
+</p>
+
+<p>
+<strong>Adres:</strong>
+Bağlarbaşı Mahallesi,
+Cemal Bey Caddesi No:110,
+34844 Maltepe / İstanbul
+</p>
+
+<p>
+<strong>Telefon:</strong>
+0216 500 17 00
+</p>
+
+<p>
+<strong>OMIX Çağrı Merkezi:</strong>
+0850 622 57 87
+</p>
+
+<div class="buttons">
+
+<a
+class="btn"
+href="tel:02165001700">
+
+☎ Servisi Ara
+
+</a>
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Cemal+Bey+Caddesi+No+110+Maltepe+İstanbul"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ANKARA -->
+
+<h2 class="city-title">
+Ankara
+</h2>
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Ankara</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> KVK Teknik Servis
+</p>
+
+<p>
+<strong>Şube:</strong> Ankara
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Ankara"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ADANA -->
+
+<h2 class="city-title">
+Adana
+</h2>
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Adana</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> KVK Teknik Servis
+</p>
+
+<p>
+<strong>Şube:</strong> Adana
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Adana"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ANTALYA -->
+
+<h2 class="city-title">
+Antalya
+</h2>
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Antalya</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> KVK Teknik Servis
+</p>
+
+<p>
+<strong>Şube:</strong> Antalya
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Antalya"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TRABZON -->
+
+<h2 class="city-title">
+Trabzon
+</h2>
+
+
+<div class="service-card">
+
+<h3>KVK Teknik Servis - Trabzon</h3>
+
+<div class="service-type">
+✓ Yetkili Servis
+</div>
+
+<p>
+<strong>Servis:</strong> KVK Teknik Servis
+</p>
+
+<p>
+<strong>Şube:</strong> Trabzon
+</p>
+
+<div class="buttons">
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=KVK+Teknik+Servis+Trabzon"
+target="_blank">
+
+📍 Haritada Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+<div id="noResult" class="no-result">
+
+OMIX servis sonucu bulunamadı.
+
+</div>
+
+
+<div class="info-box">
+
+<h2>OMIX Destek Bilgileri</h2>
+
+<p>
+OMIX için BDH tarafından yetkili servis hizmeti verilmektedir.
+</p>
+
+<p>
+<strong>OMIX Çağrı Merkezi:</strong>
+0850 622 57 87
+</p>
+
+<p>
+<strong>BDH Telefon:</strong>
+0216 500 17 00
+</p>
+
+<div class="buttons">
+
+<a
+class="btn"
+href="tel:08506225787">
+
+☎ OMIX Çağrı Merkezini Ara
+
+</a>
+
+<a
+class="btn btn-map"
+href="https://www.google.com/maps/search/?api=1&query=BDH+Bilişim+Cemal+Bey+Caddesi+No+110+Maltepe+İstanbul"
+target="_blank">
+
+📍 BDH Servisini Göster
+
+</a>
+
+</div>
+
+</div>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceSearch =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const citySearch =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const serviceList =
+        document.getElementById("serviceList");
+
+    const cards =
+        serviceList.querySelectorAll(".service-card");
+
+    const cityTitles =
+        serviceList.querySelectorAll(".city-title");
+
+    let visibleCount = 0;
+
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        let city = "";
+
+        let previous =
+            card.previousElementSibling;
+
+
+        while (previous) {
+
+            if (
+                previous.classList.contains("city-title")
+            ) {
+
+                city =
+                    previous.innerText.toLowerCase();
+
+                break;
+
+            }
+
+            previous =
+                previous.previousElementSibling;
+
+        }
+
+
+        const serviceMatch =
+            text.includes(serviceSearch);
+
+        const cityMatch =
+            city.includes(citySearch);
+
+
+        if (
+            serviceMatch &&
+            cityMatch
+        ) {
+
+            card.style.display = "block";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    cityTitles.forEach(function(title) {
+
+        let next =
+            title.nextElementSibling;
+
+        let hasVisibleCard = false;
+
+
+        while (next) {
+
+            if (
+                next.classList.contains("city-title")
+            ) {
+
+                break;
+
+            }
+
+
+            if (
+                next.classList.contains("service-card") &&
+                next.style.display !== "none"
+            ) {
+
+                hasVisibleCard = true;
+
+                break;
+
+            }
+
+
+            next =
+                next.nextElementSibling;
+
+        }
+
+
+        title.style.display =
+            hasVisibleCard
+            ? "block"
+            : "none";
+
+    });
+
+
+    document.getElementById("noResult").style.display =
+        visibleCount === 0
+        ? "block"
+        : "none";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
