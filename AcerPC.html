@@ -1,1 +1,448 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Acer Bilgisayar Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 25px;
+}
+
+.info h2 {
+    margin-top: 0;
+}
+
+.search-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+.phone {
+    display: inline-block;
+    background: #f1f5f9;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    font-weight: bold;
+}
+
+.official {
+    display: inline-block;
+    background: #111827;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    background: #f1f5f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+@media(max-width:700px) {
+
+    .search-area {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="info">
+
+<h2>Acer Bilgisayar Yetkili Servisleri</h2>
+
+<p>
+Acer marka dizüstü bilgisayar, masaüstü bilgisayar ve diğer
+Acer bilgisayar ürünleri için teknik servis ve destek bilgilerine
+buradan ulaşabilirsiniz.
+</p>
+
+<p>
+Acer'ın resmi destek sistemi üzerinden cihazınızın seri numarası,
+SNID veya ürün bilgileriyle destek ve onarım hizmetlerine
+ulaşabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="search-area">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="Servis ara..."
+onkeyup="filterServices()"
+>
+
+<input
+type="text"
+id="citySearch"
+placeholder="Şehir ara..."
+onkeyup="filterServices()"
+>
+
+</div>
+
+
+<!-- YETKİLİ SERVİS -->
+
+<div
+class="service-card"
+data-service="Acer Yetkili Servis Acer Teknik Servis"
+data-city="Türkiye">
+
+<h3>
+🛠️ Acer Yetkili Servis ve Destek
+</h3>
+
+<p>
+Acer'ın resmi destek sistemi üzerinden cihazınıza uygun
+destek ve servis seçeneklerini görüntüleyebilirsiniz.
+</p>
+
+<a
+href="https://www.acer.com/tr-tr/support"
+target="_blank"
+class="official">
+
+Acer Resmi Destek Sayfası
+
+</a>
+
+</div>
+
+
+<!-- SERVİS DURUMU -->
+
+<div
+class="service-card"
+data-service="Teknik Servis Durumu Onarılan Cihazın Durumu Servis Durumu"
+data-city="Türkiye">
+
+<h3>
+🔧 Teknik Servis Durumu Sorgula
+</h3>
+
+<p>
+Acer'ın resmi destek sisteminde bulunan
+<strong>Onarılan Cihazın Durumu</strong> bölümünden
+servise gönderilen cihazınızla ilgili onarım durumunu
+kontrol edebilirsiniz.
+</p>
+
+<p>
+Cihazınızın seri numarası veya SNID bilgilerini kullanarak
+Acer'ın resmi destek sistemine ulaşabilirsiniz.
+</p>
+
+<a
+href="https://www.acer.com/tr-tr/support"
+target="_blank"
+class="official">
+
+🔧 Servis Durumunu Sorgula
+
+</a>
+
+</div>
+
+
+<!-- MÜŞTERİ HİZMETLERİ -->
+
+<div
+class="service-card"
+data-service="Acer Müşteri Hizmetleri İletişim"
+data-city="Türkiye">
+
+<h3>
+📞 Acer Müşteri Hizmetleri
+</h3>
+
+<p>
+Acer Türkiye'nin resmi destek ve iletişim kanalları üzerinden
+ürününüzle ilgili yardım ve servis desteği alabilirsiniz.
+</p>
+
+<div class="phone">
+0850 222 22 37
+</div>
+
+<a
+href="https://www.acer.com/tr-tr/support"
+target="_blank"
+class="official">
+
+Acer İletişim ve Destek
+
+</a>
+
+</div>
+
+
+<!-- GARANTİ -->
+
+<div
+class="service-card"
+data-service="Acer Garanti Garanti Sorgulama Garanti Durumu"
+data-city="Türkiye">
+
+<h3>
+📋 Acer Garanti Durumu
+</h3>
+
+<p>
+Acer resmi destek sistemi üzerinden cihazınızın seri numarası
+veya SNID bilgileriyle garanti bilgilerinizi kontrol
+edebilirsiniz.
+</p>
+
+<a
+href="https://www.acer.com/tr-tr/support/warranty/warranty-expiration-date"
+target="_blank"
+class="official">
+
+Garanti Durumunu Sorgula
+
+</a>
+
+</div>
+
+
+<!-- TEKNİK DESTEK -->
+
+<div
+class="service-card"
+data-service="Acer Teknik Destek Sürücü Kılavuz Destek"
+data-city="Türkiye">
+
+<h3>
+💻 Acer Teknik Destek
+</h3>
+
+<p>
+Sürücüler, kullanım kılavuzları, ürün desteği ve diğer
+teknik destek seçeneklerine Acer'ın resmi destek sayfasından
+ulaşabilirsiniz.
+</p>
+
+<a
+href="https://www.acer.com/tr-tr/support"
+target="_blank"
+class="official">
+
+Acer Teknik Destek
+
+</a>
+
+</div>
+
+
+<div class="note">
+
+<strong>Bilgi:</strong><br>
+
+SUCİ, Acer'ın Türkiye genelindeki tüm servis adreslerini
+tek tek listelemek yerine kullanıcıları Acer'ın resmi destek
+ve servis sistemine yönlendirmektedir.
+
+Servis durumu, garanti ve cihaz bilgileri için Acer'ın resmi
+sistemindeki güncel bilgiler kullanılmalıdır.
+
+</div>
+
+
+<br>
+
+
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceText =
+        document
+        .getElementById("serviceSearch")
+        .value
+        .toLowerCase();
+
+    const cityText =
+        document
+        .getElementById("citySearch")
+        .value
+        .toLowerCase();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const service =
+            card
+            .getAttribute("data-service")
+            .toLowerCase();
+
+        const city =
+            card
+            .getAttribute("data-city")
+            .toLowerCase();
+
+        if (
+            service.includes(serviceText) &&
+            city.includes(cityText)
+        ) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
