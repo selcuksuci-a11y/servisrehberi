@@ -1,249 +1,230 @@
-<!DOCTYPEhtml>
-<htmllang="tr">
+<!DOCTYPE html>
+<html lang="tr">
 
 <head>
 
-<metacharset="UTF-8">
+<meta charset="UTF-8">
 
-<metaname="viewport"content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>DemirdökümKombiYetkiliServisleri-SUCİ</title>
+<title>Demirdöküm Kombi Yetkili Servisleri - SUCİ</title>
 
 <style>
 
-*{
-box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f7f9;
-color:#222;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7f9;
+    color: #222;
 }
 
-header{
-background:#0b5ed7;
-color:white;
-text-align:center;
-padding:25px15px;
+header {
+    background: #0b5ed7;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
 }
 
-headerh1{
-margin:008px;
-font-size:28px;
+header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
 }
 
-headerp{
-margin:0;
-font-size:17px;
-font-weight:bold;
+header p {
+    margin: 0;
+    font-size: 16px;
 }
 
-.container{
-max-width:900px;
-margin:25pxauto;
-padding:015px;
+.container {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 0 15px;
 }
 
-.back{
-display:inline-block;
-margin-bottom:20px;
-color:#0b5ed7;
-text-decoration:none;
-font-weight:bold;
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #0b5ed7;
+    font-weight: bold;
 }
 
-.info{
-background:white;
-padding:20px;
-border-radius:12px;
-border-left:5pxsolid#0b5ed7;
-margin-bottom:20px;
-box-shadow:02px8pxrgba(0,0,0,0.07);
+.info {
+    background: white;
+    border-left: 5px solid #0b5ed7;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.infoh2{
-margin-top:0;
-color:#0b5ed7;
+.info h2 {
+    margin-top: 0;
 }
 
-.infop{
-line-height:1.6;
+.search-box {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.search-box{
-background:white;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
-box-shadow:02px8pxrgba(0,0,0,0.07);
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 15px;
 }
 
-.search-boxh3{
-margin-top:0;
-color:#0b5ed7;
+.service-card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.search-boxinput{
-width:100%;
-padding:13px;
-margin-top:10px;
-border:1pxsolid#ccc;
-border-radius:8px;
-font-size:15px;
+.service-card h3 {
+    margin-top: 0;
+    color: #0b5ed7;
 }
 
-.service-card{
-background:white;
-padding:20px;
-margin-bottom:16px;
-border-radius:12px;
-box-shadow:02px8pxrgba(0,0,0,0.07);
+.service-card p {
+    line-height: 1.6;
 }
 
-.service-cardh3{
-margin-top:0;
-color:#0b5ed7;
+.service-card a {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 10px 14px;
+    background: #0b5ed7;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
 }
 
-.service-cardp{
-line-height:1.6;
+.service-card a:hover {
+    opacity: 0.9;
 }
 
-.service-carda{
-display:inline-block;
-margin-top:10px;
-padding:11px15px;
-background:#0b5ed7;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+.badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 10px;
+    background: #e7f5e9;
+    color: #198754;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
-.service-carda:hover{
-opacity:0.9;
+.phone {
+    font-size: 20px;
+    font-weight: bold;
+    color: #198754;
 }
 
-.badge{
-display:inline-block;
-margin-top:8px;
-padding:6px10px;
-background:#e7f5e9;
-color:#198754;
-border-radius:20px;
-font-size:13px;
-font-weight:bold;
+.no-result {
+    display: none;
+    background: #fff3cd;
+    color: #664d03;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.phone{
-font-size:21px;
-font-weight:bold;
-color:#198754;
-}
-
-.no-result{
-display:none;
-background:#fff3cd;
-color:#664d03;
-padding:15px;
-border-radius:10px;
-margin-bottom:20px;
-}
-
-footer{
-margin-top:35px;
-padding:25px15px;
-background:#222;
-color:white;
-text-align:center;
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 30px;
+    background: #222;
+    color: white;
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
-<h1>Türkiye'ninTeknikServisRehberi</h1>
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
 
-<p>🦦SUCİ</p>
+<p>🦦 SUCİ</p>
 
 </header>
 
 
-<divclass="container">
+<div class="container">
 
-
-<ahref="index.html"class="back">
-←AnaSayfayaDön
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
 </a>
 
 
-<divclass="info">
+<div class="info">
 
-<h2>🔥DemirdökümKombiYetkiliServisleri</h2>
+<h2>🔥 Demirdöküm Kombi Yetkili Servisleri</h2>
 
 <p>
-Demirdökümkombiyetkiliservisbilgilerine
-Demirdöküm'ünresmiserviskanalıve
-T.C.TicaretBakanlığıSERBİSsistemi
-üzerindenulaşabilirsiniz.
+Demirdöküm kombi yetkili servis bilgilerine
+Demirdöküm'ün resmi servis sayfası ve
+T.C. Ticaret Bakanlığı SERBİS sistemi üzerinden
+ulaşabilirsiniz.
 </p>
 
 <p>
-Güncelservisadresleriilveilçebazında
-değişebildiğiiçinSUCİüzerindesabitservis
-adresleriyerineresmiservissorgulama
-kanallarınayönlendirmeyapılmaktadır.
+Güncel yetkili servis bilgileri için resmi
+sorgulama kanallarının kullanılması önerilir.
 </p>
 
 </div>
 
 
-<divclass="search-box">
-
-<h3>🔎ServisAra</h3>
+<div class="search-box">
 
 <input
 type="text"
 id="serviceSearch"
-placeholder="Servisveyahizmetara..."
+placeholder="🔎 Servis Ara..."
 onkeyup="filterServices()">
 
 <input
 type="text"
 id="citySearch"
-placeholder="📍ŞehirAra..."
+placeholder="📍 Şehir Ara..."
 onkeyup="filterServices()">
 
 </div>
 
 
-<divid="noResult"class="no-result">
+<div id="noResult" class="no-result">
 
-Aramanızlaeşleşenservisbilgisibulunamadı.
+Aramanızla eşleşen servis bilgisi bulunamadı.
 
 </div>
 
 
-<divclass="service-card">
+<div class="service-card">
 
-<h3>🇹🇷TürkiyeGeneliDemirdökümYetkiliServisleri</h3>
+<h3>🇹🇷 Türkiye Geneli Demirdöküm Yetkili Servisleri</h3>
 
 <p>
-Demirdöküm'ünresmiyetkiliservishizmetlerine
-ulaşmakiçinresmiservissayfasınıkullanabilirsiniz.
-Buradanyetkiliservistalebindebulunabilirsiniz.
+Demirdöküm'ün Türkiye genelindeki yetkili servis
+bilgilerine resmi servis sayfası üzerinden
+ulaşabilirsiniz.
 </p>
 
-<spanclass="badge">
-✓YetkiliServis
+<span class="badge">
+✓ Yetkili Servis
 </span>
 
 <br>
@@ -251,27 +232,27 @@ Buradanyetkiliservistalebindebulunabilirsiniz.
 <a
 href="https://www.demirdokum.com.tr/yetkili-servis/servis-hizmetlerimiz/"
 target="_blank"
-rel="noopenernoreferrer">
+rel="noopener noreferrer">
 
-🔧DemirdökümYetkiliServisleri
+🔧 Demirdöküm Resmi Servis Sayfası
 
 </a>
 
 </div>
 
 
-<divclass="service-card">
+<div class="service-card">
 
-<h3>🏛️SERBİS-YetkiliServisSorgulama</h3>
+<h3>🏛️ SERBİS - Yetkili Servis Sorgulama</h3>
 
 <p>
-T.C.TicaretBakanlığıSERBİSsistemiüzerinden
-Demirdökümmarkasınınyetkiliservislerini
-ilveilçebazındasorgulayabilirsiniz.
+T.C. Ticaret Bakanlığı SERBİS üzerinden
+Demirdöküm yetkili servislerini il ve ilçe
+bazında sorgulayabilirsiniz.
 </p>
 
-<spanclass="badge">
-✓ResmiSERBİSSorgulama
+<span class="badge">
+✓ Resmi SERBİS Sorgulama
 </span>
 
 <br>
@@ -279,154 +260,141 @@ ilveilçebazındasorgulayabilirsiniz.
 <a
 href="https://www.servis.gov.tr/Genel/Sorgu"
 target="_blank"
-rel="noopenernoreferrer">
+rel="noopener noreferrer">
 
-🏛️SERBİS'teServisSorgula
+🏛️ SERBİS'te Servis Sorgula
 
 </a>
 
 </div>
 
 
-<divclass="service-card">
+<div class="service-card">
 
-<h3>📞DemirdökümMüşteriİletişimMerkezi</h3>
+<h3>📞 Demirdöküm Müşteri Hizmetleri</h3>
 
 <p>
-Yetkiliservistalebi,teknikdestekvediğer
-servisişlemleriiçinDemirdökümMüşteri
-İletişimMerkezi'neulaşabilirsiniz.
+Demirdöküm yetkili servis, teknik destek ve
+servis işlemleri için müşteri hizmetlerine
+ulaşabilirsiniz.
 </p>
 
-<pclass="phone">
-08502221833
+<p class="phone">
+0850 222 1 833
 </p>
 
-<spanclass="badge">
-✓DemirdökümResmiDestekHattı
+<span class="badge">
+✓ Demirdöküm Resmi Destek Hattı
 </span>
 
 <br>
 
-<ahref="tel:08502221833">
+<a href="tel:08502221833">
 
-📞Demirdöküm'üAra
+📞 Hemen Ara
 
 </a>
 
 </div>
 
 
-<divclass="service-card">
+<div class="service-card">
 
-<h3>🛠️DemirdökümServisHizmetleri</h3>
+<h3>🛠️ Demirdöküm Servis Talebi</h3>
 
 <p>
-Yetkiliservistalebioluşturmak,teknikdestek
-almakveservishizmetlerihakkındabilgialmak
-içinDemirdöküm'ünresmiservishizmetleri
-sayfasınıkullanabilirsiniz.
+Demirdöküm yetkili servis hizmetlerinden
+yararlanmak ve servis talebi oluşturmak için
+resmi Demirdöküm servis kanalını kullanabilirsiniz.
 </p>
 
-<spanclass="badge">
-✓ResmiDemirdökümServisHizmeti
+<span class="badge">
+✓ Resmi Demirdöküm Servis Hizmeti
 </span>
 
 <br>
 
 <a
-href="https://www.demirdokum.com.tr/tuketici-destek/servis-hizmetlerimiz/"
+href="https://www.demirdokum.com.tr/yetkili-servis/servis-hizmetlerimiz/"
 target="_blank"
-rel="noopenernoreferrer">
+rel="noopener noreferrer">
 
-🛠️ServisHizmetlerineGit
+🛠️ Demirdöküm Servis Talebi
 
 </a>
 
 </div>
 
 
-<ahref="index.html"class="back">
-←AnaSayfayaDön
-</a>
+<br>
 
+<a href="index.html" class="back">
+← Ana Sayfaya Dön
+</a>
 
 </div>
 
 
 <footer>
 
-Türkiye'ninTeknikServisRehberi©2026
+Türkiye'nin Teknik Servis Rehberi © 2026
 
 </footer>
 
 
 <script>
 
-functionfilterServices(){
+function filterServices() {
 
-constserviceSearch=
-document.getElementById("serviceSearch")
-.value
-.toLowerCase()
-.trim();
+    const serviceInput =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase();
 
-constcitySearch=
-document.getElementById("citySearch")
-.value
-.toLowerCase()
-.trim();
+    const cityInput =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase();
 
-constcards=
-document.querySelectorAll(".service-card");
+    const cards =
+        document.querySelectorAll(".service-card");
 
-letvisibleCount=0;
+    let visibleCount = 0;
 
-cards.forEach(function(card){
+    cards.forEach(function(card) {
 
-consttext=
-card.innerText.toLowerCase();
+        const text =
+            card.innerText.toLowerCase();
 
-constserviceMatch=
-serviceSearch===""||
-text.includes(serviceSearch);
+        const serviceMatch =
+            serviceInput === "" ||
+            text.includes(serviceInput);
 
-constcityMatch=
-citySearch===""||
-text.includes(citySearch);
+        const cityMatch =
+            cityInput === "" ||
+            text.includes(cityInput);
 
-if(serviceMatch&&cityMatch){
+        if (serviceMatch && cityMatch) {
 
-card.style.display="block";
+            card.style.display = "block";
 
-visibleCount++;
+            visibleCount++;
 
-}else{
+        } else {
 
-card.style.display="none";
+            card.style.display = "none";
 
-}
+        }
 
-});
+    });
 
 
-constnoResult=
-document.getElementById("noResult");
-
-if(visibleCount===0){
-
-noResult.style.display="block";
-
-}else{
-
-noResult.style.display="none";
-
-}
+    document.getElementById("noResult").style.display =
+        visibleCount === 0 ? "block" : "none";
 
 }
 
 </script>
-
 
 </body>
 
