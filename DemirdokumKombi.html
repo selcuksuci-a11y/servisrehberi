@@ -5,7 +5,8 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Demirdöküm Kombi Yetkili Servisleri - SUCİ</title>
 
@@ -18,134 +19,149 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f4f7f9;
+    background: #f5f6f8;
     color: #222;
 }
 
 header {
-    background: #0b5ed7;
+    background: #111827;
     color: white;
     text-align: center;
     padding: 25px 15px;
 }
 
 header h1 {
-    margin: 0 0 8px;
+    margin: 0;
     font-size: 28px;
 }
 
 header p {
-    margin: 0;
-    font-size: 16px;
+    margin: 8px 0 0;
+    font-size: 15px;
 }
 
 .container {
     max-width: 900px;
-    margin: 25px auto;
-    padding: 0 15px;
+    margin: auto;
+    padding: 20px;
 }
 
-.back {
+.back-link {
     display: inline-block;
     margin-bottom: 20px;
     text-decoration: none;
-    color: #0b5ed7;
+    color: #111827;
     font-weight: bold;
 }
 
-.info {
+.info-box {
     background: white;
-    border-left: 5px solid #0b5ed7;
-    padding: 18px;
-    border-radius: 10px;
+    padding: 22px;
+    border-radius: 12px;
     margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.info h2 {
+.info-box h2 {
     margin-top: 0;
 }
 
-.search-box {
+.info-box p {
+    line-height: 1.6;
+}
+
+.search-section {
     background: white;
-    padding: 18px;
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 12px;
     margin-bottom: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.search-box input {
+.search-section h3 {
+    margin-top: 0;
+}
+
+.search-input {
     width: 100%;
     padding: 13px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 9px;
     font-size: 15px;
 }
 
 .service-card {
     background: white;
     padding: 20px;
-    margin-bottom: 15px;
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
 
 .service-card h3 {
     margin-top: 0;
-    color: #0b5ed7;
 }
 
 .service-card p {
     line-height: 1.6;
+    margin: 7px 0;
 }
 
-.service-card a {
-    display: inline-block;
-    margin-top: 8px;
-    padding: 10px 14px;
-    background: #0b5ed7;
-    color: white;
-    text-decoration: none;
-    border-radius: 7px;
-}
-
-.service-card a:hover {
-    opacity: 0.9;
-}
-
-.badge {
+.official {
     display: inline-block;
     margin-top: 10px;
-    padding: 6px 10px;
-    background: #e7f5e9;
-    color: #198754;
-    border-radius: 20px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: #ecfdf5;
+    color: #166534;
+    font-weight: bold;
     font-size: 13px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
     font-weight: bold;
 }
 
-.phone {
-    font-size: 20px;
+.link-button {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    padding: 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
     font-weight: bold;
-    color: #198754;
 }
 
-.no-result {
-    display: none;
-    background: #fff3cd;
-    color: #664d03;
-    padding: 15px;
+.bottom-back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding: 14px;
+    background: white;
+    color: #111827;
+    text-decoration: none;
     border-radius: 10px;
-    margin-bottom: 20px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
 footer {
     text-align: center;
     padding: 25px 15px;
-    margin-top: 30px;
-    background: #222;
+    margin-top: 40px;
+    background: #111827;
     color: white;
+    font-size: 14px;
 }
 
 </style>
@@ -153,6 +169,7 @@ footer {
 </head>
 
 <body>
+
 
 <header>
 
@@ -165,52 +182,62 @@ footer {
 
 <div class="container">
 
-<a href="index.html" class="back">
+
+<a class="back-link" href="index.html">
+
 ← Ana Sayfaya Dön
+
 </a>
 
 
-<div class="info">
+<div class="info-box">
 
 <h2>🔥 Demirdöküm Kombi Yetkili Servisleri</h2>
 
 <p>
 Demirdöküm kombi yetkili servis bilgilerine
-Demirdöküm'ün resmi servis sayfası ve
-T.C. Ticaret Bakanlığı SERBİS sistemi üzerinden
-ulaşabilirsiniz.
+Türkiye genelinde ulaşabilirsiniz.
 </p>
 
 <p>
-Güncel yetkili servis bilgileri için resmi
-sorgulama kanallarının kullanılması önerilir.
+Güncel yetkili servis bilgileri için
+T.C. Ticaret Bakanlığı SERBİS sistemi
+ve Demirdöküm'ün resmi servis sayfası
+kullanılabilir.
 </p>
 
 </div>
 
 
-<div class="search-box">
+<div class="search-section">
+
+<h3>🔎 Servis Ara</h3>
 
 <input
 type="text"
 id="serviceSearch"
-placeholder="🔎 Servis Ara..."
+class="search-input"
+placeholder="İl, ilçe veya servis adı ara..."
 onkeyup="filterServices()">
+
+</div>
+
+
+<div class="search-section">
+
+<h3>📍 Şehir Ara</h3>
 
 <input
 type="text"
 id="citySearch"
-placeholder="📍 Şehir Ara..."
+class="search-input"
+placeholder="Şehir veya ilçe yazın..."
 onkeyup="filterServices()">
 
 </div>
 
 
-<div id="noResult" class="no-result">
-
-Aramanızla eşleşen servis bilgisi bulunamadı.
-
-</div>
+<div id="serviceList">
 
 
 <div class="service-card">
@@ -218,23 +245,24 @@ Aramanızla eşleşen servis bilgisi bulunamadı.
 <h3>🇹🇷 Türkiye Geneli Demirdöküm Yetkili Servisleri</h3>
 
 <p>
-Demirdöküm'ün Türkiye genelindeki yetkili servis
-bilgilerine resmi servis sayfası üzerinden
-ulaşabilirsiniz.
+Demirdöküm'ün Türkiye genelindeki güncel yetkili
+servis noktalarını resmi servis sayfasından
+il ve ilçe bilgilerine göre görüntüleyebilirsiniz.
 </p>
 
-<span class="badge">
+<span class="official">
+
 ✓ Yetkili Servis
+
 </span>
 
-<br>
-
 <a
+class="link-button"
 href="https://www.demirdokum.com.tr/yetkili-servis/servis-hizmetlerimiz/"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener">
 
-🔧 Demirdöküm Resmi Servis Sayfası
+Demirdöküm Resmi Servis Bul
 
 </a>
 
@@ -247,22 +275,23 @@ rel="noopener noreferrer">
 
 <p>
 T.C. Ticaret Bakanlığı SERBİS üzerinden
-Demirdöküm yetkili servislerini il ve ilçe
-bazında sorgulayabilirsiniz.
+Demirdöküm markası için yetkili servis bilgilerini
+il ve ilçe seçerek sorgulayabilirsiniz.
 </p>
 
-<span class="badge">
+<span class="official">
+
 ✓ Resmi SERBİS Sorgulama
+
 </span>
 
-<br>
-
 <a
+class="link-button"
 href="https://www.servis.gov.tr/Genel/Sorgu"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener">
 
-🏛️ SERBİS'te Servis Sorgula
+SERBİS'te Yetkili Servis Ara
 
 </a>
 
@@ -274,24 +303,27 @@ rel="noopener noreferrer">
 <h3>📞 Demirdöküm Müşteri Hizmetleri</h3>
 
 <p>
-Demirdöküm yetkili servis, teknik destek ve
-servis işlemleri için müşteri hizmetlerine
-ulaşabilirsiniz.
+Demirdöküm servis, arıza ve teknik destek
+talepleriniz için resmi çağrı merkezi:
 </p>
 
-<p class="phone">
-0850 222 1 833
+<p>
+
+<strong>0850 222 1 833</strong>
+
 </p>
 
-<span class="badge">
+<span class="official">
+
 ✓ Demirdöküm Resmi Destek Hattı
+
 </span>
 
-<br>
+<a
+class="map-button"
+href="tel:08502221833">
 
-<a href="tel:08502221833">
-
-📞 Hemen Ara
+📞 0850 222 1 833'ü Ara
 
 </a>
 
@@ -303,34 +335,35 @@ ulaşabilirsiniz.
 <h3>🛠️ Demirdöküm Servis Talebi</h3>
 
 <p>
-Demirdöküm yetkili servis hizmetlerinden
-yararlanmak ve servis talebi oluşturmak için
-resmi Demirdöküm servis kanalını kullanabilirsiniz.
+Demirdöküm resmi servis talebi oluşturmak ve
+servis desteği almak için resmi servis
+sayfasını kullanabilirsiniz.
 </p>
 
-<span class="badge">
-✓ Resmi Demirdöküm Servis Hizmeti
-</span>
-
-<br>
-
 <a
+class="link-button"
 href="https://www.demirdokum.com.tr/yetkili-servis/servis-hizmetlerimiz/"
 target="_blank"
-rel="noopener noreferrer">
+rel="noopener">
 
-🛠️ Demirdöküm Servis Talebi
+Demirdöküm Servis Talebi Oluştur
 
 </a>
 
 </div>
 
 
-<br>
+</div>
 
-<a href="index.html" class="back">
+
+<a
+class="bottom-back"
+href="index.html">
+
 ← Ana Sayfaya Dön
+
 </a>
+
 
 </div>
 
@@ -346,20 +379,20 @@ Türkiye'nin Teknik Servis Rehberi © 2026
 
 function filterServices() {
 
-    const serviceInput =
+    const serviceSearch =
         document.getElementById("serviceSearch")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
-    const cityInput =
+    const citySearch =
         document.getElementById("citySearch")
         .value
-        .toLowerCase();
+        .toLowerCase()
+        .trim();
 
     const cards =
         document.querySelectorAll(".service-card");
-
-    let visibleCount = 0;
 
     cards.forEach(function(card) {
 
@@ -367,18 +400,14 @@ function filterServices() {
             card.innerText.toLowerCase();
 
         const serviceMatch =
-            serviceInput === "" ||
-            text.includes(serviceInput);
+            text.includes(serviceSearch);
 
         const cityMatch =
-            cityInput === "" ||
-            text.includes(cityInput);
+            text.includes(citySearch);
 
         if (serviceMatch && cityMatch) {
 
             card.style.display = "block";
-
-            visibleCount++;
 
         } else {
 
@@ -388,13 +417,10 @@ function filterServices() {
 
     });
 
-
-    document.getElementById("noResult").style.display =
-        visibleCount === 0 ? "block" : "none";
-
 }
 
 </script>
+
 
 </body>
 
