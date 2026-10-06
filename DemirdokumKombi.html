@@ -5,8 +5,7 @@
 
 <metacharset="UTF-8">
 
-<metaname="viewport"
-content="width=device-width,initial-scale=1.0">
+<metaname="viewport"content="width=device-width,initial-scale=1.0">
 
 <title>DemirdökümKombiYetkiliServisleri-SUCİ</title>
 
@@ -37,7 +36,8 @@ font-size:28px;
 
 headerp{
 margin:0;
-font-size:16px;
+font-size:17px;
+font-weight:bold;
 }
 
 .container{
@@ -49,47 +49,57 @@ padding:015px;
 .back{
 display:inline-block;
 margin-bottom:20px;
-text-decoration:none;
 color:#0b5ed7;
+text-decoration:none;
 font-weight:bold;
 }
 
 .info{
 background:white;
+padding:20px;
+border-radius:12px;
 border-left:5pxsolid#0b5ed7;
-padding:18px;
-border-radius:10px;
 margin-bottom:20px;
-box-shadow:02px8pxrgba(0,0,0,0.06);
+box-shadow:02px8pxrgba(0,0,0,0.07);
 }
 
 .infoh2{
 margin-top:0;
+color:#0b5ed7;
+}
+
+.infop{
+line-height:1.6;
 }
 
 .search-box{
 background:white;
-padding:18px;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
 margin-bottom:20px;
-box-shadow:02px8pxrgba(0,0,0,0.06);
+box-shadow:02px8pxrgba(0,0,0,0.07);
+}
+
+.search-boxh3{
+margin-top:0;
+color:#0b5ed7;
 }
 
 .search-boxinput{
 width:100%;
 padding:13px;
-margin-bottom:10px;
+margin-top:10px;
 border:1pxsolid#ccc;
-border-radius:7px;
+border-radius:8px;
 font-size:15px;
 }
 
 .service-card{
 background:white;
 padding:20px;
-margin-bottom:15px;
+margin-bottom:16px;
 border-radius:12px;
-box-shadow:02px8pxrgba(0,0,0,0.08);
+box-shadow:02px8pxrgba(0,0,0,0.07);
 }
 
 .service-cardh3{
@@ -103,12 +113,13 @@ line-height:1.6;
 
 .service-carda{
 display:inline-block;
-margin-top:8px;
-padding:10px14px;
+margin-top:10px;
+padding:11px15px;
 background:#0b5ed7;
 color:white;
 text-decoration:none;
-border-radius:7px;
+border-radius:8px;
+font-weight:bold;
 }
 
 .service-carda:hover{
@@ -117,7 +128,7 @@ opacity:0.9;
 
 .badge{
 display:inline-block;
-margin-top:10px;
+margin-top:8px;
 padding:6px10px;
 background:#e7f5e9;
 color:#198754;
@@ -127,7 +138,7 @@ font-weight:bold;
 }
 
 .phone{
-font-size:20px;
+font-size:21px;
 font-weight:bold;
 color:#198754;
 }
@@ -142,18 +153,20 @@ margin-bottom:20px;
 }
 
 footer{
-text-align:center;
+margin-top:35px;
 padding:25px15px;
-margin-top:30px;
 background:#222;
 color:white;
+text-align:center;
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -166,7 +179,10 @@ color:white;
 
 <divclass="container">
 
-<ahref="index.html"class="back">←AnaSayfayaDön</a>
+
+<ahref="index.html"class="back">
+←AnaSayfayaDön
+</a>
 
 
 <divclass="info">
@@ -176,14 +192,15 @@ color:white;
 <p>
 Demirdökümkombiyetkiliservisbilgilerine
 Demirdöküm'ünresmiserviskanalıve
-T.C.TicaretBakanlığıSERBİSsistemiüzerinden
-ulaşabilirsiniz.
+T.C.TicaretBakanlığıSERBİSsistemi
+üzerindenulaşabilirsiniz.
 </p>
 
 <p>
-Güncelservisadresleriveil/ilçebazındaki
-yetkiliservisbilgileriiçinresmisorgulama
-kanallarınıkullanmanızönerilir.
+Güncelservisadresleriilveilçebazında
+değişebildiğiiçinSUCİüzerindesabitservis
+adresleriyerineresmiservissorgulama
+kanallarınayönlendirmeyapılmaktadır.
 </p>
 
 </div>
@@ -191,10 +208,12 @@ kanallarınıkullanmanızönerilir.
 
 <divclass="search-box">
 
+<h3>🔎ServisAra</h3>
+
 <input
 type="text"
 id="serviceSearch"
-placeholder="🔎ServisAra..."
+placeholder="Servisveyahizmetara..."
 onkeyup="filterServices()">
 
 <input
@@ -218,23 +237,23 @@ Aramanızlaeşleşenservisbilgisibulunamadı.
 <h3>🇹🇷TürkiyeGeneliDemirdökümYetkiliServisleri</h3>
 
 <p>
-Demirdöküm'üngüncelyetkiliservishizmetlerine
-resmiserviskanalıüzerindenulaşabilirsiniz.
-İlveilçebazındaservisdesteğiiçinDemirdöküm
-MüşteriİletişimMerkezi'ndendeservistalebi
-oluşturabilirsiniz.
+Demirdöküm'ünresmiyetkiliservishizmetlerine
+ulaşmakiçinresmiservissayfasınıkullanabilirsiniz.
+Buradanyetkiliservistalebindebulunabilirsiniz.
 </p>
 
-<spanclass="badge">✓YetkiliServis</span>
+<spanclass="badge">
+✓YetkiliServis
+</span>
 
 <br>
 
 <a
 href="https://www.demirdokum.com.tr/yetkili-servis/servis-hizmetlerimiz/"
 target="_blank"
-rel="noopener">
+rel="noopenernoreferrer">
 
-🔧DemirdökümResmiServisSayfası
+🔧DemirdökümYetkiliServisleri
 
 </a>
 
@@ -246,20 +265,21 @@ rel="noopener">
 <h3>🏛️SERBİS-YetkiliServisSorgulama</h3>
 
 <p>
-T.C.TicaretBakanlığıtarafındansunulanSERBİS
-üzerindenüretici/ithalatçı,marka,ürün,ilve
-ilçeseçerekyetkiliservissorgulaması
-yapabilirsiniz.
+T.C.TicaretBakanlığıSERBİSsistemiüzerinden
+Demirdökümmarkasınınyetkiliservislerini
+ilveilçebazındasorgulayabilirsiniz.
 </p>
 
-<spanclass="badge">✓ResmiSERBİSSorgulama</span>
+<spanclass="badge">
+✓ResmiSERBİSSorgulama
+</span>
 
 <br>
 
 <a
 href="https://www.servis.gov.tr/Genel/Sorgu"
 target="_blank"
-rel="noopener">
+rel="noopenernoreferrer">
 
 🏛️SERBİS'teServisSorgula
 
@@ -273,8 +293,8 @@ rel="noopener">
 <h3>📞DemirdökümMüşteriİletişimMerkezi</h3>
 
 <p>
-Yetkiliservistalebi,teknikdestek,ilkçalıştırma
-vediğerservisişlemleriiçinDemirdökümMüşteri
+Yetkiliservistalebi,teknikdestekvediğer
+servisişlemleriiçinDemirdökümMüşteri
 İletişimMerkezi'neulaşabilirsiniz.
 </p>
 
@@ -282,13 +302,15 @@ vediğerservisişlemleriiçinDemirdökümMüşteri
 08502221833
 </p>
 
-<spanclass="badge">✓DemirdökümResmiDestekHattı</span>
+<spanclass="badge">
+✓DemirdökümResmiDestekHattı
+</span>
 
 <br>
 
 <ahref="tel:08502221833">
 
-📞HemenAra
+📞Demirdöküm'üAra
 
 </a>
 
@@ -297,33 +319,37 @@ vediğerservisişlemleriiçinDemirdökümMüşteri
 
 <divclass="service-card">
 
-<h3>🛠️DemirdökümServisTalebi</h3>
+<h3>🛠️DemirdökümServisHizmetleri</h3>
 
 <p>
-YetkiliservistalebioluşturmakveDemirdöküm
-servishizmetlerihakkındabilgialmakiçin
-resmiservissayfasınıkullanabilirsiniz.
+Yetkiliservistalebioluşturmak,teknikdestek
+almakveservishizmetlerihakkındabilgialmak
+içinDemirdöküm'ünresmiservishizmetleri
+sayfasınıkullanabilirsiniz.
 </p>
 
-<spanclass="badge">✓ResmiDemirdökümServisHizmeti</span>
+<spanclass="badge">
+✓ResmiDemirdökümServisHizmeti
+</span>
 
 <br>
 
 <a
-href="https://www.demirdokum.com.tr/consumer-support/services/"
+href="https://www.demirdokum.com.tr/tuketici-destek/servis-hizmetlerimiz/"
 target="_blank"
-rel="noopener">
+rel="noopenernoreferrer">
 
-🛠️ServisTalebiOluştur
+🛠️ServisHizmetlerineGit
 
 </a>
 
 </div>
 
 
-<br>
+<ahref="index.html"class="back">
+←AnaSayfayaDön
+</a>
 
-<ahref="index.html"class="back">←AnaSayfayaDön</a>
 
 </div>
 
@@ -339,15 +365,17 @@ Türkiye'ninTeknikServisRehberi©2026
 
 functionfilterServices(){
 
-constserviceInput=
+constserviceSearch=
 document.getElementById("serviceSearch")
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
 
-constcityInput=
+constcitySearch=
 document.getElementById("citySearch")
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
 
 constcards=
 document.querySelectorAll(".service-card");
@@ -360,16 +388,17 @@ consttext=
 card.innerText.toLowerCase();
 
 constserviceMatch=
-serviceInput===""||
-text.includes(serviceInput);
+serviceSearch===""||
+text.includes(serviceSearch);
 
 constcityMatch=
-cityInput===""||
-text.includes(cityInput);
+citySearch===""||
+text.includes(citySearch);
 
 if(serviceMatch&&cityMatch){
 
 card.style.display="block";
+
 visibleCount++;
 
 }else{
@@ -381,12 +410,23 @@ card.style.display="none";
 });
 
 
-document.getElementById("noResult").style.display=
-visibleCount===0?"block":"none";
+constnoResult=
+document.getElementById("noResult");
+
+if(visibleCount===0){
+
+noResult.style.display="block";
+
+}else{
+
+noResult.style.display="none";
+
+}
 
 }
 
 </script>
+
 
 </body>
 
