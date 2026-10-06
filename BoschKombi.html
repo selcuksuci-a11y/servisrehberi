@@ -1,1 +1,501 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Bosch Kombi Yetkili Servisleri - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #111827;
+    font-weight: bold;
+}
+
+.info-box {
+    background: white;
+    padding: 22px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+.info-box p {
+    line-height: 1.6;
+}
+
+.search-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.search-section h3 {
+    margin-top: 0;
+}
+
+.search-input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 9px;
+    font-size: 15px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+.service-card p {
+    line-height: 1.6;
+    margin: 7px 0;
+}
+
+.official {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: #ecfdf5;
+    color: #166534;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.link-button {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    padding: 14px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.bottom-back {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    padding: 14px;
+    background: white;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    margin-top: 40px;
+    background: #111827;
+    color: white;
+    font-size: 14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+
+<a class="back-link" href="index.html">
+
+← Ana Sayfaya Dön
+
+</a>
+
+
+<div class="info-box">
+
+<h2>🔥 Bosch Kombi Yetkili Servisleri</h2>
+
+<p>
+Bosch kombi yetkili servis bilgilerine
+Türkiye genelinde ulaşabilirsiniz.
+</p>
+
+<p>
+Güncel yetkili servis bilgileri için
+T.C. Ticaret Bakanlığı SERBİS sistemi
+ve Bosch Home Comfort'ın resmi servis sorgulama sayfası
+kullanılabilir.
+</p>
+
+</div>
+
+
+<div class="search-section">
+
+<h3>🔎 Servis Ara</h3>
+
+<input
+type="text"
+id="serviceSearch"
+class="search-input"
+placeholder="İl, ilçe veya servis adı ara..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<div class="search-section">
+
+<h3>📍 Şehir Ara</h3>
+
+<input
+type="text"
+id="citySearch"
+class="search-input"
+placeholder="Şehir veya ilçe yazın..."
+onkeyup="filterServices()">
+
+</div>
+
+
+<div id="serviceList">
+
+
+<div class="service-card">
+
+<h3>🇹🇷 Türkiye Geneli Bosch Yetkili Servisleri</h3>
+
+<p>
+Bosch Home Comfort'ın Türkiye genelindeki güncel
+yetkili servis noktalarını resmi servis sorgulama
+sisteminden ürün ve konum bilgilerine göre
+görüntüleyebilirsiniz.
+</p>
+
+<span class="official">
+
+✓ Yetkili Servis
+
+</span>
+
+<a
+class="link-button"
+href="https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/yetkili-servislerimiz/"
+target="_blank"
+rel="noopener">
+
+Bosch Resmi Servis Bul
+
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>🏛️ SERBİS - Yetkili Servis Sorgulama</h3>
+
+<p>
+T.C. Ticaret Bakanlığı SERBİS üzerinden
+Bosch markası için yetkili servis bilgilerini
+il ve ilçe seçerek sorgulayabilirsiniz.
+</p>
+
+<span class="official">
+
+✓ Resmi SERBİS Sorgulama
+
+</span>
+
+<a
+class="link-button"
+href="https://www.servis.gov.tr/Genel/Sorgu"
+target="_blank"
+rel="noopener">
+
+SERBİS'te Yetkili Servis Ara
+
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>📞 Bosch Müşteri Hizmetleri</h3>
+
+<p>
+Bosch kombi servis, arıza ve teknik destek
+talepleriniz için resmi çağrı merkezi:
+</p>
+
+<p>
+
+<strong>444 2 474</strong>
+
+</p>
+
+<span class="official">
+
+✓ Bosch Home Comfort Resmi Destek Hattı
+
+</span>
+
+<a
+class="map-button"
+href="tel:4442474">
+
+📞 444 2 474'ü Ara
+
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>🛠️ Bosch Servis Talebi</h3>
+
+<p>
+Bosch resmi servis desteği almak ve
+size en yakın yetkili servise ulaşmak için
+Bosch Home Comfort resmi servis sayfasını
+kullanabilirsiniz.
+</p>
+
+<a
+class="link-button"
+href="https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/yetkili-servislerimiz/"
+target="_blank"
+rel="noopener">
+
+Bosch Servis Talebi Oluştur
+
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>🛡️ Bosch Garanti Sorgulama</h3>
+
+<p>
+Bosch kombi garanti sorgulama ve garanti
+uzatma işlemleri için Bosch Home Comfort
+Müşteri İletişim Merkezi üzerinden bilgi
+alabilirsiniz.
+</p>
+
+<p>
+
+<strong>444 2 474</strong>
+
+</p>
+
+<span class="official">
+
+✓ Bosch Resmi Garanti Bilgisi
+
+</span>
+
+<a
+class="map-button"
+href="tel:4442474">
+
+📞 Garanti Sorgulama İçin Ara
+
+</a>
+
+<a
+class="link-button"
+href="https://www.bosch-homecomfort.com/tr/tr/residential/servis-hizmetlerimiz/garanti/"
+target="_blank"
+rel="noopener">
+
+Bosch Garanti Şartlarını Gör
+
+</a>
+
+</div>
+
+
+<div class="service-card">
+
+<h3>📋 Bosch Servis Durumu ve Bilgi</h3>
+
+<p>
+Servis işleminizin durumu, servis yönlendirmesi
+ve teknik destek hakkında bilgi almak için
+Bosch Home Comfort Müşteri İletişim Merkezi
+ile iletişime geçebilirsiniz.
+</p>
+
+<span class="official">
+
+✓ Bosch Resmi Destek
+
+</span>
+
+<a
+class="map-button"
+href="tel:4442474">
+
+📞 Servis Durumunu Öğren
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<a
+class="bottom-back"
+href="index.html">
+
+← Ana Sayfaya Dön
+
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterServices() {
+
+    const serviceSearch =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const citySearch =
+        document.getElementById("citySearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".service-card");
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        const serviceMatch =
+            text.includes(serviceSearch);
+
+        const cityMatch =
+            text.includes(citySearch);
+
+        if (serviceMatch && cityMatch) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>
