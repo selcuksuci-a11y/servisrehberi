@@ -8,7 +8,7 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>Garanti & Cihaz Sorgulama Merkezi - SUCİ</title>
+<title>Garanti & Cihaz Sorgulama - SUCİ</title>
 
 <style>
 
@@ -26,8 +26,8 @@ body {
 header {
     background: #111827;
     color: white;
-    text-align: center;
     padding: 22px 15px;
+    text-align: center;
 }
 
 header h1 {
@@ -37,7 +37,7 @@ header h1 {
 
 header p {
     margin: 8px 0 0;
-    font-size: 16px;
+    font-size: 15px;
     color: #d1d5db;
 }
 
@@ -50,23 +50,19 @@ header p {
 .back-button {
     display: inline-block;
     text-decoration: none;
-    background: #374151;
+    background: #111827;
     color: white;
     padding: 11px 16px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
     font-weight: bold;
-}
-
-.back-button:hover {
-    background: #1f2937;
 }
 
 .welcome {
     background: white;
-    padding: 20px;
     border-radius: 12px;
-    margin-bottom: 20px;
+    padding: 22px;
+    margin-bottom: 18px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
@@ -83,26 +79,29 @@ header p {
     line-height: 1.6;
 }
 
-.section-title {
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-size: 22px;
+.search-box {
+    margin-bottom: 25px;
 }
 
-.search-box {
+.search-box input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.filter-section {
     background: white;
-    padding: 15px;
+    padding: 20px;
     border-radius: 12px;
     margin-bottom: 25px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
-.search-box input {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    font-size: 16px;
+.filter-section h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
 }
 
 .brand-grid {
@@ -112,23 +111,26 @@ header p {
 }
 
 .brand-card {
-    background: white;
-    border-radius: 12px;
-    padding: 18px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    background: #f9fafb;
     border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px;
 }
 
 .brand-card h3 {
     margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 19px;
+    margin-bottom: 8px;
 }
 
 .brand-card p {
+    font-size: 14px;
     color: #4b5563;
     line-height: 1.5;
-    min-height: 48px;
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 8px;
 }
 
 .button {
@@ -137,54 +139,34 @@ header p {
     text-decoration: none;
     background: #2563eb;
     color: white;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 11px;
+    border-radius: 7px;
+    margin-top: 10px;
     font-weight: bold;
-    margin-top: 12px;
-}
-
-.button:hover {
-    background: #1d4ed8;
 }
 
 .repair-button {
-    background: #059669;
-}
-
-.repair-button:hover {
-    background: #047857;
-}
-
-.imei-section {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    margin-top: 30px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    border: 1px solid #e5e7eb;
-}
-
-.imei-section h2 {
-    margin-top: 0;
+    background: #16a34a;
 }
 
 .imei-button {
-    display: inline-block;
-    text-decoration: none;
     background: #111827;
-    color: white;
-    padding: 13px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 10px;
 }
 
-.imei-button:hover {
-    background: #000000;
+#resultCount {
+    margin-top: 12px;
+    color: #4b5563;
+    font-size: 14px;
+}
+
+#noResult {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #6b7280;
 }
 
 .note {
-    margin-top: 25px;
     background: #fff7ed;
     border-left: 5px solid #f97316;
     padding: 15px;
@@ -193,27 +175,10 @@ header p {
 }
 
 footer {
-    background: #111827;
-    color: #d1d5db;
     text-align: center;
-    padding: 20px 15px;
-    margin-top: 30px;
-}
-
-#resultCount {
-    margin-top: 12px;
+    padding: 25px 15px;
     color: #6b7280;
     font-size: 14px;
-}
-
-#noResult {
-    display: none;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    color: #6b7280;
-    margin-top: 15px;
 }
 
 </style>
@@ -233,6 +198,7 @@ footer {
 
 <div class="container">
 
+
 <a href="index.html" class="back-button">
 ← Ana Sayfaya Dön
 </a>
@@ -240,12 +206,11 @@ footer {
 
 <div class="welcome">
 
-<h2>🔎 Garanti & Cihaz Sorgulama Merkezi</h2>
+<h2>🛡️ Garanti & Cihaz Sorgulama Merkezi</h2>
 
 <p>
-SUCİ Garanti & Cihaz Sorgulama Merkezi üzerinden
-desteklenen markaların resmi garanti ve teknik servis
-sorgulama sistemlerine hızlıca ulaşabilirsiniz.
+Cihazınızın garanti durumunu, teknik servis veya onarım sürecini
+ve IMEI bilgilerini resmi kaynaklar üzerinden kontrol edebilirsiniz.
 </p>
 
 </div>
@@ -253,14 +218,19 @@ sorgulama sistemlerine hızlıca ulaşabilirsiniz.
 
 <div class="info-box">
 
-<strong>ℹ️ Önemli Bilgi</strong><br><br>
+<strong>ℹ️ Önemli Bilgi</strong>
 
-Aşağıdaki bağlantılar ilgili markaların
-<strong>resmi internet sitelerindeki</strong>
-sorgulama sistemlerine yönlendirir.
+<br>
 
-SUCİ üzerinde sahte veya çalışmayan sorgulama ekranları
-bulundurulmaz.
+SUCİ üzerinden herhangi bir garanti veya servis sonucu üretilmez.
+Aşağıdaki butonlar yalnızca markaların ve resmi kurumların
+doğrulanmış sorgulama sayfalarına yönlendirir.
+
+<br><br>
+
+<strong>
+Çalışmayan veya doğrulanamayan sorgulama bağlantıları eklenmemiştir.
+</strong>
 
 </div>
 
@@ -270,17 +240,17 @@ bulundurulmaz.
 <input
 type="text"
 id="brandSearch"
-placeholder="Marka ara..."
-onkeyup="filterBrands()">
+onkeyup="filterBrands()"
+placeholder="Marka ara...">
 
 <div id="resultCount"></div>
 
 </div>
 
 
-<h2 class="section-title">
-🛡️ Marka Garanti & Servis Sorgulama
-</h2>
+<section class="filter-section">
+
+<h2>🔎 Marka Garanti & Servis Sorgulama</h2>
 
 
 <div class="brand-grid">
@@ -290,31 +260,29 @@ onkeyup="filterBrands()">
 
 <div class="brand-card">
 
-<h3>🍎 Apple</h3>
+<div class="icon">🍎</div>
+
+<h3>Apple</h3>
 
 <p>
-Apple cihazınızın garanti ve servis kapsamını
-ve devam eden onarım durumunu resmi sistemlerden
-kontrol edebilirsiniz.
+Apple cihazınızın garanti kapsamını ve destek durumunu kontrol edin.
 </p>
 
 <a
 href="https://checkcoverage.apple.com/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
 <a
-href="https://support.apple.com/tr-tr/102424"
+href="https://mysupport.apple.com/"
 target="_blank"
-rel="noopener noreferrer"
 class="button repair-button">
 
-🔧 Onarım Durumu Sorgulama
+Onarım Durumu
 
 </a>
 
@@ -325,31 +293,29 @@ class="button repair-button">
 
 <div class="brand-card">
 
-<h3>📱 Samsung</h3>
+<div class="icon">📱</div>
+
+<h3>Samsung</h3>
 
 <p>
-Samsung cihazınızın garanti bilgilerini ve
-devam eden onarım sürecini resmi sistemlerden
-kontrol edin.
+Samsung cihazınızın garanti ve teknik servis sürecini kontrol edin.
 </p>
 
 <a
 href="https://www.samsung.com/tr/support/warranty/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
 <a
 href="https://www.samsung.com/tr/support/your-service/track-repair-sms"
 target="_blank"
-rel="noopener noreferrer"
 class="button repair-button">
 
-🔧 Onarım Durumu Sorgulama
+Onarım Durumu
 
 </a>
 
@@ -360,31 +326,29 @@ class="button repair-button">
 
 <div class="brand-card">
 
-<h3>📱 Xiaomi</h3>
+<div class="icon">📱</div>
+
+<h3>Xiaomi</h3>
 
 <p>
-Xiaomi cihazınızın garanti durumunu ve
-devam eden servis / onarım sürecini resmi
-sistemlerden kontrol edin.
+Xiaomi cihazınızın garanti ve servis ilerleme durumunu kontrol edin.
 </p>
 
 <a
 href="https://www.mi.com/tr/support/warranty/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
 <a
 href="https://www.mi.com/tr/support/service-progress/"
 target="_blank"
-rel="noopener noreferrer"
 class="button repair-button">
 
-🔧 Onarım Durumu Sorgulama
+Onarım Durumu
 
 </a>
 
@@ -395,20 +359,29 @@ class="button repair-button">
 
 <div class="brand-card">
 
-<h3>📱 Huawei</h3>
+<div class="icon">🔴</div>
+
+<h3>Huawei</h3>
 
 <p>
-Huawei cihazınızın garanti süresini ve garanti
-durumunu resmi sistem üzerinden sorgulayın.
+Huawei cihazınızın garanti ve teknik servis onarım durumunu kontrol edin.
 </p>
 
 <a
 href="https://consumer.huawei.com/tr/support/warranty-query/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
+
+</a>
+
+<a
+href="https://consumer.huawei.com/tr/support/inquiry/?loginCallback=true"
+target="_blank"
+class="button repair-button">
+
+Onarım Durumu
 
 </a>
 
@@ -419,20 +392,29 @@ class="button">
 
 <div class="brand-card">
 
-<h3>📱 OPPO</h3>
+<div class="icon">🟢</div>
+
+<h3>OPPO</h3>
 
 <p>
-OPPO cihazınızın devam eden onarım sürecini
-resmi servis takip ekranından kontrol edin.
+OPPO cihazınızın garanti ve onarım durumunu kontrol edin.
 </p>
+
+<a
+href="https://support.oppo.com/tr/warranty-check/"
+target="_blank"
+class="button">
+
+Garanti Sorgulama
+
+</a>
 
 <a
 href="https://support.oppo.com/tr/repair-check/"
 target="_blank"
-rel="noopener noreferrer"
 class="button repair-button">
 
-🔧 Onarım Durumu Sorgulama
+Onarım Durumu
 
 </a>
 
@@ -443,20 +425,20 @@ class="button repair-button">
 
 <div class="brand-card">
 
-<h3>📱 HONOR</h3>
+<div class="icon">🟣</div>
+
+<h3>HONOR</h3>
 
 <p>
-HONOR cihazınızın garanti süresini ve garanti
-durumunu resmi sistem üzerinden sorgulayın.
+HONOR cihazınızın garanti bilgilerini resmi destek sayfasından kontrol edin.
 </p>
 
 <a
 href="https://www.honor.com/tr/support/warranty-query/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
@@ -467,20 +449,20 @@ class="button">
 
 <div class="brand-card">
 
-<h3>📱 OnePlus</h3>
+<div class="icon">🔴</div>
+
+<h3>OnePlus</h3>
 
 <p>
-OnePlus cihazınızın garanti ve orijinallik
-bilgilerini resmi sistem üzerinden kontrol edin.
+OnePlus cihazınızın teknik servis ve onarım durumunu kontrol edin.
 </p>
 
 <a
-href="https://service.oneplus.com/tr/warranty-check"
+href="https://service.oneplus.com/tr"
 target="_blank"
-rel="noopener noreferrer"
-class="button">
+class="button repair-button">
 
-🛡️ Garanti / Orijinallik Sorgulama
+Onarım Durumu
 
 </a>
 
@@ -491,30 +473,29 @@ class="button">
 
 <div class="brand-card">
 
-<h3>💻 Casper</h3>
+<div class="icon">💻</div>
+
+<h3>Casper</h3>
 
 <p>
-Casper resmi destek sistemi üzerinden cihazınızın
-garanti ve cihaz durumuna ulaşabilirsiniz.
+Casper cihazınızın garanti ve servis durumunu kontrol edin.
 </p>
 
 <a
-href="https://www.casper.com.tr/destek"
+href="https://www.casper.com.tr/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
 <a
-href="https://www.casper.com.tr/destek"
+href="https://www.casper.com.tr/"
 target="_blank"
-rel="noopener noreferrer"
 class="button repair-button">
 
-🔧 Cihaz / Onarım Durumu
+Cihaz / Onarım Durumu
 
 </a>
 
@@ -525,20 +506,20 @@ class="button repair-button">
 
 <div class="brand-card">
 
-<h3>📱 General Mobile</h3>
+<div class="icon">📱</div>
+
+<h3>General Mobile</h3>
 
 <p>
-General Mobile resmi destek sistemi üzerinden
-cihaz durumunu kontrol edebilirsiniz.
+General Mobile resmi destek sistemi üzerinden cihaz durumunuzu sorgulayın.
 </p>
 
 <a
-href="https://www.generalmobile.com/tr/destek"
+href="https://www.generalmobile.com/tr"
 target="_blank"
-rel="noopener noreferrer"
 class="button repair-button">
 
-🔧 Cihaz / Onarım Durumu
+Cihaz Durumu Sorgula
 
 </a>
 
@@ -549,20 +530,20 @@ class="button repair-button">
 
 <div class="brand-card">
 
-<h3>📱 TECNO</h3>
+<div class="icon">📱</div>
+
+<h3>TECNO</h3>
 
 <p>
-TECNO cihazınızın garanti durumunu IMEI
-numarası üzerinden kontrol edin.
+TECNO cihazınızın IMEI üzerinden garanti durumunu kontrol edin.
 </p>
 
 <a
 href="https://turkiye.tecno-mobile.com/warranty/"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
@@ -573,20 +554,20 @@ class="button">
 
 <div class="brand-card">
 
-<h3>📱 HMD / Nokia</h3>
+<div class="icon">📱</div>
+
+<h3>HMD</h3>
 
 <p>
-HMD veya Nokia cihazınızın garanti durumunu
-resmi garanti sorgulama ekranından kontrol edin.
+HMD cihazınızın garanti bilgilerini resmi destek sayfasından kontrol edin.
 </p>
 
 <a
 href="https://www.hmd.com/tr_tr/support/topics/warranty-finder"
 target="_blank"
-rel="noopener noreferrer"
 class="button">
 
-🛡️ Garanti Sorgulama
+Garanti Sorgulama
 
 </a>
 
@@ -602,41 +583,58 @@ Aradığınız marka bulunamadı.
 
 </div>
 
+</section>
+
 
 <!-- BTK / IMEI -->
 
-<div class="imei-section">
+<section class="filter-section">
 
-<h2>📡 BTK / IMEI Sorgulama</h2>
+<h2>📲 BTK / IMEI Sorgulama</h2>
+
+<div class="brand-grid">
+
+<div class="brand-card">
+
+<div class="icon">📡</div>
+
+<h3>IMEI Sorgulama</h3>
 
 <p>
-Cep telefonunuzun IMEI numarasını kullanarak
-cihazın Türkiye'deki kayıt ve kullanım durumunu
-e-Devlet üzerinden kontrol edebilirsiniz.
+Cep telefonunuzun IMEI kayıt durumunu e-Devlet üzerinden
+Bilgi Teknolojileri ve İletişim Kurumu sistemiyle sorgulayabilirsiniz.
 </p>
 
 <a
 href="https://www.turkiye.gov.tr/imei-sorgulama"
 target="_blank"
-rel="noopener noreferrer"
-class="imei-button">
+class="button imei-button">
 
-📡 BTK / IMEI Sorgulama
+BTK / IMEI Sorgula
 
 </a>
 
 </div>
 
+</div>
+
+</section>
+
 
 <div class="note">
 
-<strong>⚠️ SUCİ Bilgilendirmesi</strong><br><br>
+<strong>⚠️ SUCİ Notu:</strong>
 
-SUCİ, markaların resmi sorgulama sistemlerine
-yönlendirme yapar.
+<br>
 
-Garanti ve onarım sonucu, ilgili markanın kendi
-sistemi tarafından belirlenir.
+Garanti ve onarım sorgulamalarında cihazın IMEI, seri numarası,
+servis takip numarası veya doğrulama kodu istenebilir.
+
+<br><br>
+
+SUCİ herhangi bir kişisel veriyi toplamaz veya saklamaz.
+Sorgulama işlemleri ilgili markanın veya resmi kurumun
+kendi sistemi üzerinde gerçekleştirilir.
 
 </div>
 
@@ -663,7 +661,7 @@ Türkiye'nin Teknik Servis Rehberi © 2026
 
 function filterBrands() {
 
-    const input =
+    const search =
         document.getElementById("brandSearch")
         .value
         .toLowerCase()
@@ -679,7 +677,7 @@ function filterBrands() {
         const text =
             card.innerText.toLowerCase();
 
-        if (text.includes(input)) {
+        if (text.includes(search)) {
 
             card.style.display = "";
 
@@ -694,21 +692,33 @@ function filterBrands() {
     });
 
     document.getElementById("resultCount").innerText =
-        input === ""
-        ? cards.length + " marka sorgulama seçeneği"
-        : visibleCount + " sonuç bulundu";
+        visibleCount + " marka / sorgulama seçeneği";
 
-    document.getElementById("noResult").style.display =
-        visibleCount === 0
-        ? "block"
-        : "none";
+    const noResult =
+        document.getElementById("noResult");
+
+    if (visibleCount === 0 && search !== "") {
+
+        noResult.style.display = "block";
+
+    } else {
+
+        noResult.style.display = "none";
+
+    }
 
 }
 
 
-document.getElementById("resultCount").innerText =
-    document.querySelectorAll(".brand-card").length +
-    " marka sorgulama seçeneği";
+document.addEventListener("DOMContentLoaded", function() {
+
+    const cards =
+        document.querySelectorAll(".brand-card");
+
+    document.getElementById("resultCount").innerText =
+        cards.length + " marka / sorgulama seçeneği";
+
+});
 
 </script>
 
