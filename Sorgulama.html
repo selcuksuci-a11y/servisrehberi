@@ -147,6 +147,14 @@ header p {
     background: #1d4ed8;
 }
 
+.repair-button {
+    background: #059669;
+}
+
+.repair-button:hover {
+    background: #047857;
+}
+
 .imei-section {
     background: white;
     padding: 20px;
@@ -169,6 +177,10 @@ header p {
     border-radius: 8px;
     font-weight: bold;
     margin-top: 10px;
+}
+
+.imei-button:hover {
+    background: #000000;
 }
 
 .note {
@@ -221,6 +233,7 @@ footer {
 
 <div class="container">
 
+
 <a href="index.html" class="back-button">
 ← Ana Sayfaya Dön
 </a>
@@ -243,10 +256,12 @@ sorgulama sistemlerine hızlıca ulaşabilirsiniz.
 
 <strong>ℹ️ Önemli Bilgi</strong><br><br>
 
+Aşağıdaki bağlantılar ilgili markaların
+<strong>resmi internet sitelerinde bulunan</strong>
+garanti veya onarım sorgulama ekranlarına yönlendirir.
+
 SUCİ üzerinde sahte veya çalışmayan sorgulama ekranları
-bulundurulmaz. Aşağıdaki bağlantılar ilgili markaların
-<strong>resmi internet sitelerindeki</strong> sorgulama
-sistemlerine yönlendirir.
+bulundurulmaz.
 
 </div>
 
@@ -280,16 +295,16 @@ onkeyup="filterBrands()">
 
 <p>
 Apple cihazınızın garanti ve servis kapsamını
-seri numarası üzerinden kontrol edin.
+seri numarası üzerinden kontrol edebilirsiniz.
 </p>
 
 <a
-href="https://checkcoverage.apple.com/"
+href="https://checkcoverage.apple.com/?locale=tr_TR"
 target="_blank"
 rel="noopener noreferrer"
 class="button">
 
-Apple Garanti Sorgula
+🛡️ Apple Garanti Sorgulama
 
 </a>
 
@@ -303,17 +318,28 @@ Apple Garanti Sorgula
 <h3>📱 Samsung</h3>
 
 <p>
-Samsung cihazınızın devam eden onarım / servis
-durumunu resmi sistem üzerinden takip edin.
+Samsung cihazınız için garanti bilgilerini
+ve devam eden onarım sürecini resmi sistemlerden
+kontrol edebilirsiniz.
 </p>
+
+<a
+href="https://www.samsung.com/tr/support/warranty/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+🛡️ Samsung Garanti Sorgulama
+
+</a>
 
 <a
 href="https://www.samsung.com/tr/support/your-service/track-repair-sms"
 target="_blank"
 rel="noopener noreferrer"
-class="button">
+class="button repair-button">
 
-Samsung Onarım Durumu
+🔧 Samsung Onarım Durumu Sorgulama
 
 </a>
 
@@ -327,17 +353,18 @@ Samsung Onarım Durumu
 <h3>📱 Xiaomi</h3>
 
 <p>
-Xiaomi cihazınızın yetkili servisteki onarım
-sürecini resmi sistem üzerinden takip edin.
+Xiaomi yetkili servislerinde bulunan cihazınızın
+onarım sürecini IMEI, seri numarası veya servis
+iş emri numarasıyla takip edebilirsiniz.
 </p>
 
 <a
 href="https://www.mi.com/tr/support/service-progress/"
 target="_blank"
 rel="noopener noreferrer"
-class="button">
+class="button repair-button">
 
-Xiaomi Servis Durumu
+🔧 Xiaomi Onarım Durumu Sorgulama
 
 </a>
 
@@ -351,8 +378,9 @@ Xiaomi Servis Durumu
 <h3>📱 Huawei</h3>
 
 <p>
-Huawei cihazınızın garanti süresi ve destek
-hizmeti durumunu seri numarası ile sorgulayın.
+Huawei cihazınızın garanti süresini ve destek
+hizmeti durumunu seri numarası üzerinden
+sorgulayabilirsiniz.
 </p>
 
 <a
@@ -361,7 +389,7 @@ target="_blank"
 rel="noopener noreferrer"
 class="button">
 
-Huawei Garanti Sorgula
+🛡️ Huawei Garanti Sorgulama
 
 </a>
 
@@ -375,17 +403,28 @@ Huawei Garanti Sorgula
 <h3>📱 OPPO</h3>
 
 <p>
-OPPO cihazınızın devam eden onarım durumunu
-resmi servis takip ekranından kontrol edin.
+OPPO cihazınızın garanti / aktivasyon bilgilerini
+ve devam eden onarım sürecini resmi sistemlerden
+kontrol edebilirsiniz.
 </p>
+
+<a
+href="https://support.oppo.com/tr/warranty-check/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+🛡️ OPPO Garanti Sorgulama
+
+</a>
 
 <a
 href="https://support.oppo.com/tr/repair-check/"
 target="_blank"
 rel="noopener noreferrer"
-class="button">
+class="button repair-button">
 
-OPPO Onarım Durumu
+🔧 OPPO Onarım Durumu Sorgulama
 
 </a>
 
@@ -400,7 +439,8 @@ OPPO Onarım Durumu
 
 <p>
 HONOR cihazınızın garanti süresi ve garanti
-hizmeti durumunu seri numarası ile sorgulayın.
+hizmeti durumunu seri numarası üzerinden
+sorgulayabilirsiniz.
 </p>
 
 <a
@@ -409,31 +449,7 @@ target="_blank"
 rel="noopener noreferrer"
 class="button">
 
-HONOR Garanti Sorgula
-
-</a>
-
-</div>
-
-
-<!-- ONEPLUS -->
-
-<div class="brand-card">
-
-<h3>📱 OnePlus</h3>
-
-<p>
-OnePlus cihazınızın IMEI veya seri numarası
-üzerinden orijinallik ve garanti bilgilerini kontrol edin.
-</p>
-
-<a
-href="https://service.oneplus.com/tr/warranty-check"
-target="_blank"
-rel="noopener noreferrer"
-class="button">
-
-OnePlus Garanti / Orijinallik
+🛡️ HONOR Garanti Sorgulama
 
 </a>
 
@@ -447,8 +463,9 @@ OnePlus Garanti / Orijinallik
 <h3>💻 Casper</h3>
 
 <p>
-Casper resmi destek merkezi üzerinden cihaz
-durumu ve garanti bilgilerine ulaşın.
+Casper resmi destek sisteminde cihazınızın
+garanti durumunu ve servis / cihaz durumunu
+sorgulayabilirsiniz.
 </p>
 
 <a
@@ -457,31 +474,17 @@ target="_blank"
 rel="noopener noreferrer"
 class="button">
 
-Casper Cihaz / Garanti Sorgula
+🛡️ Casper Garanti Sorgulama
 
 </a>
 
-</div>
-
-
-<!-- GENERAL MOBILE -->
-
-<div class="brand-card">
-
-<h3>📱 General Mobile</h3>
-
-<p>
-General Mobile resmi destek sistemi üzerinden
-cihaz durumunuzu sorgulayın.
-</p>
-
 <a
-href="https://www.generalmobile.com/tr/destek"
+href="https://www.casper.com.tr/destek"
 target="_blank"
 rel="noopener noreferrer"
-class="button">
+class="button repair-button">
 
-General Mobile Cihaz Durumu
+🔧 Casper Onarım / Cihaz Durumu
 
 </a>
 
@@ -495,8 +498,9 @@ General Mobile Cihaz Durumu
 <h3>📱 TECNO</h3>
 
 <p>
-TECNO cihazınızın garanti durumunu IMEI numarası
-üzerinden resmi sistemden kontrol edin.
+TECNO cihazınızın garanti durumunu IMEI
+numarası üzerinden resmi garanti kontrol
+ekranından sorgulayabilirsiniz.
 </p>
 
 <a
@@ -505,22 +509,22 @@ target="_blank"
 rel="noopener noreferrer"
 class="button">
 
-TECNO Garanti Sorgula
+🛡️ TECNO Garanti Sorgulama
 
 </a>
 
 </div>
 
 
-<!-- HMD -->
+<!-- HMD / NOKIA -->
 
 <div class="brand-card">
 
 <h3>📱 HMD / Nokia</h3>
 
 <p>
-HMD veya Nokia cihazınızın garanti durumunu
-IMEI üzerinden resmi sistemden kontrol edin.
+HMD ve Nokia cihazlarınız için resmi destek
+üzerinden garanti durumunu kontrol edebilirsiniz.
 </p>
 
 <a
@@ -529,7 +533,7 @@ target="_blank"
 rel="noopener noreferrer"
 class="button">
 
-HMD / Nokia Garanti Sorgula
+🛡️ HMD / Nokia Garanti Sorgulama
 
 </a>
 
@@ -554,8 +558,9 @@ Aradığınız marka bulunamadı.
 
 <p>
 Cep telefonunuzun IMEI numarasını kullanarak
-cihazın Türkiye'deki kayıt ve kullanım durumunu
-e-Devlet üzerinden kontrol edebilirsiniz.
+cihazın Türkiye'deki kayıt, ithalat ve kayıp /
+çalıntı durumunu e-Devlet üzerinden kontrol
+edebilirsiniz.
 </p>
 
 <a
@@ -564,7 +569,7 @@ target="_blank"
 rel="noopener noreferrer"
 class="imei-button">
 
-BTK / IMEI Sorgulama
+📡 BTK / IMEI Sorgulama
 
 </a>
 
@@ -576,9 +581,12 @@ BTK / IMEI Sorgulama
 <strong>⚠️ SUCİ Bilgilendirmesi</strong><br><br>
 
 SUCİ, markaların resmi sorgulama sistemlerine
-yönlendirme yapar. Sorgulama sonucu, garanti kararı
-veya servis işlemi ilgili markanın kendi sistemi
-tarafından belirlenir.
+yönlendirme yapar.
+
+Garanti veya onarım sonucu, ilgili markanın
+kendi sistemi tarafından belirlenir.
+
+SUCİ, sorgulama sonuçlarından sorumlu değildir.
 
 </div>
 
