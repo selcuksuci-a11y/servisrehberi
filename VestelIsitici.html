@@ -1,1 +1,473 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Vestel Isıtıcı Teknik Servis - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+header {
+    background: #111827;
+    color: white;
+    padding: 22px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px 15px 40px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 10px 15px;
+    background: #374151;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.back:hover {
+    background: #1f2937;
+}
+
+.info {
+    background: #fff;
+    border-left: 5px solid #111827;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+h2 {
+    font-size: 21px;
+    margin-top: 28px;
+    color: #111827;
+}
+
+.search-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.card {
+    background: white;
+    padding: 17px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #111827;
+}
+
+.card p {
+    line-height: 1.6;
+    margin: 7px 0;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 7px;
+    padding: 11px 15px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #374151;
+}
+
+.phone {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.check {
+    color: #087f23;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #111827;
+    color: white;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.no-result {
+    display: none;
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🦦 SUCİ Teknik Servis Rehberi</h1>
+
+<p>Vestel Isıtıcı Teknik Servis</p>
+
+</header>
+
+
+<div class="container">
+
+<a class="back" href="index.html">← Ana Sayfaya Dön</a>
+
+
+<div class="info">
+
+<strong>Vestel Isıtıcı Servis Bilgileri</strong>
+
+<p>
+Vestel ısıtıcı ürünleriniz için Türkiye genelindeki
+yetkili servis bilgilerine, servis talebi ve müşteri
+hizmetleri kanallarına buradan ulaşabilirsiniz.
+</p>
+
+<p class="check">
+✓ Vestel Yetkili Servisleri resmi olarak doğrulanmıştır.
+</p>
+
+</div>
+
+
+<h2>🔎 Servis Ara</h2>
+
+<div class="search-box">
+
+<input
+type="text"
+id="serviceSearch"
+placeholder="İl veya ilçe yazın..."
+onkeyup="searchService()">
+
+</div>
+
+
+<div id="serviceCard" class="card">
+
+<h3>🏢 Vestel Yetkili Servisleri</h3>
+
+<p>
+Vestel'in resmi servis sayfasından il ve ilçe seçerek
+size en yakın yetkili servisi görüntüleyebilirsiniz.
+</p>
+
+<p>
+✓ Türkiye genelinde yetkili servis ağı
+</p>
+
+<p>
+✓ İl ve ilçe seçerek servis arama
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/servisler"
+target="_blank">
+Yetkili Servis Bul
+</a>
+
+</div>
+
+
+<div id="noResult" class="no-result">
+
+Aradığınız il veya ilçe için bu sayfada kayıtlı ayrı bir
+servis kartı bulunmamaktadır. Resmi Vestel servis
+sayfasından il ve ilçe seçerek güncel servis bilgisine
+ulaşabilirsiniz.
+
+</div>
+
+
+<h2>📍 Şehir Ara</h2>
+
+<div class="card">
+
+<h3>Türkiye Genelinde Vestel Yetkili Servisleri</h3>
+
+<p>
+Vestel resmi servis sayfasında il ve ilçe seçerek
+güncel yetkili servis adreslerini ve servis bilgilerini
+görüntüleyebilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/servisler"
+target="_blank">
+Şehir / İlçe Seç
+</a>
+
+</div>
+
+
+<h2>🛡️ Garanti Bilgileri</h2>
+
+<div class="card">
+
+<h3>Vestel Garanti</h3>
+
+<p>
+Vestel markalı ürünler için standart garanti süresi
+2 yıldır. Garanti koşulları ve ilave garanti bilgileri
+Vestel'in resmi sayfasından kontrol edilebilir.
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/garanti-montaj-bilgileri"
+target="_blank">
+Garanti Bilgilerini Gör
+</a>
+
+</div>
+
+
+<h2>🔧 Servis Durumu Sorgulama</h2>
+
+<div class="card">
+
+<h3>Servis Talebi / Durum Bilgisi</h3>
+
+<p>
+Servis talebiniz veya ürününüzle ilgili işlem durumu
+hakkında Vestel resmi destek kanallarından bilgi
+alabilirsiniz.
+</p>
+
+<p>
+Doğrudan doğrulanmış ayrı bir servis takip bağlantısı
+bulunmadığından güvenilir olmayan bir bağlantı
+kullanılmamıştır.
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/destek"
+target="_blank">
+Resmi Destek Sayfası
+</a>
+
+</div>
+
+
+<h2>📝 Servis Talebi</h2>
+
+<div class="card">
+
+<h3>Vestel Servis Randevusu</h3>
+
+<p>
+Montaj, onarım ve bakım işlemleri için Vestel'in resmi
+servis kanallarından servis talebi oluşturabilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/servisler"
+target="_blank">
+Servis Talebi Oluştur
+</a>
+
+</div>
+
+
+<h2>✓ Yetkili Servis</h2>
+
+<div class="card">
+
+<h3>Vestel Yetkili Servisleri</h3>
+
+<p>
+Vestel resmi internet sitesinde il ve ilçe seçerek
+yetkili servis bilgilerine ulaşabilirsiniz.
+</p>
+
+<p class="check">
+✓ Resmi Vestel Yetkili Servis
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/servisler"
+target="_blank">
+Yetkili Servisleri Gör
+</a>
+
+</div>
+
+
+<h2>📞 Müşteri Hizmetleri</h2>
+
+<div class="card">
+
+<h3>Vestel Müşteri Hizmetleri</h3>
+
+<p class="phone">
+0850 222 4 123
+</p>
+
+<p>
+Vestel Müşteri Hizmetleri ve WhatsApp iletişim
+kanalı aynı numara üzerinden kullanılmaktadır.
+</p>
+
+<a
+class="button"
+href="tel:08502224123">
+Telefonla Ara
+</a>
+
+<a
+class="button"
+href="https://wa.me/908502224123"
+target="_blank">
+WhatsApp
+</a>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/iletisim"
+target="_blank">
+İletişim Sayfası
+</a>
+
+</div>
+
+
+<h2>🗺️ Servis Bilgisi</h2>
+
+<div class="card">
+
+<h3>Vestel Servis Haritası</h3>
+
+<p>
+Size en yakın Vestel yetkili servisini resmi servis
+sayfasından konumunuzu paylaşarak veya il ve ilçe
+seçerek bulabilirsiniz.
+</p>
+
+<a
+class="button"
+href="https://www.vestel.com.tr/content/servisler"
+target="_blank">
+Haritada Göster
+</a>
+
+</div>
+
+
+<a class="back" href="index.html">← Ana Sayfaya Dön</a>
+
+</div>
+
+
+<footer>
+
+Türkiye’nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function searchService() {
+
+    const input =
+        document.getElementById("serviceSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const card =
+        document.getElementById("serviceCard");
+
+    const noResult =
+        document.getElementById("noResult");
+
+    if (input === "") {
+
+        card.style.display = "block";
+        noResult.style.display = "none";
+        return;
+
+    }
+
+    /*
+    Vestel resmi servis sistemi il ve ilçe
+    seçimiyle çalıştığı için burada servis
+    adresi uydurulmamaktadır.
+    Kullanıcı resmi servis sayfasına yönlendirilir.
+    */
+
+    card.style.display = "block";
+    noResult.style.display = "none";
+
+}
+
+</script>
+
+</body>
+
+</html>
