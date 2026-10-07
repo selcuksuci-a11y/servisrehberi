@@ -1,1 +1,662 @@
+<!DOCTYPE html>
+<html lang="tr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Garanti & Cihaz Sorgulama Merkezi - SUCİ</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f6f8;
+    color: #111827;
+}
+
+header {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+    color: #d1d5db;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px 15px 40px;
+}
+
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #374151;
+    color: white;
+    padding: 11px 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    background: #1f2937;
+}
+
+.welcome {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+.info-box {
+    background: #eef6ff;
+    border-left: 5px solid #2563eb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.section-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.search-box {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.search-box input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.brand-card {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.brand-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.brand-card p {
+    color: #4b5563;
+    line-height: 1.5;
+    min-height: 48px;
+}
+
+.button {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #2563eb;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.button:hover {
+    background: #1d4ed8;
+}
+
+.imei-section {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 30px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid #e5e7eb;
+}
+
+.imei-section h2 {
+    margin-top: 0;
+}
+
+.imei-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #111827;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.note {
+    margin-top: 25px;
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px;
+    border-radius: 8px;
+    line-height: 1.6;
+}
+
+footer {
+    background: #111827;
+    color: #d1d5db;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 30px;
+}
+
+#resultCount {
+    margin-top: 12px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+#noResult {
+    display: none;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #6b7280;
+    margin-top: 15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Türkiye'nin Teknik Servis Rehberi</h1>
+
+<p>🦦 SUCİ</p>
+
+</header>
+
+
+<div class="container">
+
+<a href="index.html" class="back-button">
+← Ana Sayfaya Dön
+</a>
+
+
+<div class="welcome">
+
+<h2>🔎 Garanti & Cihaz Sorgulama Merkezi</h2>
+
+<p>
+SUCİ Garanti & Cihaz Sorgulama Merkezi üzerinden
+desteklenen markaların resmi garanti ve teknik servis
+sorgulama sistemlerine hızlıca ulaşabilirsiniz.
+</p>
+
+</div>
+
+
+<div class="info-box">
+
+<strong>ℹ️ Önemli Bilgi</strong><br><br>
+
+SUCİ üzerinde sahte veya çalışmayan sorgulama ekranları
+bulundurulmaz. Aşağıdaki bağlantılar ilgili markaların
+<strong>resmi internet sitelerindeki</strong> sorgulama
+sistemlerine yönlendirir.
+
+</div>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="brandSearch"
+placeholder="Marka ara..."
+onkeyup="filterBrands()">
+
+<div id="resultCount"></div>
+
+</div>
+
+
+<h2 class="section-title">
+🛡️ Marka Garanti & Servis Sorgulama
+</h2>
+
+
+<div class="brand-grid">
+
+
+<!-- APPLE -->
+
+<div class="brand-card">
+
+<h3>🍎 Apple</h3>
+
+<p>
+Apple cihazınızın garanti ve servis kapsamını
+seri numarası üzerinden kontrol edin.
+</p>
+
+<a
+href="https://checkcoverage.apple.com/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+Apple Garanti Sorgula
+
+</a>
+
+</div>
+
+
+<!-- SAMSUNG -->
+
+<div class="brand-card">
+
+<h3>📱 Samsung</h3>
+
+<p>
+Samsung cihazınızın devam eden onarım / servis
+durumunu resmi sistem üzerinden takip edin.
+</p>
+
+<a
+href="https://www.samsung.com/tr/support/your-service/track-repair-sms"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+Samsung Onarım Durumu
+
+</a>
+
+</div>
+
+
+<!-- XIAOMI -->
+
+<div class="brand-card">
+
+<h3>📱 Xiaomi</h3>
+
+<p>
+Xiaomi cihazınızın yetkili servisteki onarım
+sürecini resmi sistem üzerinden takip edin.
+</p>
+
+<a
+href="https://www.mi.com/tr/support/service-progress/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+Xiaomi Servis Durumu
+
+</a>
+
+</div>
+
+
+<!-- HUAWEI -->
+
+<div class="brand-card">
+
+<h3>📱 Huawei</h3>
+
+<p>
+Huawei cihazınızın garanti süresi ve destek
+hizmeti durumunu seri numarası ile sorgulayın.
+</p>
+
+<a
+href="https://consumer.huawei.com/tr/support/warranty-query/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+Huawei Garanti Sorgula
+
+</a>
+
+</div>
+
+
+<!-- OPPO -->
+
+<div class="brand-card">
+
+<h3>📱 OPPO</h3>
+
+<p>
+OPPO cihazınızın devam eden onarım durumunu
+resmi servis takip ekranından kontrol edin.
+</p>
+
+<a
+href="https://support.oppo.com/tr/repair-check/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+OPPO Onarım Durumu
+
+</a>
+
+</div>
+
+
+<!-- HONOR -->
+
+<div class="brand-card">
+
+<h3>📱 HONOR</h3>
+
+<p>
+HONOR cihazınızın garanti süresi ve garanti
+hizmeti durumunu seri numarası ile sorgulayın.
+</p>
+
+<a
+href="https://www.honor.com/tr/support/warranty-query/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+HONOR Garanti Sorgula
+
+</a>
+
+</div>
+
+
+<!-- ONEPLUS -->
+
+<div class="brand-card">
+
+<h3>📱 OnePlus</h3>
+
+<p>
+OnePlus cihazınızın IMEI veya seri numarası
+üzerinden orijinallik ve garanti bilgilerini kontrol edin.
+</p>
+
+<a
+href="https://service.oneplus.com/tr/warranty-check"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+OnePlus Garanti / Orijinallik
+
+</a>
+
+</div>
+
+
+<!-- CASPER -->
+
+<div class="brand-card">
+
+<h3>💻 Casper</h3>
+
+<p>
+Casper resmi destek merkezi üzerinden cihaz
+durumu ve garanti bilgilerine ulaşın.
+</p>
+
+<a
+href="https://www.casper.com.tr/destek"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+Casper Cihaz / Garanti Sorgula
+
+</a>
+
+</div>
+
+
+<!-- GENERAL MOBILE -->
+
+<div class="brand-card">
+
+<h3>📱 General Mobile</h3>
+
+<p>
+General Mobile resmi destek sistemi üzerinden
+cihaz durumunuzu sorgulayın.
+</p>
+
+<a
+href="https://www.generalmobile.com/tr/destek"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+General Mobile Cihaz Durumu
+
+</a>
+
+</div>
+
+
+<!-- TECNO -->
+
+<div class="brand-card">
+
+<h3>📱 TECNO</h3>
+
+<p>
+TECNO cihazınızın garanti durumunu IMEI numarası
+üzerinden resmi sistemden kontrol edin.
+</p>
+
+<a
+href="https://turkiye.tecno-mobile.com/warranty/"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+TECNO Garanti Sorgula
+
+</a>
+
+</div>
+
+
+<!-- HMD -->
+
+<div class="brand-card">
+
+<h3>📱 HMD / Nokia</h3>
+
+<p>
+HMD veya Nokia cihazınızın garanti durumunu
+IMEI üzerinden resmi sistemden kontrol edin.
+</p>
+
+<a
+href="https://www.hmd.com/tr_tr/support/topics/warranty-finder"
+target="_blank"
+rel="noopener noreferrer"
+class="button">
+
+HMD / Nokia Garanti Sorgula
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<div id="noResult">
+
+Aradığınız marka bulunamadı.
+
+</div>
+
+
+<!-- BTK / IMEI -->
+
+<div class="imei-section">
+
+<h2>📡 BTK / IMEI Sorgulama</h2>
+
+<p>
+Cep telefonunuzun IMEI numarasını kullanarak
+cihazın Türkiye'deki kayıt ve kullanım durumunu
+e-Devlet üzerinden kontrol edebilirsiniz.
+</p>
+
+<a
+href="https://www.turkiye.gov.tr/imei-sorgulama"
+target="_blank"
+rel="noopener noreferrer"
+class="imei-button">
+
+BTK / IMEI Sorgulama
+
+</a>
+
+</div>
+
+
+<div class="note">
+
+<strong>⚠️ SUCİ Bilgilendirmesi</strong><br><br>
+
+SUCİ, markaların resmi sorgulama sistemlerine
+yönlendirme yapar. Sorgulama sonucu, garanti kararı
+veya servis işlemi ilgili markanın kendi sistemi
+tarafından belirlenir.
+
+</div>
+
+
+<br>
+
+
+<a href="index.html" class="back-button">
+← Ana Sayfaya Dön
+</a>
+
+
+</div>
+
+
+<footer>
+
+Türkiye'nin Teknik Servis Rehberi © 2026
+
+</footer>
+
+
+<script>
+
+function filterBrands() {
+
+    const input =
+        document.getElementById("brandSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+        document.querySelectorAll(".brand-card");
+
+    let visibleCount = 0;
+
+    cards.forEach(function(card) {
+
+        const text =
+            card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            card.style.display = "";
+
+            visibleCount++;
+
+        } else {
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+
+    document.getElementById("resultCount").innerText =
+        input === ""
+        ? cards.length + " marka sorgulama seçeneği"
+        : visibleCount + " sonuç bulundu";
+
+
+    document.getElementById("noResult").style.display =
+        visibleCount === 0
+        ? "block"
+        : "none";
+
+}
+
+
+document.getElementById("resultCount").innerText =
+    document.querySelectorAll(".brand-card").length +
+    " marka sorgulama seçeneği";
+
+</script>
+
+
+</body>
+
+</html>
